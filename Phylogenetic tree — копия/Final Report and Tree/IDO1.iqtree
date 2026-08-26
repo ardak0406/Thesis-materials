@@ -1,0 +1,717 @@
+IQ-TREE 2.4.0 built Feb 12 2025
+
+Input file name: /data/dnb12/galaxy_db/files/4/3/6/dataset_4363abdc-7440-4051-bfa3-9cbd6d780cbd.dat
+Type of analysis: ModelFinder + tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 304401
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2018) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol. Biol. Evol., 35:518–522.
+https://doi.org/10.1093/molbev/msx281
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 122 sequences with 336 amino-acid sites
+Number of constant sites: 24 (= 7.14286% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 24 (= 7.14286% of all sites)
+Number of parsimony informative sites: 290
+Number of distinct site patterns: 333
+
+ModelFinder
+-----------
+
+Best-fit model according to AIC: JTT+I+R6
+
+List of models sorted by AIC scores: 
+
+Model                  LogL         AIC      w-AIC        AICc     w-AICc         BIC      w-BIC
+JTT+I+R6         -26496.861   53497.723 +    0.413   55034.012 - 3.18e-46   54459.635 -   0.0218
+JTT+I+R5         -26499.007   53498.014 +    0.357   54974.484 - 2.68e-33   54452.291 +    0.858
+JTT+R6           -26499.323   53500.645 +   0.0959   55006.645 - 2.78e-40   54458.740 -   0.0341
+JTTDCMut+R6      -26500.262   53502.524 -   0.0375   55008.524 - 1.09e-40   54460.619 -   0.0133
+JTT+R7           -26498.317   53502.634 -   0.0355   55070.000 - 4.87e-54   54468.364 - 0.000278
+JTTDCMut+I+R5    -26501.553   53503.105 -    0.028   54979.576 -  2.1e-34   54457.383 +   0.0673
+JTTDCMut+R7      -26498.960   53503.920 -   0.0186   55071.286 - 2.56e-54   54469.650 - 0.000146
+JTTDCMut+I+R6    -26500.344   53504.689 -   0.0127   55040.978 - 9.76e-48   54466.601 -  0.00067
+LG+I+R5          -26505.221   53510.443 - 0.000715   54986.913 - 5.36e-36   54464.720 -  0.00172
+LG+I+R6          -26504.659   53513.319 -  0.00017   55049.608 -  1.3e-49   54475.231 - 8.96e-06
+LG+R6            -26505.943   53513.885 - 0.000128   55019.885 - 3.71e-43   54471.980 - 4.55e-05
+LG+R7            -26505.542   53517.085 - 2.58e-05   55084.451 - 3.54e-57   54482.814 - 2.02e-07
+LG+R5            -26512.620   53523.239 - 1.19e-06   54970.914 -  1.6e-32   54473.700 - 1.93e-05
+LG+I+R4          -26518.545   53533.091 - 8.63e-09   54952.677 - 1.46e-28   54479.734 - 9.43e-07
+LG+I+G4          -26525.291   53536.582 - 1.51e-09   54825.539 +    0.591   54464.140 -  0.00229
+Q.pfam+I+R6      -26518.405   53540.810 - 1.82e-10   55077.099 -  1.4e-55   54502.722 - 9.61e-12
+Q.pfam+I+R5      -26521.836   53543.671 - 4.35e-11   55020.142 - 3.26e-43   54497.949 - 1.05e-10
+Q.pfam+R7        -26518.985   53543.970 - 3.75e-11   55111.335 - 5.15e-63   54509.699 - 2.94e-13
+Q.pfam+R6        -26521.342   53544.684 - 2.62e-11   55050.684 - 7.62e-50   54502.779 - 9.34e-12
+LG+R4            -26527.428   53548.855 - 3.26e-12   54941.037 - 4.91e-26   54491.682 -  2.4e-09
+LG+G4            -26538.814   53561.628 - 5.49e-15   54826.273 +    0.409   54485.369 - 5.64e-08
+JTT+F+I+R6       -26525.715   53593.431 - 6.82e-22   55896.931 - 1.32e-233   54627.868 - 6.42e-39
+JTT+F+R7         -26525.885   53595.769 - 2.12e-22   55953.102 - 8.4e-246   54634.023 - 2.96e-40
+JTT+F+R6         -26528.310   53596.621 - 1.38e-22   55848.005 - 5.57e-223   54627.241 - 8.79e-39
+JTT+F+I+R5       -26529.386   53596.773 - 1.28e-22   55797.682 - 4.71e-212   54623.576 - 5.49e-38
+JTTDCMut+F+I+R6  -26530.671   53603.342 -  4.8e-24   55906.842 - 9.32e-236   54637.779 - 4.52e-41
+LG+I+R3          -26555.776   53603.552 - 4.32e-24   54968.990 - 4.18e-32   54542.562 - 2.15e-20
+JTTDCMut+F+R7    -26530.035   53604.070 - 3.34e-24   55961.403 - 1.32e-247   54642.324 - 4.66e-42
+JTTDCMut+F+R6    -26532.391   53604.782 - 2.34e-24   55856.167 - 9.4e-225   54635.402 - 1.48e-40
+JTTDCMut+F+I+R5  -26533.976   53605.952 -  1.3e-24   55806.861 - 4.78e-214   54632.755 - 5.58e-40
+WAG+I+R5         -26559.813   53619.626 -  1.4e-27   55096.096 - 1.05e-59   54573.903 - 3.36e-27
+WAG+I+R6         -26559.271   53622.542 - 3.25e-28   55158.831 -  2.5e-73   54584.454 - 1.72e-29
+WAG+R6           -26562.403   53626.807 - 3.86e-29   55132.807 - 1.12e-67   54584.901 - 1.37e-29
+WAG+R7           -26561.207   53628.414 - 1.73e-29   55195.780 - 2.37e-81   54594.143 - 1.35e-31
+LG+R3            -26579.439   53648.877 - 6.22e-34   54988.210 -  2.8e-36   54584.069 - 2.08e-29
+LG+F+I+R6        -26555.574   53653.147 - 7.35e-35   55956.647 - 1.43e-246   54687.584 - 6.92e-52
+LG+F+I+R5        -26558.834   53655.668 - 2.08e-35   55856.577 - 7.66e-225   54682.471 - 8.93e-51
+LG+F+R7          -26556.452   53656.905 - 1.12e-35   56014.238 - 4.45e-259   54695.159 - 1.57e-53
+LG+F+R6          -26559.559   53659.118 - 3.71e-36   55910.503 - 1.49e-236   54689.738 - 2.36e-52
+Q.pfam+F+I+R6    -26577.308   53696.617 - 2.67e-44   56000.117 - 5.19e-256   54731.054 - 2.52e-61
+Q.pfam+F+R6      -26579.699   53699.398 - 6.65e-45   55950.782 - 2.68e-245   54730.018 - 4.23e-61
+Q.pfam+F+R7      -26578.195   53700.390 - 4.05e-45   56057.723 - 1.61e-268   54738.644 - 5.66e-63
+Q.pfam+F+I+R5    -26582.867   53703.733 - 7.62e-46   55904.642 - 2.8e-235   54730.536 - 3.26e-61
+WAG+F+I+R5       -26582.991   53703.982 - 6.72e-46   55904.892 - 2.47e-235   54730.785 - 2.88e-61
+WAG+F+I+R6       -26582.646   53707.291 - 1.29e-46   56010.791 - 2.5e-258   54741.728 - 1.21e-63
+WAG+F+R6         -26584.823   53709.646 - 3.96e-47   55961.030 - 1.59e-247   54740.266 - 2.52e-63
+WAG+F+R7         -26583.742   53711.485 - 1.58e-47   56068.818 - 6.26e-271   54749.739 - 2.21e-65
+VT+I+R5          -26659.924   53819.849 - 4.65e-71   55296.319 - 3.49e-103   54774.127 - 1.12e-70
+VT+R6            -26659.354   53820.708 - 3.03e-71   55326.708 - 8.79e-110   54778.803 - 1.08e-71
+VT+I+R6          -26659.995   53823.990 - 5.87e-72   55360.279 - 4.51e-117   54785.902 -  3.1e-73
+VT+R7            -26659.027   53824.053 - 5.68e-72   55391.419 - 7.8e-124   54789.782 - 4.45e-74
+LG+I+R2          -26729.313   53946.627 - 1.37e-98   55260.473 - 2.12e-95   54878.002 -  3.1e-93
+VT+F+R6          -26709.343   53958.686 - 3.31e-101   56210.071 - 1.33e-301   54989.306 - 2.1e-117
+VT+F+I+R5        -26710.480   53958.960 - 2.88e-101   56159.869 - 1.06e-290   54985.763 - 1.24e-116
+VT+F+R7          -26708.922   53961.844 - 6.82e-102   56319.177 -        0   55000.098 - 9.53e-120
+VT+F+I+R6        -26710.203   53962.406 - 5.15e-102   56265.906 - 9.99e-314   54996.843 - 4.85e-119
+LG+R2            -26781.048   54048.097 - 1.27e-120   55337.053 - 4.98e-112   54975.655 - 1.94e-114
+Blosum62+R6      -26973.336   54448.673 - 1.32e-207   55954.673 - 3.83e-246   55406.768 - 4.7e-208
+Blosum62+I+R5    -26975.606   54451.212 - 3.71e-208   55927.682 - 2.78e-240   55405.489 - 8.9e-208
+Blosum62+R7      -26973.101   54452.201 - 2.26e-208   56019.567 - 3.1e-260   55417.930 - 1.77e-210
+Blosum62+I+R6    -26974.383   54452.767 - 1.7e-208   55989.056 - 1.31e-253   55414.679 - 8.99e-210
+PMB+R6           -26997.888   54497.775 - 2.87e-218   56003.775 - 8.33e-257   55455.870 - 1.02e-218
+PMB+I+R5         -27000.094   54500.187 - 8.59e-219   55976.658 - 6.44e-251   55454.465 - 2.06e-218
+PMB+R7           -26997.551   54501.102 - 5.44e-219   56068.468 - 7.46e-271   55466.831 - 4.26e-221
+PMB+I+R6         -26999.637   54503.273 - 1.84e-219   56039.562 - 1.41e-264   55465.185 - 9.7e-221
+Dayhoff+R7       -27036.742   54579.484 - 5.19e-236   56146.850 - 7.12e-288   55545.213 - 4.06e-238
+DCMut+I+R6       -27038.628   54581.256 - 2.14e-236   56117.545 - 1.64e-281   55543.168 - 1.13e-237
+Dayhoff+R6       -27039.906   54581.811 - 1.62e-236   56087.811 - 4.7e-275   55539.906 - 5.77e-237
+Dayhoff+I+R5     -27040.913   54581.826 - 1.61e-236   56058.297 - 1.21e-268   55536.104 - 3.86e-236
+DCMut+I+R5       -27041.488   54582.977 - 9.04e-237   56059.448 - 6.78e-269   55537.255 - 2.17e-236
+DCMut+R7         -27038.804   54583.608 - 6.6e-237   56150.974 - 9.05e-289   55549.337 - 5.17e-239
+Dayhoff+I+R6     -27040.168   54584.335 - 4.59e-237   56120.624 - 3.52e-282   55546.247 - 2.42e-238
+DCMut+R6         -27041.573   54585.146 - 3.06e-237   56091.146 - 8.88e-276   55543.241 - 1.09e-237
+Dayhoff+F+R7     -27032.117   54608.235 - 2.96e-242   56965.568 -        0   55646.489 - 4.14e-260
+DCMut+F+I+R6     -27033.742   54609.484 - 1.59e-242   56912.984 -        0   55643.921 - 1.49e-259
+Dayhoff+F+I+R5   -27036.563   54611.125 - 6.98e-243   56812.034 -        0   55637.928 - 2.99e-258
+Dayhoff+F+R6     -27035.766   54611.531 - 5.7e-243   56862.916 -        0   55642.151 - 3.62e-259
+DCMut+F+R7       -27034.070   54612.140 - 4.2e-243   56969.473 -        0   55650.394 - 5.87e-261
+DCMut+F+I+R5     -27037.310   54612.621 - 3.31e-243   56813.530 -        0   55639.424 - 1.42e-258
+Dayhoff+F+I+R6   -27035.555   54613.110 - 2.59e-243   56916.610 -        0   55647.547 - 2.44e-260
+DCMut+F+R6       -27037.317   54614.634 - 1.21e-243   56866.018 -        0   55645.254 - 7.68e-260
+Blosum62+F+R6    -27057.056   54654.112 - 3.23e-252   56905.496 -        0   55684.732 - 2.05e-268
+Blosum62+F+I+R5  -27059.235   54656.470 - 9.94e-253   56857.379 -        0   55683.273 - 4.26e-268
+Blosum62+F+R7    -27056.839   54657.679 - 5.43e-253   57015.012 -        0   55695.933 - 7.59e-271
+Blosum62+F+I+R6  -27057.948   54657.895 - 4.88e-253   56961.395 -        0   55692.333 - 4.59e-270
+PMB+F+R6         -27065.934   54671.869 - 4.51e-256   56923.253 -        0   55702.489 - 2.86e-272
+PMB+F+R7         -27065.568   54675.136 - 8.8e-257   57032.469 -        0   55713.390 - 1.23e-274
+PMB+F+I+R6       -27066.597   54675.194 - 8.55e-257   56978.694 -        0   55709.631 - 8.05e-274
+PMB+F+I+R5       -27068.614   54675.228 - 8.4e-257   56876.137 -        0   55702.031 - 3.6e-272
+LG+I             -27637.724   55759.447 -        0   57024.092 -        0   56683.188 -        0
+LG               -27820.807   56123.615 -        0   57364.508 -        0   57043.539 -        0
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JTT+I+R6
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Invar+FreeRate with 6 categories
+Proportion of invariable sites: 0.0321
+Site proportion and rates:  (0.1276,0.1252) (0.1584,0.3182) (0.2546,0.6687) (0.2585,1.2885) (0.1471,2.3336) (0.0218,3.9972)
+
+ Category  Relative_rate  Proportion
+  0         0              0.0321
+  1         0.1252         0.1276
+  2         0.3182         0.1584
+  3         0.6687         0.2546
+  4         1.2885         0.2585
+  5         2.3336         0.1471
+  6         3.9972         0.0218
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -26477.5923 (s.e. 968.2699)
+Unconstrained log-likelihood (without tree): -1949.8672
+Number of free parameters (#branches + #model parameters): 252
+Akaike information criterion (AIC) score: 53459.1845
+Corrected Akaike information criterion (AICc) score: 54995.4737
+Bayesian information criterion (BIC) score: 54421.0965
+
+Total tree length (sum of branch lengths): 21.8626
+Sum of internal branch lengths: 8.8644 (40.5461% of tree length)
+
+WARNING: 1 near-zero internal branches (<0.0030) should be treated with caution
+         Such branches are denoted by '**' in the figure below
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Fungi_Aspergillus_clavatus_5057.CADACLAP00004810' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++--Fungi_Aspergillus_clavatus_5057.CADACLAP00004810
+|
+|              +**Fungi_Aspergillus_flavus_5059.CADAFLAP00001959
+|           +--| (100)
+|           |  +**Fungi_Aspergillus_oryzae_5062.CADAORAP00001752
+|        +--| (100)
+|        |  +--Fungi_Aspergillus_terreus_ATEG_00759_33178.CADATEAP00007195
+|     +--| (38)
+|     |  |   +--Fungi_Aspergillus_niger_CAN33_6665_5061.CADANGAP00004337
+|     |  +---| (100)
+|     |      +--Fungi_Aspergillus_kawachii_AKAW_09825_40384.G7XXS2
+|  +--| (30)
+|  |  |                             +--Fungi_Fusarium_fujikuroi_LW93_14229_5127.CCT64949
+|  |  |                          +--| (100)
+|  |  |                          |  +--Fungi_Fusarium_verticillioides_FVEG_03512_117187.FVEG_03512T0
+|  |  |                       +--| (100)
+|  |  |                       |  +**Fungi_Fusarium_oxysporum_FOQG_10890_5507.FOXG_05659P0
+|  |  |                    +--| (99)
+|  |  |                    |  |  +--Fungi_Fusarium_graminearum_FG04828.1_5518.FGSG_04828P0
+|  |  |                    |  +--| (100)
+|  |  |                    |     +**Fungi_Fusarium_pseudograminearum_FPSE_04050_101028.EKJ75870
+|  |  |                 +--| (100)
+|  |  |                 |  +--Fungi_Nectria_haematococca_140110.NechaP85363
+|  |  |              +--| (100)
+|  |  |              |  |           +--Fungi_Trichoderma_virens_29875.EHK27121
+|  |  |              |  |        +--| (100)
+|  |  |              |  |        |  +--Fungi_Trichoderma_reesei_51453.EGR52612
+|  |  |              |  |     +--| (100)
+|  |  |              |  |     |  +----Fungi_Trichoderma_atroviride_63577.G9NVE9
+|  |  |              |  |  +--| (41)
+|  |  |              |  |  |  |  +--Fungi_Metarhizium_acridum_MAC_05464_92637.XP_007811804.1
+|  |  |              |  |  |  +--| (100)
+|  |  |              |  |  |     +--Fungi_Metarhizium_robertsii_568076.XP_007821430.1
+|  |  |              |  +--| (91)
+|  |  |              |     |     +----------Fungi_Arthroderma_otae_MCYG_07403_63405.XP_002843620.1
+|  |  |              |     |  +--| (50)
+|  |  |              |     |  |  |  +--Fungi_Cordyceps_militaris_CCM_02833_73501.XP_006668048.1
+|  |  |              |     |  |  +--| (100)
+|  |  |              |     |  |     +--Fungi_Beauveria_bassiana_176275.XP_008594207.1
+|  |  |              |     +--| (40)
+|  |  |              |        +---Fungi_Ophiocordyceps_sinensis_OCS_00794_72228.T5ANT7
+|  |  |           +--| (100)
+|  |  |           |  |        +--Fungi_Colletotrichum_orbiculare_Cob_02084_5465.ENH76541
+|  |  |           |  |     +--| (100)
+|  |  |           |  |     |  +--Fungi_Colletotrichum_gloeosporioides_CGLO_10545_474922.ELA30715
+|  |  |           |  |  +--| (100)
+|  |  |           |  |  |  +--Fungi_Colletotrichum_fioriniae_710243.XP_007599437.1
+|  |  |           |  +--| (100)
+|  |  |           |     |  +--Fungi_Verticillium_dahliae_VDAG_10523_27337.EGY21541
+|  |  |           |     +--| (100)
+|  |  |           |        +**Fungi_Verticillium_alfalfae_VDBG_09667_1051613.XP_003000472.1
+|  |  |        +--| (84)
+|  |  |        |  |           +------------------------------------Fungi_Agaricus_bisporus_5341.XP_007326091.1
+|  |  |        |  |     +-----| (99)
+|  |  |        |  |     |     |                          +--Reptiles_Chelonia_mydas_IDO1_8469.XP_007053526.1
+|  |  |        |  |     |     |                       +--| (100)
+|  |  |        |  |     |     |                       |  +--Reptiles_Chrysemys_picta_IDO1_8479.XP_005286614.1
+|  |  |        |  |     |     |                  +----| (100)
+|  |  |        |  |     |     |                  |    +--Reptiles_Pelodiscus_sinensis_IDO1_13735.ENSPSIP00000005352
+|  |  |        |  |     |     |               +--| (85)
+|  |  |        |  |     |     |               |  |  +-------Mammals_Ornithorhynchus_anatinus_IDO1_9258.ENSOANP00000030981
+|  |  |        |  |     |     |               |  +--| (85)
+|  |  |        |  |     |     |               |     |           +--Mammals_Sarcophilus_harrisii_IDO1_9305.ENSSHAP00000006527
+|  |  |        |  |     |     |               |     |        +--| (100)
+|  |  |        |  |     |     |               |     |        |  +--Mammals_Sarcophilus_harrisii_9305.ENSSHAP00000007609
+|  |  |        |  |     |     |               |     |     +--| (100)
+|  |  |        |  |     |     |               |     |     |  +--Mammals_Macropus_eugenii_IDO1_9315.ENSMEUP00000009634
+|  |  |        |  |     |     |               |     |  +--| (100)
+|  |  |        |  |     |     |               |     |  |  +--Mammals_Monodelphis_domestica_IDO1_13616.ENSMODP00000013171
+|  |  |        |  |     |     |               |     +--| (99)
+|  |  |        |  |     |     |               |        |                     +--Mammals_Dasypus_novemcinctus_9361.ENSDNOP00000001685
+|  |  |        |  |     |     |               |        |                 +---| (100)
+|  |  |        |  |     |     |               |        |                 |   +--Mammals_Dasypus_novemcinctus_9361.ENSDNOP00000027435
+|  |  |        |  |     |     |               |        |              +--| (94)
+|  |  |        |  |     |     |               |        |              |  |        +----Mammals_Erinaceus_europaeus_IDO1_9365.XP_007516804.1
+|  |  |        |  |     |     |               |        |              |  |     +--| (55)
+|  |  |        |  |     |     |               |        |              |  |     |  |        +--Mammals_Pteropus_alecto_IDO1_9402.XP_006916344.1
+|  |  |        |  |     |     |               |        |              |  |     |  |     +--| (100)
+|  |  |        |  |     |     |               |        |              |  |     |  |     |  +--Mammals_Pteropus_vampyrus_IDO1_132908.ENSPVAP00000007477
+|  |  |        |  |     |     |               |        |              |  |     |  |  +--| (99)
+|  |  |        |  |     |     |               |        |              |  |     |  |  |  |  +--Mammals_Sorex_araneus_IDO1_42254.XP_004606980.1
+|  |  |        |  |     |     |               |        |              |  |     |  |  |  +--| (99)
+|  |  |        |  |     |     |               |        |              |  |     |  |  |     +---Mammals_Sorex_araneus_42254.XP_004621800.1
+|  |  |        |  |     |     |               |        |              |  |     |  +--| (50)
+|  |  |        |  |     |     |               |        |              |  |     |     |              +--Mammals_Tarsius_syrichta_9478.XP_008049827.1
+|  |  |        |  |     |     |               |        |              |  |     |     |           +--| (100)
+|  |  |        |  |     |     |               |        |              |  |     |     |           |  |     +--Mammals_Callithrix_jacchus_IDO1_9483.ENSCJAP00000011933
+|  |  |        |  |     |     |               |        |              |  |     |     |           |  |  +--| (100)
+|  |  |        |  |     |     |               |        |              |  |     |     |           |  |  |  +--Mammals_Saimiri_boliviensis_IDO1_27679.XP_010328555.1
+|  |  |        |  |     |     |               |        |              |  |     |     |           |  +--| (100)
+|  |  |        |  |     |     |               |        |              |  |     |     |           |     |              +**Mammals_Macaca_fascicularis_EGM_17258_9541.XP_005563203.1
+|  |  |        |  |     |     |               |        |              |  |     |     |           |     |           +--| (100)
+|  |  |        |  |     |     |               |        |              |  |     |     |           |     |           |  +--Mammals_Macaca_mulatta_IDO1_9544.ENSMMUP00000032133
+|  |  |        |  |     |     |               |        |              |  |     |     |           |     |        +--| (100)
+|  |  |        |  |     |     |               |        |              |  |     |     |           |     |        |  +--Mammals_Papio_anubis_IDO1_9555.ENSPANP00000009136
+|  |  |        |  |     |     |               |        |              |  |     |     |           |     |     +--| (100)
+|  |  |        |  |     |     |               |        |              |  |     |     |           |     |     |  +--Mammals_Chlorocebus_sabaeus_IDO1_60711.ENSCSAP00000011218
+|  |  |        |  |     |     |               |        |              |  |     |     |           |     |  +--| (100)
+|  |  |        |  |     |     |               |        |              |  |     |     |           |     |  |  +--Mammals_Rhinopithecus_roxellana_IDO1_61622.XP_010352916.1
+|  |  |        |  |     |     |               |        |              |  |     |     |           |     +--| (99)
+|  |  |        |  |     |     |               |        |              |  |     |     |           |        |        +**Mammals_Gorilla_gorilla_IDO1_9593.ENSGGOP00000023050
+|  |  |        |  |     |     |               |        |              |  |     |     |           |        |     +--| (99)
+|  |  |        |  |     |     |               |        |              |  |     |     |           |        |     |  +--Mammals_Homo_sapiens_IDO1_9606.ENSP00000430950
+|  |  |        |  |     |     |               |        |              |  |     |     |           |        |  +**| (63)
+|  |  |        |  |     |     |               |        |              |  |     |     |           |        |  |  |  +--Mammals_Pan_troglodytes_IDO1_9598.ENSPTRP00000034569
+|  |  |        |  |     |     |               |        |              |  |     |     |           |        |  |  +--| (91)
+|  |  |        |  |     |     |               |        |              |  |     |     |           |        |  |     |  +--Mammals_Pongo_abelii_IDO1_9601.ENSPPYP00000020785
+|  |  |        |  |     |     |               |        |              |  |     |     |           |        |  |     +--| (94)
+|  |  |        |  |     |     |               |        |              |  |     |     |           |        |  |        +--Mammals_Nomascus_leucogenys_IDO1_61853.ENSNLEP00000015223
+|  |  |        |  |     |     |               |        |              |  |     |     |           |        +--| (99)
+|  |  |        |  |     |     |               |        |              |  |     |     |           |           +**Mammals_Pan_paniscus_IDO1_9597.XP_003823356.1
+|  |  |        |  |     |     |               |        |              |  |     |     |        +--| (61)
+|  |  |        |  |     |     |               |        |              |  |     |     |        |  |  +--Mammals_Ictidomys_tridecemlineatus_IDO1_43179.ENSSTOP00000011828
+|  |  |        |  |     |     |               |        |              |  |     |     |        |  +--| (77)
+|  |  |        |  |     |     |               |        |              |  |     |     |        |     |  +--Mammals_Jaculus_jaculus_Ido1_51337.XP_004669036.1
+|  |  |        |  |     |     |               |        |              |  |     |     |        |     +--| (77)
+|  |  |        |  |     |     |               |        |              |  |     |     |        |        +--Mammals_Nannospalax_galili_Ido1_1026970.XP_008841633.1
+|  |  |        |  |     |     |               |        |              |  |     |     |     +--| (67)
+|  |  |        |  |     |     |               |        |              |  |     |     |     |  |     +--Mammals_Ochotona_princeps_IDO1_9978.XP_004592787.1
+|  |  |        |  |     |     |               |        |              |  |     |     |     |  |  +--| (100)
+|  |  |        |  |     |     |               |        |              |  |     |     |     |  |  |  +--Mammals_Oryctolagus_cuniculus_IDO1_9986.ENSOCUP00000002899
+|  |  |        |  |     |     |               |        |              |  |     |     |     |  +--| (68)
+|  |  |        |  |     |     |               |        |              |  |     |     |     |     +--Mammals_Tupaia_chinensis_IDO1_246437.XP_006164819.1
+|  |  |        |  |     |     |               |        |              |  |     |     |  +--| (71)
+|  |  |        |  |     |     |               |        |              |  |     |     |  |  +--Mammals_Galeopterus_variegatus_IDO1_482537.XP_008591488.1
+|  |  |        |  |     |     |               |        |              |  |     |     +--| (44)
+|  |  |        |  |     |     |               |        |              |  |     |        |              +**Mammals_Orcinus_orca_IDO1_9733.XP_004286560.1
+|  |  |        |  |     |     |               |        |              |  |     |        |           +--| (100)
+|  |  |        |  |     |     |               |        |              |  |     |        |           |  +--Mammals_Tursiops_truncatus_IDO1_9739.XP_004310410.1
+|  |  |        |  |     |     |               |        |              |  |     |        |        +--| (91)
+|  |  |        |  |     |     |               |        |              |  |     |        |        |  +--Mammals_Balaenoptera_acutorostrata_IDO1_9767.XP_007178481.1
+|  |  |        |  |     |     |               |        |              |  |     |        |     +--| (100)
+|  |  |        |  |     |     |               |        |              |  |     |        |     |  +--Mammals_Lipotes_vexillifer_IDO1_118797.XP_007455547.1
+|  |  |        |  |     |     |               |        |              |  |     |        |  +--| (100)
+|  |  |        |  |     |     |               |        |              |  |     |        |  |  |  +--Mammals_Sus_scrofa_IDO1_9823.ENSSSCP00000007468
+|  |  |        |  |     |     |               |        |              |  |     |        |  |  +--| (99)
+|  |  |        |  |     |     |               |        |              |  |     |        |  |     |        +--Mammals_Bos_taurus_IDO1_9913.ENSBTAP00000027449
+|  |  |        |  |     |     |               |        |              |  |     |        |  |     |     +--| (98)
+|  |  |        |  |     |     |               |        |              |  |     |        |  |     |     |  +--Mammals_Bos_mutus_IDO1_72004.XP_005897589.1
+|  |  |        |  |     |     |               |        |              |  |     |        |  |     |  +--| (100)
+|  |  |        |  |     |     |               |        |              |  |     |        |  |     |  |  +--Mammals_Bubalus_bubalis_IDO1_89462.XP_006078679.1
+|  |  |        |  |     |     |               |        |              |  |     |        |  |     +--| (100)
+|  |  |        |  |     |     |               |        |              |  |     |        |  |        |  +--Mammals_Ovis_aries_IDO1_9940.ENSOARP00000002385
+|  |  |        |  |     |     |               |        |              |  |     |        |  |        +--| (100)
+|  |  |        |  |     |     |               |        |              |  |     |        |  |           +--Mammals_Pantholops_hodgsonii_IDO1_59538.XP_005980444.1
+|  |  |        |  |     |     |               |        |              |  |     |        +--| (73)
+|  |  |        |  |     |     |               |        |              |  |     |           |  +--Mammals_Eptesicus_fuscus_IDO1_29078.XP_008142081.1
+|  |  |        |  |     |     |               |        |              |  |     |           +--| (100)
+|  |  |        |  |     |     |               |        |              |  |     |              |     +--Mammals_Myotis_lucifugus_IDO1_59463.ENSMLUP00000011576
+|  |  |        |  |     |     |               |        |              |  |     |              |  +--| (99)
+|  |  |        |  |     |     |               |        |              |  |     |              |  |  +--Mammals_Myotis_brandtii_IDO1_109478.XP_005856505.1
+|  |  |        |  |     |     |               |        |              |  |     |              +--| (100)
+|  |  |        |  |     |     |               |        |              |  |     |                 +--Mammals_Myotis_davidii_IDO1_225400.XP_006765620.1
+|  |  |        |  |     |     |               |        |              |  |  +--| (71)
+|  |  |        |  |     |     |               |        |              |  |  |  |        +--Mammals_Canis_lupus_IDO1_9612.ENSCAFP00000008594
+|  |  |        |  |     |     |               |        |              |  |  |  |     +--| (83)
+|  |  |        |  |     |     |               |        |              |  |  |  |     |  +--Mammals_Mustela_putorius_IDO1_9668.ENSMPUP00000005813
+|  |  |        |  |     |     |               |        |              |  |  |  |  +--| (100)
+|  |  |        |  |     |     |               |        |              |  |  |  |  |  |     +--Mammals_Ailuropoda_melanoleuca_IDO1_9646.ENSAMEP00000002944
+|  |  |        |  |     |     |               |        |              |  |  |  |  |  |  +--| (100)
+|  |  |        |  |     |     |               |        |              |  |  |  |  |  |  |  +--Mammals_Ursus_maritimus_IDO1_29073.XP_008704565.1
+|  |  |        |  |     |     |               |        |              |  |  |  |  |  +--| (100)
+|  |  |        |  |     |     |               |        |              |  |  |  |  |     |  +--Mammals_Odobenus_rosmarus_IDO1_9707.XP_004394518.1
+|  |  |        |  |     |     |               |        |              |  |  |  |  |     +--| (98)
+|  |  |        |  |     |     |               |        |              |  |  |  |  |        +--Mammals_Leptonychotes_weddellii_IDO1_9713.XP_006731898.1
+|  |  |        |  |     |     |               |        |              |  |  |  +--| (100)
+|  |  |        |  |     |     |               |        |              |  |  |     |  +--Mammals_Felis_catus_IDO1_9685.ENSFCAP00000003351
+|  |  |        |  |     |     |               |        |              |  |  |     +--| (100)
+|  |  |        |  |     |     |               |        |              |  |  |        +**Mammals_Panthera_tigris_IDO1_9694.XP_007097118.1
+|  |  |        |  |     |     |               |        |              |  +--| (98)
+|  |  |        |  |     |     |               |        |              |     |                 +--Mammals_Cricetulus_griseus_Ido1_10029.XP_007610940.1
+|  |  |        |  |     |     |               |        |              |     |              +--| (99)
+|  |  |        |  |     |     |               |        |              |     |              |  +--Mammals_Mesocricetus_auratus_Ido1_10036.XP_005066617.1
+|  |  |        |  |     |     |               |        |              |     |           +--| (72)
+|  |  |        |  |     |     |               |        |              |     |           |  +--Mammals_Peromyscus_maniculatus_10042.XP_006983027.1
+|  |  |        |  |     |     |               |        |              |     |        +--| (76)
+|  |  |        |  |     |     |               |        |              |     |        |  +--Mammals_Microtus_ochrogaster_79684.XP_005362495.1
+|  |  |        |  |     |     |               |        |              |     |     +--| (100)
+|  |  |        |  |     |     |               |        |              |     |     |  |  +--Mammals_Mus_musculus_Ido1_10090.ENSMUSP00000033956
+|  |  |        |  |     |     |               |        |              |     |     |  +--| (100)
+|  |  |        |  |     |     |               |        |              |     |     |     +--Mammals_Rattus_norvegicus_Ido1_10116.ENSRNOP00000050320
+|  |  |        |  |     |     |               |        |              |     |  +--| (98)
+|  |  |        |  |     |     |               |        |              |     |  |  |     +--Mammals_Cavia_porcellus_IDO1_10141.ENSCPOP00000013309
+|  |  |        |  |     |     |               |        |              |     |  |  |  +--| (100)
+|  |  |        |  |     |     |               |        |              |     |  |  |  |  |  +--Mammals_Octodon_degus_Ido1_10160.XP_004633178.1
+|  |  |        |  |     |     |               |        |              |     |  |  |  |  +--| (100)
+|  |  |        |  |     |     |               |        |              |     |  |  |  |     +--Mammals_Chinchilla_lanigera_Ido1_34839.XP_005410595.1
+|  |  |        |  |     |     |               |        |              |     |  |  +--| (100)
+|  |  |        |  |     |     |               |        |              |     |  |     |  +--Mammals_Heterocephalus_glaber_Ido1_10181.XP_004855376.1
+|  |  |        |  |     |     |               |        |              |     |  |     +--| (100)
+|  |  |        |  |     |     |               |        |              |     |  |        +--Mammals_Fukomys_damarensis_Ido1_885580.XP_010615449.1
+|  |  |        |  |     |     |               |        |              |     +--| (68)
+|  |  |        |  |     |     |               |        |              |        +--Mammals_Otolemur_garnettii_IDO1_30611.ENSOGAP00000011596
+|  |  |        |  |     |     |               |        |           +--| (93)
+|  |  |        |  |     |     |               |        |           |  |  +--Mammals_Trichechus_manatus_IDO1_9778.XP_004382127.1
+|  |  |        |  |     |     |               |        |           |  +--| (100)
+|  |  |        |  |     |     |               |        |           |     +--Mammals_Loxodonta_africana_IDO1_9785.ENSLAFP00000002235
+|  |  |        |  |     |     |               |        |        +--| (90)
+|  |  |        |  |     |     |               |        |        |  +----Mammals_Elephantulus_edwardii_IDO1_28737.XP_006900361.1
+|  |  |        |  |     |     |               |        |     +--| (95)
+|  |  |        |  |     |     |               |        |     |  +---Mammals_Chrysochloris_asiatica_IDO1_185453.XP_006860001.1
+|  |  |        |  |     |     |               |        |  +--| (77)
+|  |  |        |  |     |     |               |        |  |  |  +---Mammals_Echinops_telfairi_9371.XP_004707721.1
+|  |  |        |  |     |     |               |        |  |  +--| (100)
+|  |  |        |  |     |     |               |        |  |     +--Mammals_Echinops_telfairi_IDO1_9371.XP_004707722.1
+|  |  |        |  |     |     |               |        +--| (100)
+|  |  |        |  |     |     |               |           +--Mammals_Orycteropus_afer_IDO1_9818.XP_007933199.1
+|  |  |        |  |     |     |  +------------| (100)
+|  |  |        |  |     |     |  |            +-------------Fish_Cynoglossus_semilaevis_244447.XP_008320619.1
+|  |  |        |  |     |     +--| (97)
+|  |  |        |  |     |        |                      +--Sponges_Amphimedon_queenslandica_400682.PAC_15703221
+|  |  |        |  |     |        |                   +--| (99)
+|  |  |        |  |     |        |                   |  +--Sponges_Amphimedon_queenslandica_400682.PAC_15704599
+|  |  |        |  |     |        +-------------------| (100)
+|  |  |        |  |     |                            +--Sponges_Amphimedon_queenslandica_400682.PAC_15718344
+|  |  |        |  |  +--| (93)
+|  |  |        |  |  |  +------------Fungi_Macrophomina_phaseolina_MPH_12520_35725.K2QKN9
+|  |  |        |  +--| (97)
+|  |  |        |     +-----------Fungi_Cordyceps_militaris_CCM_06695_73501.XP_006671899.1
+|  |  |     +--| (100)
+|  |  |     |  |               +--Fungi_Sclerotinia_sclerotiorum_SS1G_08222_5180.EDN92359
+|  |  |     |  |        +------| (100)
+|  |  |     |  |        |      +--Fungi_Botrytis_cinerea_40559.M7U2V8
+|  |  |     |  |     +--| (80)
+|  |  |     |  |     |  +------Fungi_Marssonina_brunnea_MBM_04791_698440.XP_007292680.1
+|  |  |     |  |  +--| (71)
+|  |  |     |  |  |  +-----------Fungi_Cladophialophora_carrionii_CLCR_08504_86049.XP_008728626.1
+|  |  |     |  +--| (68)
+|  |  |     |     |      +--Fungi_Macrophomina_phaseolina_MPH_09725_35725.K2S8G2
+|  |  |     |     +------| (100)
+|  |  |     |            +--Fungi_Neofusicoccum_parvum_310453.XP_007582217.1
+|  |  |  +--| (96)
+|  |  |  |  +---Fungi_Byssochlamys_spectabilis_PVAR5_8477_264951.V5GCG4
+|  |  +--| (99)
+|  |     +------------Fungi_Talaromyces_stipitatus_28564.XP_002484881.1
++--| (100)
+|  |  +-------Fungi_Penicillium_oxalicum_PDE_02454_69781.S7ZFS6
+|  +--| (30)
+|     +-----Fungi_Aspergillus_nidulans_AN1858.2_162425.CADANIAP00008512
+|
+|  +--Fungi_Neosartorya_fischeri_36630.CADNFIAP00009352
++--| (100)
+   +--Fungi_Aspergillus_fumigatus_746128.CADAFUBP00006513
+
+Tree in newick format:
+
+(Fungi_Aspergillus_clavatus_5057.CADACLAP00004810:0.0806735617,(((((Fungi_Aspergillus_flavus_5059.CADAFLAP00001959:0.0000012176,Fungi_Aspergillus_oryzae_5062.CADAORAP00001752:0.0000012176)100:0.0915384439,Fungi_Aspergillus_terreus_ATEG_00759_33178.CADATEAP00007195:0.1378051800)100:0.0903772819,(Fungi_Aspergillus_niger_CAN33_6665_5061.CADANGAP00004337:0.0115522983,Fungi_Aspergillus_kawachii_AKAW_09825_40384.G7XXS2:0.0263583140)100:0.1855096867)38:0.0216049052,((((((((((Fungi_Fusarium_fujikuroi_LW93_14229_5127.CCT64949:0.0091449635,Fungi_Fusarium_verticillioides_FVEG_03512_117187.FVEG_03512T0:0.0030377692)100:0.0060837077,Fungi_Fusarium_oxysporum_FOQG_10890_5507.FOXG_05659P0:0.0000028881)100:0.0634478761,(Fungi_Fusarium_graminearum_FG04828.1_5518.FGSG_04828P0:0.0030992128,Fungi_Fusarium_pseudograminearum_FPSE_04050_101028.EKJ75870:0.0000012176)100:0.0821255959)99:0.0406538684,Fungi_Nectria_haematococca_140110.NechaP85363:0.0577217047)100:0.0913058805,((((Fungi_Trichoderma_virens_29875.EHK27121:0.0749040932,Fungi_Trichoderma_reesei_51453.EGR52612:0.1030211778)100:0.1071860188,Fungi_Trichoderma_atroviride_63577.G9NVE9:0.2343567069)100:0.0957906369,(Fungi_Metarhizium_acridum_MAC_05464_92637.XP_007811804.1:0.0245923533,Fungi_Metarhizium_robertsii_568076.XP_007821430.1:0.0366278621)100:0.1221691911)41:0.0366000291,((Fungi_Arthroderma_otae_MCYG_07403_63405.XP_002843620.1:0.4697932074,(Fungi_Cordyceps_militaris_CCM_02833_73501.XP_006668048.1:0.0340915163,Fungi_Beauveria_bassiana_176275.XP_008594207.1:0.1180598262)100:0.1245959190)50:0.0366074096,Fungi_Ophiocordyceps_sinensis_OCS_00794_72228.T5ANT7:0.2027310621)40:0.0258057667)91:0.0709245747)100:0.1380563705,(((Fungi_Colletotrichum_orbiculare_Cob_02084_5465.ENH76541:0.0608764034,Fungi_Colletotrichum_gloeosporioides_CGLO_10545_474922.ELA30715:0.0641072796)100:0.0379724995,Fungi_Colletotrichum_fioriniae_710243.XP_007599437.1:0.0867774205)100:0.0979179262,(Fungi_Verticillium_dahliae_VDAG_10523_27337.EGY21541:0.0283057026,Fungi_Verticillium_alfalfae_VDBG_09667_1051613.XP_003000472.1:0.0000028824)100:0.1623197584)100:0.1217445350)100:0.1636014609,(((Fungi_Agaricus_bisporus_5341.XP_007326091.1:1.5451473038,(((((Reptiles_Chelonia_mydas_IDO1_8469.XP_007053526.1:0.0453820490,Reptiles_Chrysemys_picta_IDO1_8479.XP_005286614.1:0.0199153299)100:0.1033378625,Reptiles_Pelodiscus_sinensis_IDO1_13735.ENSPSIP00000005352:0.1438004683)100:0.2333893607,(Mammals_Ornithorhynchus_anatinus_IDO1_9258.ENSOANP00000030981:0.3400204679,((((Mammals_Sarcophilus_harrisii_IDO1_9305.ENSSHAP00000006527:0.0947906431,Mammals_Sarcophilus_harrisii_9305.ENSSHAP00000007609:0.1552666409)100:0.0902409692,Mammals_Macropus_eugenii_IDO1_9315.ENSMEUP00000009634:0.1635697932)100:0.0709812133,Mammals_Monodelphis_domestica_IDO1_13616.ENSMODP00000013171:0.1360843872)100:0.1061886545,(((((((Mammals_Dasypus_novemcinctus_9361.ENSDNOP00000001685:0.0142982345,Mammals_Dasypus_novemcinctus_9361.ENSDNOP00000027435:0.1216800730)100:0.2067948498,(((Mammals_Erinaceus_europaeus_IDO1_9365.XP_007516804.1:0.2153287335,(((Mammals_Pteropus_alecto_IDO1_9402.XP_006916344.1:0.0121489499,Mammals_Pteropus_vampyrus_IDO1_132908.ENSPVAP00000007477:0.0268723372)100:0.0765115952,(Mammals_Sorex_araneus_IDO1_42254.XP_004606980.1:0.0866221718,Mammals_Sorex_araneus_42254.XP_004621800.1:0.1678210103)99:0.0542912238)99:0.0243069467,(((((Mammals_Tarsius_syrichta_9478.XP_008049827.1:0.0501113468,((Mammals_Callithrix_jacchus_IDO1_9483.ENSCJAP00000011933:0.0210044988,Mammals_Saimiri_boliviensis_IDO1_27679.XP_010328555.1:0.0790246184)100:0.0674126483,(((((Mammals_Macaca_fascicularis_EGM_17258_9541.XP_005563203.1:0.0000029880,Mammals_Macaca_mulatta_IDO1_9544.ENSMMUP00000032133:0.0217236031)100:0.0030490099,Mammals_Papio_anubis_IDO1_9555.ENSPANP00000009136:0.0030468266)100:0.0058467131,Mammals_Chlorocebus_sabaeus_IDO1_60711.ENSCSAP00000011218:0.0058281142)100:0.0157125409,Mammals_Rhinopithecus_roxellana_IDO1_61622.XP_010352916.1:0.0162933707)100:0.0258420008,(((Mammals_Gorilla_gorilla_IDO1_9593.ENSGGOP00000023050:0.0000012176,Mammals_Homo_sapiens_IDO1_9606.ENSP00000430950:0.0030800021)99:0.0061201583,(Mammals_Pan_troglodytes_IDO1_9598.ENSPTRP00000034569:0.0030462883,(Mammals_Pongo_abelii_IDO1_9601.ENSPPYP00000020785:0.0677771433,Mammals_Nomascus_leucogenys_IDO1_61853.ENSNLEP00000015223:0.0181544441)94:0.0035606148)91:0.0123493665)63:0.0000029290,Mammals_Pan_paniscus_IDO1_9597.XP_003823356.1:0.0000032981)99:0.0146223841)99:0.0384291583)100:0.1235955164)100:0.0119500079,(Mammals_Ictidomys_tridecemlineatus_IDO1_43179.ENSSTOP00000011828:0.1009392391,(Mammals_Jaculus_jaculus_Ido1_51337.XP_004669036.1:0.1480730103,Mammals_Nannospalax_galili_Ido1_1026970.XP_008841633.1:0.1037625663)77:0.0234629101)77:0.0516811129)61:0.0077497407,((Mammals_Ochotona_princeps_IDO1_9978.XP_004592787.1:0.1058715075,Mammals_Oryctolagus_cuniculus_IDO1_9986.ENSOCUP00000002899:0.0567142409)100:0.0849464741,Mammals_Tupaia_chinensis_IDO1_246437.XP_006164819.1:0.0901815304)68:0.0177619203)67:0.0190708200,Mammals_Galeopterus_variegatus_IDO1_482537.XP_008591488.1:0.0801006701)71:0.0114815399,(((((Mammals_Orcinus_orca_IDO1_9733.XP_004286560.1:0.0000012176,Mammals_Tursiops_truncatus_IDO1_9739.XP_004310410.1:0.0061035338)100:0.0260797281,Mammals_Balaenoptera_acutorostrata_IDO1_9767.XP_007178481.1:0.0221670761)91:0.0071629889,Mammals_Lipotes_vexillifer_IDO1_118797.XP_007455547.1:0.0242227940)100:0.0382590109,(Mammals_Sus_scrofa_IDO1_9823.ENSSSCP00000007468:0.0562660589,(((Mammals_Bos_taurus_IDO1_9913.ENSBTAP00000027449:0.0084661210,Mammals_Bos_mutus_IDO1_72004.XP_005897589.1:0.0036622732)98:0.0131605678,Mammals_Bubalus_bubalis_IDO1_89462.XP_006078679.1:0.0328858790)100:0.0204503954,(Mammals_Ovis_aries_IDO1_9940.ENSOARP00000002385:0.0386415206,Mammals_Pantholops_hodgsonii_IDO1_59538.XP_005980444.1:0.0145284755)100:0.0245391384)100:0.0563943278)99:0.0101012839)100:0.0286512590,(Mammals_Eptesicus_fuscus_IDO1_29078.XP_008142081.1:0.0467271339,((Mammals_Myotis_lucifugus_IDO1_59463.ENSMLUP00000011576:0.0301685298,Mammals_Myotis_brandtii_IDO1_109478.XP_005856505.1:0.0233476371)99:0.0130467614,Mammals_Myotis_davidii_IDO1_225400.XP_006765620.1:0.0121339856)100:0.0259899725)100:0.0635860296)73:0.0248466393)44:0.0059716807)50:0.0125727553)55:0.0188140047,(((Mammals_Canis_lupus_IDO1_9612.ENSCAFP00000008594:0.1155926307,Mammals_Mustela_putorius_IDO1_9668.ENSMPUP00000005813:0.1069297899)83:0.0171836346,((Mammals_Ailuropoda_melanoleuca_IDO1_9646.ENSAMEP00000002944:0.0143990436,Mammals_Ursus_maritimus_IDO1_29073.XP_008704565.1:0.0072260495)100:0.0253940930,(Mammals_Odobenus_rosmarus_IDO1_9707.XP_004394518.1:0.0250436268,Mammals_Leptonychotes_weddellii_IDO1_9713.XP_006731898.1:0.0414079497)98:0.0121434832)100:0.0154906574)100:0.0567238057,(Mammals_Felis_catus_IDO1_9685.ENSFCAP00000003351:0.0217442572,Mammals_Panthera_tigris_IDO1_9694.XP_007097118.1:0.0000024200)100:0.0904183122)100:0.1071264104)71:0.0146257051,((((((Mammals_Cricetulus_griseus_Ido1_10029.XP_007610940.1:0.0402442777,Mammals_Mesocricetus_auratus_Ido1_10036.XP_005066617.1:0.0800751246)99:0.0501217007,Mammals_Peromyscus_maniculatus_10042.XP_006983027.1:0.0610448224)72:0.0172677507,Mammals_Microtus_ochrogaster_79684.XP_005362495.1:0.1072187541)76:0.0209153986,(Mammals_Mus_musculus_Ido1_10090.ENSMUSP00000033956:0.0645788193,Mammals_Rattus_norvegicus_Ido1_10116.ENSRNOP00000050320:0.0417388153)100:0.0545922198)100:0.1333728557,((Mammals_Cavia_porcellus_IDO1_10141.ENSCPOP00000013309:0.0860681319,(Mammals_Octodon_degus_Ido1_10160.XP_004633178.1:0.0589780341,Mammals_Chinchilla_lanigera_Ido1_34839.XP_005410595.1:0.0331957527)100:0.0334190682)100:0.0470302263,(Mammals_Heterocephalus_glaber_Ido1_10181.XP_004855376.1:0.0239121135,Mammals_Fukomys_damarensis_Ido1_885580.XP_010615449.1:0.0841350079)100:0.0666929321)100:0.1395498196)98:0.0536146001,Mammals_Otolemur_garnettii_IDO1_30611.ENSOGAP00000011596:0.1570438775)68:0.0162997889)98:0.0438822748)94:0.0107136481,(Mammals_Trichechus_manatus_IDO1_9778.XP_004382127.1:0.1396954758,Mammals_Loxodonta_africana_IDO1_9785.ENSLAFP00000002235:0.1171948653)100:0.0362471760)93:0.0106246603,Mammals_Elephantulus_edwardii_IDO1_28737.XP_006900361.1:0.2134689423)90:0.0095805948,Mammals_Chrysochloris_asiatica_IDO1_185453.XP_006860001.1:0.1805562285)95:0.0220363325,(Mammals_Echinops_telfairi_9371.XP_004707721.1:0.1998781727,Mammals_Echinops_telfairi_IDO1_9371.XP_004707722.1:0.1200216400)100:0.1308246872)77:0.0086652929,Mammals_Orycteropus_afer_IDO1_9818.XP_007933199.1:0.1067487523)100:0.1244659952)99:0.1105492015)85:0.0485488876)85:0.1226635280,Fish_Cynoglossus_semilaevis_244447.XP_008320619.1:0.5894394719)100:0.5416574460,((Sponges_Amphimedon_queenslandica_400682.PAC_15703221:0.0549135244,Sponges_Amphimedon_queenslandica_400682.PAC_15704599:0.0195507509)99:0.0453451186,Sponges_Amphimedon_queenslandica_400682.PAC_15718344:0.0318412806)100:0.8438619144)97:0.1204711763)99:0.2643413966,Fungi_Macrophomina_phaseolina_MPH_12520_35725.K2QKN9:0.5447669509)93:0.0588209396,Fungi_Cordyceps_militaris_CCM_06695_73501.XP_006671899.1:0.5367357618)97:0.1609295384)84:0.0366446075,((((Fungi_Sclerotinia_sclerotiorum_SS1G_08222_5180.EDN92359:0.0654983467,Fungi_Botrytis_cinerea_40559.M7U2V8:0.0637945840)100:0.2928490297,Fungi_Marssonina_brunnea_MBM_04791_698440.XP_007292680.1:0.3185327267)80:0.0576416581,Fungi_Cladophialophora_carrionii_CLCR_08504_86049.XP_008728626.1:0.5017490268)71:0.0377683743,(Fungi_Macrophomina_phaseolina_MPH_09725_35725.K2S8G2:0.0504992617,Fungi_Neofusicoccum_parvum_310453.XP_007582217.1:0.0174305696)100:0.3187350262)68:0.0582352978)100:0.1402247006,Fungi_Byssochlamys_spectabilis_PVAR5_8477_264951.V5GCG4:0.1978570477)96:0.0477116697,Fungi_Talaromyces_stipitatus_28564.XP_002484881.1:0.5479225474)99:0.1000394686)30:0.0264943092,(Fungi_Penicillium_oxalicum_PDE_02454_69781.S7ZFS6:0.3493821008,Fungi_Aspergillus_nidulans_AN1858.2_162425.CADANIAP00008512:0.2781057346)30:0.0228747144)100:0.1020418894,(Fungi_Neosartorya_fischeri_36630.CADNFIAP00009352:0.0095097245,Fungi_Aspergillus_fumigatus_746128.CADAFUBP00006513:0.0305014887)100:0.1142367857);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -26478.924262
+Robinson-Foulds distance between ML tree and consensus tree: 6
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++--Fungi_Aspergillus_clavatus_5057.CADACLAP00004810
+|
+|           +--Fungi_Aspergillus_flavus_5059.CADAFLAP00001959
+|        +--| (100)
+|        |  +--Fungi_Aspergillus_oryzae_5062.CADAORAP00001752
+|     +--| (100)
+|     |  +--Fungi_Aspergillus_terreus_ATEG_00759_33178.CADATEAP00007195
+|  +--| (59)
+|  |  +-----Fungi_Aspergillus_nidulans_AN1858.2_162425.CADANIAP00008512
++--| (100)
+|  |      +--Fungi_Aspergillus_niger_CAN33_6665_5061.CADANGAP00004337
+|  |  +---| (100)
+|  |  |   +--Fungi_Aspergillus_kawachii_AKAW_09825_40384.G7XXS2
+|  +--| (57)
+|     |                                +--Fungi_Fusarium_fujikuroi_LW93_14229_5127.CCT64949
+|     |                             +--| (100)
+|     |                             |  +--Fungi_Fusarium_verticillioides_FVEG_03512_117187.FVEG_03512T0
+|     |                          +--| (100)
+|     |                          |  +--Fungi_Fusarium_oxysporum_FOQG_10890_5507.FOXG_05659P0
+|     |                       +--| (99)
+|     |                       |  |  +--Fungi_Fusarium_graminearum_FG04828.1_5518.FGSG_04828P0
+|     |                       |  +--| (100)
+|     |                       |     +--Fungi_Fusarium_pseudograminearum_FPSE_04050_101028.EKJ75870
+|     |                    +--| (100)
+|     |                    |  +--Fungi_Nectria_haematococca_140110.NechaP85363
+|     |                 +--| (100)
+|     |                 |  |           +--Fungi_Trichoderma_virens_29875.EHK27121
+|     |                 |  |        +--| (100)
+|     |                 |  |        |  +--Fungi_Trichoderma_reesei_51453.EGR52612
+|     |                 |  |     +--| (100)
+|     |                 |  |     |  +----Fungi_Trichoderma_atroviride_63577.G9NVE9
+|     |                 |  |  +--| (41)
+|     |                 |  |  |  |  +--Fungi_Metarhizium_acridum_MAC_05464_92637.XP_007811804.1
+|     |                 |  |  |  +--| (100)
+|     |                 |  |  |     +--Fungi_Metarhizium_robertsii_568076.XP_007821430.1
+|     |                 |  +--| (91)
+|     |                 |     |     +----------Fungi_Arthroderma_otae_MCYG_07403_63405.XP_002843620.1
+|     |                 |     |  +--| (50)
+|     |                 |     |  |  |  +--Fungi_Cordyceps_militaris_CCM_02833_73501.XP_006668048.1
+|     |                 |     |  |  +--| (100)
+|     |                 |     |  |     +--Fungi_Beauveria_bassiana_176275.XP_008594207.1
+|     |                 |     +--| (40)
+|     |                 |        +---Fungi_Ophiocordyceps_sinensis_OCS_00794_72228.T5ANT7
+|     |              +--| (100)
+|     |              |  |        +--Fungi_Colletotrichum_orbiculare_Cob_02084_5465.ENH76541
+|     |              |  |     +--| (100)
+|     |              |  |     |  +--Fungi_Colletotrichum_gloeosporioides_CGLO_10545_474922.ELA30715
+|     |              |  |  +--| (100)
+|     |              |  |  |  +--Fungi_Colletotrichum_fioriniae_710243.XP_007599437.1
+|     |              |  +--| (100)
+|     |              |     |  +--Fungi_Verticillium_dahliae_VDAG_10523_27337.EGY21541
+|     |              |     +--| (100)
+|     |              |        +--Fungi_Verticillium_alfalfae_VDBG_09667_1051613.XP_003000472.1
+|     |           +--| (84)
+|     |           |  |           +-----------------------------------Fungi_Agaricus_bisporus_5341.XP_007326091.1
+|     |           |  |     +-----| (99)
+|     |           |  |     |     |                         +--Reptiles_Chelonia_mydas_IDO1_8469.XP_007053526.1
+|     |           |  |     |     |                      +--| (100)
+|     |           |  |     |     |                      |  +--Reptiles_Chrysemys_picta_IDO1_8479.XP_005286614.1
+|     |           |  |     |     |                 +----| (100)
+|     |           |  |     |     |                 |    +--Reptiles_Pelodiscus_sinensis_IDO1_13735.ENSPSIP00000005352
+|     |           |  |     |     |              +--| (85)
+|     |           |  |     |     |              |  |  +-------Mammals_Ornithorhynchus_anatinus_IDO1_9258.ENSOANP00000030981
+|     |           |  |     |     |              |  +--| (85)
+|     |           |  |     |     |              |     |           +--Mammals_Sarcophilus_harrisii_IDO1_9305.ENSSHAP00000006527
+|     |           |  |     |     |              |     |        +--| (100)
+|     |           |  |     |     |              |     |        |  +--Mammals_Sarcophilus_harrisii_9305.ENSSHAP00000007609
+|     |           |  |     |     |              |     |     +--| (100)
+|     |           |  |     |     |              |     |     |  +--Mammals_Macropus_eugenii_IDO1_9315.ENSMEUP00000009634
+|     |           |  |     |     |              |     |  +--| (100)
+|     |           |  |     |     |              |     |  |  +--Mammals_Monodelphis_domestica_IDO1_13616.ENSMODP00000013171
+|     |           |  |     |     |              |     +--| (99)
+|     |           |  |     |     |              |        |                     +--Mammals_Dasypus_novemcinctus_9361.ENSDNOP00000001685
+|     |           |  |     |     |              |        |                 +---| (100)
+|     |           |  |     |     |              |        |                 |   +--Mammals_Dasypus_novemcinctus_9361.ENSDNOP00000027435
+|     |           |  |     |     |              |        |              +--| (94)
+|     |           |  |     |     |              |        |              |  |        +----Mammals_Erinaceus_europaeus_IDO1_9365.XP_007516804.1
+|     |           |  |     |     |              |        |              |  |     +--| (55)
+|     |           |  |     |     |              |        |              |  |     |  |        +--Mammals_Pteropus_alecto_IDO1_9402.XP_006916344.1
+|     |           |  |     |     |              |        |              |  |     |  |     +--| (100)
+|     |           |  |     |     |              |        |              |  |     |  |     |  +--Mammals_Pteropus_vampyrus_IDO1_132908.ENSPVAP00000007477
+|     |           |  |     |     |              |        |              |  |     |  |  +--| (99)
+|     |           |  |     |     |              |        |              |  |     |  |  |  |  +--Mammals_Sorex_araneus_IDO1_42254.XP_004606980.1
+|     |           |  |     |     |              |        |              |  |     |  |  |  +--| (99)
+|     |           |  |     |     |              |        |              |  |     |  |  |     +---Mammals_Sorex_araneus_42254.XP_004621800.1
+|     |           |  |     |     |              |        |              |  |     |  +--| (50)
+|     |           |  |     |     |              |        |              |  |     |     |              +--Mammals_Tarsius_syrichta_9478.XP_008049827.1
+|     |           |  |     |     |              |        |              |  |     |     |           +--| (100)
+|     |           |  |     |     |              |        |              |  |     |     |           |  |     +--Mammals_Callithrix_jacchus_IDO1_9483.ENSCJAP00000011933
+|     |           |  |     |     |              |        |              |  |     |     |           |  |  +--| (100)
+|     |           |  |     |     |              |        |              |  |     |     |           |  |  |  +--Mammals_Saimiri_boliviensis_IDO1_27679.XP_010328555.1
+|     |           |  |     |     |              |        |              |  |     |     |           |  +--| (100)
+|     |           |  |     |     |              |        |              |  |     |     |           |     |              +--Mammals_Macaca_fascicularis_EGM_17258_9541.XP_005563203.1
+|     |           |  |     |     |              |        |              |  |     |     |           |     |           +--| (100)
+|     |           |  |     |     |              |        |              |  |     |     |           |     |           |  +--Mammals_Macaca_mulatta_IDO1_9544.ENSMMUP00000032133
+|     |           |  |     |     |              |        |              |  |     |     |           |     |        +--| (100)
+|     |           |  |     |     |              |        |              |  |     |     |           |     |        |  +--Mammals_Papio_anubis_IDO1_9555.ENSPANP00000009136
+|     |           |  |     |     |              |        |              |  |     |     |           |     |     +--| (100)
+|     |           |  |     |     |              |        |              |  |     |     |           |     |     |  +--Mammals_Chlorocebus_sabaeus_IDO1_60711.ENSCSAP00000011218
+|     |           |  |     |     |              |        |              |  |     |     |           |     |  +--| (100)
+|     |           |  |     |     |              |        |              |  |     |     |           |     |  |  +--Mammals_Rhinopithecus_roxellana_IDO1_61622.XP_010352916.1
+|     |           |  |     |     |              |        |              |  |     |     |           |     +--| (99)
+|     |           |  |     |     |              |        |              |  |     |     |           |        |        +--Mammals_Gorilla_gorilla_IDO1_9593.ENSGGOP00000023050
+|     |           |  |     |     |              |        |              |  |     |     |           |        |     +--| (99)
+|     |           |  |     |     |              |        |              |  |     |     |           |        |     |  +--Mammals_Homo_sapiens_IDO1_9606.ENSP00000430950
+|     |           |  |     |     |              |        |              |  |     |     |           |        |  +--| (63)
+|     |           |  |     |     |              |        |              |  |     |     |           |        |  |  |  +--Mammals_Pan_troglodytes_IDO1_9598.ENSPTRP00000034569
+|     |           |  |     |     |              |        |              |  |     |     |           |        |  |  +--| (91)
+|     |           |  |     |     |              |        |              |  |     |     |           |        |  |     |  +--Mammals_Pongo_abelii_IDO1_9601.ENSPPYP00000020785
+|     |           |  |     |     |              |        |              |  |     |     |           |        |  |     +--| (94)
+|     |           |  |     |     |              |        |              |  |     |     |           |        |  |        +--Mammals_Nomascus_leucogenys_IDO1_61853.ENSNLEP00000015223
+|     |           |  |     |     |              |        |              |  |     |     |           |        +--| (99)
+|     |           |  |     |     |              |        |              |  |     |     |           |           +--Mammals_Pan_paniscus_IDO1_9597.XP_003823356.1
+|     |           |  |     |     |              |        |              |  |     |     |        +--| (61)
+|     |           |  |     |     |              |        |              |  |     |     |        |  |  +--Mammals_Ictidomys_tridecemlineatus_IDO1_43179.ENSSTOP00000011828
+|     |           |  |     |     |              |        |              |  |     |     |        |  +--| (77)
+|     |           |  |     |     |              |        |              |  |     |     |        |     |  +--Mammals_Jaculus_jaculus_Ido1_51337.XP_004669036.1
+|     |           |  |     |     |              |        |              |  |     |     |        |     +--| (77)
+|     |           |  |     |     |              |        |              |  |     |     |        |        +--Mammals_Nannospalax_galili_Ido1_1026970.XP_008841633.1
+|     |           |  |     |     |              |        |              |  |     |     |     +--| (67)
+|     |           |  |     |     |              |        |              |  |     |     |     |  |     +--Mammals_Ochotona_princeps_IDO1_9978.XP_004592787.1
+|     |           |  |     |     |              |        |              |  |     |     |     |  |  +--| (100)
+|     |           |  |     |     |              |        |              |  |     |     |     |  |  |  +--Mammals_Oryctolagus_cuniculus_IDO1_9986.ENSOCUP00000002899
+|     |           |  |     |     |              |        |              |  |     |     |     |  +--| (68)
+|     |           |  |     |     |              |        |              |  |     |     |     |     +--Mammals_Tupaia_chinensis_IDO1_246437.XP_006164819.1
+|     |           |  |     |     |              |        |              |  |     |     |  +--| (71)
+|     |           |  |     |     |              |        |              |  |     |     |  |  +--Mammals_Galeopterus_variegatus_IDO1_482537.XP_008591488.1
+|     |           |  |     |     |              |        |              |  |     |     +--| (44)
+|     |           |  |     |     |              |        |              |  |     |        |              +--Mammals_Orcinus_orca_IDO1_9733.XP_004286560.1
+|     |           |  |     |     |              |        |              |  |     |        |           +--| (100)
+|     |           |  |     |     |              |        |              |  |     |        |           |  +--Mammals_Tursiops_truncatus_IDO1_9739.XP_004310410.1
+|     |           |  |     |     |              |        |              |  |     |        |        +--| (91)
+|     |           |  |     |     |              |        |              |  |     |        |        |  +--Mammals_Balaenoptera_acutorostrata_IDO1_9767.XP_007178481.1
+|     |           |  |     |     |              |        |              |  |     |        |     +--| (100)
+|     |           |  |     |     |              |        |              |  |     |        |     |  +--Mammals_Lipotes_vexillifer_IDO1_118797.XP_007455547.1
+|     |           |  |     |     |              |        |              |  |     |        |  +--| (100)
+|     |           |  |     |     |              |        |              |  |     |        |  |  |  +--Mammals_Sus_scrofa_IDO1_9823.ENSSSCP00000007468
+|     |           |  |     |     |              |        |              |  |     |        |  |  +--| (99)
+|     |           |  |     |     |              |        |              |  |     |        |  |     |        +--Mammals_Bos_taurus_IDO1_9913.ENSBTAP00000027449
+|     |           |  |     |     |              |        |              |  |     |        |  |     |     +--| (98)
+|     |           |  |     |     |              |        |              |  |     |        |  |     |     |  +--Mammals_Bos_mutus_IDO1_72004.XP_005897589.1
+|     |           |  |     |     |              |        |              |  |     |        |  |     |  +--| (100)
+|     |           |  |     |     |              |        |              |  |     |        |  |     |  |  +--Mammals_Bubalus_bubalis_IDO1_89462.XP_006078679.1
+|     |           |  |     |     |              |        |              |  |     |        |  |     +--| (100)
+|     |           |  |     |     |              |        |              |  |     |        |  |        |  +--Mammals_Ovis_aries_IDO1_9940.ENSOARP00000002385
+|     |           |  |     |     |              |        |              |  |     |        |  |        +--| (100)
+|     |           |  |     |     |              |        |              |  |     |        |  |           +--Mammals_Pantholops_hodgsonii_IDO1_59538.XP_005980444.1
+|     |           |  |     |     |              |        |              |  |     |        +--| (73)
+|     |           |  |     |     |              |        |              |  |     |           |  +--Mammals_Eptesicus_fuscus_IDO1_29078.XP_008142081.1
+|     |           |  |     |     |              |        |              |  |     |           +--| (100)
+|     |           |  |     |     |              |        |              |  |     |              |     +--Mammals_Myotis_lucifugus_IDO1_59463.ENSMLUP00000011576
+|     |           |  |     |     |              |        |              |  |     |              |  +--| (99)
+|     |           |  |     |     |              |        |              |  |     |              |  |  +--Mammals_Myotis_brandtii_IDO1_109478.XP_005856505.1
+|     |           |  |     |     |              |        |              |  |     |              +--| (100)
+|     |           |  |     |     |              |        |              |  |     |                 +--Mammals_Myotis_davidii_IDO1_225400.XP_006765620.1
+|     |           |  |     |     |              |        |              |  |  +--| (71)
+|     |           |  |     |     |              |        |              |  |  |  |        +--Mammals_Canis_lupus_IDO1_9612.ENSCAFP00000008594
+|     |           |  |     |     |              |        |              |  |  |  |     +--| (83)
+|     |           |  |     |     |              |        |              |  |  |  |     |  +--Mammals_Mustela_putorius_IDO1_9668.ENSMPUP00000005813
+|     |           |  |     |     |              |        |              |  |  |  |  +--| (100)
+|     |           |  |     |     |              |        |              |  |  |  |  |  |     +--Mammals_Ailuropoda_melanoleuca_IDO1_9646.ENSAMEP00000002944
+|     |           |  |     |     |              |        |              |  |  |  |  |  |  +--| (100)
+|     |           |  |     |     |              |        |              |  |  |  |  |  |  |  +--Mammals_Ursus_maritimus_IDO1_29073.XP_008704565.1
+|     |           |  |     |     |              |        |              |  |  |  |  |  +--| (100)
+|     |           |  |     |     |              |        |              |  |  |  |  |     |  +--Mammals_Odobenus_rosmarus_IDO1_9707.XP_004394518.1
+|     |           |  |     |     |              |        |              |  |  |  |  |     +--| (98)
+|     |           |  |     |     |              |        |              |  |  |  |  |        +--Mammals_Leptonychotes_weddellii_IDO1_9713.XP_006731898.1
+|     |           |  |     |     |              |        |              |  |  |  +--| (100)
+|     |           |  |     |     |              |        |              |  |  |     |  +--Mammals_Felis_catus_IDO1_9685.ENSFCAP00000003351
+|     |           |  |     |     |              |        |              |  |  |     +--| (100)
+|     |           |  |     |     |              |        |              |  |  |        +--Mammals_Panthera_tigris_IDO1_9694.XP_007097118.1
+|     |           |  |     |     |              |        |              |  +--| (98)
+|     |           |  |     |     |              |        |              |     |                 +--Mammals_Cricetulus_griseus_Ido1_10029.XP_007610940.1
+|     |           |  |     |     |              |        |              |     |              +--| (99)
+|     |           |  |     |     |              |        |              |     |              |  +--Mammals_Mesocricetus_auratus_Ido1_10036.XP_005066617.1
+|     |           |  |     |     |              |        |              |     |           +--| (72)
+|     |           |  |     |     |              |        |              |     |           |  +--Mammals_Peromyscus_maniculatus_10042.XP_006983027.1
+|     |           |  |     |     |              |        |              |     |        +--| (76)
+|     |           |  |     |     |              |        |              |     |        |  +--Mammals_Microtus_ochrogaster_79684.XP_005362495.1
+|     |           |  |     |     |              |        |              |     |     +--| (100)
+|     |           |  |     |     |              |        |              |     |     |  |  +--Mammals_Mus_musculus_Ido1_10090.ENSMUSP00000033956
+|     |           |  |     |     |              |        |              |     |     |  +--| (100)
+|     |           |  |     |     |              |        |              |     |     |     +--Mammals_Rattus_norvegicus_Ido1_10116.ENSRNOP00000050320
+|     |           |  |     |     |              |        |              |     |  +--| (98)
+|     |           |  |     |     |              |        |              |     |  |  |     +--Mammals_Cavia_porcellus_IDO1_10141.ENSCPOP00000013309
+|     |           |  |     |     |              |        |              |     |  |  |  +--| (100)
+|     |           |  |     |     |              |        |              |     |  |  |  |  |  +--Mammals_Octodon_degus_Ido1_10160.XP_004633178.1
+|     |           |  |     |     |              |        |              |     |  |  |  |  +--| (100)
+|     |           |  |     |     |              |        |              |     |  |  |  |     +--Mammals_Chinchilla_lanigera_Ido1_34839.XP_005410595.1
+|     |           |  |     |     |              |        |              |     |  |  +--| (100)
+|     |           |  |     |     |              |        |              |     |  |     |  +--Mammals_Heterocephalus_glaber_Ido1_10181.XP_004855376.1
+|     |           |  |     |     |              |        |              |     |  |     +--| (100)
+|     |           |  |     |     |              |        |              |     |  |        +--Mammals_Fukomys_damarensis_Ido1_885580.XP_010615449.1
+|     |           |  |     |     |              |        |              |     +--| (68)
+|     |           |  |     |     |              |        |              |        +--Mammals_Otolemur_garnettii_IDO1_30611.ENSOGAP00000011596
+|     |           |  |     |     |              |        |           +--| (93)
+|     |           |  |     |     |              |        |           |  |  +--Mammals_Trichechus_manatus_IDO1_9778.XP_004382127.1
+|     |           |  |     |     |              |        |           |  +--| (100)
+|     |           |  |     |     |              |        |           |     +--Mammals_Loxodonta_africana_IDO1_9785.ENSLAFP00000002235
+|     |           |  |     |     |              |        |        +--| (90)
+|     |           |  |     |     |              |        |        |  +----Mammals_Elephantulus_edwardii_IDO1_28737.XP_006900361.1
+|     |           |  |     |     |              |        |     +--| (95)
+|     |           |  |     |     |              |        |     |  +---Mammals_Chrysochloris_asiatica_IDO1_185453.XP_006860001.1
+|     |           |  |     |     |              |        |  +--| (77)
+|     |           |  |     |     |              |        |  |  |  +---Mammals_Echinops_telfairi_9371.XP_004707721.1
+|     |           |  |     |     |              |        |  |  +--| (100)
+|     |           |  |     |     |              |        |  |     +--Mammals_Echinops_telfairi_IDO1_9371.XP_004707722.1
+|     |           |  |     |     |              |        +--| (100)
+|     |           |  |     |     |              |           +--Mammals_Orycteropus_afer_IDO1_9818.XP_007933199.1
+|     |           |  |     |     |  +-----------| (100)
+|     |           |  |     |     |  |           +-------------Fish_Cynoglossus_semilaevis_244447.XP_008320619.1
+|     |           |  |     |     +--| (97)
+|     |           |  |     |        |                      +--Sponges_Amphimedon_queenslandica_400682.PAC_15703221
+|     |           |  |     |        |                   +--| (99)
+|     |           |  |     |        |                   |  +--Sponges_Amphimedon_queenslandica_400682.PAC_15704599
+|     |           |  |     |        +-------------------| (100)
+|     |           |  |     |                            +--Sponges_Amphimedon_queenslandica_400682.PAC_15718344
+|     |           |  |  +--| (93)
+|     |           |  |  |  +------------Fungi_Macrophomina_phaseolina_MPH_12520_35725.K2QKN9
+|     |           |  +--| (97)
+|     |           |     +-----------Fungi_Cordyceps_militaris_CCM_06695_73501.XP_006671899.1
+|     |        +--| (100)
+|     |        |  |               +--Fungi_Sclerotinia_sclerotiorum_SS1G_08222_5180.EDN92359
+|     |        |  |        +------| (100)
+|     |        |  |        |      +--Fungi_Botrytis_cinerea_40559.M7U2V8
+|     |        |  |     +--| (80)
+|     |        |  |     |  +------Fungi_Marssonina_brunnea_MBM_04791_698440.XP_007292680.1
+|     |        |  |  +--| (71)
+|     |        |  |  |  +----------Fungi_Cladophialophora_carrionii_CLCR_08504_86049.XP_008728626.1
+|     |        |  +--| (68)
+|     |        |     |      +--Fungi_Macrophomina_phaseolina_MPH_09725_35725.K2S8G2
+|     |        |     +------| (100)
+|     |        |            +--Fungi_Neofusicoccum_parvum_310453.XP_007582217.1
+|     |     +--| (96)
+|     |     |  +---Fungi_Byssochlamys_spectabilis_PVAR5_8477_264951.V5GCG4
+|     |  +--| (99)
+|     |  |  +------------Fungi_Talaromyces_stipitatus_28564.XP_002484881.1
+|     +--| (69)
+|        +-------Fungi_Penicillium_oxalicum_PDE_02454_69781.S7ZFS6
+|
+|  +--Fungi_Neosartorya_fischeri_36630.CADNFIAP00009352
++--| (100)
+   +--Fungi_Aspergillus_fumigatus_746128.CADAFUBP00006513
+
+
+Consensus tree in newick format: 
+
+(Fungi_Aspergillus_clavatus_5057.CADACLAP00004810:0.0841199866,((((Fungi_Aspergillus_flavus_5059.CADAFLAP00001959:0.0000024573,Fungi_Aspergillus_oryzae_5062.CADAORAP00001752:0.0000024573)100:0.0978222194,Fungi_Aspergillus_terreus_ATEG_00759_33178.CADATEAP00007195:0.1287859160)100:0.0706852381,Fungi_Aspergillus_nidulans_AN1858.2_162425.CADANIAP00008512:0.2869363235)59:0.0419997782,((Fungi_Aspergillus_niger_CAN33_6665_5061.CADANGAP00004337:0.0093424948,Fungi_Aspergillus_kawachii_AKAW_09825_40384.G7XXS2:0.0284119848)100:0.1791095756,(((((((((((Fungi_Fusarium_fujikuroi_LW93_14229_5127.CCT64949:0.0091174712,Fungi_Fusarium_verticillioides_FVEG_03512_117187.FVEG_03512T0:0.0030286791)100:0.0060654559,Fungi_Fusarium_oxysporum_FOQG_10890_5507.FOXG_05659P0:0.0000024573)100:0.0631796732,(Fungi_Fusarium_graminearum_FG04828.1_5518.FGSG_04828P0:0.0030889092,Fungi_Fusarium_pseudograminearum_FPSE_04050_101028.EKJ75870:0.0000024573)100:0.0818897280)99:0.0403408080,Fungi_Nectria_haematococca_140110.NechaP85363:0.0576840396)100:0.0909313903,((((Fungi_Trichoderma_virens_29875.EHK27121:0.0746618906,Fungi_Trichoderma_reesei_51453.EGR52612:0.1025528458)100:0.1067457082,Fungi_Trichoderma_atroviride_63577.G9NVE9:0.2333507765)100:0.0954916723,(Fungi_Metarhizium_acridum_MAC_05464_92637.XP_007811804.1:0.0245056310,Fungi_Metarhizium_robertsii_568076.XP_007821430.1:0.0364964068)100:0.1217017962)41:0.0364905368,((Fungi_Arthroderma_otae_MCYG_07403_63405.XP_002843620.1:0.4674600621,(Fungi_Cordyceps_militaris_CCM_02833_73501.XP_006668048.1:0.0340941810,Fungi_Beauveria_bassiana_176275.XP_008594207.1:0.1174782609)100:0.1241253129)50:0.0365447115,Fungi_Ophiocordyceps_sinensis_OCS_00794_72228.T5ANT7:0.2018362682)40:0.0258571669)91:0.0702899025)100:0.1377309652,(((Fungi_Colletotrichum_orbiculare_Cob_02084_5465.ENH76541:0.0607458382,Fungi_Colletotrichum_gloeosporioides_CGLO_10545_474922.ELA30715:0.0638986966)100:0.0378506605,Fungi_Colletotrichum_fioriniae_710243.XP_007599437.1:0.0862927039)100:0.0978228773,(Fungi_Verticillium_dahliae_VDAG_10523_27337.EGY21541:0.0281981276,Fungi_Verticillium_alfalfae_VDBG_09667_1051613.XP_003000472.1:0.0000023533)100:0.1615142446)100:0.1215557187)100:0.1632108474,(((Fungi_Agaricus_bisporus_5341.XP_007326091.1:1.5289085357,(((((Reptiles_Chelonia_mydas_IDO1_8469.XP_007053526.1:0.0451914817,Reptiles_Chrysemys_picta_IDO1_8479.XP_005286614.1:0.0198582679)100:0.1028790874,Reptiles_Pelodiscus_sinensis_IDO1_13735.ENSPSIP00000005352:0.1433390098)100:0.2324757508,(Mammals_Ornithorhynchus_anatinus_IDO1_9258.ENSOANP00000030981:0.3384986426,((((Mammals_Sarcophilus_harrisii_IDO1_9305.ENSSHAP00000006527:0.0945154958,Mammals_Sarcophilus_harrisii_9305.ENSSHAP00000007609:0.1547513061)100:0.0898122501,Mammals_Macropus_eugenii_IDO1_9315.ENSMEUP00000009634:0.1631779296)100:0.0708589837,Mammals_Monodelphis_domestica_IDO1_13616.ENSMODP00000013171:0.1355708291)100:0.1060225648,(((((((Mammals_Dasypus_novemcinctus_9361.ENSDNOP00000001685:0.0142244550,Mammals_Dasypus_novemcinctus_9361.ENSDNOP00000027435:0.1212143827)100:0.2059759095,(((Mammals_Erinaceus_europaeus_IDO1_9365.XP_007516804.1:0.2145038330,(((Mammals_Pteropus_alecto_IDO1_9402.XP_006916344.1:0.0121342314,Mammals_Pteropus_vampyrus_IDO1_132908.ENSPVAP00000007477:0.0267381352)100:0.0761909576,(Mammals_Sorex_araneus_IDO1_42254.XP_004606980.1:0.0863052917,Mammals_Sorex_araneus_42254.XP_004621800.1:0.1670717386)99:0.0540767917)99:0.0242103323,(((((Mammals_Tarsius_syrichta_9478.XP_008049827.1:0.0498954047,((Mammals_Callithrix_jacchus_IDO1_9483.ENSCJAP00000011933:0.0209307978,Mammals_Saimiri_boliviensis_IDO1_27679.XP_010328555.1:0.0787148253)100:0.0671382636,(((((Mammals_Macaca_fascicularis_EGM_17258_9541.XP_005563203.1:0.0000024573,Mammals_Macaca_mulatta_IDO1_9544.ENSMMUP00000032133:0.0216331567)100:0.0030359141,Mammals_Papio_anubis_IDO1_9555.ENSPANP00000009136:0.0030345472)100:0.0058233202,Mammals_Chlorocebus_sabaeus_IDO1_60711.ENSCSAP00000011218:0.0058041506)100:0.0156501682,Mammals_Rhinopithecus_roxellana_IDO1_61622.XP_010352916.1:0.0162262423)100:0.0257430150,(((Mammals_Gorilla_gorilla_IDO1_9593.ENSGGOP00000023050:0.0000024573,Mammals_Homo_sapiens_IDO1_9606.ENSP00000430950:0.0030672017)99:0.0060949229,(Mammals_Pan_troglodytes_IDO1_9598.ENSPTRP00000034569:0.0030336668,(Mammals_Pongo_abelii_IDO1_9601.ENSPPYP00000020785:0.0675017529,Mammals_Nomascus_leucogenys_IDO1_61853.ENSNLEP00000015223:0.0180782845)94:0.0035474618)91:0.0122984168)63:0.0000025244,Mammals_Pan_paniscus_IDO1_9597.XP_003823356.1:0.0000024573)99:0.0145562730)99:0.0382873588)100:0.1230619738)100:0.0119190777,(Mammals_Ictidomys_tridecemlineatus_IDO1_43179.ENSSTOP00000011828:0.1005690851,(Mammals_Jaculus_jaculus_Ido1_51337.XP_004669036.1:0.1474864593,Mammals_Nannospalax_galili_Ido1_1026970.XP_008841633.1:0.1033122833)77:0.0233853186)77:0.0514573238)61:0.0077192859,((Mammals_Ochotona_princeps_IDO1_9978.XP_004592787.1:0.1054120300,Mammals_Oryctolagus_cuniculus_IDO1_9986.ENSOCUP00000002899:0.0565108500)100:0.0845637650,Mammals_Tupaia_chinensis_IDO1_246437.XP_006164819.1:0.0897652622)68:0.0177258171)67:0.0189965453,Mammals_Galeopterus_variegatus_IDO1_482537.XP_008591488.1:0.0797612485)71:0.0114357946,(((((Mammals_Orcinus_orca_IDO1_9733.XP_004286560.1:0.0000024573,Mammals_Tursiops_truncatus_IDO1_9739.XP_004310410.1:0.0060801326)100:0.0259795014,Mammals_Balaenoptera_acutorostrata_IDO1_9767.XP_007178481.1:0.0220863373)91:0.0071341219,Mammals_Lipotes_vexillifer_IDO1_118797.XP_007455547.1:0.0241321973)100:0.0381004049,(Mammals_Sus_scrofa_IDO1_9823.ENSSSCP00000007468:0.0560149673,(((Mammals_Bos_taurus_IDO1_9913.ENSBTAP00000027449:0.0084344145,Mammals_Bos_mutus_IDO1_72004.XP_005897589.1:0.0036478144)98:0.0131057586,Mammals_Bubalus_bubalis_IDO1_89462.XP_006078679.1:0.0327674171)100:0.0203741119,(Mammals_Ovis_aries_IDO1_9940.ENSOARP00000002385:0.0384988982,Mammals_Pantholops_hodgsonii_IDO1_59538.XP_005980444.1:0.0144721423)100:0.0244555242)100:0.0561755724)99:0.0100882504)100:0.0285313536,(Mammals_Eptesicus_fuscus_IDO1_29078.XP_008142081.1:0.0465330116,((Mammals_Myotis_lucifugus_IDO1_59463.ENSMLUP00000011576:0.0300756905,Mammals_Myotis_brandtii_IDO1_109478.XP_005856505.1:0.0232239593)99:0.0129907676,Mammals_Myotis_davidii_IDO1_225400.XP_006765620.1:0.0120987691)100:0.0258870774)100:0.0633030671)73:0.0247751205)44:0.0059507958)50:0.0125198982)55:0.0187588902,(((Mammals_Canis_lupus_IDO1_9612.ENSCAFP00000008594:0.1151388134,Mammals_Mustela_putorius_IDO1_9668.ENSMPUP00000005813:0.1064772938)83:0.0171921277,((Mammals_Ailuropoda_melanoleuca_IDO1_9646.ENSAMEP00000002944:0.0143479598,Mammals_Ursus_maritimus_IDO1_29073.XP_008704565.1:0.0071975609)100:0.0253059644,(Mammals_Odobenus_rosmarus_IDO1_9707.XP_004394518.1:0.0249582307,Mammals_Leptonychotes_weddellii_IDO1_9713.XP_006731898.1:0.0412497724)98:0.0120878706)100:0.0154000767)100:0.0565292270,(Mammals_Felis_catus_IDO1_9685.ENSFCAP00000003351:0.0216630787,Mammals_Panthera_tigris_IDO1_9694.XP_007097118.1:0.0000028456)100:0.0900256108)100:0.1066568057)71:0.0145939451,((((((Mammals_Cricetulus_griseus_Ido1_10029.XP_007610940.1:0.0401127092,Mammals_Mesocricetus_auratus_Ido1_10036.XP_005066617.1:0.0797527549)99:0.0499167499,Mammals_Peromyscus_maniculatus_10042.XP_006983027.1:0.0608175847)72:0.0172127095,Mammals_Microtus_ochrogaster_79684.XP_005362495.1:0.1068601819)76:0.0208508333,(Mammals_Mus_musculus_Ido1_10090.ENSMUSP00000033956:0.0643417128,Mammals_Rattus_norvegicus_Ido1_10116.ENSRNOP00000050320:0.0415887196)100:0.0543838222)100:0.1328276427,((Mammals_Cavia_porcellus_IDO1_10141.ENSCPOP00000013309:0.0857117209,(Mammals_Octodon_degus_Ido1_10160.XP_004633178.1:0.0587269816,Mammals_Chinchilla_lanigera_Ido1_34839.XP_005410595.1:0.0330700458)100:0.0332728943)100:0.0468039300,(Mammals_Heterocephalus_glaber_Ido1_10181.XP_004855376.1:0.0238160557,Mammals_Fukomys_damarensis_Ido1_885580.XP_010615449.1:0.0838351500)100:0.0664861296)100:0.1390162889)98:0.0534416179,Mammals_Otolemur_garnettii_IDO1_30611.ENSOGAP00000011596:0.1564231905)68:0.0162942430)98:0.0436946162)94:0.0106749742,(Mammals_Trichechus_manatus_IDO1_9778.XP_004382127.1:0.1391116784,Mammals_Loxodonta_africana_IDO1_9785.ENSLAFP00000002235:0.1167079041)100:0.0361722861)93:0.0105769060,Mammals_Elephantulus_edwardii_IDO1_28737.XP_006900361.1:0.2127513580)90:0.0095520311,Mammals_Chrysochloris_asiatica_IDO1_185453.XP_006860001.1:0.1798522851)95:0.0219176161,(Mammals_Echinops_telfairi_9371.XP_004707721.1:0.1991805871,Mammals_Echinops_telfairi_IDO1_9371.XP_004707722.1:0.1195020439)100:0.1303274518)77:0.0086918542,Mammals_Orycteropus_afer_IDO1_9818.XP_007933199.1:0.1063065410)100:0.1237989087)99:0.1104270839)85:0.0480708725)85:0.1234371530,Fish_Cynoglossus_semilaevis_244447.XP_008320619.1:0.5855514892)100:0.5377684265,((Sponges_Amphimedon_queenslandica_400682.PAC_15703221:0.0547175013,Sponges_Amphimedon_queenslandica_400682.PAC_15704599:0.0194551503)99:0.0451942584,Sponges_Amphimedon_queenslandica_400682.PAC_15718344:0.0317646417)100:0.8383253062)97:0.1201938890)99:0.2626918973,Fungi_Macrophomina_phaseolina_MPH_12520_35725.K2QKN9:0.5434512039)93:0.0597554646,Fungi_Cordyceps_militaris_CCM_06695_73501.XP_006671899.1:0.5352305560)97:0.1562239959)84:0.0375370195,((((Fungi_Sclerotinia_sclerotiorum_SS1G_08222_5180.EDN92359:0.0646771448,Fungi_Botrytis_cinerea_40559.M7U2V8:0.0642905483)100:0.2905586138,Fungi_Marssonina_brunnea_MBM_04791_698440.XP_007292680.1:0.3178896772)80:0.0596906145,Fungi_Cladophialophora_carrionii_CLCR_08504_86049.XP_008728626.1:0.4959425985)71:0.0359720471,(Fungi_Macrophomina_phaseolina_MPH_09725_35725.K2S8G2:0.0502680683,Fungi_Neofusicoccum_parvum_310453.XP_007582217.1:0.0174308958)100:0.3184647467)68:0.0601235378)100:0.1344677290,Fungi_Byssochlamys_spectabilis_PVAR5_8477_264951.V5GCG4:0.1940880059)96:0.0389211446,Fungi_Talaromyces_stipitatus_28564.XP_002484881.1:0.5417970698)99:0.0744956005,Fungi_Penicillium_oxalicum_PDE_02454_69781.S7ZFS6:0.3342402933)69:0.0630422424)57:0.0212111593)100:0.1024652501,(Fungi_Neosartorya_fischeri_36630.CADNFIAP00009352:0.0090525458,Fungi_Aspergillus_fumigatus_746128.CADAFUBP00006513:0.0308448667)100:0.1103492539);
+
+ALISIM COMMAND
+--------------
+To simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis, you can use the following command:
+
+--alisim simulated_MSA -t PREF.treefile -m "JTT+I{0.0321289}+R6{0.127561,0.125239,0.158374,0.318193,0.25458,0.668722,0.258452,1.28845,0.147126,2.33362,0.0217775,3.99717}" --length 336
+
+To mimic the alignment used to produce this analysis, i.e. simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis *and* copying the same gap positions as the original alignment, you can use the following command:
+
+iqtree -s /data/dnb12/galaxy_db/files/4/3/6/dataset_4363abdc-7440-4051-bfa3-9cbd6d780cbd.dat --alisim mimicked_MSA
+
+To simulate any number of alignments in either of the two commandlines above, use the --num-alignments options, for example mimic 100 alignments you would use the command line:
+
+iqtree -s /data/dnb12/galaxy_db/files/4/3/6/dataset_4363abdc-7440-4051-bfa3-9cbd6d780cbd.dat --alisim mimicked_MSA --num-alignments 100
+
+For more information on using AliSim, please visit: www.iqtree.org/doc/AliSim
+
+TIME STAMP
+----------
+
+Date and time: Tue Apr  7 19:11:47 2026
+Total CPU time used: 5113.086931 seconds (1h:25m:13s)
+Total wall-clock time used: 520.2112173 seconds (0h:8m:40s)
+

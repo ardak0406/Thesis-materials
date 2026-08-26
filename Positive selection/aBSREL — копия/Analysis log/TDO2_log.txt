@@ -1,0 +1,342 @@
+
+Analysis Description
+--------------------
+aBSREL (Adaptive branch-site random effects likelihood) uses an adaptive
+random effects branch-site model framework to test whether each branch
+has evolved under positive selection, using a procedure which infers an
+optimal number of rate categories per branch. v2.2 adds support for
+multiple-hit models. v2.3 adds support for SRV. v2.5 adds support for
+ancestral state reconstruction, identification of sites contributing to
+selection signal, and some diagnostics. v2.6 adds tree reports and ASCII
+art
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree
+
+- __Citation__:  Less Is More: An Adaptive Branch-Site Random Effects Model for
+Efficient Detection of Episodic Diversifying Selection (2015). Mol Biol
+Evol 32 (5): 1342-1353. 
+
+- __Written by__: Sergei L Kosakovsky Pond, Ben Murrell, Steven Weaver and Temple iGEM /
+UCSD viral evolution group
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 2.6
+
+[Advanced option] Bag of little bootstrap alignment resampling rate (permissible range = [0.01,1], default value = 1): blb: 1
+
+>code => Universal
+/home/datamonkey/datamonkey-js-server/app/absrel/output/6a54b312a3cde1ef15d376d7.tre
+/home/datamonkey/datamonkey-js-server/app/absrel/output/6a54b312a3cde1ef15d376d7.tre
+
+>Loaded a multiple sequence alignment with **43** sequences, **405** codons, and **1** partitions from `/home/datamonkey/datamonkey-js-server/app/absrel/output/6a54b312a3cde1ef15d376d7`
+
+>branches => FG
+
+>multiple-hits => None
+
+>srv => No
+
+
+### * Selected 83 branches for testing: `FISH_CYNOGLOSSUS_SEMILAEVIS_TDO2_244447_XP_008324797_1, FISH_DANIO_RERIO_TDO2B_7955_ENSDARP00000035102, FISH_LATIMERIA_CHALUMNAE_TDO2_7897_ENSLACP00000000384, AMPHIBIANS_XENOPUS_SILURANA_TDO2_8364_ENSXETP00000048482, REPTILES_ALLIGATOR_MISSISSIPPIENSIS_TDO2_8496_XP_006275838_1, BIRDS_COLUMBA_LIVIA_TDO2_8932_XP_005509615_1, BIRDS_HALIAEETUS_LEUCOCEPHALUS_TDO2_52644_XP_010584401_1, BIRDS_NIPPONIA_NIPPON_TDO2_128390_XP_009473029_1, Node18, Node16, BIRDS_PSEUDOPODOCES_HUMILIS_TDO2_181119_XP_005517635_1, Node15, Node13, REPTILES_CHELONIA_MYDAS_TDO2_8469_XP_007071332_1, REPTILES_CHRYSEMYS_PICTA_TDO2_8479_XP_005299386_1, Node23, REPTILES_PELODISCUS_SINENSIS_TDO2_13735_ENSPSIP00000009850, Node22, Node12, REPTILES_ANOLIS_CAROLINENSIS_TDO2_28377_ENSACAP00000016632, REPTILES_PYTHON_BIVITTATUS_TDO2_176946_XP_007437938_1, Node27, Node11, MAMMALS_BALAENOPTERA_ACUTOROSTRATA_TDO2_9767_XP_007184228_1, MAMMALS_ORCINUS_ORCA_TDO2_9733_XP_004266221_1, Node38, MAMMALS_TUPAIA_CHINENSIS_TDO2_246437_XP_006164255_1, Node37, MAMMALS_CRICETULUS_GRISEUS_TDO2_10029_XP_007613764_1, MAMMALS_HETEROCEPHALUS_GLABER_TDO2_10181_XP_004868605_1, Node42, Node36, MAMMALS_OCHOTONA_PRINCEPS_TDO2_9978_XP_004591458_1, Node35, MAMMALS_MYOTIS_BRANDTII_TDO2_109478_XP_005860827_1, MAMMALS_SOREX_ARANEUS_TDO2_42254_XP_004606216_1, Node46, Node34, MAMMALS_GALEOPTERUS_VARIEGATUS_TDO2_482537_XP_008580788_1, MAMMALS_LEPTONYCHOTES_WEDDELLII_TDO2_9713_XP_006727337_1, MAMMALS_ODOBENUS_ROSMARUS_TDO2_9707_XP_004394300_1, Node52, MAMMALS_MACACA_FASCICULARIS_TDO2_9541_XP_005556209_1, MAMMALS_TARSIUS_SYRICHTA_9478_XP_008063676_1, Node55, Node51, Node49, Node33, MAMMALS_ECHINOPS_TELFAIRI_TDO2_9371_XP_004708784_1, MAMMALS_TRICHECHUS_MANATUS_TDO2_9778_XP_004382121_1, Node58, Node32, MAMMALS_DASYPUS_NOVEMCINCTUS_TDO2_9361_ENSDNOP00000028774, Node31, MAMMALS_MONODELPHIS_DOMESTICA_TDO2_13616_ENSMODP00000002068, Node30, Node10, Node8, Node6, FISH_LEPISOSTEUS_OCULATUS_TDO2_7918_ENSLOCP00000010007, Node5, Node3, FISH_ESOX_LUCIUS_TDO2_8010_XP_010898111_1, Node2, FISH_GASTEROSTEUS_ACULEATUS_TDO2_69293_ENSGACP00000021816, FISH_TAKIFUGU_RUBRIPES_TDO2_31033_ENSTRUP00000040153, Node66, FISH_HAPLOCHROMIS_BURTONI_8153_XP_005919480_1, FISH_PUNDAMILIA_NYEREREI_303518_XP_005726539_1, Node74, FISH_MAYLANDIA_ZEBRA_TDO2_106582_XP_004553681_1, Node73, FISH_NEOLAMPROLOGUS_BRICHARDI_32507_XP_006798913_1, Node72, FISH_POECILIA_RETICULATA_TDO2_8081_XP_008419272_1, FISH_XIPHOPHORUS_MACULATUS_TDO2_8083_ENSXMAP00000002272, Node79, Node71, FISH_STEGASTES_PARTITUS_TDO2_144197_XP_008277714_1, Node70, FISH_LARIMICHTHYS_CROCEA_TDO2_215358_XP_010727802_1, Node69, Node65`
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths => Yes
+* Log(L) = -20858.97, AIC-c = 41900.26 (91 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  3.905
+
+### Fitting the baseline model with a single dN/dS class per branch, and no site-to-site variation. 
+* Log(L) = -18439.04, AIC-c = 37241.86 (180 estimated parameters)
+* Branch-level non-synonymous/synonymous rate ratio distribution has median  0.11, and 95% of the weight in  0.02 -  0.89
+
+### Determining the optimal number of rate classes per branch using a step up procedure
+
+|              Branch               |  Length  |  Rates   |     Max. dN/dS     |    Log(L)     |     AIC-c     |Best AIC-c so far|
+|-----------------------------------|----------|----------|--------------------|---------------|---------------|-----------------|
+|FISH_DANIO_RERIO_TDO2B_7955_ENSD...|   0.34   |    2     |    0.78 (18.26%)   |   -18425.76   |   37219.38    |    37219.38     |
+|FISH_DANIO_RERIO_TDO2B_7955_ENSD...|   0.34   |    3     |   >1000 ( 1.09%)   |   -18425.57   |   37223.10    |    37219.38     |
+|AMPHIBIANS_XENOPUS_SILURANA_TDO2...|   0.26   |    2     |    1.46 ( 7.72%)   |   -18411.89   |   37195.73    |    37195.73     |
+|AMPHIBIANS_XENOPUS_SILURANA_TDO2...|   0.26   |    3     |    2.17 ( 4.06%)   |   -18411.87   |   37199.79    |    37195.73     |
+|FISH_LATIMERIA_CHALUMNAE_TDO2_78...|   0.21   |    2     |    6.25 (13.92%)   |   -18381.64   |   37139.33    |    37139.33     |
+|FISH_LATIMERIA_CHALUMNAE_TDO2_78...|   0.21   |    3     |   11.39 (10.66%)   |   -18381.23   |   37142.59    |    37139.33     |
+|MAMMALS_TUPAIA_CHINENSIS_TDO2_24...|   0.21   |    2     |    0.12 (51.14%)   |   -18381.44   |   37143.00    |    37139.33     |
+|               Node6               |   0.20   |    2     |   13.83 ( 4.24%)   |   -18360.88   |   37101.88    |    37101.88     |
+|               Node6               |   0.20   |    3     |   12.56 ( 4.05%)   |   -18361.00   |   37106.21    |    37101.88     |
+|FISH_LEPISOSTEUS_OCULATUS_TDO2_7...|   0.17   |    2     |    1.96 (10.72%)   |   -18344.81   |   37073.83    |    37073.83     |
+|FISH_LEPISOSTEUS_OCULATUS_TDO2_7...|   0.17   |    3     |  357.93 ( 3.50%)   |   -18343.35   |   37075.01    |    37073.83     |
+|               Node2               |   0.17   |    2     |    3.00 ( 2.79%)   |   -18333.62   |   37055.54    |    37055.54     |
+|               Node2               |   0.17   |    3     |    4.33 ( 1.57%)   |   -18333.95   |   37060.29    |    37055.54     |
+|FISH_CYNOGLOSSUS_SEMILAEVIS_TDO2...|   0.16   |    2     |    0.69 (30.35%)   |   -18331.02   |   37054.43    |    37054.43     |
+|FISH_CYNOGLOSSUS_SEMILAEVIS_TDO2...|   0.16   |    3     |    4.59 ( 2.58%)   |   -18329.94   |   37056.37    |    37054.43     |
+|FISH_ESOX_LUCIUS_TDO2_8010_XP_01...|   0.15   |    2     |  148.04 ( 4.34%)   |   -18308.83   |   37014.15    |    37014.15     |
+|FISH_ESOX_LUCIUS_TDO2_8010_XP_01...|   0.15   |    3     |  127.79 ( 4.20%)   |   -18308.80   |   37018.17    |    37014.15     |
+|               Node3               |   0.14   |    2     |    2.86 ( 7.00%)   |   -18301.75   |   37004.07    |    37004.07     |
+|               Node3               |   0.14   |    3     |   47.44 ( 2.14%)   |   -18299.24   |   37003.15    |    37003.15     |
+|               Node3               |   0.14   |    4     |   57.97 ( 2.09%)   |   -18299.30   |   37007.36    |    37003.15     |
+|FISH_TAKIFUGU_RUBRIPES_TDO2_3103...|   0.13   |    2     |    0.76 (25.08%)   |   -18295.15   |   36999.06    |    36999.06     |
+|FISH_TAKIFUGU_RUBRIPES_TDO2_3103...|   0.13   |    3     |    0.76 (23.11%)   |   -18295.15   |   37003.15    |    36999.06     |
+|              Node79               |   0.12   |    2     |    7.65 ( 2.03%)   |   -18290.48   |   36993.81    |    36993.81     |
+|              Node79               |   0.12   |    3     |    8.06 ( 1.87%)   |   -18290.45   |   36997.86    |    36993.81     |
+|REPTILES_ANOLIS_CAROLINENSIS_TDO...|   0.11   |    2     |    1.04 ( 7.37%)   |   -18286.35   |   36989.66    |    36989.66     |
+|REPTILES_ANOLIS_CAROLINENSIS_TDO...|   0.11   |    3     |  406.35 ( 0.50%)   |   -18286.03   |   36993.10    |    36989.66     |
+|MAMMALS_MONODELPHIS_DOMESTICA_TD...|   0.11   |    2     |    0.78 ( 7.88%)   |   -18282.77   |   36986.60    |    36986.60     |
+|MAMMALS_MONODELPHIS_DOMESTICA_TD...|   0.11   |    3     |    0.83 ( 0.16%)   |   -18282.77   |   36990.69    |    36986.60     |
+|MAMMALS_CRICETULUS_GRISEUS_TDO2_...|   0.11   |    2     |   0.10 (100.00%)   |   -18282.77   |   36990.69    |    36986.60     |
+|MAMMALS_SOREX_ARANEUS_TDO2_42254...|   0.11   |    2     |   0.10 (100.00%)   |   -18282.77   |   36990.69    |    36986.60     |
+|MAMMALS_OCHOTONA_PRINCEPS_TDO2_9...|   0.11   |    2     |    0.88 (13.97%)   |   -18279.86   |   36984.88    |    36984.88     |
+|MAMMALS_OCHOTONA_PRINCEPS_TDO2_9...|   0.11   |    3     |  199.57 ( 1.28%)   |   -18276.61   |   36982.47    |    36982.47     |
+|MAMMALS_OCHOTONA_PRINCEPS_TDO2_9...|   0.11   |    4     |  104.90 ( 1.13%)   |   -18276.77   |   36986.88    |    36982.47     |
+|MAMMALS_HETEROCEPHALUS_GLABER_TD...|   0.10   |    2     |    0.64 (29.22%)   |   -18274.93   |   36983.20    |    36982.47     |
+|MAMMALS_TRICHECHUS_MANATUS_TDO2_...|   0.09   |    2     |   35.06 ( 7.83%)   |   -18221.20   |   36875.74    |    36875.74     |
+|MAMMALS_TRICHECHUS_MANATUS_TDO2_...|   0.09   |    3     |   34.87 ( 7.83%)   |   -18221.20   |   36879.84    |    36875.74     |
+|MAMMALS_ECHINOPS_TELFAIRI_TDO2_9...|   0.09   |    2     |    1.26 (20.97%)   |   -18218.21   |   36873.87    |    36873.87     |
+|MAMMALS_ECHINOPS_TELFAIRI_TDO2_9...|   0.09   |    3     |    1.57 (10.52%)   |   -18218.22   |   36877.99    |    36873.87     |
+|FISH_GASTEROSTEUS_ACULEATUS_TDO2...|   0.09   |    2     |   0.09 (100.00%)   |   -18218.20   |   36877.96    |    36873.87     |
+|               Node8               |   0.09   |    2     |    5.71 ( 5.09%)   |   -18211.40   |   36864.34    |    36864.34     |
+|               Node8               |   0.09   |    3     |  317.98 ( 2.36%)   |   -18209.96   |   36865.58    |    36864.34     |
+|              Node72               |   0.09   |    2     |   0.05 (100.00%)   |   -18211.36   |   36868.38    |    36864.34     |
+|REPTILES_PYTHON_BIVITTATUS_TDO2_...|   0.08   |    2     |    0.71 (14.22%)   |   -18210.18   |   36866.01    |    36864.34     |
+|              Node15               |   0.08   |    2     |    1.02 (11.71%)   |   -18209.81   |   36865.28    |    36864.34     |
+|              Node30               |   0.08   |    2     |    4.05 (10.86%)   |   -18200.27   |   36846.20    |    36846.20     |
+|              Node30               |   0.08   |    3     |    5.27 ( 7.27%)   |   -18200.30   |   36850.37    |    36846.20     |
+|              Node31               |   0.08   |    2     |    0.07 (98.41%)   |   -18200.26   |   36850.28    |    36846.20     |
+|              Node27               |   0.08   |    2     |    0.04 (99.54%)   |   -18200.27   |   36850.29    |    36846.20     |
+|MAMMALS_MYOTIS_BRANDTII_TDO2_109...|   0.07   |    2     |    2.23 (13.01%)   |   -18198.43   |   36846.61    |    36846.20     |
+|REPTILES_ALLIGATOR_MISSISSIPPIEN...|   0.07   |    2     |    1.09 (14.23%)   |   -18197.80   |   36845.35    |    36845.35     |
+|REPTILES_ALLIGATOR_MISSISSIPPIEN...|   0.07   |    3     |    1.69 ( 3.39%)   |   -18197.80   |   36849.45    |    36845.35     |
+|              Node10               |   0.07   |    2     |   0.09 (100.00%)   |   -18197.69   |   36849.25    |    36845.35     |
+|               Node5               |   0.07   |    2     |    1.75 ( 8.61%)   |   -18196.02   |   36845.91    |    36845.35     |
+|MAMMALS_GALEOPTERUS_VARIEGATUS_T...|   0.06   |    2     |  374.80 ( 1.96%)   |   -18186.30   |   36826.45    |    36826.45     |
+|MAMMALS_GALEOPTERUS_VARIEGATUS_T...|   0.06   |    3     |  428.17 ( 1.96%)   |   -18186.30   |   36830.57    |    36826.45     |
+|              Node11               |   0.06   |    2     |    4.91 ( 2.80%)   |   -18180.05   |   36818.07    |    36818.07     |
+|              Node11               |   0.06   |    3     |    6.60 ( 1.92%)   |   -18180.10   |   36822.27    |    36818.07     |
+|FISH_STEGASTES_PARTITUS_TDO2_144...|   0.06   |    2     |   19.89 ( 3.52%)   |   -18158.86   |   36779.79    |    36779.79     |
+|FISH_STEGASTES_PARTITUS_TDO2_144...|   0.06   |    3     |   58.55 ( 1.88%)   |   -18157.35   |   36780.88    |    36779.79     |
+|MAMMALS_MACACA_FASCICULARIS_TDO2...|   0.05   |    2     |    0.40 ( 0.00%)   |   -18158.86   |   36783.89    |    36779.79     |
+|MAMMALS_TARSIUS_SYRICHTA_9478_XP...|   0.05   |    2     |    1.62 (11.69%)   |   -18157.17   |   36780.53    |    36779.79     |
+|FISH_LARIMICHTHYS_CROCEA_TDO2_21...|   0.05   |    2     |    0.06 (99.98%)   |   -18158.82   |   36783.82    |    36779.79     |
+|REPTILES_PELODISCUS_SINENSIS_TDO...|   0.05   |    2     |    2.19 ( 8.60%)   |   -18158.36   |   36782.90    |    36779.79     |
+|              Node37               |   0.04   |    2     |    0.10 (15.28%)   |   -18158.88   |   36783.94    |    36779.79     |
+|              Node52               |   0.04   |    2     |    1.99 ( 3.88%)   |   -18156.37   |   36778.92    |    36778.92     |
+|              Node52               |   0.04   |    3     |    2.54 ( 2.32%)   |   -18156.37   |   36783.02    |    36778.92     |
+|              Node38               |   0.04   |    2     |   0.16 (100.00%)   |   -18156.37   |   36783.03    |    36778.92     |
+|BIRDS_PSEUDOPODOCES_HUMILIS_TDO2...|   0.04   |    2     |    3.39 ( 5.83%)   |   -18155.45   |   36781.20    |    36778.92     |
+|MAMMALS_DASYPUS_NOVEMCINCTUS_TDO...|   0.04   |    2     |    1.57 (17.01%)   |   -18155.30   |   36780.89    |    36778.92     |
+|              Node22               |   0.04   |    2     |    0.05 (59.11%)   |   -18156.37   |   36783.03    |    36778.92     |
+|BIRDS_NIPPONIA_NIPPON_TDO2_12839...|   0.03   |    2     |    2.92 ( 7.66%)   |   -18154.59   |   36779.46    |    36778.92     |
+|BIRDS_HALIAEETUS_LEUCOCEPHALUS_T...|   0.02   |    2     |   23.84 ( 0.87%)   |   -18148.70   |   36767.69    |    36767.69     |
+|BIRDS_HALIAEETUS_LEUCOCEPHALUS_T...|   0.02   |    3     |  157.82 ( 0.29%)   |   -18146.77   |   36767.93    |    36767.69     |
+|BIRDS_COLUMBA_LIVIA_TDO2_8932_XP...|   0.02   |    2     |   0.08 (100.00%)   |   -18148.70   |   36771.80    |    36767.69     |
+|              Node70               |   0.02   |    2     |    0.28 (26.26%)   |   -18148.69   |   36771.79    |    36767.69     |
+|FISH_XIPHOPHORUS_MACULATUS_TDO2_...|   0.02   |    2     |    9.96 ( 4.86%)   |   -18147.06   |   36768.53    |    36767.69     |
+|              Node42               |   0.02   |    2     |    0.09 (45.23%)   |   -18148.70   |   36771.80    |    36767.69     |
+|FISH_POECILIA_RETICULATA_TDO2_80...|   0.02   |    2     |   22.91 ( 3.00%)   |   -18141.75   |   36757.90    |    36757.90     |
+|FISH_POECILIA_RETICULATA_TDO2_80...|   0.02   |    3     |   24.95 ( 2.71%)   |   -18141.77   |   36762.05    |    36757.90     |
+|              Node36               |   0.02   |    2     |    0.08 (64.78%)   |   -18141.73   |   36761.97    |    36757.90     |
+|              Node58               |   0.02   |    2     |    0.25 (50.91%)   |   -18141.71   |   36761.94    |    36757.90     |
+|              Node16               |   0.02   |    2     |    0.15 ( 1.16%)   |   -18141.75   |   36762.01    |    36757.90     |
+|              Node65               |   0.01   |    2     |    0.37 (10.13%)   |   -18141.70   |   36761.92    |    36757.90     |
+|              Node12               |   0.01   |    2     |    0.76 (24.06%)   |   -18141.70   |   36761.90    |    36757.90     |
+|REPTILES_CHELONIA_MYDAS_TDO2_846...|   0.01   |    2     |    0.59 ( 0.00%)   |   -18141.75   |   36762.01    |    36757.90     |
+|              Node35               |   0.01   |    2     |   0.11 (100.00%)   |   -18141.67   |   36761.85    |    36757.90     |
+|              Node32               |   0.01   |    2     |   22.19 ( 0.76%)   |   -18139.99   |   36758.50    |    36757.90     |
+|              Node66               |   0.01   |    2     |    0.96 ( 5.00%)   |   -18141.72   |   36761.96    |    36757.90     |
+|MAMMALS_LEPTONYCHOTES_WEDDELLII_...|   0.01   |    2     |    0.24 (48.46%)   |   -18141.75   |   36762.02    |    36757.90     |
+|              Node69               |   0.01   |    2     |    0.31 (51.65%)   |   -18141.72   |   36761.96    |    36757.90     |
+|              Node55               |   0.01   |    2     |    0.27 (10.57%)   |   -18141.75   |   36762.01    |    36757.90     |
+|REPTILES_CHRYSEMYS_PICTA_TDO2_84...|   0.01   |    2     |    0.59 (74.27%)   |   -18141.75   |   36762.01    |    36757.90     |
+|MAMMALS_BALAENOPTERA_ACUTOROSTRA...|   0.01   |    2     |    0.26 (36.36%)   |   -18141.75   |   36762.02    |    36757.90     |
+|              Node34               |   0.01   |    2     |    0.49 (10.44%)   |   -18141.75   |   36762.00    |    36757.90     |
+|              Node23               |   0.01   |    2     |    0.41 (11.08%)   |   -18141.75   |   36762.02    |    36757.90     |
+|              Node46               |   0.01   |    2     |    0.24 (47.99%)   |   -18141.75   |   36762.01    |    36757.90     |
+|MAMMALS_ORCINUS_ORCA_TDO2_9733_X...|   0.01   |    2     |    0.40 (50.00%)   |   -18141.75   |   36762.01    |    36757.90     |
+|              Node13               |   0.01   |    2     |    0.18 (31.40%)   |   -18163.02   |   36804.55    |    36757.90     |
+|MAMMALS_ODOBENUS_ROSMARUS_TDO2_9...|   0.01   |    2     |    0.44 (34.91%)   |   -18141.75   |   36762.02    |    36757.90     |
+|              Node73               |   0.00   |    2     |    1.05 (10.30%)   |   -18141.76   |   36762.03    |    36757.90     |
+|              Node18               |   0.00   |    2     |    0.46 (19.66%)   |   -18141.75   |   36762.02    |    36757.90     |
+|              Node33               |   0.00   |    2     |    0.25 ( 0.00%)   |   -18141.75   |   36762.01    |    36757.90     |
+|FISH_NEOLAMPROLOGUS_BRICHARDI_32...|   0.00   |    2     |    0.40 (50.43%)   |   -18141.75   |   36762.01    |    36757.90     |
+|              Node51               |   0.00   |    2     |    0.23 ( 0.00%)   |   -18141.75   |   36762.01    |    36757.90     |
+|FISH_MAYLANDIA_ZEBRA_TDO2_106582...|   0.00   |    2     |    0.98 (24.08%)   |   -18141.75   |   36762.01    |    36757.90     |
+|              Node71               |   0.00   |    2     |    0.20 ( 0.00%)   |   -18141.74   |   36762.00    |    36757.90     |
+|FISH_HAPLOCHROMIS_BURTONI_8153_X...|   0.00   |    2     |    0.25 ( 0.00%)   |   -18141.75   |   36762.01    |    36757.90     |
+|FISH_PUNDAMILIA_NYEREREI_303518_...|   0.00   |    2     |    0.50 (24.12%)   |   -18141.75   |   36762.01    |    36757.90     |
+|              Node49               |   0.00   |    2     |  264.83 (100.00%)  |   -18141.72   |   36761.96    |    36757.90     |
+|              Node74               |   0.00   |    2     |    0.26 (14.25%)   |   -18145.32   |   36769.15    |    36757.90     |
+
+### Rate class analyses summary
+*  23 branches with **2** rate classes
+*  58 branches with **1** rate classes
+*  2 branches with **3** rate classes
+
+### Annotated Tree
+(FISH_CYNOGLOSSUS_SEMILAEVIS_TDO2_244447_XP_008324797_1{2},((FISH_DANIO_RERIO_TDO2B_7955_ENSDARP00000035102{2},((FISH_LATIMERIA_CHALUMNAE_TDO2_7897_ENSLACP00000000384{2},(AMPHIBIANS_XENOPUS_SILURANA_TDO2_8364_ENSXETP00000048482{2},((((REPTILES_ALLIGATOR_MISSISSIPPIENSIS_TDO2_8496_XP_006275838_1{2},((BIRDS_COLUMBA_LIVIA_TDO2_8932_XP_005509615_1{1},(BIRDS_HALIAEETUS_LEUCOCEPHALUS_TDO2_52644_XP_010584401_1{2},BIRDS_NIPPONIA_NIPPON_TDO2_128390_XP_009473029_1{1})Node18{1})Node16{1},BIRDS_PSEUDOPODOCES_HUMILIS_TDO2_181119_XP_005517635_1{1})Node15{1})Node13{1},((REPTILES_CHELONIA_MYDAS_TDO2_8469_XP_007071332_1{1},REPTILES_CHRYSEMYS_PICTA_TDO2_8479_XP_005299386_1{1})Node23{1},REPTILES_PELODISCUS_SINENSIS_TDO2_13735_ENSPSIP00000009850{1})Node22{1})Node12{1},(REPTILES_ANOLIS_CAROLINENSIS_TDO2_28377_ENSACAP00000016632{2},REPTILES_PYTHON_BIVITTATUS_TDO2_176946_XP_007437938_1{1})Node27{1})Node11{2},(((((((((MAMMALS_BALAENOPTERA_ACUTOROSTRATA_TDO2_9767_XP_007184228_1{1},MAMMALS_ORCINUS_ORCA_TDO2_9733_XP_004266221_1{1})Node38{1},MAMMALS_TUPAIA_CHINENSIS_TDO2_246437_XP_006164255_1{1})Node37{1},(MAMMALS_CRICETULUS_GRISEUS_TDO2_10029_XP_007613764_1{1},MAMMALS_HETEROCEPHALUS_GLABER_TDO2_10181_XP_004868605_1{1})Node42{1})Node36{1},MAMMALS_OCHOTONA_PRINCEPS_TDO2_9978_XP_004591458_1{3})Node35{1},(MAMMALS_MYOTIS_BRANDTII_TDO2_109478_XP_005860827_1{1},MAMMALS_SOREX_ARANEUS_TDO2_42254_XP_004606216_1{1})Node46{1})Node34{1},(MAMMALS_GALEOPTERUS_VARIEGATUS_TDO2_482537_XP_008580788_1{2},((MAMMALS_LEPTONYCHOTES_WEDDELLII_TDO2_9713_XP_006727337_1{1},MAMMALS_ODOBENUS_ROSMARUS_TDO2_9707_XP_004394300_1{1})Node52{2},(MAMMALS_MACACA_FASCICULARIS_TDO2_9541_XP_005556209_1{1},MAMMALS_TARSIUS_SYRICHTA_9478_XP_008063676_1{1})Node55{1})Node51{1})Node49{1})Node33{1},(MAMMALS_ECHINOPS_TELFAIRI_TDO2_9371_XP_004708784_1{2},MAMMALS_TRICHECHUS_MANATUS_TDO2_9778_XP_004382121_1{2})Node58{1})Node32{1},MAMMALS_DASYPUS_NOVEMCINCTUS_TDO2_9361_ENSDNOP00000028774{1})Node31{1},MAMMALS_MONODELPHIS_DOMESTICA_TDO2_13616_ENSMODP00000002068{2})Node30{2})Node10{1})Node8{2})Node6{2},FISH_LEPISOSTEUS_OCULATUS_TDO2_7918_ENSLOCP00000010007{2})Node5{1})Node3{3},FISH_ESOX_LUCIUS_TDO2_8010_XP_010898111_1{2})Node2{2},((FISH_GASTEROSTEUS_ACULEATUS_TDO2_69293_ENSGACP00000021816{1},FISH_TAKIFUGU_RUBRIPES_TDO2_31033_ENSTRUP00000040153{2})Node66{1},((((((FISH_HAPLOCHROMIS_BURTONI_8153_XP_005919480_1{1},FISH_PUNDAMILIA_NYEREREI_303518_XP_005726539_1{1})Node74{1},FISH_MAYLANDIA_ZEBRA_TDO2_106582_XP_004553681_1{1})Node73{1},FISH_NEOLAMPROLOGUS_BRICHARDI_32507_XP_006798913_1{1})Node72{1},(FISH_POECILIA_RETICULATA_TDO2_8081_XP_008419272_1{2},FISH_XIPHOPHORUS_MACULATUS_TDO2_8083_ENSXMAP00000002272{1})Node79{2})Node71{1},FISH_STEGASTES_PARTITUS_TDO2_144197_XP_008277714_1{2})Node70{1},FISH_LARIMICHTHYS_CROCEA_TDO2_215358_XP_010727802_1{1})Node69{1})Node65{1})
+
+----
+
+```
+|FISH_CYNOGLOSSUS_SEMILAEVIS_TDO2_244447_XP_008324797_1 (2)
+| |FISH_DANIO_RERIO_TDO2B_7955_ENSDARP00000035102 (2)
+||+Node3 (3)
+||| |FISH_LATIMERIA_CHALUMNAE_TDO2_7897_ENSLACP00000000384 (2)
+||||+Node6 (2)
+||||||AMPHIBIANS_XENOPUS_SILURANA_TDO2_8364_ENSXETP00000048482 (2)
+|||||+Node8 (2)
+|||| |   |REPTILES_ALLIGATOR_MISSISSIPPIENSIS_TDO2_8496_XP_006275838_1 (2)
+|||| |  |+Node13 (1)
+|||| |  || |BIRDS_COLUMBA_LIVIA_TDO2_8932_XP_005509615_1 (1)
+|||| |  |||+Node16 (1)
+|||| |  |||||BIRDS_HALIAEETUS_LEUCOCEPHALUS_TDO2_52644_XP_010584401_1 (2)
+|||| |  ||||+Node18 (1)
+|||| |  ||| |BIRDS_NIPPONIA_NIPPON_TDO2_128390_XP_009473029_1 (1)
+|||| |  ||+Node15 (1)
+|||| |  | |BIRDS_PSEUDOPODOCES_HUMILIS_TDO2_181119_XP_005517635_1 (1)
+|||| | |+Node12 (1)
+|||| | || |REPTILES_CHELONIA_MYDAS_TDO2_8469_XP_007071332_1 (1)
+|||| | |||+Node23 (1)
+|||| | ||||REPTILES_CHRYSEMYS_PICTA_TDO2_8479_XP_005299386_1 (1)
+|||| | ||+Node22 (1)
+|||| | | |REPTILES_PELODISCUS_SINENSIS_TDO2_13735_ENSPSIP00000009850 (1)
+|||| ||+Node11 (2)
+|||| ||||REPTILES_ANOLIS_CAROLINENSIS_TDO2_28377_ENSACAP00000016632 (2)
+|||| |||+Node27 (1)
+|||| || |REPTILES_PYTHON_BIVITTATUS_TDO2_176946_XP_007437938_1 (1)
+|||| |+Node10 (1)
+||||  |        |MAMMALS_BALAENOPTERA_ACUTOROSTRATA_TDO2_9767_XP_007184228_1 (1)
+||||  |       |+Node38 (1)
+||||  |       ||MAMMALS_ORCINUS_ORCA_TDO2_9733_XP_004266221_1 (1)
+||||  |      |+Node37 (1)
+||||  |      ||MAMMALS_TUPAIA_CHINENSIS_TDO2_246437_XP_006164255_1 (1)
+||||  |     |+Node36 (1)
+||||  |     |||MAMMALS_CRICETULUS_GRISEUS_TDO2_10029_XP_007613764_1 (1)
+||||  |     ||+Node42 (1)
+||||  |     | |MAMMALS_HETEROCEPHALUS_GLABER_TDO2_10181_XP_004868605_1 (1)
+||||  |    |+Node35 (1)
+||||  |    ||MAMMALS_OCHOTONA_PRINCEPS_TDO2_9978_XP_004591458_1 (3)
+||||  |   |+Node34 (1)
+||||  |   |||MAMMALS_MYOTIS_BRANDTII_TDO2_109478_XP_005860827_1 (1)
+||||  |   ||+Node46 (1)
+||||  |   | |MAMMALS_SOREX_ARANEUS_TDO2_42254_XP_004606216_1 (1)
+||||  |  |+Node33 (1)
+||||  |  |||MAMMALS_GALEOPTERUS_VARIEGATUS_TDO2_482537_XP_008580788_1 (2)
+||||  |  ||+Node49 (1)
+||||  |  | | |MAMMALS_LEPTONYCHOTES_WEDDELLII_TDO2_9713_XP_006727337_1 (1)
+||||  |  | ||+Node52 (2)
+||||  |  | |||MAMMALS_ODOBENUS_ROSMARUS_TDO2_9707_XP_004394300_1 (1)
+||||  |  | |+Node51 (1)
+||||  |  |  ||MAMMALS_MACACA_FASCICULARIS_TDO2_9541_XP_005556209_1 (1)
+||||  |  |  |+Node55 (1)
+||||  |  |   |MAMMALS_TARSIUS_SYRICHTA_9478_XP_008063676_1 (1)
+||||  | |+Node32 (1)
+||||  | |||MAMMALS_ECHINOPS_TELFAIRI_TDO2_9371_XP_004708784_1 (2)
+||||  | ||+Node58 (1)
+||||  | | |MAMMALS_TRICHECHUS_MANATUS_TDO2_9778_XP_004382121_1 (2)
+||||  ||+Node31 (1)
+||||  |||MAMMALS_DASYPUS_NOVEMCINCTUS_TDO2_9361_ENSDNOP00000028774 (1)
+||||  |+Node30 (2)
+||||   |MAMMALS_MONODELPHIS_DOMESTICA_TDO2_13616_ENSMODP00000002068 (2)
+|||+Node5 (1)
+|| |FISH_LEPISOSTEUS_OCULATUS_TDO2_7918_ENSLOCP00000010007 (2)
+|+Node2 (2)
+||FISH_ESOX_LUCIUS_TDO2_8010_XP_010898111_1 (2)
+| |FISH_GASTEROSTEUS_ACULEATUS_TDO2_69293_ENSGACP00000021816 (1)
+||+Node66 (1)
+|||FISH_TAKIFUGU_RUBRIPES_TDO2_31033_ENSTRUP00000040153 (2)
+|+Node65 (1)
+ |     |FISH_HAPLOCHROMIS_BURTONI_8153_XP_005919480_1 (1)
+ |    |+Node74 (1)
+ |    ||FISH_PUNDAMILIA_NYEREREI_303518_XP_005726539_1 (1)
+ |   |+Node73 (1)
+ |   ||FISH_MAYLANDIA_ZEBRA_TDO2_106582_XP_004553681_1 (1)
+ |  |+Node72 (1)
+ |  ||FISH_NEOLAMPROLOGUS_BRICHARDI_32507_XP_006798913_1 (1)
+ | |+Node71 (1)
+ | |||FISH_POECILIA_RETICULATA_TDO2_8081_XP_008419272_1 (2)
+ | ||+Node79 (2)
+ | | |FISH_XIPHOPHORUS_MACULATUS_TDO2_8083_ENSXMAP00000002272 (1)
+ ||+Node70 (1)
+ |||FISH_STEGASTES_PARTITUS_TDO2_144197_XP_008277714_1 (2)
+ |+Node69 (1)
+  |FISH_LARIMICHTHYS_CROCEA_TDO2_215358_XP_010727802_1 (1)
+```
+
+
+### Improving parameter estimates of the adaptive rate class model
+* Log(L) = -18053.87, AIC-c = 36582.13 (234 estimated parameters)
+
+### Testing selected branches for selection
+
+|              Branch               |  Rates   |     Max. dN/dS     | Sites @ EBF>=100 |      Test LRT      |Uncorrected p-value |
+|-----------------------------------|----------|--------------------|------------------|--------------------|--------------------|
+|FISH_DANIO_RERIO_TDO2B_7955_ENSD...|     2    |    0.71 (18.09%)   |       N/A        |        0.00        |       1.00000      |
+|AMPHIBIANS_XENOPUS_SILURANA_TDO2...|     2    |    1.11 ( 8.03%)   |         20       |        0.05        |       0.45764      |
+|FISH_LATIMERIA_CHALUMNAE_TDO2_78...|     2    |    3.40 (14.39%)   |         29       |        7.67        |       0.00761      |
+|MAMMALS_TUPAIA_CHINENSIS_TDO2_24...|     1    |   0.06 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|               Node6               |     2    |  310.68 ( 2.35%)   |          4       |        4.33        |       0.04192      |
+|FISH_LEPISOSTEUS_OCULATUS_TDO2_7...|     2    |    1.01 (13.00%)   |         24       |       -0.00        |       0.50000      |
+|               Node2               |     2    |    2.24 ( 2.57%)   |          6       |        1.04        |       0.23987      |
+|FISH_CYNOGLOSSUS_SEMILAEVIS_TDO2...|     2    |    2.96 ( 2.75%)   |          2       |        0.57        |       0.31569      |
+|FISH_ESOX_LUCIUS_TDO2_8010_XP_01...|     2    |  664.12 ( 3.96%)   |          9       |        7.37        |       0.00887      |
+|               Node3               |     3    |  402.05 ( 2.17%)   |          5       |        5.75        |       0.02020      |
+|FISH_TAKIFUGU_RUBRIPES_TDO2_3103...|     2    |    0.62 (27.03%)   |       N/A        |        0.00        |       1.00000      |
+|              Node79               |     2    |    7.96 ( 1.60%)   |          4       |        2.14        |       0.13147      |
+|REPTILES_ANOLIS_CAROLINENSIS_TDO...|     2    |    0.82 ( 7.69%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_MONODELPHIS_DOMESTICA_TD...|     2    |    0.70 ( 6.85%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_CRICETULUS_GRISEUS_TDO2_...|     1    |   0.09 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_SOREX_ARANEUS_TDO2_42254...|     1    |   0.09 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_OCHOTONA_PRINCEPS_TDO2_9...|     3    |  136.70 ( 1.11%)   |          2       |        4.44        |       0.03955      |
+|MAMMALS_HETEROCEPHALUS_GLABER_TD...|     1    |   0.15 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_TRICHECHUS_MANATUS_TDO2_...|     2    |   27.65 ( 7.43%)   |         18       |       55.85        |       0.00000      |
+|MAMMALS_ECHINOPS_TELFAIRI_TDO2_9...|     2    |    0.95 (23.34%)   |       N/A        |        0.00        |       1.00000      |
+|FISH_GASTEROSTEUS_ACULEATUS_TDO2...|     1    |   0.08 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|               Node8               |     2    |  496.19 ( 2.40%)   |          4       |        4.78        |       0.03320      |
+|              Node72               |     1    |   0.04 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|REPTILES_PYTHON_BIVITTATUS_TDO2_...|     1    |   0.08 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node15               |     1    |   0.09 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node30               |     2    |    2.84 (12.23%)   |         24       |        3.39        |       0.06813      |
+|              Node31               |     1    |   0.06 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node27               |     1    |   0.03 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_MYOTIS_BRANDTII_TDO2_109...|     1    |   0.30 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|REPTILES_ALLIGATOR_MISSISSIPPIEN...|     2    |    0.99 (12.92%)   |       N/A        |        0.00        |       1.00000      |
+|              Node10               |     1    |   0.09 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|               Node5               |     1    |   0.14 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_GALEOPTERUS_VARIEGATUS_T...|     2    |   >1000 ( 1.85%)   |          3       |       13.33        |       0.00043      |
+|              Node11               |     2    |    4.03 ( 2.81%)   |          5       |        2.03        |       0.13993      |
+|FISH_STEGASTES_PARTITUS_TDO2_144...|     2    |   36.78 ( 1.86%)   |          6       |       18.95        |       0.00003      |
+|MAMMALS_MACACA_FASCICULARIS_TDO2...|     1    |   0.17 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_TARSIUS_SYRICHTA_9478_XP...|     1    |   0.14 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|FISH_LARIMICHTHYS_CROCEA_TDO2_21...|     1    |   0.05 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|REPTILES_PELODISCUS_SINENSIS_TDO...|     1    |   0.31 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node37               |     1    |   0.02 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node52               |     2    |    1.85 ( 3.70%)   |          6       |        0.30        |       0.37451      |
+|              Node38               |     1    |   0.15 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|BIRDS_PSEUDOPODOCES_HUMILIS_TDO2...|     1    |   0.28 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_DASYPUS_NOVEMCINCTUS_TDO...|     1    |   0.21 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node22               |     1    |   0.04 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|BIRDS_NIPPONIA_NIPPON_TDO2_12839...|     1    |   0.17 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|BIRDS_HALIAEETUS_LEUCOCEPHALUS_T...|     2    |  114.75 ( 0.29%)   |          1       |        9.97        |       0.00237      |
+|BIRDS_COLUMBA_LIVIA_TDO2_8932_XP...|     1    |   0.06 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node70               |     1    |   0.06 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|FISH_XIPHOPHORUS_MACULATUS_TDO2_...|     1    |   0.21 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node42               |     1    |   0.04 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|FISH_POECILIA_RETICULATA_TDO2_80...|     2    |   20.61 ( 3.09%)   |          8       |        9.00        |       0.00387      |
+|              Node36               |     1    |   0.06 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node58               |     1    |   0.11 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node16               |     1    |   0.02 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node65               |     1    |   0.14 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node12               |     1    |   0.19 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|REPTILES_CHELONIA_MYDAS_TDO2_846...|     1    |   0.22 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node35               |     1    |   0.09 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node32               |     1    |   0.06 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node66               |     1    |   0.21 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_LEPTONYCHOTES_WEDDELLII_...|     1    |   0.10 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node69               |     1    |   0.20 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node55               |     1    |   0.02 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|REPTILES_CHRYSEMYS_PICTA_TDO2_84...|     1    |   0.44 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_BALAENOPTERA_ACUTOROSTRA...|     1    |   0.08 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node34               |     1    |   0.04 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node23               |     1    |   0.04 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node46               |     1    |   0.09 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_ORCINUS_ORCA_TDO2_9733_X...|     1    |   0.29 (100.00%)   |       N/A        |        0.00        |       1.00000      |

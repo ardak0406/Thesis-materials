@@ -1,0 +1,319 @@
+
+Analysis Description
+--------------------
+aBSREL (Adaptive branch-site random effects likelihood) uses an adaptive
+random effects branch-site model framework to test whether each branch
+has evolved under positive selection, using a procedure which infers an
+optimal number of rate categories per branch. v2.2 adds support for
+multiple-hit models. v2.3 adds support for SRV. v2.5 adds support for
+ancestral state reconstruction, identification of sites contributing to
+selection signal, and some diagnostics. v2.6 adds tree reports and ASCII
+art
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree
+
+- __Citation__:  Less Is More: An Adaptive Branch-Site Random Effects Model for
+Efficient Detection of Episodic Diversifying Selection (2015). Mol Biol
+Evol 32 (5): 1342-1353. 
+
+- __Written by__: Sergei L Kosakovsky Pond, Ben Murrell, Steven Weaver and Temple iGEM /
+UCSD viral evolution group
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 2.6
+
+[Advanced option] Bag of little bootstrap alignment resampling rate (permissible range = [0.01,1], default value = 1): blb: 1
+
+>code => Universal
+/home/datamonkey/datamonkey-js-server/app/absrel/output/6a54b2daa3cde1ef15d37473.tre
+/home/datamonkey/datamonkey-js-server/app/absrel/output/6a54b2daa3cde1ef15d37473.tre
+
+>Loaded a multiple sequence alignment with **37** sequences, **461** codons, and **1** partitions from `/home/datamonkey/datamonkey-js-server/app/absrel/output/6a54b2daa3cde1ef15d37473`
+
+>branches => FG
+
+>multiple-hits => None
+
+>srv => No
+
+
+### * Selected 71 branches for testing: `FISH_CYNOGLOSSUS_SEMILAEVIS_KYNU_244447_XP_008322991_1, FISH_ESOX_LUCIUS_KYNU_8010_XP_010889365_1, FISH_LATIMERIA_CHALUMNAE_KYNU_7897_ENSLACP00000023152, REPTILES_ALLIGATOR_MISSISSIPPIENSIS_KYNU_8496_XP_006267057_1, BIRDS_COLUMBA_LIVIA_KYNU_8932_XP_005509016_1, BIRDS_HALIAEETUS_LEUCOCEPHALUS_KYNU_52644_XP_010573490_1, BIRDS_PSEUDOPODOCES_HUMILIS_KYNU_181119_XP_005519655_1, Node16, BIRDS_NIPPONIA_NIPPON_KYNU_128390_XP_009460058_1, Node15, Node13, Node11, REPTILES_CHELONIA_MYDAS_KYNU_8469_XP_007057537_1, REPTILES_CHRYSEMYS_PICTA_KYNU_8479_XP_008170543_1, Node21, REPTILES_PELODISCUS_SINENSIS_KYNU_13735_ENSPSIP00000018582, Node20, Node10, REPTILES_PYTHON_BIVITTATUS_KYNU_176946_XP_007440271_1, Node9, MAMMALS_BALAENOPTERA_ACUTOROSTRATA_KYNU_9767_XP_007183083_1, MAMMALS_BUBALUS_BUBALIS_KYNU_89462_XP_006068218_1, Node31, MAMMALS_PANTHERA_TIGRIS_KYNU_9694_XP_007086470_1, MAMMALS_URSUS_MARITIMUS_KYNU_29073_XP_008694090_1, Node34, Node30, MAMMALS_PTEROPUS_ALECTO_KYNU_9402_XP_006921107_1, Node29, MAMMALS_DASYPUS_NOVEMCINCTUS_KYNU_9361_ENSDNOP00000035046, MAMMALS_ERINACEUS_EUROPAEUS_KYNU_9365_XP_007539730_1, Node38, Node28, MAMMALS_CHINCHILLA_LANIGERA_KYNU_34839_XP_005390834_1, MAMMALS_FUKOMYS_DAMARENSIS_KYNU_885580_XP_010619247_1, Node44, MAMMALS_SAIMIRI_BOLIVIENSIS_KYNU_27679_XP_010328698_1, MAMMALS_TARSIUS_SYRICHTA_9478_XP_008059589_1, Node47, Node43, MAMMALS_GALEOPTERUS_VARIEGATUS_KYNU_482537_XP_008583146_1, Node42, MAMMALS_OCHOTONA_PRINCEPS_KYNU_9978_XP_004577245_1, Node41, Node27, MAMMALS_ECHINOPS_TELFAIRI_KYNU_9371_XP_004703897_1, MAMMALS_TRICHECHUS_MANATUS_KYNU_9778_XP_004375161_1, Node52, Node26, Node8, Node6, AMPHIBIANS_XENOPUS_SILURANA_KYNU_8364_ENSXETP00000059028, Node5, FISH_LEPISOSTEUS_OCULATUS_KYNU_7918_ENSLOCP00000001423, Node4, Node2, FISH_HAPLOCHROMIS_BURTONI_8153_XP_005919998_1, FISH_MAYLANDIA_ZEBRA_KYNU_106582_XP_004563381_1, FISH_PUNDAMILIA_NYEREREI_303518_XP_005738717_1, Node63, Node61, FISH_NEOLAMPROLOGUS_BRICHARDI_32507_XP_006792911_1, Node60, FISH_POECILIA_RETICULATA_KYNU_8081_XP_008395722_1, FISH_XIPHOPHORUS_MACULATUS_KYNU_8083_ENSXMAP00000010599, Node67, Node59, FISH_STEGASTES_PARTITUS_KYNU_144197_XP_008298563_1, Node58, FISH_LARIMICHTHYS_CROCEA_KYNU_215358_XP_010751714_1, Node57`
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths => Yes
+* Log(L) = -20966.29, AIC-c = 42090.83 (79 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  3.698
+
+### Fitting the baseline model with a single dN/dS class per branch, and no site-to-site variation. 
+* Log(L) = -19485.98, AIC-c = 39286.86 (156 estimated parameters)
+* Branch-level non-synonymous/synonymous rate ratio distribution has median  0.21, and 95% of the weight in  0.07 -  0.93
+
+### Determining the optimal number of rate classes per branch using a step up procedure
+
+|              Branch               |  Length  |  Rates   |     Max. dN/dS     |    Log(L)     |     AIC-c     |Best AIC-c so far|
+|-----------------------------------|----------|----------|--------------------|---------------|---------------|-----------------|
+|AMPHIBIANS_XENOPUS_SILURANA_KYNU...|   0.32   |    2     |    0.91 (23.15%)   |   -19468.87   |   39256.71    |    39256.71     |
+|AMPHIBIANS_XENOPUS_SILURANA_KYNU...|   0.32   |    3     |  168.12 ( 7.15%)   |   -19463.94   |   39250.92    |    39250.92     |
+|AMPHIBIANS_XENOPUS_SILURANA_KYNU...|   0.32   |    4     |  114.02 ( 7.11%)   |   -19463.94   |   39255.00    |    39250.92     |
+|FISH_ESOX_LUCIUS_KYNU_8010_XP_01...|   0.29   |    2     |    0.72 (25.21%)   |   -19453.52   |   39234.17    |    39234.17     |
+|FISH_ESOX_LUCIUS_KYNU_8010_XP_01...|   0.29   |    3     |    0.75 ( 0.93%)   |   -19453.52   |   39238.24    |    39234.17     |
+|               Node4               |   0.27   |    2     |   88.76 ( 4.65%)   |   -19439.38   |   39209.96    |    39209.96     |
+|               Node4               |   0.27   |    3     |   >1000 ( 3.65%)   |   -19439.49   |   39214.27    |    39209.96     |
+|               Node5               |   0.25   |    2     |   >1000 ( 4.98%)   |   -19424.07   |   39183.43    |    39183.43     |
+|               Node5               |   0.25   |    3     |   95.78 ( 4.96%)   |   -19424.08   |   39187.51    |    39183.43     |
+|              Node26               |   0.22   |    2     |   41.90 ( 3.58%)   |   -19413.24   |   39165.84    |    39165.84     |
+|              Node26               |   0.22   |    3     |  163.59 ( 3.28%)   |   -19413.28   |   39170.00    |    39165.84     |
+|FISH_CYNOGLOSSUS_SEMILAEVIS_KYNU...|   0.22   |    2     |    1.58 (21.18%)   |   -19392.24   |   39127.93    |    39127.93     |
+|FISH_CYNOGLOSSUS_SEMILAEVIS_KYNU...|   0.22   |    3     |    2.12 (11.82%)   |   -19392.25   |   39132.03    |    39127.93     |
+|FISH_LATIMERIA_CHALUMNAE_KYNU_78...|   0.22   |    2     |    0.79 (32.88%)   |   -19388.52   |   39124.57    |    39124.57     |
+|FISH_LATIMERIA_CHALUMNAE_KYNU_78...|   0.22   |    3     |    0.80 ( 4.41%)   |   -19388.52   |   39128.65    |    39124.57     |
+|FISH_LEPISOSTEUS_OCULATUS_KYNU_7...|   0.20   |    2     |    0.55 (25.35%)   |   -19384.03   |   39119.67    |    39119.67     |
+|FISH_LEPISOSTEUS_OCULATUS_KYNU_7...|   0.20   |    3     |    0.60 ( 0.51%)   |   -19384.03   |   39123.76    |    39119.67     |
+|              Node67               |   0.17   |    2     |    0.74 (28.32%)   |   -19379.16   |   39114.01    |    39114.01     |
+|              Node67               |   0.17   |    3     |   88.49 ( 1.55%)   |   -19378.12   |   39116.01    |    39114.01     |
+|REPTILES_PYTHON_BIVITTATUS_KYNU_...|   0.14   |    2     |   0.14 (100.00%)   |   -19379.16   |   39118.09    |    39114.01     |
+|               Node2               |   0.13   |    2     |   >1000 ( 4.52%)   |   -19362.08   |   39083.94    |    39083.94     |
+|               Node2               |   0.13   |    3     |  188.79 ( 4.44%)   |   -19362.09   |   39088.04    |    39083.94     |
+|               Node6               |   0.13   |    2     |    0.20 (18.96%)   |   -19362.04   |   39087.93    |    39083.94     |
+|MAMMALS_ERINACEUS_EUROPAEUS_KYNU...|   0.10   |    2     |    0.45 (31.73%)   |   -19361.03   |   39085.91    |    39083.94     |
+|MAMMALS_OCHOTONA_PRINCEPS_KYNU_9...|   0.10   |    2     |    0.67 (29.49%)   |   -19360.83   |   39085.51    |    39083.94     |
+|FISH_STEGASTES_PARTITUS_KYNU_144...|   0.10   |    2     |    1.99 (12.26%)   |   -19354.64   |   39073.15    |    39073.15     |
+|FISH_STEGASTES_PARTITUS_KYNU_144...|   0.10   |    3     |   15.24 ( 1.83%)   |   -19354.05   |   39076.04    |    39073.15     |
+|              Node60               |   0.10   |    2     |    1.01 (25.82%)   |   -19352.03   |   39072.00    |    39072.00     |
+|              Node60               |   0.10   |    3     |    1.58 ( 5.13%)   |   -19352.03   |   39076.10    |    39072.00     |
+|               Node9               |   0.09   |    2     |    1.25 (13.37%)   |   -19349.58   |   39071.20    |    39071.20     |
+|               Node9               |   0.09   |    3     |    1.60 ( 6.71%)   |   -19349.58   |   39075.28    |    39071.20     |
+|MAMMALS_ECHINOPS_TELFAIRI_KYNU_9...|   0.09   |    2     |    0.27 ( 0.00%)   |   -19349.58   |   39075.29    |    39071.20     |
+|MAMMALS_DASYPUS_NOVEMCINCTUS_KYN...|   0.09   |    2     |   15.74 ( 4.67%)   |   -19339.01   |   39054.14    |    39054.14     |
+|MAMMALS_DASYPUS_NOVEMCINCTUS_KYN...|   0.09   |    3     |   21.86 ( 3.98%)   |   -19339.04   |   39058.29    |    39054.14     |
+|MAMMALS_GALEOPTERUS_VARIEGATUS_K...|   0.08   |    2     |  398.94 ( 3.67%)   |   -19311.38   |   39002.96    |    39002.96     |
+|MAMMALS_GALEOPTERUS_VARIEGATUS_K...|   0.08   |    3     |   >1000 ( 3.69%)   |   -19311.39   |   39007.08    |    39002.96     |
+|FISH_LARIMICHTHYS_CROCEA_KYNU_21...|   0.07   |    2     |    1.11 (24.74%)   |   -19309.93   |   39004.17    |    39002.96     |
+|MAMMALS_PTEROPUS_ALECTO_KYNU_940...|   0.07   |    2     |    2.24 (19.24%)   |   -19306.35   |   38997.00    |    38997.00     |
+|MAMMALS_PTEROPUS_ALECTO_KYNU_940...|   0.07   |    3     |    2.78 (11.94%)   |   -19306.41   |   39001.21    |    38997.00     |
+|REPTILES_ALLIGATOR_MISSISSIPPIEN...|   0.07   |    2     |    2.80 (10.44%)   |   -19296.64   |   38981.67    |    38981.67     |
+|REPTILES_ALLIGATOR_MISSISSIPPIEN...|   0.07   |    3     |    2.80 (10.39%)   |   -19296.64   |   38985.76    |    38981.67     |
+|              Node13               |   0.07   |    2     |    0.99 (18.97%)   |   -19294.75   |   38981.98    |    38981.67     |
+|MAMMALS_CHINCHILLA_LANIGERA_KYNU...|   0.07   |    2     |    0.63 (23.59%)   |   -19295.96   |   38984.41    |    38981.67     |
+|BIRDS_PSEUDOPODOCES_HUMILIS_KYNU...|   0.06   |    2     |    0.24 ( 0.00%)   |   -19296.64   |   38985.76    |    38981.67     |
+|MAMMALS_TARSIUS_SYRICHTA_9478_XP...|   0.06   |    2     |    1.51 (25.52%)   |   -19294.56   |   38981.61    |    38981.61     |
+|MAMMALS_TARSIUS_SYRICHTA_9478_XP...|   0.06   |    3     |    1.87 (14.34%)   |   -19294.57   |   38985.71    |    38981.61     |
+|              Node44               |   0.06   |    2     |    8.09 ( 3.52%)   |   -19289.50   |   38975.58    |    38975.58     |
+|              Node44               |   0.06   |    3     |    9.18 ( 3.00%)   |   -19289.51   |   38979.69    |    38975.58     |
+|MAMMALS_SAIMIRI_BOLIVIENSIS_KYNU...|   0.05   |    2     |    2.52 ( 8.61%)   |   -19288.30   |   38977.28    |    38975.58     |
+|              Node57               |   0.05   |    2     |   26.16 ( 1.67%)   |   -19285.18   |   38971.04    |    38971.04     |
+|              Node57               |   0.05   |    3     |   22.17 ( 1.97%)   |   -19285.11   |   38974.98    |    38971.04     |
+|REPTILES_PELODISCUS_SINENSIS_KYN...|   0.05   |    2     |   0.15 (100.00%)   |   -19285.18   |   38975.14    |    38971.04     |
+|               Node8               |   0.05   |    2     |    5.70 ( 5.24%)   |   -19282.70   |   38970.17    |    38970.17     |
+|               Node8               |   0.05   |    3     |    6.82 ( 3.94%)   |   -19282.71   |   38974.29    |    38970.17     |
+|MAMMALS_FUKOMYS_DAMARENSIS_KYNU_...|   0.04   |    2     |    1.70 (12.91%)   |   -19281.17   |   38971.21    |    38970.17     |
+|MAMMALS_BUBALUS_BUBALIS_KYNU_894...|   0.04   |    2     |    1.53 (20.49%)   |   -19282.32   |   38973.51    |    38970.17     |
+|MAMMALS_PANTHERA_TIGRIS_KYNU_969...|   0.03   |    2     |    0.33 (90.45%)   |   -19282.69   |   38974.25    |    38970.17     |
+|MAMMALS_URSUS_MARITIMUS_KYNU_290...|   0.03   |    2     |    0.24 (56.86%)   |   -19282.69   |   38974.24    |    38970.17     |
+|MAMMALS_TRICHECHUS_MANATUS_KYNU_...|   0.03   |    2     |    0.23 (35.28%)   |   -19282.70   |   38974.27    |    38970.17     |
+|MAMMALS_BALAENOPTERA_ACUTOROSTRA...|   0.03   |    2     |    0.27 (76.29%)   |   -19282.70   |   38974.27    |    38970.17     |
+|              Node10               |   0.03   |    2     |    0.29 (69.56%)   |   -19282.69   |   38974.25    |    38970.17     |
+|              Node58               |   0.03   |    2     |    9.03 ( 3.70%)   |   -19280.43   |   38969.72    |    38969.72     |
+|              Node58               |   0.03   |    3     |   12.03 ( 2.80%)   |   -19280.35   |   38973.66    |    38969.72     |
+|              Node20               |   0.03   |    2     |    4.51 ( 9.53%)   |   -19277.92   |   38968.80    |    38968.80     |
+|              Node20               |   0.03   |    3     |    5.31 ( 6.89%)   |   -19277.95   |   38972.97    |    38968.80     |
+|FISH_XIPHOPHORUS_MACULATUS_KYNU_...|   0.03   |    2     |    4.56 ( 6.16%)   |   -19274.95   |   38966.95    |    38966.95     |
+|FISH_XIPHOPHORUS_MACULATUS_KYNU_...|   0.03   |    3     |    5.49 ( 4.39%)   |   -19274.94   |   38971.03    |    38966.95     |
+|BIRDS_COLUMBA_LIVIA_KYNU_8932_XP...|   0.03   |    2     |    3.32 ( 9.09%)   |   -19274.03   |   38969.22    |    38966.95     |
+|FISH_POECILIA_RETICULATA_KYNU_80...|   0.03   |    2     |    0.64 (16.65%)   |   -19274.91   |   38970.99    |    38966.95     |
+|              Node31               |   0.02   |    2     |    9.55 ( 4.97%)   |   -19270.22   |   38961.61    |    38961.61     |
+|              Node31               |   0.02   |    3     |   10.90 ( 4.05%)   |   -19270.25   |   38965.75    |    38961.61     |
+|              Node59               |   0.02   |    2     |   >1000 ( 1.32%)   |   -19264.16   |   38953.58    |    38953.58     |
+|              Node59               |   0.02   |    3     |   >1000 ( 1.34%)   |   -19264.16   |   38957.68    |    38953.58     |
+|              Node11               |   0.02   |    2     |    0.29 ( 3.69%)   |   -19264.14   |   38957.64    |    38953.58     |
+|              Node52               |   0.02   |    2     |    3.98 ( 5.33%)   |   -19263.52   |   38956.39    |    38953.58     |
+|              Node34               |   0.02   |    2     |    0.39 (76.21%)   |   -19264.16   |   38957.68    |    38953.58     |
+|BIRDS_NIPPONIA_NIPPON_KYNU_12839...|   0.02   |    2     |    0.23 ( 0.00%)   |   -19264.16   |   38957.69    |    38953.58     |
+|REPTILES_CHELONIA_MYDAS_KYNU_846...|   0.01   |    2     |    0.40 (50.46%)   |   -19264.16   |   38957.69    |    38953.58     |
+|BIRDS_HALIAEETUS_LEUCOCEPHALUS_K...|   0.01   |    2     |   10.44 ( 3.35%)   |   -19261.51   |   38952.37    |    38952.37     |
+|BIRDS_HALIAEETUS_LEUCOCEPHALUS_K...|   0.01   |    3     |   11.52 ( 2.77%)   |   -19261.50   |   38956.46    |    38952.37     |
+|              Node41               |   0.01   |    2     |   13.83 ( 3.51%)   |   -19260.59   |   38954.64    |    38952.37     |
+|REPTILES_CHRYSEMYS_PICTA_KYNU_84...|   0.01   |    2     |    0.92 (47.24%)   |   -19261.50   |   38956.47    |    38952.37     |
+|              Node61               |   0.01   |    2     |    0.26 (26.13%)   |   -19261.51   |   38956.49    |    38952.37     |
+|FISH_NEOLAMPROLOGUS_BRICHARDI_32...|   0.01   |    2     |    0.37 (21.64%)   |   -19261.52   |   38956.51    |    38952.37     |
+|              Node47               |   0.01   |    2     |    0.52 ( 3.95%)   |   -19261.50   |   38956.47    |    38952.37     |
+|              Node21               |   0.01   |    2     |    0.28 (51.54%)   |   -19261.51   |   38956.48    |    38952.37     |
+|              Node15               |   0.01   |    2     |   0.40 (100.00%)   |   -19261.51   |   38956.47    |    38952.37     |
+|              Node38               |   0.01   |    2     |    0.27 ( 6.16%)   |   -19261.32   |   38956.10    |    38952.37     |
+|              Node29               |   0.01   |    2     |    0.47 (47.86%)   |   -19261.41   |   38956.29    |    38952.37     |
+|              Node16               |   0.00   |    2     |    0.78 (10.22%)   |   -19261.51   |   38956.49    |    38952.37     |
+|              Node27               |   0.00   |    2     |    0.27 (31.40%)   |   -19266.52   |   38966.50    |    38952.37     |
+|FISH_PUNDAMILIA_NYEREREI_303518_...|   0.00   |    2     |    0.50 (25.00%)   |   -19261.51   |   38956.48    |    38952.37     |
+|              Node28               |   0.00   |    2     |    0.27 (31.40%)   |   -19273.45   |   38980.36    |    38952.37     |
+|FISH_HAPLOCHROMIS_BURTONI_8153_X...|   0.00   |    2     |    0.53 ( 9.05%)   |   -19261.51   |   38956.47    |    38952.37     |
+|              Node42               |   0.00   |    2     |  142.38 ( 0.80%)   |   -19260.72   |   38954.89    |    38952.37     |
+|              Node43               |   0.00   |    2     |    0.18 (31.40%)   |   -19265.91   |   38965.28    |    38952.37     |
+|FISH_MAYLANDIA_ZEBRA_KYNU_106582...|   0.00   |    2     |    1.00 (25.53%)   |   -19261.51   |   38956.47    |    38952.37     |
+|              Node30               |   0.00   |    2     |  174.19 ( 0.41%)   |   -19259.82   |   38953.10    |    38952.37     |
+|              Node63               |   0.00   |    2     |    0.25 ( 2.00%)   |   -19267.31   |   38968.09    |    38952.37     |
+
+### Rate class analyses summary
+*  1 branches with **3** rate classes
+*  26 branches with **2** rate classes
+*  44 branches with **1** rate classes
+
+### Annotated Tree
+(FISH_CYNOGLOSSUS_SEMILAEVIS_KYNU_244447_XP_008322991_1{2},(FISH_ESOX_LUCIUS_KYNU_8010_XP_010889365_1{2},(((FISH_LATIMERIA_CHALUMNAE_KYNU_7897_ENSLACP00000023152{2},((((REPTILES_ALLIGATOR_MISSISSIPPIENSIS_KYNU_8496_XP_006267057_1{2},(BIRDS_COLUMBA_LIVIA_KYNU_8932_XP_005509016_1{1},((BIRDS_HALIAEETUS_LEUCOCEPHALUS_KYNU_52644_XP_010573490_1{2},BIRDS_PSEUDOPODOCES_HUMILIS_KYNU_181119_XP_005519655_1{1})Node16{1},BIRDS_NIPPONIA_NIPPON_KYNU_128390_XP_009460058_1{1})Node15{1})Node13{1})Node11{1},((REPTILES_CHELONIA_MYDAS_KYNU_8469_XP_007057537_1{1},REPTILES_CHRYSEMYS_PICTA_KYNU_8479_XP_008170543_1{1})Node21{1},REPTILES_PELODISCUS_SINENSIS_KYNU_13735_ENSPSIP00000018582{1})Node20{2})Node10{1},REPTILES_PYTHON_BIVITTATUS_KYNU_176946_XP_007440271_1{1})Node9{2},((((((MAMMALS_BALAENOPTERA_ACUTOROSTRATA_KYNU_9767_XP_007183083_1{1},MAMMALS_BUBALUS_BUBALIS_KYNU_89462_XP_006068218_1{1})Node31{2},(MAMMALS_PANTHERA_TIGRIS_KYNU_9694_XP_007086470_1{1},MAMMALS_URSUS_MARITIMUS_KYNU_29073_XP_008694090_1{1})Node34{1})Node30{1},MAMMALS_PTEROPUS_ALECTO_KYNU_9402_XP_006921107_1{2})Node29{1},(MAMMALS_DASYPUS_NOVEMCINCTUS_KYNU_9361_ENSDNOP00000035046{2},MAMMALS_ERINACEUS_EUROPAEUS_KYNU_9365_XP_007539730_1{1})Node38{1})Node28{1},((((MAMMALS_CHINCHILLA_LANIGERA_KYNU_34839_XP_005390834_1{1},MAMMALS_FUKOMYS_DAMARENSIS_KYNU_885580_XP_010619247_1{1})Node44{2},(MAMMALS_SAIMIRI_BOLIVIENSIS_KYNU_27679_XP_010328698_1{1},MAMMALS_TARSIUS_SYRICHTA_9478_XP_008059589_1{2})Node47{1})Node43{1},MAMMALS_GALEOPTERUS_VARIEGATUS_KYNU_482537_XP_008583146_1{2})Node42{1},MAMMALS_OCHOTONA_PRINCEPS_KYNU_9978_XP_004577245_1{1})Node41{1})Node27{1},(MAMMALS_ECHINOPS_TELFAIRI_KYNU_9371_XP_004703897_1{1},MAMMALS_TRICHECHUS_MANATUS_KYNU_9778_XP_004375161_1{1})Node52{1})Node26{2})Node8{2})Node6{1},AMPHIBIANS_XENOPUS_SILURANA_KYNU_8364_ENSXETP00000059028{3})Node5{2},FISH_LEPISOSTEUS_OCULATUS_KYNU_7918_ENSLOCP00000001423{2})Node4{2})Node2{2},(((((FISH_HAPLOCHROMIS_BURTONI_8153_XP_005919998_1{1},(FISH_MAYLANDIA_ZEBRA_KYNU_106582_XP_004563381_1{1},FISH_PUNDAMILIA_NYEREREI_303518_XP_005738717_1{1})Node63{1})Node61{1},FISH_NEOLAMPROLOGUS_BRICHARDI_32507_XP_006792911_1{1})Node60{2},(FISH_POECILIA_RETICULATA_KYNU_8081_XP_008395722_1{1},FISH_XIPHOPHORUS_MACULATUS_KYNU_8083_ENSXMAP00000010599{2})Node67{2})Node59{2},FISH_STEGASTES_PARTITUS_KYNU_144197_XP_008298563_1{2})Node58{2},FISH_LARIMICHTHYS_CROCEA_KYNU_215358_XP_010751714_1{1})Node57{2})
+
+----
+
+```
+|FISH_CYNOGLOSSUS_SEMILAEVIS_KYNU_244447_XP_008322991_1 (2)
+||FISH_ESOX_LUCIUS_KYNU_8010_XP_010889365_1 (2)
+|+Node2 (2)
+||  |FISH_LATIMERIA_CHALUMNAE_KYNU_7897_ENSLACP00000023152 (2)
+|| |+Node6 (1)
+|| ||   |REPTILES_ALLIGATOR_MISSISSIPPIENSIS_KYNU_8496_XP_006267057_1 (2)
+|| ||  |+Node11 (1)
+|| ||  |||BIRDS_COLUMBA_LIVIA_KYNU_8932_XP_005509016_1 (1)
+|| ||  ||+Node13 (1)
+|| ||  | | |BIRDS_HALIAEETUS_LEUCOCEPHALUS_KYNU_52644_XP_010573490_1 (2)
+|| ||  | ||+Node16 (1)
+|| ||  | |||BIRDS_PSEUDOPODOCES_HUMILIS_KYNU_181119_XP_005519655_1 (1)
+|| ||  | |+Node15 (1)
+|| ||  |  |BIRDS_NIPPONIA_NIPPON_KYNU_128390_XP_009460058_1 (1)
+|| || |+Node10 (1)
+|| || || |REPTILES_CHELONIA_MYDAS_KYNU_8469_XP_007057537_1 (1)
+|| || |||+Node21 (1)
+|| || ||||REPTILES_CHRYSEMYS_PICTA_KYNU_8479_XP_008170543_1 (1)
+|| || ||+Node20 (2)
+|| || | |REPTILES_PELODISCUS_SINENSIS_KYNU_13735_ENSPSIP00000018582 (1)
+|| |||+Node9 (2)
+|| ||||REPTILES_PYTHON_BIVITTATUS_KYNU_176946_XP_007440271_1 (1)
+|| ||+Node8 (2)
+|| | |     |MAMMALS_BALAENOPTERA_ACUTOROSTRATA_KYNU_9767_XP_007183083_1 (1)
+|| | |    |+Node31 (2)
+|| | |    ||MAMMALS_BUBALUS_BUBALIS_KYNU_89462_XP_006068218_1 (1)
+|| | |   |+Node30 (1)
+|| | |   |||MAMMALS_PANTHERA_TIGRIS_KYNU_9694_XP_007086470_1 (1)
+|| | |   ||+Node34 (1)
+|| | |   | |MAMMALS_URSUS_MARITIMUS_KYNU_29073_XP_008694090_1 (1)
+|| | |  |+Node29 (1)
+|| | |  ||MAMMALS_PTEROPUS_ALECTO_KYNU_9402_XP_006921107_1 (2)
+|| | | |+Node28 (1)
+|| | | |||MAMMALS_DASYPUS_NOVEMCINCTUS_KYNU_9361_ENSDNOP00000035046 (2)
+|| | | ||+Node38 (1)
+|| | | | |MAMMALS_ERINACEUS_EUROPAEUS_KYNU_9365_XP_007539730_1 (1)
+|| | ||+Node27 (1)
+|| | |||   |MAMMALS_CHINCHILLA_LANIGERA_KYNU_34839_XP_005390834_1 (1)
+|| | |||  |+Node44 (2)
+|| | |||  ||MAMMALS_FUKOMYS_DAMARENSIS_KYNU_885580_XP_010619247_1 (1)
+|| | ||| |+Node43 (1)
+|| | ||| |||MAMMALS_SAIMIRI_BOLIVIENSIS_KYNU_27679_XP_010328698_1 (1)
+|| | ||| ||+Node47 (1)
+|| | ||| | |MAMMALS_TARSIUS_SYRICHTA_9478_XP_008059589_1 (2)
+|| | ||||+Node42 (1)
+|| | |||||MAMMALS_GALEOPTERUS_VARIEGATUS_KYNU_482537_XP_008583146_1 (2)
+|| | |||+Node41 (1)
+|| | || |MAMMALS_OCHOTONA_PRINCEPS_KYNU_9978_XP_004577245_1 (1)
+|| | |+Node26 (2)
+|| |  ||MAMMALS_ECHINOPS_TELFAIRI_KYNU_9371_XP_004703897_1 (1)
+|| |  |+Node52 (1)
+|| |   |MAMMALS_TRICHECHUS_MANATUS_KYNU_9778_XP_004375161_1 (1)
+|||+Node5 (2)
+||||AMPHIBIANS_XENOPUS_SILURANA_KYNU_8364_ENSXETP00000059028 (3)
+||+Node4 (2)
+| |FISH_LEPISOSTEUS_OCULATUS_KYNU_7918_ENSLOCP00000001423 (2)
+|    |FISH_HAPLOCHROMIS_BURTONI_8153_XP_005919998_1 (1)
+|   |+Node61 (1)
+|   |||FISH_MAYLANDIA_ZEBRA_KYNU_106582_XP_004563381_1 (1)
+|   ||+Node63 (1)
+|   | |FISH_PUNDAMILIA_NYEREREI_303518_XP_005738717_1 (1)
+|  |+Node60 (2)
+|  ||FISH_NEOLAMPROLOGUS_BRICHARDI_32507_XP_006792911_1 (1)
+| |+Node59 (2)
+| |||FISH_POECILIA_RETICULATA_KYNU_8081_XP_008395722_1 (1)
+| ||+Node67 (2)
+| | |FISH_XIPHOPHORUS_MACULATUS_KYNU_8083_ENSXMAP00000010599 (2)
+||+Node58 (2)
+|||FISH_STEGASTES_PARTITUS_KYNU_144197_XP_008298563_1 (2)
+|+Node57 (2)
+ |FISH_LARIMICHTHYS_CROCEA_KYNU_215358_XP_010751714_1 (1)
+```
+
+
+### Improving parameter estimates of the adaptive rate class model
+* Log(L) = -19226.12, AIC-c = 38881.60 (212 estimated parameters)
+
+### Testing selected branches for selection
+
+|              Branch               |  Rates   |     Max. dN/dS     | Sites @ EBF>=100 |      Test LRT      |Uncorrected p-value |
+|-----------------------------------|----------|--------------------|------------------|--------------------|--------------------|
+|AMPHIBIANS_XENOPUS_SILURANA_KYNU...|     3    |  535.24 ( 6.57%)   |         12       |        6.89        |       0.01129      |
+|FISH_ESOX_LUCIUS_KYNU_8010_XP_01...|     2    |    0.63 (26.40%)   |       N/A        |        0.00        |       1.00000      |
+|               Node4               |     2    |  451.99 ( 3.53%)   |          6       |        0.11        |       0.43127      |
+|               Node5               |     2    |  357.30 ( 4.45%)   |          7       |        1.28        |       0.20946      |
+|              Node26               |     2    |   36.39 ( 3.07%)   |          5       |        3.46        |       0.06568      |
+|FISH_CYNOGLOSSUS_SEMILAEVIS_KYNU...|     2    |    1.31 (22.64%)   |         47       |       -0.07        |       0.50000      |
+|FISH_LATIMERIA_CHALUMNAE_KYNU_78...|     2    |    0.67 (33.90%)   |       N/A        |        0.00        |       1.00000      |
+|FISH_LEPISOSTEUS_OCULATUS_KYNU_7...|     2    |    0.44 (28.32%)   |       N/A        |        0.00        |       1.00000      |
+|              Node67               |     2    |    0.62 (29.84%)   |       N/A        |        0.00        |       1.00000      |
+|REPTILES_PYTHON_BIVITTATUS_KYNU_...|     1    |   0.12 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|               Node2               |     2    |  370.62 ( 4.38%)   |          8       |        6.09        |       0.01702      |
+|               Node6               |     1    |   0.03 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_ERINACEUS_EUROPAEUS_KYNU...|     1    |   0.13 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_OCHOTONA_PRINCEPS_KYNU_9...|     1    |   0.17 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|FISH_STEGASTES_PARTITUS_KYNU_144...|     2    |   10.43 ( 2.41%)   |          6       |        1.63        |       0.17316      |
+|              Node60               |     2    |    0.76 (27.16%)   |       N/A        |        0.00        |       1.00000      |
+|               Node9               |     2    |    1.08 (12.35%)   |          1       |       -0.82        |       0.50000      |
+|MAMMALS_ECHINOPS_TELFAIRI_KYNU_9...|     1    |   0.17 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_DASYPUS_NOVEMCINCTUS_KYN...|     2    |   22.02 ( 4.47%)   |          8       |        8.70        |       0.00450      |
+|MAMMALS_GALEOPTERUS_VARIEGATUS_K...|     2    |   >1000 ( 3.68%)   |         11       |       34.66        |       0.00000      |
+|FISH_LARIMICHTHYS_CROCEA_KYNU_21...|     1    |   0.23 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_PTEROPUS_ALECTO_KYNU_940...|     2    |    2.21 (17.64%)   |         31       |        1.45        |       0.19068      |
+|REPTILES_ALLIGATOR_MISSISSIPPIEN...|     2    |    2.59 (10.12%)   |         20       |        2.79        |       0.09328      |
+|              Node13               |     1    |   0.17 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_CHINCHILLA_LANIGERA_KYNU...|     1    |   0.13 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|BIRDS_PSEUDOPODOCES_HUMILIS_KYNU...|     1    |   0.18 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_TARSIUS_SYRICHTA_9478_XP...|     2    |    1.69 (21.98%)   |         30       |       -0.02        |       0.50000      |
+|              Node44               |     2    |    4.75 ( 6.31%)   |          4       |        2.06        |       0.13746      |
+|MAMMALS_SAIMIRI_BOLIVIENSIS_KYNU...|     1    |   0.33 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node57               |     2    |   16.03 ( 1.71%)   |          3       |        1.62        |       0.17437      |
+|REPTILES_PELODISCUS_SINENSIS_KYN...|     1    |   0.15 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|               Node8               |     2    |    7.56 ( 5.28%)   |          3       |        1.50        |       0.18549      |
+|MAMMALS_FUKOMYS_DAMARENSIS_KYNU_...|     1    |   0.19 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_BUBALUS_BUBALIS_KYNU_894...|     1    |   0.38 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_PANTHERA_TIGRIS_KYNU_969...|     1    |   0.31 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_URSUS_MARITIMUS_KYNU_290...|     1    |   0.22 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_TRICHECHUS_MANATUS_KYNU_...|     1    |   0.20 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_BALAENOPTERA_ACUTOROSTRA...|     1    |   0.25 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node10               |     1    |   0.27 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node58               |     2    |  527.31 ( 0.72%)   |          2       |        2.35        |       0.11793      |
+|              Node20               |     2    |    4.37 ( 9.33%)   |          6       |        1.42        |       0.19465      |
+|FISH_XIPHOPHORUS_MACULATUS_KYNU_...|     2    |    3.95 ( 6.02%)   |         10       |        0.82        |       0.27261      |
+|BIRDS_COLUMBA_LIVIA_KYNU_8932_XP...|     1    |   0.37 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|FISH_POECILIA_RETICULATA_KYNU_80...|     1    |   0.10 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node31               |     2    |   10.41 ( 4.42%)   |         10       |        4.94        |       0.03058      |
+|              Node59               |     2    |   >1000 ( 1.36%)   |          5       |        8.47        |       0.00506      |
+|              Node11               |     1    |   0.23 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node52               |     1    |   0.15 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node34               |     1    |   0.33 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|BIRDS_NIPPONIA_NIPPON_KYNU_12839...|     1    |   0.17 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|REPTILES_CHELONIA_MYDAS_KYNU_846...|     1    |   0.31 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|BIRDS_HALIAEETUS_LEUCOCEPHALUS_K...|     2    |   40.19 ( 0.59%)   |          1       |        2.07        |       0.13640      |
+|              Node41               |     1    |   0.24 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|REPTILES_CHRYSEMYS_PICTA_KYNU_84...|     1    |   0.82 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node61               |     1    |   0.06 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|FISH_NEOLAMPROLOGUS_BRICHARDI_32...|     1    |   0.08 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node47               |     1    |   0.38 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node21               |     1    |   0.14 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node15               |     1    |   0.36 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node38               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node29               |     1    |   0.36 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node16               |     1    |   0.07 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node27               |     1    |  >1000 (100.00%)   |       N/A        |       -0.00        |       0.50000      |
+|FISH_PUNDAMILIA_NYEREREI_303518_...|     1    |   0.26 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node28               |     1    |   2.58 (100.00%)   |       N/A        |       -0.62        |       0.50000      |
+|FISH_HAPLOCHROMIS_BURTONI_8153_X...|     1    |   0.38 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node42               |     1    |   0.64 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node43               |     1    |  >1000 (100.00%)   |       N/A        |       -0.16        |       0.50000      |
+|FISH_MAYLANDIA_ZEBRA_KYNU_106582...|     1    |   0.81 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node30               |     1    |   0.43 (100.00%)   |       N/A        |        0.00        |       1.00000      |

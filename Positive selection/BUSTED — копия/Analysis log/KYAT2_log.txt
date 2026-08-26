@@ -1,0 +1,103 @@
+
+Analysis Description
+--------------------
+BUSTED (branch-site unrestricted statistical test of episodic
+diversification) uses a random effects branch-site model fitted jointly
+to all or a subset of tree branches in order to test for alignment-wide
+evidence of episodic diversifying selection. Assuming there is evidence
+of positive selection (i.e. there is an omega > 1), BUSTED will also
+perform a quick evidence-ratio style analysis to explore which
+individual sites may have been subject to selection. Version 2.0 adds
+support for synonymous rate variation, and relaxes the test statistic to
+0.5 (chi^2_0 + chi^2_2). Version 2.1 adds a grid search for the initial
+starting point. Version 2.2 changes the grid search to LHC, and adds an
+initial search phase to use adaptive Nedler-Mead. Version 3.0 implements
+the option for branch-site variation in synonymous substitution rates.
+Version 3.1 adds HMM auto-correlation option for SRV, and binds SRV
+distributions for multiple branch sets. Version 4.0 adds support for
+multiple hits (MH), ancestral state reconstruction saved to JSON, and
+profiling of branch-site level support for selection / multiple hits.
+Version 4.2 adds calculation of MH-attributable fractions of
+substitutions. Version 4.5 adds an 'error absorption' component. Version
+4.6 adds support for MSS-type models. Version 4.7 adds user configurable
+options for the error class. 
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree (optionally annotated
+with {})
+
+- __Citation__: *Gene-wide identification of episodic selection*, Mol Biol Evol.
+32(5):1365-71, *Synonymous Site-to-Site Substitution Rate Variation
+Dramatically Inflates False Positive Rates of Selection Analyses: Ignore
+at Your Own Peril*, Mol Biol Evol. 37(8):2430-2439
+
+- __Written by__: Sergei L Kosakovsky Pond
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 4.7
+
+
+>code => Universal
+/home/datamonkey/datamonkey-js-server/app/busted/output/6a54b051a3cde1ef15d3596b.tre
+/home/datamonkey/datamonkey-js-server/app/busted/output/6a54b051a3cde1ef15d3596b.tre
+
+>Loaded a multiple sequence alignment with **40** sequences, **421** codons, and **1** partitions from `/home/datamonkey/datamonkey-js-server/app/busted/output/6a54b051a3cde1ef15d3596b`
+
+>branches => All
+
+>srv => Yes
+The number omega rate classes to include in the model (permissible range = [1,10], default value = 3, integer): 
+>rates => 3
+
+>multiple-hits => None
+
+>mss => No
+The number alpha rate classes to include in the model [1-10, default 3] (permissible range = [1,10], default value = 3, integer): 
+>syn-rates => 3
+
+>error-sink => No
+The number of points in the initial distributional guess for likelihood fitting (permissible range = [1,10000], default value = 250, integer): 
+>grid-size => 250
+The number of initial random guesses to 'seed' rate values optimization (permissible range = [1,25], default value = 1, integer): 
+>starting-points => 1
+
+
+### Branches to test for selection in the BUSTED analysis
+* Selected 77 branches to test in the BUSTED analysis: `FISH_CYNOGLOSSUS_SEMILAEVIS_AADAT_244447_XP_008321870_1, FISH_DANIO_RERIO_AADAT_7955_ENSDARP00000010437, FISH_LATIMERIA_CHALUMNAE_AADAT_7897_ENSLACP00000003451, REPTILES_ALLIGATOR_MISSISSIPPIENSIS_AADAT_8496_XP_006277551_1, REPTILES_CHELONIA_MYDAS_AADAT_8469_XP_007067118_1, REPTILES_CHRYSEMYS_PICTA_8479_XP_008161010_1, REPTILES_PELODISCUS_SINENSIS_AADAT_13735_ENSPSIP00000010151, Node15, Node13, Node11, REPTILES_PYTHON_BIVITTATUS_AADAT_176946_XP_007441842_1, Node10, BIRDS_COLUMBA_LIVIA_AADAT_8932_XP_005509595_1, BIRDS_HALIAEETUS_LEUCOCEPHALUS_AADAT_52644_XP_010568257_1, BIRDS_NIPPONIA_NIPPON_AADAT_128390_XP_009473070_1, Node22, Node20, BIRDS_FICEDULA_ALBICOLLIS_AADAT_59894_ENSFALP00000011924, BIRDS_PSEUDOPODOCES_HUMILIS_AADAT_181119_XP_005517679_1, Node25, Node19, Node9, MAMMALS_BALAENOPTERA_ACUTOROSTRATA_9767_XP_007192838_1, MAMMALS_PTEROPUS_ALECTO_AADAT_9402_XP_006906381_1, Node37, MAMMALS_LEPTONYCHOTES_WEDDELLII_AADAT_9713_XP_006730179_1, MAMMALS_PANTHERA_TIGRIS_AADAT_9694_XP_007097214_1, Node40, Node36, MAMMALS_ERINACEUS_EUROPAEUS_AADAT_9365_XP_007527291_1, Node35, MAMMALS_GALEOPTERUS_VARIEGATUS_AADAT_482537_XP_008576751_1, MAMMALS_MACACA_FASCICULARIS_EGM_14810_9541_XP_005556359_1, MAMMALS_TARSIUS_SYRICHTA_9478_XP_008058866_1, Node46, Node44, Node34, MAMMALS_TUPAIA_CHINENSIS_AADAT_246437_XP_006141386_1, Node33, MAMMALS_CHINCHILLA_LANIGERA_34839_XP_005373952_1, MAMMALS_NANNOSPALAX_GALILI_AADAT_1026970_XP_008823154_1, Node51, MAMMALS_OCHOTONA_PRINCEPS_AADAT_9978_XP_004579326_1, Node50, Node32, MAMMALS_DASYPUS_NOVEMCINCTUS_AADAT_9361_ENSDNOP00000032387, Node31, MAMMALS_ECHINOPS_TELFAIRI_AADAT_9371_XP_004696179_1, Node30, MAMMALS_SARCOPHILUS_HARRISII_AADAT_9305_ENSSHAP00000010245, Node29, MAMMALS_ORNITHORHYNCHUS_ANATINUS_AADAT_9258_ENSOANP00000011847, Node28, Node8, Node6, FISH_LEPISOSTEUS_OCULATUS_AADAT_7918_ENSLOCP00000015705, Node5, Node3, FISH_ESOX_LUCIUS_AADAT_8010_XP_010896724_1, Node2, FISH_HAPLOCHROMIS_BURTONI_8153_XP_005950016_1, FISH_PUNDAMILIA_NYEREREI_303518_XP_005751129_1, Node67, FISH_MAYLANDIA_ZEBRA_AADAT_106582_XP_004570756_1, Node66, FISH_NEOLAMPROLOGUS_BRICHARDI_32507_XP_006805565_1, Node65, FISH_OREOCHROMIS_NILOTICUS_AADAT_8128_ENSONIP00000016358, Node64, FISH_LARIMICHTHYS_CROCEA_AADAT_215358_XP_010752635_1, Node63, FISH_STEGASTES_PARTITUS_AADAT_144197_XP_008284606_1, Node62, FISH_POECILIA_RETICULATA_AADAT_8081_XP_008426155_1, FISH_XIPHOPHORUS_MACULATUS_AADAT_8083_ENSXMAP00000001904, Node75, Node61`
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths => No
+* Log(L) = -23109.53, AIC-c = 46389.35 (85 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  4.279
+
+### Obtaining the global omega estimate based on relative GTR branch lengths and nucleotide substitution biases
+* Log(L) = -21657.90, AIC-c = 43500.82 (92 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  4.774
+* non-synonymous/synonymous rate ratio for *test* =   0.2095
+
+### Improving branch lengths, nucleotide substitution biases, and global dN/dS ratios under a full codon model
+* Log(L) = -21592.96, AIC-c = 43370.94 (92 estimated parameters)
+* non-synonymous/synonymous rate ratio for *test* =   0.1937
+
+### Performing the full (dN/dS > 1 allowed) branch-site model fit
+* Log(L) = -21210.08, AIC-c = 42623.39 (101 estimated parameters)
+* For *test* branches, the following rate distribution for branch-site combinations was inferred
+
+|          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
+|-----------------------------------|---------------|-------------|-----------------------------------|
+|        Negative selection         |     0.106     |   91.233    |                                   |
+|         Neutral evolution         |     1.000     |    8.375    |                                   |
+|      Diversifying selection       |    88.660     |    0.392    |                                   |
+
+* The following rate distribution for site-to-site **synonymous** rate variation was inferred
+
+|               Rate                | Proportion, % |               Notes               |
+|-----------------------------------|---------------|-----------------------------------|
+|               0.550               |    41.036     |                                   |
+|               1.033               |    42.785     |                                   |
+|               2.054               |    16.179     |                                   |
+
+
+### Performing the constrained (dN/dS > 1 not allowed) model fit

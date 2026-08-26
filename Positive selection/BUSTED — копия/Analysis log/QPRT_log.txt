@@ -1,0 +1,84 @@
+
+Analysis Description
+--------------------
+BUSTED (branch-site unrestricted statistical test of episodic
+diversification) uses a random effects branch-site model fitted jointly
+to all or a subset of tree branches in order to test for alignment-wide
+evidence of episodic diversifying selection. Assuming there is evidence
+of positive selection (i.e. there is an omega > 1), BUSTED will also
+perform a quick evidence-ratio style analysis to explore which
+individual sites may have been subject to selection. Version 2.0 adds
+support for synonymous rate variation, and relaxes the test statistic to
+0.5 (chi^2_0 + chi^2_2). Version 2.1 adds a grid search for the initial
+starting point. Version 2.2 changes the grid search to LHC, and adds an
+initial search phase to use adaptive Nedler-Mead. Version 3.0 implements
+the option for branch-site variation in synonymous substitution rates.
+Version 3.1 adds HMM auto-correlation option for SRV, and binds SRV
+distributions for multiple branch sets. Version 4.0 adds support for
+multiple hits (MH), ancestral state reconstruction saved to JSON, and
+profiling of branch-site level support for selection / multiple hits.
+Version 4.2 adds calculation of MH-attributable fractions of
+substitutions. Version 4.5 adds an 'error absorption' component. Version
+4.6 adds support for MSS-type models. Version 4.7 adds user configurable
+options for the error class. 
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree (optionally annotated
+with {})
+
+- __Citation__: *Gene-wide identification of episodic selection*, Mol Biol Evol.
+32(5):1365-71, *Synonymous Site-to-Site Substitution Rate Variation
+Dramatically Inflates False Positive Rates of Selection Analyses: Ignore
+at Your Own Peril*, Mol Biol Evol. 37(8):2430-2439
+
+- __Written by__: Sergei L Kosakovsky Pond
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 4.7
+
+
+>code => Universal
+/home/datamonkey/datamonkey-js-server/app/busted/output/6a54b102a3cde1ef15d361d3.tre
+/home/datamonkey/datamonkey-js-server/app/busted/output/6a54b102a3cde1ef15d361d3.tre
+
+>Loaded a multiple sequence alignment with **35** sequences, **292** codons, and **1** partitions from `/home/datamonkey/datamonkey-js-server/app/busted/output/6a54b102a3cde1ef15d361d3`
+
+>branches => All
+
+>srv => Yes
+The number omega rate classes to include in the model (permissible range = [1,10], default value = 3, integer): 
+>rates => 3
+
+>multiple-hits => None
+
+>mss => No
+The number alpha rate classes to include in the model [1-10, default 3] (permissible range = [1,10], default value = 3, integer): 
+>syn-rates => 3
+
+>error-sink => No
+The number of points in the initial distributional guess for likelihood fitting (permissible range = [1,10000], default value = 250, integer): 
+>grid-size => 250
+The number of initial random guesses to 'seed' rate values optimization (permissible range = [1,25], default value = 1, integer): 
+>starting-points => 1
+
+
+### Branches to test for selection in the BUSTED analysis
+* Selected 67 branches to test in the BUSTED analysis: `FISH_CYNOGLOSSUS_SEMILAEVIS_QPRT_244447_XP_008316080_1, FISH_ESOX_LUCIUS_QPRT_8010_XP_010887676_1, FISH_LEPISOSTEUS_OCULATUS_QPRT_7918_ENSLOCP00000003250, Node6, FISH_LATIMERIA_CHALUMNAE_QPRT_7897_ENSLACP00000002514, AMPHIBIANS_XENOPUS_SILURANA_QPRT_8364_ENSXETP00000040992, REPTILES_ALLIGATOR_MISSISSIPPIENSIS_QPRT_1_8496_XP_006262877_1, BIRDS_PSEUDOPODOCES_HUMILIS_QPRT_181119_XP_005533880_1, Node15, MAMMALS_BALAENOPTERA_ACUTOROSTRATA_QPRT_9767_XP_007186460_1, MAMMALS_BOS_MUTUS_QPRT_72004_XP_005888895_1, Node22, MAMMALS_PTEROPUS_ALECTO_QPRT_9402_XP_006914295_1, Node21, MAMMALS_DASYPUS_NOVEMCINCTUS_9361_ENSDNOP00000025532, MAMMALS_ELEPHANTULUS_EDWARDII_28737_XP_006896674_1, MAMMALS_TRICHECHUS_MANATUS_QPRT_9778_XP_004386821_1, Node29, Node27, MAMMALS_GALEOPTERUS_VARIEGATUS_QPRT_482537_XP_008584766_1, MAMMALS_TUPAIA_CHINENSIS_QPRT_246437_XP_006148336_1, Node33, MAMMALS_MESOCRICETUS_AURATUS_QPRT_10036_XP_005063444_1, MAMMALS_OCHOTONA_PRINCEPS_QPRT_9978_XP_004587194_1, Node38, MAMMALS_OCTODON_DEGUS_QPRT_10160_XP_004623210_1, Node37, MAMMALS_PAN_PANISCUS_MAZ_9597_XP_008959847_1, MAMMALS_SAIMIRI_BOLIVIENSIS_QPRT_27679_XP_010338990_1, Node42, Node36, Node32, Node26, Node20, MAMMALS_ODOBENUS_ROSMARUS_QPRT_9707_XP_004397270_1, MAMMALS_URSUS_MARITIMUS_QPRT_29073_XP_008683513_1, Node45, Node19, MAMMALS_ERINACEUS_EUROPAEUS_QPRT_9365_XP_007536242_1, Node18, Node14, REPTILES_ANOLIS_CAROLINENSIS_QPRT_28377_ENSACAP00000010539, REPTILES_PYTHON_BIVITTATUS_QPRT_176946_XP_007432297_1, Node50, REPTILES_CHELONIA_MYDAS_8469_XP_007071206_1, REPTILES_CHRYSEMYS_PICTA_QPRT_8479_XP_008174263_1, Node53, Node49, Node13, Node11, Node9, Node5, FISH_STEGASTES_PARTITUS_QPRT_144197_XP_008292521_1, Node4, FISH_POECILIA_RETICULATA_QPRT_8081_XP_008404967_1, Node3, FISH_HAPLOCHROMIS_BURTONI_8153_XP_005919283_1, FISH_MAYLANDIA_ZEBRA_QPRT_106582_XP_004538817_1, FISH_PUNDAMILIA_NYEREREI_303518_XP_005737460_1, Node62, Node60, FISH_OREOCHROMIS_NILOTICUS_QPRT_8128_ENSONIP00000004121, Node59, FISH_NEOLAMPROLOGUS_BRICHARDI_32507_XP_006799688_1, Node58, Node2, FISH_LARIMICHTHYS_CROCEA_QPRT_215358_XP_010730959_1`
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths => No
+* Log(L) = -17876.06, AIC-c = 35902.50 (75 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  5.968
+
+### Obtaining the global omega estimate based on relative GTR branch lengths and nucleotide substitution biases
+* Log(L) = -16833.99, AIC-c = 33833.33 (82 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  7.185
+* non-synonymous/synonymous rate ratio for *test* =   0.1951
+
+### Improving branch lengths, nucleotide substitution biases, and global dN/dS ratios under a full codon model
+* Log(L) = -16783.25, AIC-c = 33731.85 (82 estimated parameters)
+* non-synonymous/synonymous rate ratio for *test* =   0.1726
+
+### Performing the full (dN/dS > 1 allowed) branch-site model fit

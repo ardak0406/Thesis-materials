@@ -1,0 +1,333 @@
+
+Analysis Description
+--------------------
+aBSREL (Adaptive branch-site random effects likelihood) uses an adaptive
+random effects branch-site model framework to test whether each branch
+has evolved under positive selection, using a procedure which infers an
+optimal number of rate categories per branch. v2.2 adds support for
+multiple-hit models. v2.3 adds support for SRV. v2.5 adds support for
+ancestral state reconstruction, identification of sites contributing to
+selection signal, and some diagnostics. v2.6 adds tree reports and ASCII
+art
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree
+
+- __Citation__:  Less Is More: An Adaptive Branch-Site Random Effects Model for
+Efficient Detection of Episodic Diversifying Selection (2015). Mol Biol
+Evol 32 (5): 1342-1353. 
+
+- __Written by__: Sergei L Kosakovsky Pond, Ben Murrell, Steven Weaver and Temple iGEM /
+UCSD viral evolution group
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 2.6
+
+[Advanced option] Bag of little bootstrap alignment resampling rate (permissible range = [0.01,1], default value = 1): blb: 1
+
+>code => Universal
+/home/datamonkey/datamonkey-js-server/app/absrel/output/6a54b211a3cde1ef15d36c47.tre
+/home/datamonkey/datamonkey-js-server/app/absrel/output/6a54b211a3cde1ef15d36c47.tre
+
+>Loaded a multiple sequence alignment with **42** sequences, **465** codons, and **1** partitions from `/home/datamonkey/datamonkey-js-server/app/absrel/output/6a54b211a3cde1ef15d36c47`
+
+>branches => FG
+
+>multiple-hits => None
+
+>srv => No
+
+
+### * Selected 81 branches for testing: `FISH_CYNOGLOSSUS_SEMILAEVIS_KMO_244447_XP_008320381_1, FISH_DANIO_RERIO_KMO_7955_ENSDARP00000024051, FISH_LATIMERIA_CHALUMNAE_KMO_7897_ENSLACP00000009168, REPTILES_ALLIGATOR_MISSISSIPPIENSIS_KMO_8496_XP_006258411_1, REPTILES_CHELONIA_MYDAS_KMO_8469_XP_007069222_1, REPTILES_CHRYSEMYS_PICTA_KMO_8479_XP_008173567_1, Node15, REPTILES_PELODISCUS_SINENSIS_KMO_13735_ENSPSIP00000010333, Node14, BIRDS_COLUMBA_LIVIA_KMO_8932_XP_005515080_1, BIRDS_HALIAEETUS_LEUCOCEPHALUS_KMO_52644_XP_010565276_1, BIRDS_NIPPONIA_NIPPON_KMO_128390_XP_009464445_1, Node22, Node20, BIRDS_FICEDULA_ALBICOLLIS_KMO_59894_ENSFALP00000013905, BIRDS_PSEUDOPODOCES_HUMILIS_KMO_181119_XP_005528981_1, Node25, Node19, Node13, Node11, REPTILES_ANOLIS_CAROLINENSIS_KMO_28377_ENSACAP00000009283, REPTILES_PYTHON_BIVITTATUS_KMO_176946_XP_007434981_1, Node28, Node10, MAMMALS_CHINCHILLA_LANIGERA_KMO_34839_XP_005374878_1, MAMMALS_HETEROCEPHALUS_GLABER_KMO_10181_XP_004853528_1, Node38, MAMMALS_GALEOPTERUS_VARIEGATUS_KMO_482537_XP_008573477_1, MAMMALS_OCHOTONA_PRINCEPS_KMO_9978_XP_004578916_1, Node41, Node37, MAMMALS_PAN_PANISCUS_KMO_9597_XP_003824577_1, MAMMALS_TARSIUS_SYRICHTA_9478_XP_008062084_1, Node45, MAMMALS_TUPAIA_CHINENSIS_KMO_246437_XP_006142427_1, Node44, Node36, MAMMALS_LEPTONYCHOTES_WEDDELLII_KMO_9713_XP_006746747_1, MAMMALS_PANTHERA_TIGRIS_KMO_9694_XP_007077101_1, Node51, MAMMALS_MYOTIS_BRANDTII_KMO_109478_XP_005884150_1, Node50, MAMMALS_ORCINUS_ORCA_KMO_9733_XP_004283535_1, MAMMALS_SOREX_ARANEUS_KMO_42254_XP_004619072_1, Node55, Node49, Node35, MAMMALS_CHRYSOCHLORIS_ASIATICA_KMO_185453_XP_006868642_1, MAMMALS_ORYCTEROPUS_AFER_KMO_9818_XP_007940908_1, Node58, Node34, MAMMALS_DASYPUS_NOVEMCINCTUS_KMO_9361_ENSDNOP00000005818, Node33, MAMMALS_ORNITHORHYNCHUS_ANATINUS_KMO_9258_ENSOANP00000016301, Node32, MAMMALS_MACROPUS_EUGENII_KMO_9315_ENSMEUP00000004703, Node31, Node9, Node7, FISH_LEPISOSTEUS_OCULATUS_KMO_7918_ENSLOCP00000020480, Node6, Node4, FISH_ESOX_LUCIUS_KMO_8010_XP_010862162_1, Node3, FISH_GASTEROSTEUS_ACULEATUS_KMO_69293_ENSGACP00000003896, FISH_TAKIFUGU_RUBRIPES_KMO_31033_ENSTRUP00000028827, Node67, FISH_HAPLOCHROMIS_BURTONI_8153_XP_005933658_1, FISH_MAYLANDIA_ZEBRA_KMO_106582_XP_004554593_1, FISH_PUNDAMILIA_NYEREREI_303518_XP_005735149_1, Node75, Node73, FISH_NEOLAMPROLOGUS_BRICHARDI_32507_XP_006799102_1, Node72, FISH_STEGASTES_PARTITUS_KMO_144197_XP_008278392_1, Node71, FISH_LARIMICHTHYS_CROCEA_KMO_215358_XP_010732891_1, Node70, Node66, Node2, FISH_POECILIA_RETICULATA_KMO_8081_XP_008428219_1`
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths => Yes
+* Log(L) = -27021.03, AIC-c = 54220.33 (89 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  4.578
+
+### Fitting the baseline model with a single dN/dS class per branch, and no site-to-site variation. 
+* Log(L) = -24962.10, AIC-c = 50279.43 (176 estimated parameters)
+* Branch-level non-synonymous/synonymous rate ratio distribution has median  0.20, and 95% of the weight in  0.06 - 10000000000.00
+
+### Determining the optimal number of rate classes per branch using a step up procedure
+
+|              Branch               |  Length  |  Rates   |     Max. dN/dS     |    Log(L)     |     AIC-c     |Best AIC-c so far|
+|-----------------------------------|----------|----------|--------------------|---------------|---------------|-----------------|
+|MAMMALS_ORNITHORHYNCHUS_ANATINUS...|   0.32   |    2     |    0.61 (27.99%)   |   -24952.91   |   50265.10    |    50265.10     |
+|MAMMALS_ORNITHORHYNCHUS_ANATINUS...|   0.32   |    3     |    0.61 (25.19%)   |   -24952.91   |   50269.18    |    50265.10     |
+|FISH_DANIO_RERIO_KMO_7955_ENSDAR...|   0.29   |    2     |    0.98 (17.81%)   |   -24935.32   |   50234.01    |    50234.01     |
+|FISH_DANIO_RERIO_KMO_7955_ENSDAR...|   0.29   |    3     |  137.19 ( 5.51%)   |   -24931.67   |   50230.78    |    50230.78     |
+|FISH_DANIO_RERIO_KMO_7955_ENSDAR...|   0.29   |    4     |  366.59 ( 5.50%)   |   -24931.67   |   50234.86    |    50230.78     |
+|               Node7               |   0.27   |    2     |  265.54 ( 5.54%)   |   -24912.61   |   50196.74    |    50196.74     |
+|               Node7               |   0.27   |    3     |  160.24 ( 5.53%)   |   -24912.61   |   50200.82    |    50196.74     |
+|               Node6               |   0.23   |    2     |    1.96 ( 8.31%)   |   -24895.58   |   50166.76    |    50166.76     |
+|               Node6               |   0.23   |    3     |   27.69 ( 3.42%)   |   -24895.51   |   50170.70    |    50166.76     |
+|FISH_LATIMERIA_CHALUMNAE_KMO_789...|   0.20   |    2     |    1.03 (19.16%)   |   -24884.70   |   50149.07    |    50149.07     |
+|FISH_LATIMERIA_CHALUMNAE_KMO_789...|   0.20   |    3     |    1.05 (12.69%)   |   -24884.70   |   50153.15    |    50149.07     |
+|FISH_ESOX_LUCIUS_KMO_8010_XP_010...|   0.20   |    2     |    0.73 (22.30%)   |   -24878.25   |   50140.25    |    50140.25     |
+|FISH_ESOX_LUCIUS_KMO_8010_XP_010...|   0.20   |    3     |  116.37 ( 2.80%)   |   -24876.16   |   50140.15    |    50140.15     |
+|FISH_ESOX_LUCIUS_KMO_8010_XP_010...|   0.20   |    4     |  122.93 ( 2.55%)   |   -24876.21   |   50144.34    |    50140.15     |
+|FISH_TAKIFUGU_RUBRIPES_KMO_31033...|   0.18   |    2     |    0.65 (29.73%)   |   -24872.58   |   50137.07    |    50137.07     |
+|FISH_TAKIFUGU_RUBRIPES_KMO_31033...|   0.18   |    3     |  150.34 ( 1.70%)   |   -24870.81   |   50137.62    |    50137.07     |
+|FISH_CYNOGLOSSUS_SEMILAEVIS_KMO_...|   0.17   |    2     |    0.53 (35.65%)   |   -24870.31   |   50136.61    |    50136.61     |
+|FISH_CYNOGLOSSUS_SEMILAEVIS_KMO_...|   0.17   |    3     |    0.60 ( 0.71%)   |   -24870.31   |   50140.69    |    50136.61     |
+|              Node31               |   0.16   |    2     |    0.83 (26.24%)   |   -24867.40   |   50134.87    |    50134.87     |
+|              Node31               |   0.16   |    3     |    0.83 (25.72%)   |   -24867.40   |   50138.95    |    50134.87     |
+|FISH_POECILIA_RETICULATA_KMO_808...|   0.15   |    2     |    0.25 (33.74%)   |   -24866.96   |   50138.07    |    50134.87     |
+|REPTILES_ANOLIS_CAROLINENSIS_KMO...|   0.13   |    2     |   12.13 ( 5.22%)   |   -24856.06   |   50116.27    |    50116.27     |
+|REPTILES_ANOLIS_CAROLINENSIS_KMO...|   0.13   |    3     |   12.48 ( 5.00%)   |   -24856.03   |   50120.30    |    50116.27     |
+|               Node9               |   0.13   |    2     |    3.40 ( 9.49%)   |   -24845.13   |   50098.51    |    50098.51     |
+|               Node9               |   0.13   |    3     |    3.42 ( 9.45%)   |   -24845.13   |   50102.59    |    50098.51     |
+|              Node28               |   0.12   |    2     |    0.85 (19.58%)   |   -24842.75   |   50097.83    |    50097.83     |
+|              Node28               |   0.12   |    3     |    0.86 (18.91%)   |   -24842.75   |   50101.92    |    50097.83     |
+|FISH_LEPISOSTEUS_OCULATUS_KMO_79...|   0.12   |    2     |  329.70 ( 3.45%)   |   -24830.21   |   50076.83    |    50076.83     |
+|FISH_LEPISOSTEUS_OCULATUS_KMO_79...|   0.12   |    3     |  192.96 ( 3.36%)   |   -24830.22   |   50080.95    |    50076.83     |
+|MAMMALS_MYOTIS_BRANDTII_KMO_1094...|   0.12   |    2     |    0.52 (30.43%)   |   -24828.45   |   50077.41    |    50076.83     |
+|REPTILES_PYTHON_BIVITTATUS_KMO_1...|   0.12   |    2     |    1.29 (16.88%)   |   -24823.91   |   50068.32    |    50068.32     |
+|REPTILES_PYTHON_BIVITTATUS_KMO_1...|   0.12   |    3     |    1.28 (16.80%)   |   -24823.91   |   50072.41    |    50068.32     |
+|              Node19               |   0.12   |    2     |   75.10 ( 1.33%)   |   -24820.84   |   50066.26    |    50066.26     |
+|              Node19               |   0.12   |    3     |   78.92 ( 1.28%)   |   -24820.88   |   50070.43    |    50066.26     |
+|REPTILES_PELODISCUS_SINENSIS_KMO...|   0.11   |    2     |    1.67 (14.40%)   |   -24814.07   |   50056.82    |    50056.82     |
+|REPTILES_PELODISCUS_SINENSIS_KMO...|   0.11   |    3     |    2.15 ( 8.25%)   |   -24814.11   |   50060.98    |    50056.82     |
+|REPTILES_ALLIGATOR_MISSISSIPPIEN...|   0.11   |    2     |    2.72 (11.47%)   |   -24796.97   |   50026.71    |    50026.71     |
+|REPTILES_ALLIGATOR_MISSISSIPPIEN...|   0.11   |    3     |    3.96 ( 6.70%)   |   -24796.89   |   50030.63    |    50026.71     |
+|MAMMALS_LEPTONYCHOTES_WEDDELLII_...|   0.10   |    2     |   47.48 (11.66%)   |   -24712.11   |   49861.07    |    49861.07     |
+|MAMMALS_LEPTONYCHOTES_WEDDELLII_...|   0.10   |    3     |   88.64 ( 9.51%)   |   -24710.17   |   49861.28    |    49861.07     |
+|MAMMALS_TARSIUS_SYRICHTA_9478_XP...|   0.10   |    2     |   22.15 ( 5.12%)   |   -24692.90   |   49826.74    |    49826.74     |
+|MAMMALS_TARSIUS_SYRICHTA_9478_XP...|   0.10   |    3     |   22.62 ( 5.03%)   |   -24692.90   |   49830.84    |    49826.74     |
+|               Node3               |   0.10   |    2     |    2.00 ( 9.82%)   |   -24687.34   |   49819.71    |    49819.71     |
+|               Node3               |   0.10   |    3     |    1.98 ( 9.83%)   |   -24687.34   |   49823.80    |    49819.71     |
+|MAMMALS_MACROPUS_EUGENII_KMO_931...|   0.10   |    2     |    0.25 ( 0.00%)   |   -24687.29   |   49823.72    |    49819.71     |
+|MAMMALS_SOREX_ARANEUS_KMO_42254_...|   0.09   |    2     |    0.25 ( 0.00%)   |   -24687.34   |   49823.80    |    49819.71     |
+|              Node14               |   0.09   |    2     |    2.98 ( 7.20%)   |   -24679.27   |   49807.66    |    49807.66     |
+|              Node14               |   0.09   |    3     |   18.58 ( 1.48%)   |   -24678.40   |   49810.02    |    49807.66     |
+|FISH_GASTEROSTEUS_ACULEATUS_KMO_...|   0.09   |    2     |    1.80 (20.35%)   |   -24673.15   |   49799.52    |    49799.52     |
+|FISH_GASTEROSTEUS_ACULEATUS_KMO_...|   0.09   |    3     |    1.81 (20.21%)   |   -24673.15   |   49803.62    |    49799.52     |
+|              Node72               |   0.08   |    2     |    0.62 (22.76%)   |   -24672.05   |   49801.42    |    49799.52     |
+|MAMMALS_GALEOPTERUS_VARIEGATUS_K...|   0.07   |    2     |    0.27 ( 0.00%)   |   -24673.15   |   49803.61    |    49799.52     |
+|MAMMALS_TUPAIA_CHINENSIS_KMO_246...|   0.07   |    2     |    1.38 (16.75%)   |   -24669.45   |   49796.22    |    49796.22     |
+|MAMMALS_TUPAIA_CHINENSIS_KMO_246...|   0.07   |    3     |   15.89 ( 1.23%)   |   -24668.57   |   49798.55    |    49796.22     |
+|MAMMALS_OCHOTONA_PRINCEPS_KMO_99...|   0.07   |    2     |    0.68 (29.70%)   |   -24668.41   |   49798.23    |    49796.22     |
+|MAMMALS_CHRYSOCHLORIS_ASIATICA_K...|   0.07   |    2     |    0.81 (31.94%)   |   -24668.37   |   49798.15    |    49796.22     |
+|FISH_LARIMICHTHYS_CROCEA_KMO_215...|   0.07   |    2     |   30.36 ( 1.76%)   |   -24658.85   |   49779.11    |    49779.11     |
+|FISH_LARIMICHTHYS_CROCEA_KMO_215...|   0.07   |    3     |  213.14 ( 1.56%)   |   -24658.57   |   49782.66    |    49779.11     |
+|FISH_STEGASTES_PARTITUS_KMO_1441...|   0.07   |    2     |    1.48 ( 8.29%)   |   -24656.41   |   49778.33    |    49778.33     |
+|FISH_STEGASTES_PARTITUS_KMO_1441...|   0.07   |    3     |    1.95 ( 4.49%)   |   -24656.39   |   49782.38    |    49778.33     |
+|              Node33               |   0.06   |    2     |    6.00 ( 8.57%)   |   -24645.28   |   49760.17    |    49760.17     |
+|              Node33               |   0.06   |    3     |    7.50 ( 6.35%)   |   -24645.32   |   49764.33    |    49760.17     |
+|MAMMALS_DASYPUS_NOVEMCINCTUS_KMO...|   0.06   |    2     |    9.57 ( 3.95%)   |   -24636.16   |   49746.02    |    49746.02     |
+|MAMMALS_DASYPUS_NOVEMCINCTUS_KMO...|   0.06   |    3     |   11.58 ( 3.24%)   |   -24636.19   |   49750.18    |    49746.02     |
+|MAMMALS_CHINCHILLA_LANIGERA_KMO_...|   0.06   |    2     |   26.02 ( 1.35%)   |   -24630.44   |   49738.69    |    49738.69     |
+|MAMMALS_CHINCHILLA_LANIGERA_KMO_...|   0.06   |    3     |  127.49 ( 1.07%)   |   -24630.05   |   49742.00    |    49738.69     |
+|              Node11               |   0.06   |    2     |    1.45 ( 6.28%)   |   -24630.17   |   49742.23    |    49738.69     |
+|MAMMALS_PAN_PANISCUS_KMO_9597_XP...|   0.05   |    2     |    4.80 ( 6.77%)   |   -24623.60   |   49729.11    |    49729.11     |
+|MAMMALS_PAN_PANISCUS_KMO_9597_XP...|   0.05   |    3     |    6.09 ( 4.78%)   |   -24623.61   |   49733.22    |    49729.11     |
+|               Node4               |   0.05   |    2     |    3.26 ( 6.63%)   |   -24620.83   |   49727.66    |    49727.66     |
+|               Node4               |   0.05   |    3     |    3.27 ( 6.68%)   |   -24620.83   |   49731.76    |    49727.66     |
+|BIRDS_HALIAEETUS_LEUCOCEPHALUS_K...|   0.05   |    2     |  100.08 ( 3.22%)   |   -24594.70   |   49679.50    |    49679.50     |
+|BIRDS_HALIAEETUS_LEUCOCEPHALUS_K...|   0.05   |    3     |  113.07 ( 3.08%)   |   -24594.76   |   49683.72    |    49679.50     |
+|              Node32               |   0.05   |    2     |  296.47 ( 2.45%)   |   -24584.89   |   49663.98    |    49663.98     |
+|              Node32               |   0.05   |    3     |  524.50 ( 2.36%)   |   -24584.83   |   49667.95    |    49663.98     |
+|MAMMALS_PANTHERA_TIGRIS_KMO_9694...|   0.05   |    2     |    8.69 ( 8.89%)   |   -24576.45   |   49651.21    |    49651.21     |
+|MAMMALS_PANTHERA_TIGRIS_KMO_9694...|   0.05   |    3     |   10.75 ( 6.93%)   |   -24576.41   |   49655.23    |    49651.21     |
+|              Node38               |   0.05   |    2     |    0.48 ( 0.00%)   |   -24576.45   |   49655.31    |    49651.21     |
+|REPTILES_CHELONIA_MYDAS_KMO_8469...|   0.04   |    2     |  287.63 ( 6.36%)   |   -24535.59   |   49573.58    |    49573.58     |
+|REPTILES_CHELONIA_MYDAS_KMO_8469...|   0.04   |    3     |   >1000 ( 4.66%)   |   -24529.41   |   49565.32    |    49565.32     |
+|REPTILES_CHELONIA_MYDAS_KMO_8469...|   0.04   |    4     |   >1000 ( 4.62%)   |   -24529.41   |   49569.43    |    49565.32     |
+|BIRDS_COLUMBA_LIVIA_KMO_8932_XP_...|   0.04   |    2     |   0.12 (100.00%)   |   -24529.40   |   49569.42    |    49565.32     |
+|MAMMALS_ORYCTEROPUS_AFER_KMO_981...|   0.04   |    2     |    1.64 (14.29%)   |   -24528.01   |   49566.64    |    49565.32     |
+|MAMMALS_ORCINUS_ORCA_KMO_9733_XP...|   0.04   |    2     |    0.96 (27.36%)   |   -24528.79   |   49568.20    |    49565.32     |
+|              Node10               |   0.04   |    2     |    6.19 ( 8.07%)   |   -24526.98   |   49564.57    |    49564.57     |
+|              Node10               |   0.04   |    3     |    7.17 ( 6.15%)   |   -24527.00   |   49568.73    |    49564.57     |
+|BIRDS_FICEDULA_ALBICOLLIS_KMO_59...|   0.04   |    2     |    0.06 (82.77%)   |   -24526.98   |   49568.68    |    49564.57     |
+|MAMMALS_HETEROCEPHALUS_GLABER_KM...|   0.04   |    2     |    0.44 (59.11%)   |   -24526.97   |   49568.67    |    49564.57     |
+|REPTILES_CHRYSEMYS_PICTA_KMO_847...|   0.03   |    2     |  302.24 ( 1.04%)   |   -24519.82   |   49554.35    |    49554.35     |
+|REPTILES_CHRYSEMYS_PICTA_KMO_847...|   0.03   |    3     |  316.74 ( 1.02%)   |   -24519.79   |   49558.40    |    49554.35     |
+|              Node25               |   0.03   |    2     |    0.16 (99.96%)   |   -24519.80   |   49558.44    |    49554.35     |
+|BIRDS_NIPPONIA_NIPPON_KMO_128390...|   0.03   |    2     |    0.37 ( 0.00%)   |   -24519.80   |   49558.42    |    49554.35     |
+|              Node66               |   0.03   |    2     |    2.37 ( 7.95%)   |   -24519.68   |   49558.19    |    49554.35     |
+|              Node15               |   0.02   |    2     |    1.57 (34.29%)   |   -24516.76   |   49552.34    |    49552.34     |
+|              Node15               |   0.02   |    3     |    2.04 (17.75%)   |   -24516.76   |   49556.45    |    49552.34     |
+|BIRDS_PSEUDOPODOCES_HUMILIS_KMO_...|   0.02   |    2     |   35.15 ( 1.02%)   |   -24512.34   |   49547.62    |    49547.62     |
+|BIRDS_PSEUDOPODOCES_HUMILIS_KMO_...|   0.02   |    3     |  100.15 ( 0.78%)   |   -24512.33   |   49551.70    |    49547.62     |
+|              Node34               |   0.02   |    2     |    0.23 (50.01%)   |   -24512.33   |   49551.71    |    49547.62     |
+|              Node67               |   0.02   |    2     |    0.12 (70.33%)   |   -24512.27   |   49551.59    |    49547.62     |
+|              Node13               |   0.02   |    2     |    0.25 (49.09%)   |   -24512.30   |   49551.64    |    49547.62     |
+|              Node20               |   0.02   |    2     |    0.12 (76.50%)   |   -24512.34   |   49551.73    |    49547.62     |
+|              Node70               |   0.02   |    2     |    0.50 ( 1.70%)   |   -24512.27   |   49551.59    |    49547.62     |
+|              Node71               |   0.02   |    2     |   29.13 ( 1.60%)   |   -24510.56   |   49548.17    |    49547.62     |
+|              Node58               |   0.02   |    2     |    7.18 ( 3.19%)   |   -24511.77   |   49550.58    |    49547.62     |
+|              Node35               |   0.01   |    2     |    0.74 ( 9.62%)   |   -24512.33   |   49551.71    |    49547.62     |
+|              Node51               |   0.01   |    2     |    8.92 ( 1.67%)   |   -24512.26   |   49551.56    |    49547.62     |
+|              Node45               |   0.01   |    2     |  100.95 ( 0.36%)   |   -24511.84   |   49550.73    |    49547.62     |
+|              Node36               |   0.01   |    2     |    0.27 (52.63%)   |   -24512.32   |   49551.68    |    49547.62     |
+|              Node44               |   0.01   |    2     |   66.13 ( 0.83%)   |   -24509.33   |   49545.70    |    49545.70     |
+|              Node44               |   0.01   |    3     |   87.79 ( 0.78%)   |   -24509.33   |   49549.80    |    49545.70     |
+|              Node50               |   0.01   |    2     |    0.14 (59.34%)   |   -24509.32   |   49549.79    |    49545.70     |
+|FISH_NEOLAMPROLOGUS_BRICHARDI_32...|   0.01   |    2     |    0.80 (50.64%)   |   -24509.33   |   49549.81    |    49545.70     |
+|              Node55               |   0.01   |    2     |    0.52 ( 9.04%)   |   -24509.33   |   49549.80    |    49545.70     |
+|              Node49               |   0.01   |    2     |    0.59 (75.09%)   |   -24509.33   |   49549.80    |    49545.70     |
+|              Node73               |   0.01   |    2     |    0.72 (22.04%)   |   -24509.33   |   49549.81    |    49545.70     |
+|              Node22               |   0.00   |    2     |    0.63 (71.05%)   |   -24509.32   |   49549.80    |    49545.70     |
+|              Node41               |   0.00   |    2     |   5.61 (100.00%)   |   -24509.33   |   49549.81    |    49545.70     |
+|               Node2               |   0.00   |    2     |    0.25 ( 2.00%)   |   -24514.94   |   49561.03    |    49545.70     |
+|              Node37               |   0.00   |    2     |    0.21 ( 0.00%)   |   -24509.28   |   49549.72    |    49545.70     |
+|FISH_HAPLOCHROMIS_BURTONI_8153_X...|   0.00   |    2     |    0.40 (98.00%)   |   -24509.33   |   49549.80    |    49545.70     |
+|FISH_PUNDAMILIA_NYEREREI_303518_...|   0.00   |    2     |    0.27 ( 0.00%)   |   -24509.33   |   49549.80    |    49545.70     |
+|FISH_MAYLANDIA_ZEBRA_KMO_106582_...|   0.00   |    2     |    0.40 (95.00%)   |   -24509.33   |   49549.80    |    49545.70     |
+|              Node75               |   0.00   |    2     |    0.25 ( 2.00%)   |   -24514.46   |   49560.08    |    49545.70     |
+
+### Rate class analyses summary
+*  36 branches with **2** rate classes
+*  3 branches with **3** rate classes
+*  42 branches with **1** rate classes
+
+### Annotated Tree
+(FISH_CYNOGLOSSUS_SEMILAEVIS_KMO_244447_XP_008320381_1{2},(((FISH_DANIO_RERIO_KMO_7955_ENSDARP00000024051{3},((FISH_LATIMERIA_CHALUMNAE_KMO_7897_ENSLACP00000009168{2},(((REPTILES_ALLIGATOR_MISSISSIPPIENSIS_KMO_8496_XP_006258411_1{2},(((REPTILES_CHELONIA_MYDAS_KMO_8469_XP_007069222_1{3},REPTILES_CHRYSEMYS_PICTA_KMO_8479_XP_008173567_1{2})Node15{2},REPTILES_PELODISCUS_SINENSIS_KMO_13735_ENSPSIP00000010333{2})Node14{2},((BIRDS_COLUMBA_LIVIA_KMO_8932_XP_005515080_1{1},(BIRDS_HALIAEETUS_LEUCOCEPHALUS_KMO_52644_XP_010565276_1{2},BIRDS_NIPPONIA_NIPPON_KMO_128390_XP_009464445_1{1})Node22{1})Node20{1},(BIRDS_FICEDULA_ALBICOLLIS_KMO_59894_ENSFALP00000013905{1},BIRDS_PSEUDOPODOCES_HUMILIS_KMO_181119_XP_005528981_1{2})Node25{1})Node19{2})Node13{1})Node11{1},(REPTILES_ANOLIS_CAROLINENSIS_KMO_28377_ENSACAP00000009283{2},REPTILES_PYTHON_BIVITTATUS_KMO_176946_XP_007434981_1{2})Node28{2})Node10{2},((((((((MAMMALS_CHINCHILLA_LANIGERA_KMO_34839_XP_005374878_1{2},MAMMALS_HETEROCEPHALUS_GLABER_KMO_10181_XP_004853528_1{1})Node38{1},(MAMMALS_GALEOPTERUS_VARIEGATUS_KMO_482537_XP_008573477_1{1},MAMMALS_OCHOTONA_PRINCEPS_KMO_9978_XP_004578916_1{1})Node41{1})Node37{1},((MAMMALS_PAN_PANISCUS_KMO_9597_XP_003824577_1{2},MAMMALS_TARSIUS_SYRICHTA_9478_XP_008062084_1{2})Node45{1},MAMMALS_TUPAIA_CHINENSIS_KMO_246437_XP_006142427_1{2})Node44{2})Node36{1},(((MAMMALS_LEPTONYCHOTES_WEDDELLII_KMO_9713_XP_006746747_1{2},MAMMALS_PANTHERA_TIGRIS_KMO_9694_XP_007077101_1{2})Node51{1},MAMMALS_MYOTIS_BRANDTII_KMO_109478_XP_005884150_1{1})Node50{1},(MAMMALS_ORCINUS_ORCA_KMO_9733_XP_004283535_1{1},MAMMALS_SOREX_ARANEUS_KMO_42254_XP_004619072_1{1})Node55{1})Node49{1})Node35{1},(MAMMALS_CHRYSOCHLORIS_ASIATICA_KMO_185453_XP_006868642_1{1},MAMMALS_ORYCTEROPUS_AFER_KMO_9818_XP_007940908_1{1})Node58{1})Node34{1},MAMMALS_DASYPUS_NOVEMCINCTUS_KMO_9361_ENSDNOP00000005818{2})Node33{2},MAMMALS_ORNITHORHYNCHUS_ANATINUS_KMO_9258_ENSOANP00000016301{2})Node32{2},MAMMALS_MACROPUS_EUGENII_KMO_9315_ENSMEUP00000004703{1})Node31{2})Node9{2})Node7{2},FISH_LEPISOSTEUS_OCULATUS_KMO_7918_ENSLOCP00000020480{2})Node6{2})Node4{2},FISH_ESOX_LUCIUS_KMO_8010_XP_010862162_1{3})Node3{2},((FISH_GASTEROSTEUS_ACULEATUS_KMO_69293_ENSGACP00000003896{2},FISH_TAKIFUGU_RUBRIPES_KMO_31033_ENSTRUP00000028827{2})Node67{1},((((FISH_HAPLOCHROMIS_BURTONI_8153_XP_005933658_1{1},(FISH_MAYLANDIA_ZEBRA_KMO_106582_XP_004554593_1{1},FISH_PUNDAMILIA_NYEREREI_303518_XP_005735149_1{1})Node75{1})Node73{1},FISH_NEOLAMPROLOGUS_BRICHARDI_32507_XP_006799102_1{1})Node72{1},FISH_STEGASTES_PARTITUS_KMO_144197_XP_008278392_1{2})Node71{1},FISH_LARIMICHTHYS_CROCEA_KMO_215358_XP_010732891_1{2})Node70{1})Node66{1})Node2{1},FISH_POECILIA_RETICULATA_KMO_8081_XP_008428219_1{1})
+
+----
+
+```
+|FISH_CYNOGLOSSUS_SEMILAEVIS_KMO_244447_XP_008320381_1 (2)
+|  |FISH_DANIO_RERIO_KMO_7955_ENSDARP00000024051 (3)
+| |+Node4 (2)
+| || |FISH_LATIMERIA_CHALUMNAE_KMO_7897_ENSLACP00000009168 (2)
+| |||+Node7 (2)
+| ||||  |REPTILES_ALLIGATOR_MISSISSIPPIENSIS_KMO_8496_XP_006258411_1 (2)
+| |||| |+Node11 (1)
+| |||| ||  |REPTILES_CHELONIA_MYDAS_KMO_8469_XP_007069222_1 (3)
+| |||| || |+Node15 (2)
+| |||| || ||REPTILES_CHRYSEMYS_PICTA_KMO_8479_XP_008173567_1 (2)
+| |||| |||+Node14 (2)
+| |||| ||||REPTILES_PELODISCUS_SINENSIS_KMO_13735_ENSPSIP00000010333 (2)
+| |||| ||+Node13 (1)
+| |||| | | |BIRDS_COLUMBA_LIVIA_KMO_8932_XP_005515080_1 (1)
+| |||| | ||+Node20 (1)
+| |||| | ||||BIRDS_HALIAEETUS_LEUCOCEPHALUS_KMO_52644_XP_010565276_1 (2)
+| |||| | |||+Node22 (1)
+| |||| | || |BIRDS_NIPPONIA_NIPPON_KMO_128390_XP_009464445_1 (1)
+| |||| | |+Node19 (2)
+| |||| |  ||BIRDS_FICEDULA_ALBICOLLIS_KMO_59894_ENSFALP00000013905 (1)
+| |||| |  |+Node25 (1)
+| |||| |   |BIRDS_PSEUDOPODOCES_HUMILIS_KMO_181119_XP_005528981_1 (2)
+| |||||+Node10 (2)
+| |||||||REPTILES_ANOLIS_CAROLINENSIS_KMO_28377_ENSACAP00000009283 (2)
+| ||||||+Node28 (2)
+| ||||| |REPTILES_PYTHON_BIVITTATUS_KMO_176946_XP_007434981_1 (2)
+| ||||+Node9 (2)
+| ||| |       |MAMMALS_CHINCHILLA_LANIGERA_KMO_34839_XP_005374878_1 (2)
+| ||| |      |+Node38 (1)
+| ||| |      ||MAMMALS_HETEROCEPHALUS_GLABER_KMO_10181_XP_004853528_1 (1)
+| ||| |     |+Node37 (1)
+| ||| |     |||MAMMALS_GALEOPTERUS_VARIEGATUS_KMO_482537_XP_008573477_1 (1)
+| ||| |     ||+Node41 (1)
+| ||| |     | |MAMMALS_OCHOTONA_PRINCEPS_KMO_9978_XP_004578916_1 (1)
+| ||| |    |+Node36 (1)
+| ||| |    || |MAMMALS_PAN_PANISCUS_KMO_9597_XP_003824577_1 (2)
+| ||| |    |||+Node45 (1)
+| ||| |    ||||MAMMALS_TARSIUS_SYRICHTA_9478_XP_008062084_1 (2)
+| ||| |    ||+Node44 (2)
+| ||| |    | |MAMMALS_TUPAIA_CHINENSIS_KMO_246437_XP_006142427_1 (2)
+| ||| |   |+Node35 (1)
+| ||| |   ||  |MAMMALS_LEPTONYCHOTES_WEDDELLII_KMO_9713_XP_006746747_1 (2)
+| ||| |   || |+Node51 (1)
+| ||| |   || ||MAMMALS_PANTHERA_TIGRIS_KMO_9694_XP_007077101_1 (2)
+| ||| |   |||+Node50 (1)
+| ||| |   ||||MAMMALS_MYOTIS_BRANDTII_KMO_109478_XP_005884150_1 (1)
+| ||| |   ||+Node49 (1)
+| ||| |   | ||MAMMALS_ORCINUS_ORCA_KMO_9733_XP_004283535_1 (1)
+| ||| |   | |+Node55 (1)
+| ||| |   |  |MAMMALS_SOREX_ARANEUS_KMO_42254_XP_004619072_1 (1)
+| ||| |  |+Node34 (1)
+| ||| |  |||MAMMALS_CHRYSOCHLORIS_ASIATICA_KMO_185453_XP_006868642_1 (1)
+| ||| |  ||+Node58 (1)
+| ||| |  | |MAMMALS_ORYCTEROPUS_AFER_KMO_9818_XP_007940908_1 (1)
+| ||| | |+Node33 (2)
+| ||| | ||MAMMALS_DASYPUS_NOVEMCINCTUS_KMO_9361_ENSDNOP00000005818 (2)
+| ||| ||+Node32 (2)
+| ||| |||MAMMALS_ORNITHORHYNCHUS_ANATINUS_KMO_9258_ENSOANP00000016301 (2)
+| ||| |+Node31 (2)
+| |||  |MAMMALS_MACROPUS_EUGENII_KMO_9315_ENSMEUP00000004703 (1)
+| ||+Node6 (2)
+| | |FISH_LEPISOSTEUS_OCULATUS_KMO_7918_ENSLOCP00000020480 (2)
+||+Node3 (2)
+|||FISH_ESOX_LUCIUS_KMO_8010_XP_010862162_1 (3)
+|+Node2 (1)
+|| |FISH_GASTEROSTEUS_ACULEATUS_KMO_69293_ENSGACP00000003896 (2)
+|||+Node67 (1)
+||||FISH_TAKIFUGU_RUBRIPES_KMO_31033_ENSTRUP00000028827 (2)
+||+Node66 (1)
+| |   |FISH_HAPLOCHROMIS_BURTONI_8153_XP_005933658_1 (1)
+| |  |+Node73 (1)
+| |  |||FISH_MAYLANDIA_ZEBRA_KMO_106582_XP_004554593_1 (1)
+| |  ||+Node75 (1)
+| |  | |FISH_PUNDAMILIA_NYEREREI_303518_XP_005735149_1 (1)
+| | |+Node72 (1)
+| | ||FISH_NEOLAMPROLOGUS_BRICHARDI_32507_XP_006799102_1 (1)
+| ||+Node71 (1)
+| |||FISH_STEGASTES_PARTITUS_KMO_144197_XP_008278392_1 (2)
+| |+Node70 (1)
+|  |FISH_LARIMICHTHYS_CROCEA_KMO_215358_XP_010732891_1 (2)
+|FISH_POECILIA_RETICULATA_KMO_8081_XP_008428219_1 (1)
+```
+
+
+### Improving parameter estimates of the adaptive rate class model
+* Log(L) = -24454.88, AIC-c = 49436.81 (260 estimated parameters)
+
+### Testing selected branches for selection
+
+|              Branch               |  Rates   |     Max. dN/dS     | Sites @ EBF>=100 |      Test LRT      |Uncorrected p-value |
+|-----------------------------------|----------|--------------------|------------------|--------------------|--------------------|
+|MAMMALS_ORNITHORHYNCHUS_ANATINUS...|     2    |    0.43 (33.58%)   |       N/A        |        0.00        |       1.00000      |
+|FISH_DANIO_RERIO_KMO_7955_ENSDAR...|     3    |  272.94 ( 5.13%)   |         11       |        5.86        |       0.01912      |
+|               Node7               |     2    |  404.77 ( 4.36%)   |          6       |        8.25        |       0.00565      |
+|               Node6               |     2    |    1.89 ( 8.41%)   |         16       |        0.80        |       0.27490      |
+|FISH_LATIMERIA_CHALUMNAE_KMO_789...|     2    |    0.66 (22.71%)   |       N/A        |        0.00        |       1.00000      |
+|FISH_ESOX_LUCIUS_KMO_8010_XP_010...|     3    |  424.98 ( 2.28%)   |          7       |        2.29        |       0.12136      |
+|FISH_TAKIFUGU_RUBRIPES_KMO_31033...|     2    |  457.93 ( 2.05%)   |          4       |        0.98        |       0.24820      |
+|FISH_CYNOGLOSSUS_SEMILAEVIS_KMO_...|     2    |    0.48 (36.63%)   |       N/A        |        0.00        |       1.00000      |
+|              Node31               |     2    |    0.58 (32.06%)   |       N/A        |        0.00        |       1.00000      |
+|FISH_POECILIA_RETICULATA_KMO_808...|     1    |   0.07 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|REPTILES_ANOLIS_CAROLINENSIS_KMO...|     2    |    3.69 ( 9.75%)   |          7       |        2.67        |       0.09940      |
+|               Node9               |     2    |    3.37 (10.08%)   |         14       |        2.80        |       0.09269      |
+|              Node28               |     2    |    0.74 (19.80%)   |       N/A        |        0.00        |       1.00000      |
+|FISH_LEPISOSTEUS_OCULATUS_KMO_79...|     2    |  553.47 ( 3.50%)   |          7       |        4.26        |       0.04349      |
+|MAMMALS_MYOTIS_BRANDTII_KMO_1094...|     1    |   0.14 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|REPTILES_PYTHON_BIVITTATUS_KMO_1...|     2    |    1.11 (17.97%)   |         25       |       -0.01        |       0.50000      |
+|              Node19               |     2    |   80.73 ( 0.94%)   |          2       |        2.41        |       0.11379      |
+|REPTILES_PELODISCUS_SINENSIS_KMO...|     2    |    1.48 (15.78%)   |         29       |        0.79        |       0.27682      |
+|REPTILES_ALLIGATOR_MISSISSIPPIEN...|     2    |    3.92 ( 6.91%)   |         10       |        5.26        |       0.02598      |
+|MAMMALS_LEPTONYCHOTES_WEDDELLII_...|     2    |   72.03 ( 9.44%)   |         34       |       108.19       |       0.00000      |
+|MAMMALS_TARSIUS_SYRICHTA_9478_XP...|     2    |   24.07 ( 4.56%)   |         12       |       18.54        |       0.00003      |
+|               Node3               |     2    |    1.35 (10.87%)   |         12       |        0.17        |       0.41178      |
+|MAMMALS_MACROPUS_EUGENII_KMO_931...|     1    |   0.15 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_SOREX_ARANEUS_KMO_42254_...|     1    |   0.18 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node14               |     2    |    7.40 ( 2.66%)   |          5       |        3.48        |       0.06509      |
+|FISH_GASTEROSTEUS_ACULEATUS_KMO_...|     2    |    1.49 (21.80%)   |         37       |        0.61        |       0.30873      |
+|              Node72               |     1    |   0.11 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_GALEOPTERUS_VARIEGATUS_K...|     1    |   0.17 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_TUPAIA_CHINENSIS_KMO_246...|     2    |    1.38 (13.44%)   |          3       |        0.08        |       0.44265      |
+|MAMMALS_OCHOTONA_PRINCEPS_KMO_99...|     1    |   0.17 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_CHRYSOCHLORIS_ASIATICA_K...|     1    |   0.24 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|FISH_LARIMICHTHYS_CROCEA_KMO_215...|     2    |   >1000 ( 1.66%)   |          6       |       10.55        |       0.00177      |
+|FISH_STEGASTES_PARTITUS_KMO_1441...|     2    |  917.69 ( 0.81%)   |          2       |        0.84        |       0.26918      |
+|              Node33               |     2    |    4.20 ( 7.18%)   |          5       |        2.55        |       0.10590      |
+|MAMMALS_DASYPUS_NOVEMCINCTUS_KMO...|     2    |    8.80 ( 3.97%)   |          5       |        6.32        |       0.01512      |
+|MAMMALS_CHINCHILLA_LANIGERA_KMO_...|     2    |  133.58 ( 0.97%)   |          4       |        3.73        |       0.05724      |
+|              Node11               |     1    |   0.07 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_PAN_PANISCUS_KMO_9597_XP...|     2    |    4.38 ( 6.40%)   |          5       |        3.13        |       0.07818      |
+|               Node4               |     2    |    2.89 ( 6.68%)   |          7       |        0.54        |       0.32071      |
+|BIRDS_HALIAEETUS_LEUCOCEPHALUS_K...|     2    |   74.44 ( 3.23%)   |         11       |       27.95        |       0.00000      |
+|              Node32               |     2    |  628.74 ( 2.33%)   |          5       |       14.60        |       0.00023      |
+|MAMMALS_PANTHERA_TIGRIS_KMO_9694...|     2    |    7.61 ( 8.65%)   |         18       |        9.14        |       0.00361      |
+|              Node38               |     1    |   0.37 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|REPTILES_CHELONIA_MYDAS_KMO_8469...|     3    |   >1000 ( 4.61%)   |         17       |        9.22        |       0.00347      |
+|BIRDS_COLUMBA_LIVIA_KMO_8932_XP_...|     1    |   0.11 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_ORYCTEROPUS_AFER_KMO_981...|     1    |   0.19 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_ORCINUS_ORCA_KMO_9733_XP...|     1    |   0.23 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node10               |     2    |    6.24 ( 8.69%)   |          8       |        1.86        |       0.15323      |
+|BIRDS_FICEDULA_ALBICOLLIS_KMO_59...|     1    |   0.06 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_HETEROCEPHALUS_GLABER_KM...|     1    |   0.40 (100.00%)   |       N/A        |        0.00        |       1.00000      |

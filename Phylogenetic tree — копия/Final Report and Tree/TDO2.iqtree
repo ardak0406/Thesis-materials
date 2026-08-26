@@ -1,0 +1,958 @@
+IQ-TREE 2.4.0 built Feb 12 2025
+
+Input file name: /data/dnb12/galaxy_db/files/1/a/1/dataset_1a17e5c1-bb06-4cb0-b189-0d1ee36d90cb.dat
+Type of analysis: ModelFinder + tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 142456
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2018) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol. Biol. Evol., 35:518–522.
+https://doi.org/10.1093/molbev/msx281
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 174 sequences with 311 amino-acid sites
+Number of constant sites: 18 (= 5.78778% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 18 (= 5.78778% of all sites)
+Number of parsimony informative sites: 252
+Number of distinct site patterns: 311
+
+ModelFinder
+-----------
+
+Best-fit model according to AIC: LG+R7
+
+List of models sorted by AIC scores: 
+
+Model                  LogL         AIC      w-AIC        AICc     w-AICc         BIC      w-BIC
+LG+R7            -21436.516   43575.032 +    0.587  290679.032 -        0   44887.699 +   0.0782
+LG+R6            -21439.994   43577.988 +    0.134  287877.988 -        0   44883.175 +     0.75
+LG+I+R7          -21436.994   43577.988 +    0.134  292089.988 -        0   44894.395 -  0.00275
+LG+R8            -21436.353   43578.706 +   0.0936  293502.706 -        0   44898.853 - 0.000296
+LG+I+R6          -21440.572   43581.144 -   0.0277  289281.144 -        0   44890.071 -   0.0239
+LG+I+R8          -21436.772   43581.545 -   0.0226  294921.545 -        0   44905.431 -  1.1e-05
+LG+R5            -21447.441   43588.882 - 0.000577  285100.882 -        0   44886.591 +    0.136
+LG+I+R5          -21447.427   43590.854 - 0.000215  286494.854 -        0   44892.302 -  0.00783
+LG+R4            -21458.641   43607.283 - 5.83e-08  282347.283 -        0   44897.511 - 0.000578
+LG+I+R4          -21457.827   43607.654 - 4.84e-08  283731.654 -        0   44901.622 - 7.41e-05
+Q.pfam+R6        -21459.993   43617.986 - 2.76e-10  287917.986 -        0   44923.173 - 1.55e-09
+Q.pfam+R7        -21459.203   43620.406 - 8.24e-11  290724.405 -        0   44933.073 -  1.1e-11
+Q.pfam+I+R6      -21460.350   43620.700 - 7.11e-11  289320.700 -        0   44929.628 - 6.14e-11
+Q.pfam+I+R7      -21459.454   43622.908 - 2.36e-11  292134.908 -        0   44939.315 - 4.84e-13
+LG+G4            -21475.073   43630.146 - 6.32e-13  275510.146 +        1   44901.676 - 7.21e-05
+LG+I+G4          -21474.132   43630.264 - 5.96e-13  276874.264 - 6.1e-297   44905.533 - 1.05e-05
+LG+I+R3          -21505.128   43698.256 - 1.03e-27  281058.256 -        0   44984.744 -  6.6e-23
+LG+R3            -21507.406   43700.811 - 2.86e-28  279684.811 -        0   44983.560 - 1.19e-22
+JTTDCMut+R6      -21561.569   43821.137 - 2.13e-54  288121.137 -        0   45126.325 - 1.19e-53
+JTTDCMut+I+R6    -21561.746   43823.492 - 6.55e-55  289523.492 -        0   45132.420 - 5.66e-55
+JTTDCMut+R7      -21561.523   43825.046 - 3.01e-55  290929.046 -        0   45137.713 - 4.01e-56
+JTT+R6           -21564.335   43826.670 - 1.34e-55  288126.670 -        0   45131.858 - 7.49e-55
+JTTDCMut+I+R7    -21561.710   43827.421 - 9.19e-56  292339.421 -        0   45143.828 - 1.88e-57
+JTT+R7           -21563.746   43829.492 - 3.26e-56  290933.492 -        0   45142.159 - 4.34e-57
+JTT+I+R6         -21564.875   43829.750 - 2.87e-56  289529.750 -        0   45138.678 - 2.48e-56
+JTT+I+R7         -21564.085   43832.170 - 8.55e-57  292344.170 -        0   45148.577 - 1.75e-58
+Q.pfam+F+R6      -21552.602   43841.204 - 9.34e-59  315425.204 -        0   45217.448 - 1.94e-73
+Q.pfam+F+I+R6    -21552.909   43843.819 - 2.53e-59  316903.819 -        0   45223.802 - 8.11e-75
+Q.pfam+F+R7      -21552.119   43844.238 - 2.05e-59  318384.238 -        0   45227.962 - 1.01e-75
+Q.pfam+F+I+R7    -21552.313   43846.627 - 6.21e-60  319870.627 -        0   45234.090 - 4.73e-77
+LG+F+R7          -21555.900   43851.800 - 4.67e-61  318391.800 -        0   45235.523 - 2.31e-77
+LG+F+I+R7        -21556.205   43854.410 - 1.27e-61  319878.410 -        0   45241.873 - 9.66e-79
+LG+F+R8          -21555.792   43855.583 - 7.05e-62  321367.583 -        0   45246.786 - 8.28e-80
+LG+F+R6          -21560.426   43856.852 - 3.74e-62  315440.852 -        0   45233.096 - 7.78e-77
+LG+F+I+R8        -21556.059   43858.118 - 1.98e-62  322862.118 -        0   45253.060 -  3.6e-81
+LG+F+I+R6        -21560.968   43859.936 - 7.99e-63  316919.936 -        0   45239.920 - 2.57e-78
+WAG+R6           -21583.915   43865.831 -  4.2e-64  288165.831 -        0   45171.018 - 2.35e-63
+WAG+I+R6         -21583.457   43866.914 - 2.44e-64  289566.914 -        0   45175.841 - 2.11e-64
+WAG+R7           -21583.168   43868.335 -  1.2e-64  290972.335 -        0   45181.003 -  1.6e-65
+WAG+I+R7         -21583.005   43870.010 - 5.19e-65  292382.010 -        0   45186.417 - 1.06e-66
+VT+R6            -21624.103   43946.206 - 1.48e-81  288246.206 -        0   45251.393 - 8.27e-81
+VT+R7            -21622.739   43947.478 - 7.82e-82  291051.478 -        0   45260.146 - 1.04e-82
+VT+I+R6          -21623.978   43947.955 - 6.16e-82  289647.955 -        0   45256.883 - 5.32e-82
+VT+I+R7          -21622.755   43949.511 - 2.83e-82  292461.511 -        0   45265.918 -  5.8e-84
+JTTDCMut+F+R6    -21610.243   43956.487 - 8.65e-84  315540.487 -        0   45332.731 -  1.8e-98
+JTT+F+R7         -21608.264   43956.529 - 8.47e-84  318496.529 -        0   45340.252 - 4.19e-100
+JTT+F+R6         -21610.340   43956.680 - 7.85e-84  315540.680 -        0   45332.924 - 1.64e-98
+JTTDCMut+F+R7    -21608.662   43957.324 - 5.69e-84  318497.324 -        0   45341.048 - 2.82e-100
+JTTDCMut+F+I+R6  -21610.370   43958.741 -  2.8e-84  317018.741 -        0   45338.724 -   9e-100
+JTT+F+I+R7       -21608.508   43959.015 - 2.44e-84  319983.015 -        0   45346.478 - 1.86e-101
+JTT+F+I+R6       -21610.744   43959.488 - 1.93e-84  317019.488 -        0   45339.471 - 6.19e-100
+JTTDCMut+F+I+R7  -21608.770   43959.540 - 1.88e-84  319983.540 -        0   45347.003 - 1.43e-101
+JTT+F+R8         -21608.256   43960.511 - 1.16e-84  321472.511 -        0   45351.714 - 1.36e-102
+JTT+F+I+R8       -21608.475   43962.950 - 3.42e-85  322966.950 -        0   45357.893 - 6.19e-104
+LG+I+R2          -21702.000   44088.001 - 2.39e-112  278700.001 -        0   45367.010 - 6.49e-106
+WAG+F+R7         -21675.317   44090.635 - 6.42e-113  318630.635 -        0   45474.358 - 3.17e-129
+WAG+F+I+R7       -21675.363   44092.726 - 2.25e-113  320116.726 -        0   45480.190 - 1.72e-130
+WAG+F+R6         -21678.502   44093.005 - 1.96e-113  315677.005 -        0   45469.249 - 4.08e-128
+WAG+F+R8         -21675.295   44094.590 - 8.88e-114  321606.590 -        0   45485.793 - 1.04e-131
+WAG+F+I+R6       -21678.473   44094.946 - 7.43e-114  317154.946 -        0   45474.930 - 2.38e-129
+WAG+F+I+R8       -21675.322   44096.644 - 3.18e-114  323100.644 -        0   45491.586 - 5.76e-133
+LG+R2            -21723.890   44129.780 - 2.03e-121  277373.780 -        0   45405.049 - 3.56e-114
+VT+F+R6          -21723.185   44182.371 - 7.71e-133  315766.371 -        0   45558.615 - 1.61e-147
+VT+F+R7          -21721.850   44183.700 - 3.97e-133  318723.700 -        0   45567.423 - 1.96e-149
+VT+F+I+R6        -21723.177   44184.355 - 2.86e-133  317244.355 -        0   45564.338 - 9.17e-149
+VT+F+I+R7        -21721.861   44185.721 - 1.44e-133  320209.721 -        0   45573.184 - 1.1e-150
+Blosum62+R6      -21802.819   44303.638 - 3.58e-159  288603.638 -        0   45608.825 - 2.01e-158
+Blosum62+I+R6    -21802.813   44305.627 - 1.33e-159  290005.627 -        0   45614.554 - 1.14e-159
+Blosum62+R7      -21802.056   44306.113 - 1.04e-159  291410.113 -        0   45618.780 - 1.38e-160
+Blosum62+I+R7    -21802.056   44308.112 - 3.82e-160  292820.112 -        0   45624.519 - 7.84e-162
+Dayhoff+F+R6     -21798.882   44333.764 - 1.03e-165  315917.764 -        0   45710.008 - 2.14e-180
+Dayhoff+F+I+R6   -21798.701   44335.401 - 4.54e-166  317395.401 -        0   45715.385 - 1.46e-181
+Dayhoff+F+R7     -21798.150   44336.300 - 2.89e-166  318876.300 -        0   45720.023 - 1.43e-182
+DCMut+F+R6       -21800.233   44336.466 - 2.66e-166  315920.466 -        0   45712.710 - 5.55e-181
+Dayhoff+F+I+R7   -21797.862   44337.725 - 1.42e-166  320361.725 -        0   45725.188 - 1.08e-183
+DCMut+F+R7       -21798.920   44337.839 - 1.34e-166  318877.839 -        0   45721.563 - 6.63e-183
+DCMut+F+I+R6     -21800.106   44338.213 - 1.11e-166  317398.213 -        0   45718.196 - 3.57e-182
+DCMut+F+I+R7     -21798.825   44339.651 - 5.42e-167  320363.651 -        0   45727.114 - 4.13e-184
+PMB+R6           -21836.072   44370.145 - 1.3e-173  288670.145 -        0   45675.332 - 7.25e-173
+PMB+I+R6         -21836.081   44372.162 - 4.72e-174  290072.162 -        0   45681.090 - 4.08e-174
+PMB+R7           -21835.621   44373.241 - 2.75e-174  291477.241 -        0   45685.908 - 3.66e-175
+PMB+I+R7         -21835.618   44375.236 - 1.02e-174  292887.236 -        0   45691.643 - 2.08e-176
+Dayhoff+R6       -21839.112   44376.225 - 6.2e-175  288676.225 -        0   45681.413 - 3.47e-174
+Dayhoff+I+R6     -21838.488   44376.976 - 4.26e-175  290076.976 -        0   45685.903 - 3.67e-175
+Dayhoff+R7       -21837.578   44377.156 - 3.89e-175  291481.156 -        0   45689.823 - 5.17e-176
+Dayhoff+I+R7     -21836.907   44377.814 - 2.8e-175  292889.814 -        0   45694.221 - 5.74e-177
+DCMut+R6         -21840.333   44378.666 - 1.83e-175  288678.666 -        0   45683.853 - 1.02e-174
+DCMut+R7         -21838.393   44378.785 - 1.72e-175  291482.785 -        0   45691.452 - 2.29e-176
+DCMut+I+R6       -21839.896   44379.793 - 1.04e-175  290079.793 -        0   45688.720 - 8.98e-176
+DCMut+I+R7       -21838.041   44380.083 -   9e-176  292892.083 -        0   45696.490 - 1.85e-177
+Blosum62+F+R6    -21966.834   44669.669 - 1.18e-238  316253.669 -        0   46045.912 - 2.46e-253
+Blosum62+F+R7    -21965.002   44670.003 - 9.97e-239  319210.003 -        0   46053.727 - 4.93e-255
+Blosum62+F+I+R6  -21966.798   44671.596 - 4.5e-239  317731.596 -        0   46051.580 - 1.44e-254
+Blosum62+F+I+R7  -21964.994   44671.987 - 3.7e-239  320695.987 -        0   46059.450 - 2.82e-256
+PMB+F+R6         -21972.247   44680.493 - 5.26e-241  316264.493 -        0   46056.737 - 1.1e-255
+PMB+F+R7         -21970.787   44681.574 - 3.06e-241  319221.574 -        0   46065.297 - 1.52e-257
+PMB+F+I+R6       -21972.229   44682.458 - 1.97e-241  317742.458 -        0   46062.442 - 6.32e-257
+PMB+F+I+R7       -21970.782   44683.564 - 1.13e-241  320707.564 -        0   46071.027 - 8.64e-259
+LG+I             -22660.036   46000.073 -        0  277880.073 -        0   47271.602 -        0
+LG               -22743.291   46164.581 -        0  276684.581 - 9.43e-256   47432.371 -        0
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+R7
+
+State frequencies: (model)
+
+Model of rate heterogeneity: FreeRate with 7 categories
+Site proportion and rates:  (0.1844,0.0877) (0.1822,0.2905) (0.2665,0.6312) (0.1690,1.2709) (0.1299,2.1602) (0.0570,3.4962) (0.0110,6.1799)
+
+ Category  Relative_rate  Proportion
+  1         0.0877         0.1844
+  2         0.2905         0.1822
+  3         0.6312         0.2665
+  4         1.2709         0.1690
+  5         2.1602         0.1299
+  6         3.4962         0.0570
+  7         6.1799         0.0110
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -21341.9318 (s.e. 866.5512)
+Unconstrained log-likelihood (without tree): -1785.0756
+Number of free parameters (#branches + #model parameters): 351
+Akaike information criterion (AIC) score: 43385.8635
+Corrected Akaike information criterion (AICc) score: 290489.8635
+Bayesian information criterion (BIC) score: 44698.5308
+
+**************************** WARNING ****************************
+Number of parameters (K, model parameters and branch lengths): 351
+Sample size (n, alignment length): 311
+
+Given that K>=n, the parameter estimates might be inaccurate.
+Thus, phylogenetic estimates should be interpreted with caution.
+
+Ideally, it is desirable that n >> K. When selecting optimal models,
+1. use AIC or BIC if n > 40K;
+2. use AICc or BIC if 40K >= n > K;
+3. be extremely cautious if n <= K
+
+To improve the situation (3), consider the following options:
+  1. Increase the sample size (n)
+  2. Decrease the number of parameters (K) to be estimated. If
+     possible:
+     a. Remove the least important sequences from the alignment
+     b. Specify some of the parameter values for the substitution
+        model (e.g., the nucleotide or amino acid frequencies)
+     c. Specify some of the parameter values for the rates-across-
+        sites model (e.g., the shape parameter for the discrete
+        Gamma distribution, the proportion of invariable sites, or
+        the rates of change for different rate categories under
+        the FreeRate model)
+
+Reference:
+Burnham KR, Anderson DR (2002). Model Selection and Multimodel
+Inference: A Practical Information-Theoretic Approach. Springer,
+New York.
+************************ END OF WARNING ***********************
+
+Total tree length (sum of branch lengths): 26.6226
+Sum of internal branch lengths: 7.5902 (28.5105% of tree length)
+
+WARNING: 23 near-zero internal branches (<0.0032) should be treated with caution
+         Such branches are denoted by '**' in the figure below
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Cnidarians_Hydra_vulgaris_6087.XP_004206814.1' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++---------------------Cnidarians_Hydra_vulgaris_6087.XP_004206814.1
+|
+|                  +--Nematodes_Caenorhabditis_briggsae_CBG09046_6238.CBG09046
+|               +--| (82)
+|               |  |     +--Nematodes_Caenorhabditis_elegans_C28H8.11_6239.C28H8.11a.1
+|               |  |  +--| (96)
+|               |  |  |  +--Nematodes_Caenorhabditis_remanei_CRE_04506_31234.CRE04506
+|               |  +--| (74)
+|               |     |  +--Nematodes_Caenorhabditis_brenneri_CBN24716_135651.CBN24716
+|               |     +**| (74)
+|               |        +--Nematodes_Caenorhabditis_tropicalis_1561998.Csp11.Scaffold546.g3499.t1
+|            +--| (81)
+|            |  |     +--Nematodes_Caenorhabditis_japonica_CJA00189_281687.CJA00189
+|            |  |  +--| (99)
+|            |  |  |  +**Nematodes_Caenorhabditis_japonica_CJA42184b_281687.CJA42184b
+|            |  +**| (75)
+|            |     |  +**Nematodes_Caenorhabditis_japonica_CJA16255a_281687.CJA16255a
+|            |     +--| (94)
+|            |        +--Nematodes_Caenorhabditis_japonica_CJA35679b_281687.CJA35679b
+|        +---| (99)
+|        |   +--Nematodes_Bursaphelenchus_xylophilus_6326.BUX.s00351.454
+|     +--| (100)
+|     |  |  +---Nematodes_Bursaphelenchus_xylophilus_6326.BUX.s00351.453
+|     |  +--| (100)
+|     |     +-----Nematodes_Strongyloides_ratti_g4317_34506.g4317
+|  +--| (74)
+|  |  |  +------Placozoa_Trichoplax_adhaerens_10228.TriadP25841
+|  |  +--| (79)
+|  |     |                                   +-----------Mammals_Pantholops_hodgsonii_59538.XP_005961907.1
+|  |     +-----------------------------------| (100)
+|  |                                         +---------------Mammals_Pantholops_hodgsonii_59538.XP_005968213.1
++--| (76)
+|  |               +-----Annelids_Helobdella_robusta_20210143_6412.HelroP185454
+|  |           +---| (92)
+|  |           |   +------------------------------------Ctenophores_Mnemiopsis_leidyi_27923.ML030523a-PA
+|  |        +--| (78)
+|  |        |  +---------Molluscs_Aplysia_californica_6500.XP_005104332.1
+|  |     +--| (72)
+|  |     |  |  +----Lancelets_Branchiostoma_floridae_7739.XP_002611396.1
+|  |     |  +--| (96)
+|  |     |     +-------Cnidarians_Nematostella_vectensis_v1g157887_45351.EDO49705
+|  |  +--| (61)
+|  |  |  |     +---Crustaceans_Daphnia_pulex_6669.EFX83853
+|  |  |  |  +--| (100)
+|  |  |  |  |  |              +--Insects_Tribolium_castaneum_V_7070.TC008028-PA
+|  |  |  |  |  |           +--| (69)
+|  |  |  |  |  |           |  |        +--Insects_Aedes_aegypti_AAEL000428_7159.AAEL000428-PA
+|  |  |  |  |  |           |  |     +--| (100)
+|  |  |  |  |  |           |  |     |  +------Insects_Culex_quinquefasciatus_6034009_7176.CPIJ002864-PA
+|  |  |  |  |  |           |  |  +--| (99)
+|  |  |  |  |  |           |  |  |  |  +--Insects_Anopheles_gambiae_T23O_ANOGA_7165.AGAP002721-PA
+|  |  |  |  |  |           |  |  |  +--| (95)
+|  |  |  |  |  |           |  |  |     +--Insects_Anopheles_darlingi_AND_004972_43151.ADAC004972-PA
+|  |  |  |  |  |           |  +--| (79)
+|  |  |  |  |  |           |     |  +--Insects_Ceratitis_capitata_7213.XP_004529546.1
+|  |  |  |  |  |           |     +--| (100)
+|  |  |  |  |  |           |        |           +**Insects_Drosophila_ananassae_v_7217.FBpp0123668
+|  |  |  |  |  |           |        |        +--| (100)
+|  |  |  |  |  |           |        |        |  |     +**Insects_Drosophila_erecta_GG18380_7220.FBpp0136926
+|  |  |  |  |  |           |        |        |  |  +**| (100)
+|  |  |  |  |  |           |        |        |  |  |  +**Insects_Drosophila_melanogaster_v_7227.FBpp0073242
+|  |  |  |  |  |           |        |        |  +--| (100)
+|  |  |  |  |  |           |        |        |     +--Insects_Drosophila_yakuba_v_7245.FBpp0260907
+|  |  |  |  |  |           |        |     +--| (99)
+|  |  |  |  |  |           |        |     |  |  +**Insects_Drosophila_persimilis_GL18243_7234.FBpp0182350
+|  |  |  |  |  |           |        |     |  +--| (100)
+|  |  |  |  |  |           |        |     |     +**Insects_Drosophila_pseudoobscura_GA15272_7237.FBpp0285544
+|  |  |  |  |  |           |        |  +--| (100)
+|  |  |  |  |  |           |        |  |  |     +--Insects_Drosophila_grimshawi_GH12679_7222.FBpp0146585
+|  |  |  |  |  |           |        |  |  |  +--| (99)
+|  |  |  |  |  |           |        |  |  |  |  |  +--Insects_Drosophila_mojavensis_GI16256_7230.FBpp0165473
+|  |  |  |  |  |           |        |  |  |  |  +--| (99)
+|  |  |  |  |  |           |        |  |  |  |     +--Insects_Drosophila_virilis_GJ16721_7244.FBpp0231138
+|  |  |  |  |  |           |        |  |  +--| (98)
+|  |  |  |  |  |           |        |  |     +--Insects_Drosophila_willistoni_GK19977_7260.FBpp0249120
+|  |  |  |  |  |           |        +--| (100)
+|  |  |  |  |  |           |           +--Insects_Musca_domestica_101890019_7370.XP_005177538.1
+|  |  |  |  |  |        +--| (100)
+|  |  |  |  |  |        |  |  +--Insects_Bombyx_mori_7091.BGIBMGA009276-TA
+|  |  |  |  |  |        |  +--| (100)
+|  |  |  |  |  |        |     |  +--Insects_Danaus_plexippus_KGM_213793_13037.EHJ70119
+|  |  |  |  |  |        |     +--| (95)
+|  |  |  |  |  |        |        |  +--Insects_Heliconius_melpomene_34740.HMEL008452-PA
+|  |  |  |  |  |        |        +--| (100)
+|  |  |  |  |  |        |           +--Insects_Heliconius_melpomene_34740.HMEL010716-PA
+|  |  |  |  |  |     +--| (86)
+|  |  |  |  |  |     |  |     +--Insects_Nasonia_vitripennis_7425.NV17830-PA
+|  |  |  |  |  |     |  |  +--| (99)
+|  |  |  |  |  |     |  |  |  |     +--Insects_Apis_mellifera_LOC410828_7460.GB55638-PA
+|  |  |  |  |  |     |  |  |  |  +--| (100)
+|  |  |  |  |  |     |  |  |  |  |  +--Insects_Bombus_impatiens_132113.XP_003490724.1
+|  |  |  |  |  |     |  |  |  +--| (95)
+|  |  |  |  |  |     |  |  |     |  +--Insects_Atta_cephalotes_105627134_12957.ACEP23192-PA
+|  |  |  |  |  |     |  |  |     +--| (100)
+|  |  |  |  |  |     |  |  |        +--Insects_Acromyrmex_echinatior_G5I_06975_103372.F4WME1
+|  |  |  |  |  |     |  +--| (100)
+|  |  |  |  |  |     |     +--Insects_Microplitis_demolitor_69319.XP_008547448.1
+|  |  |  |  |  |  +--| (89)
+|  |  |  |  |  |  |  |  +--Insects_Rhodnius_prolixus_13249.RPRC004566-PA
+|  |  |  |  |  |  |  +--| (95)
+|  |  |  |  |  |  |     +--Insects_Pediculus_humanus_8231114_121225.PHUM065570-PA
+|  |  |  |  |  +--| (100)
+|  |  |  |  |     +--Insects_Zootermopsis_nevadensis_L798_09476_136037.KDR16811
+|  |  |  +--| (100)
+|  |  |     +------Arachnids_Tetranychus_urticae_107361768_32264.tetur07g03620.1
+|  +--| (61)
+|     |        +--------------------Insects_Acyrthosiphon_pisum_7029.ACYPI001045-PA
+|     |     +--| (93)
+|     |     |  +---------------------------------------Placozoa_Trichoplax_adhaerens_10228.TriadP56158
+|     |  +--| (75)
+|     |  |  |  +--------Hemichordates_Saccoglossus_kowalevskii_10224.XP_002732444.1
+|     |  |  +--| (80)
+|     |  |     +-----------Filasterea_Capsaspora_owczarzaki_192875.XP_004343304.1
+|     +--| (77)
+|        |              +--Tunicates_Ciona_intestinalis_7719.XP_002119996.1
+|        |        +-----| (100)
+|        |        |     +---Tunicates_Ciona_savignyi_51511.ENSCSAVP00000010545
+|        |     +--| (99)
+|        |     |  |           +------Tunicates_Ciona_intestinalis_7719.XP_002128288.1
+|        |     |  +-----------| (100)
+|        |     |              +-----Tunicates_Ciona_savignyi_51511.ENSCSAVP00000019069
+|        |  +--| (58)
+|        |  |  |  +--------------Choanoflagellates_Monosiga_brevicollis_33737_81824.XP_001748573.1
+|        |  |  +--| (78)
+|        |  |     +-------------Choanoflagellates_Salpingoeca_rosetta_PTSG_06450_946362.XP_004991830.1
+|        +--| (63)
+|           |     +--Fish_Latimeria_chalumnae_TDO2_7897.ENSLACP00000000384
+|           +-----| (100)
+|                 |  +--Fish_Lepisosteus_oculatus_TDO2_7918.ENSLOCP00000010007
+|                 +--| (97)
+|                    |     +--Fish_Danio_rerio_tdo2b_7955.ENSDARP00000035102
+|                    |  +--| (100)
+|                    |  |  +--Fish_Astyanax_mexicanus_7994.ENSAMXP00000008439
+|                    +--| (53)
+|                       |                 +--Fish_Danio_rerio_tdo2a_7955.ENSDARP00000096367
+|                       |              +--| (99)
+|                       |              |  +--Fish_Astyanax_mexicanus_TDO2_7994.ENSAMXP00000015637
+|                       |           +--| (65)
+|                       |           |  +--Fish_Esox_lucius_tdo2_8010.XP_010898111.1
+|                       |        +--| (65)
+|                       |        |  |                 +--Fish_Poecilia_reticulata_tdo2_8081.XP_008419272.1
+|                       |        |  |              +--| (100)
+|                       |        |  |              |  +--Fish_Poecilia_formosa_tdo2_48698.ENSPFOP00000019088
+|                       |        |  |           +--| (100)
+|                       |        |  |           |  +--Fish_Xiphophorus_maculatus_TDO2_8083.ENSXMAP00000002272
+|                       |        |  |        +**| (76)
+|                       |        |  |        |  +--Fish_Oryzias_latipes_TDO2_8090.ENSORLP00000025285
+|                       |        |  |     +--| (77)
+|                       |        |  |     |  |     +--Fish_Oreochromis_niloticus_TDO2_8128.ENSONIP00000001455
+|                       |        |  |     |  |  +**| (89)
+|                       |        |  |     |  |  |  |     +**Fish_Haplochromis_burtoni_8153.XP_005919480.1
+|                       |        |  |     |  |  |  |  +**| (56)
+|                       |        |  |     |  |  |  |  |  +--Fish_Maylandia_zebra_tdo2_106582.XP_004553681.1
+|                       |        |  |     |  |  |  +--| (100)
+|                       |        |  |     |  |  |     +--Fish_Pundamilia_nyererei_303518.XP_005726539.1
+|                       |        |  |     |  +--| (100)
+|                       |        |  |     |     +--Fish_Neolamprologus_brichardi_32507.XP_006798913.1
+|                       |        |  |  +--| (85)
+|                       |        |  |  |  |     +--Fish_Takifugu_rubripes_TDO2_31033.ENSTRUP00000040153
+|                       |        |  |  |  |  +--| (97)
+|                       |        |  |  |  |  |  +--Fish_Gasterosteus_aculeatus_TDO2_69293.ENSGACP00000021816
+|                       |        |  |  |  +--| (52)
+|                       |        |  |  |     +--Fish_Stegastes_partitus_tdo2_144197.XP_008277714.1
+|                       |        |  +--| (93)
+|                       |        |     +--Fish_Larimichthys_crocea_tdo2_215358.XP_010727802.1
+|                       |     +--| (53)
+|                       |     |  +--Fish_Gadus_morhua_8049.ENSGMOP00000013275
+|                       |  +--| (100)
+|                       |  |  |  +--Fish_Cynoglossus_semilaevis_244447.XP_008305943.1
+|                       |  |  +--| (100)
+|                       |  |     +**Fish_Cynoglossus_semilaevis_tdo2_244447.XP_008324797.1
+|                       +--| (53)
+|                          |  +--Amphibians_Xenopus__Silurana__tdo2_8364.ENSXETP00000048482
+|                          +--| (100)
+|                             |           +--Reptiles_Chelonia_mydas_TDO2_8469.XP_007071332.1
+|                             |        +--| (58)
+|                             |        |  |  +--Reptiles_Anolis_carolinensis_TDO2_28377.ENSACAP00000016632
+|                             |        |  +--| (96)
+|                             |        |     +--Reptiles_Python_bivittatus_TDO2_176946.XP_007437938.1
+|                             |     +--| (54)
+|                             |     |  |  +--Reptiles_Chrysemys_picta_TDO2_8479.XP_005299386.1
+|                             |     |  +**| (55)
+|                             |     |     +--Reptiles_Pelodiscus_sinensis_TDO2_13735.ENSPSIP00000009850
+|                             |  +--| (92)
+|                             |  |  |     +--Reptiles_Alligator_mississippiensis_TDO2_8496.XP_006275838.1
+|                             |  |  |  +--| (100)
+|                             |  |  |  |  +**Reptiles_Alligator_sinensis_TDO2_38654.XP_006038040.1
+|                             |  |  +--| (99)
+|                             |  |     |  +--Birds_Columba_livia_TDO2_8932.XP_005509615.1
+|                             |  |     +--| (100)
+|                             |  |        |     +--Birds_Haliaeetus_leucocephalus_TDO2_52644.XP_010584401.1
+|                             |  |        |  +**| (77)
+|                             |  |        |  |  |  +**Birds_Ficedula_albicollis_TDO2_59894.ENSFALP00000009682
+|                             |  |        |  |  +--| (100)
+|                             |  |        |  |     +**Birds_Pseudopodoces_humilis_TDO2_181119.XP_005517635.1
+|                             |  |        +--| (100)
+|                             |  |           +--Birds_Nipponia_nippon_TDO2_128390.XP_009473029.1
+|                             +--| (100)
+|                                |     +**Mammals_Ornithorhynchus_anatinus_TDO2_9258.ENSOANP00000024684
+|                                |  +--| (100)
+|                                |  |  +--Mammals_Ornithorhynchus_anatinus_9258.ENSOANP00000029816
+|                                +--| (100)
+|                                   |                    +--Mammals_Sarcophilus_harrisii_TDO2_9305.ENSSHAP00000003483
+|                                   |                 +--| (96)
+|                                   |                 |  +--Mammals_Macropus_eugenii_TDO2_9315.ENSMEUP00000000133
+|                                   |              +--| (96)
+|                                   |              |  +**Mammals_Monodelphis_domestica_TDO2_13616.ENSMODP00000002068
+|                                   |           +--| (23)
+|                                   |           |  +--Mammals_Chrysochloris_asiatica_TDO2_185453.XP_006867973.1
+|                                   |        +--| (30)
+|                                   |        |  |                 +--Mammals_Echinops_telfairi_TDO2_9371.XP_004708784.1
+|                                   |        |  |              +--| (100)
+|                                   |        |  |              |  |     +--Mammals_Callithrix_jacchus_TDO2_9483.ENSCJAP00000003010
+|                                   |        |  |              |  |  +--| (98)
+|                                   |        |  |              |  |  |  +--Mammals_Saimiri_boliviensis_TDO2_27679.XP_010336874.1
+|                                   |        |  |              |  +--| (97)
+|                                   |        |  |              |     |           +**Mammals_Macaca_fascicularis_TDO2_9541.XP_005556209.1
+|                                   |        |  |              |     |        +**| (69)
+|                                   |        |  |              |     |        |  +**Mammals_Pan_paniscus_TDO2_9597.XP_003822608.1
+|                                   |        |  |              |     |     +**| (17)
+|                                   |        |  |              |     |     |  |  +--Mammals_Rhinopithecus_roxellana_TDO2_61622.XP_010356340.1
+|                                   |        |  |              |     |     |  +**| (16)
+|                                   |        |  |              |     |     |     +--Mammals_Nomascus_leucogenys_TDO2_61853.ENSNLEP00000007627
+|                                   |        |  |              |     |  +**| (21)
+|                                   |        |  |              |     |  |  +--Mammals_Papio_anubis_TDO2_9555.ENSPANP00000015362
+|                                   |        |  |              |     +--| (100)
+|                                   |        |  |              |        |     +--Mammals_Macaca_mulatta_TDO2_9544.ENSMMUP00000028993
+|                                   |        |  |              |        |  +--| (100)
+|                                   |        |  |              |        |  |  +--Mammals_Gorilla_gorilla_TDO2_9593.ENSGGOP00000020021
+|                                   |        |  |              |        +**| (38)
+|                                   |        |  |              |           +--Mammals_Pongo_abelii_TDO2_9601.ENSPPYP00000016928
+|                                   |        |  |           +--| (97)
+|                                   |        |  |           |  +--Mammals_Sorex_araneus_TDO2_42254.XP_004606216.1
+|                                   |        |  |        +--| (74)
+|                                   |        |  |        |  |  +--Mammals_Felis_catus_TDO2_9685.ENSFCAP00000022790
+|                                   |        |  |        |  +--| (96)
+|                                   |        |  |        |     +**Mammals_Panthera_tigris_TDO2_9694.XP_007084318.1
+|                                   |        |  |     +**| (35)
+|                                   |        |  |     |  |        +--Mammals_Tarsius_syrichta_9478.XP_008063676.1
+|                                   |        |  |     |  |     +--| (65)
+|                                   |        |  |     |  |     |  +--Mammals_Elephantulus_edwardii_TDO2_28737.XP_006884511.1
+|                                   |        |  |     |  |  +**| (18)
+|                                   |        |  |     |  |  |  |  +--Mammals_Orycteropus_afer_TDO2_9818.XP_007942169.1
+|                                   |        |  |     |  |  |  +--| (51)
+|                                   |        |  |     |  |  |     |  +--Mammals_Galeopterus_variegatus_482537.XP_008562049.1
+|                                   |        |  |     |  |  |     +--| (69)
+|                                   |        |  |     |  |  |        +--Mammals_Galeopterus_variegatus_TDO2_482537.XP_008580788.1
+|                                   |        |  |     |  +--| (20)
+|                                   |        |  |     |     |  +--Mammals_Trichechus_manatus_TDO2_9778.XP_004382121.1
+|                                   |        |  |     |     +--| (86)
+|                                   |        |  |     |        +--Mammals_Loxodonta_africana_TDO2_9785.ENSLAFP00000006729
+|                                   |        |  |  +**| (37)
+|                                   |        |  |  |  |     +--Mammals_Canis_lupus_TDO2_9612.ENSCAFP00000012609
+|                                   |        |  |  |  |  +--| (93)
+|                                   |        |  |  |  |  |  |     +**Mammals_Ailuropoda_melanoleuca_TDO2_9646.ENSAMEP00000016329
+|                                   |        |  |  |  |  |  |  +--| (99)
+|                                   |        |  |  |  |  |  |  |  +**Mammals_Ursus_maritimus_TDO2_29073.XP_008683754.1
+|                                   |        |  |  |  |  |  +**| (59)
+|                                   |        |  |  |  |  |     +--Mammals_Mustela_putorius_TDO2_9668.ENSMPUP00000005684
+|                                   |        |  |  |  +--| (96)
+|                                   |        |  |  |     |  +--Mammals_Odobenus_rosmarus_TDO2_9707.XP_004394300.1
+|                                   |        |  |  |     +--| (100)
+|                                   |        |  |  |        +--Mammals_Leptonychotes_weddellii_TDO2_9713.XP_006727337.1
+|                                   |        |  +--| (36)
+|                                   |        |     |           +--Mammals_Pteropus_alecto_TDO2_9402.XP_006917052.1
+|                                   |        |     |        +--| (100)
+|                                   |        |     |        |  +--Mammals_Pteropus_vampyrus_TDO2_132908.ENSPVAP00000006423
+|                                   |        |     |     +**| (96)
+|                                   |        |     |     |  |  +--Mammals_Eptesicus_fuscus_TDO2_29078.XP_008142795.1
+|                                   |        |     |     |  +--| (100)
+|                                   |        |     |     |     |  +**Mammals_Myotis_lucifugus_TDO2_59463.ENSMLUP00000011346
+|                                   |        |     |     |     +--| (100)
+|                                   |        |     |     |        |  +**Mammals_Myotis_brandtii_TDO2_109478.XP_005860827.1
+|                                   |        |     |     |        +--| (100)
+|                                   |        |     |     |           +--Mammals_Myotis_davidii_TDO2_225400.XP_006754339.1
+|                                   |        |     |  +--| (71)
+|                                   |        |     |  |  |     +--Mammals_Cavia_porcellus_TDO2_10141.ENSCPOP00000007787
+|                                   |        |     |  |  |  +--| (98)
+|                                   |        |     |  |  |  |  |  +--Mammals_Octodon_degus_Tdo2_10160.XP_004638770.1
+|                                   |        |     |  |  |  |  +--| (99)
+|                                   |        |     |  |  |  |     +--Mammals_Chinchilla_lanigera_Tdo2_34839.XP_005401005.1
+|                                   |        |     |  |  +--| (100)
+|                                   |        |     |  |     |  +--Mammals_Heterocephalus_glaber_Tdo2_10181.XP_004868605.1
+|                                   |        |     |  |     +--| (98)
+|                                   |        |     |  |        +--Mammals_Fukomys_damarensis_Tdo2_885580.XP_010626270.1
+|                                   |        |     +--| (55)
+|                                   |        |        |                                +--Mammals_Orcinus_orca_TDO2_9733.XP_004266221.1
+|                                   |        |        |                             +--| (99)
+|                                   |        |        |                             |  |  +**Mammals_Tursiops_truncatus_9739.XP_004326709.1
+|                                   |        |        |                             |  +**| (47)
+|                                   |        |        |                             |     +--Mammals_Lipotes_vexillifer_TDO2_118797.XP_007461933.1
+|                                   |        |        |                          +--| (100)
+|                                   |        |        |                          |  +--Mammals_Balaenoptera_acutorostrata_TDO2_9767.XP_007184228.1
+|                                   |        |        |                       +**| (70)
+|                                   |        |        |                       |  +--Mammals_Ictidomys_tridecemlineatus_TDO2_43179.ENSSTOP00000012370
+|                                   |        |        |                    +--| (63)
+|                                   |        |        |                    |  +--Mammals_Bubalus_bubalis_TDO2_89462.XP_006078274.1
+|                                   |        |        |                 +**| (61)
+|                                   |        |        |                 |  |  +**Mammals_Bos_taurus_TDO2_9913.ENSBTAP00000014690
+|                                   |        |        |                 |  +--| (100)
+|                                   |        |        |                 |     +**Mammals_Bos_mutus_TDO2_72004.XP_005888745.1
+|                                   |        |        |              +--| (98)
+|                                   |        |        |              |  |  +--Mammals_Ovis_aries_TDO2_9940.ENSOARP00000007369
+|                                   |        |        |              |  +--| (91)
+|                                   |        |        |              |     +--Mammals_Pantholops_hodgsonii_TDO2_59538.XP_005961766.1
+|                                   |        |        |           +--| (96)
+|                                   |        |        |           |  +--Mammals_Sus_scrofa_TDO2_9823.ENSSSCP00000009459
+|                                   |        |        |        +--| (79)
+|                                   |        |        |        |  |  +--Mammals_Ochotona_princeps_TDO2_9978.XP_004591458.1
+|                                   |        |        |        |  +--| (87)
+|                                   |        |        |        |     +--Mammals_Oryctolagus_cuniculus_TDO2_9986.ENSOCUP00000013279
+|                                   |        |        |     +--| (37)
+|                                   |        |        |     |  +--Mammals_Nannospalax_galili_Tdo2_1026970.XP_008852527.1
+|                                   |        |        |  +**| (39)
+|                                   |        |        |  |  |        +--Mammals_Cricetulus_griseus_Tdo2_10029.XP_007613764.1
+|                                   |        |        |  |  |     +--| (100)
+|                                   |        |        |  |  |     |  +**Mammals_Mesocricetus_auratus_TDO2_10036.XP_005076212.1
+|                                   |        |        |  |  |  +--| (99)
+|                                   |        |        |  |  |  |  |     +**Mammals_Peromyscus_maniculatus_10042.XP_006985363.1
+|                                   |        |        |  |  |  |  |  +--| (65)
+|                                   |        |        |  |  |  |  |  |  |  +--Mammals_Mus_musculus_Tdo2_10090.ENSMUSP00000029645
+|                                   |        |        |  |  |  |  |  |  +--| (98)
+|                                   |        |        |  |  |  |  |  |     +--Mammals_Rattus_norvegicus_Tdo2_10116.ENSRNOP00000015732
+|                                   |        |        |  |  |  |  +**| (46)
+|                                   |        |        |  |  |  |     +--Mammals_Microtus_ochrogaster_79684.XP_005344195.1
+|                                   |        |        |  |  +--| (90)
+|                                   |        |        |  |     +--Mammals_Jaculus_jaculus_Tdo2_51337.XP_004655943.1
+|                                   |        |        +--| (49)
+|                                   |        |           +--Mammals_Tupaia_chinensis_TDO2_246437.XP_006164255.1
+|                                   |     +--| (29)
+|                                   |     |  +--Mammals_Erinaceus_europaeus_TDO2_9365.XP_007535113.1
+|                                   |  +--| (33)
+|                                   |  |  +--Mammals_Otolemur_garnettii_TDO2_30611.ENSOGAP00000003864
+|                                   +--| (99)
+|                                      +--Mammals_Dasypus_novemcinctus_TDO2_9361.ENSDNOP00000028774
+|
+|  +-----------Echinoderms_Strongylocentrotus_purpuratus_LOC589461_7668.SPU_019914-tr
++--| (77)
+   |  +--Echinoderms_Strongylocentrotus_purpuratus_LOC593764_7668.SPU_027816-tr
+   +--| (77)
+      +-----------------------------------Fonticula_Fonticula_alba_H696_02007_691883.XP_009494180.1
+
+Tree in newick format:
+
+(Cnidarians_Hydra_vulgaris_6087.XP_004206814.1:0.9974945738,((((((Nematodes_Caenorhabditis_briggsae_CBG09046_6238.CBG09046:0.0147161927,((Nematodes_Caenorhabditis_elegans_C28H8.11_6239.C28H8.11a.1:0.0309879653,Nematodes_Caenorhabditis_remanei_CRE_04506_31234.CRE04506:0.0073476076)96:0.0078962684,(Nematodes_Caenorhabditis_brenneri_CBN24716_135651.CBN24716:0.0054988891,Nematodes_Caenorhabditis_tropicalis_1561998.Csp11.Scaffold546.g3499.t1:0.0079876560)74:0.0013367871)74:0.0137790035)82:0.0257498634,((Nematodes_Caenorhabditis_japonica_CJA00189_281687.CJA00189:0.0181842424,Nematodes_Caenorhabditis_japonica_CJA42184b_281687.CJA42184b:0.0000020355)99:0.0406211418,(Nematodes_Caenorhabditis_japonica_CJA16255a_281687.CJA16255a:0.0000020449,Nematodes_Caenorhabditis_japonica_CJA35679b_281687.CJA35679b:0.0358440649)94:0.0552925314)75:0.0001417194)81:0.0908733083,Nematodes_Bursaphelenchus_xylophilus_6326.BUX.s00351.454:0.1243668716)99:0.2173864606,(Nematodes_Bursaphelenchus_xylophilus_6326.BUX.s00351.453:0.2163453343,Nematodes_Strongyloides_ratti_g4317_34506.g4317:0.2626102776)100:0.1353623819)100:0.1740517219,(Placozoa_Trichoplax_adhaerens_10228.TriadP25841:0.3344425016,(Mammals_Pantholops_hodgsonii_59538.XP_005961907.1:0.5434283585,Mammals_Pantholops_hodgsonii_59538.XP_005968213.1:0.7346494652)100:1.5948754480)79:0.1173918186)74:0.0643926891,(((((Annelids_Helobdella_robusta_20210143_6412.HelroP185454:0.2640535240,Ctenophores_Mnemiopsis_leidyi_27923.ML030523a-PA:1.6442336633)92:0.1750275840,Molluscs_Aplysia_californica_6500.XP_005104332.1:0.4723653071)78:0.0362800089,(Lancelets_Branchiostoma_floridae_7739.XP_002611396.1:0.2346005576,Cnidarians_Nematostella_vectensis_v1g157887_45351.EDO49705:0.3618556083)96:0.0761896778)72:0.0371103484,((Crustaceans_Daphnia_pulex_6669.EFX83853:0.1894529931,(((((Insects_Tribolium_castaneum_V_7070.TC008028-PA:0.1377859777,(((Insects_Aedes_aegypti_AAEL000428_7159.AAEL000428-PA:0.0185526916,Insects_Culex_quinquefasciatus_6034009_7176.CPIJ002864-PA:0.3306644564)100:0.0269022541,(Insects_Anopheles_gambiae_T23O_ANOGA_7165.AGAP002721-PA:0.0154313992,Insects_Anopheles_darlingi_AND_004972_43151.ADAC004972-PA:0.0246215717)95:0.0133471459)99:0.0474927211,(Insects_Ceratitis_capitata_7213.XP_004529546.1:0.0737385466,((((Insects_Drosophila_ananassae_v_7217.FBpp0123668:0.0000024895,((Insects_Drosophila_erecta_GG18380_7220.FBpp0136926:0.0000010571,Insects_Drosophila_melanogaster_v_7227.FBpp0073242:0.0000010571)100:0.0000022464,Insects_Drosophila_yakuba_v_7245.FBpp0260907:0.0034189048)100:0.0279669498)100:0.0169841828,(Insects_Drosophila_persimilis_GL18243_7234.FBpp0182350:0.0000023310,Insects_Drosophila_pseudoobscura_GA15272_7237.FBpp0285544:0.0000022618)100:0.0097709945)99:0.0040880712,((Insects_Drosophila_grimshawi_GH12679_7222.FBpp0146585:0.0163924645,(Insects_Drosophila_mojavensis_GI16256_7230.FBpp0165473:0.0132831885,Insects_Drosophila_virilis_GJ16721_7244.FBpp0231138:0.0125836684)99:0.0085090916)99:0.0064285181,Insects_Drosophila_willistoni_GK19977_7260.FBpp0249120:0.0234412779)98:0.0037491299)100:0.0751100789,Insects_Musca_domestica_101890019_7370.XP_005177538.1:0.0341191125)100:0.0402453484)100:0.0794537436)79:0.0498268867)69:0.0207529288,(Insects_Bombyx_mori_7091.BGIBMGA009276-TA:0.0305092664,(Insects_Danaus_plexippus_KGM_213793_13037.EHJ70119:0.0363098448,(Insects_Heliconius_melpomene_34740.HMEL008452-PA:0.0407402335,Insects_Heliconius_melpomene_34740.HMEL010716-PA:0.1110122073)100:0.0326678231)95:0.0101487980)100:0.1383526426)100:0.0425257480,((Insects_Nasonia_vitripennis_7425.NV17830-PA:0.0711529643,((Insects_Apis_mellifera_LOC410828_7460.GB55638-PA:0.0214023679,Insects_Bombus_impatiens_132113.XP_003490724.1:0.0377304955)100:0.0379296232,(Insects_Atta_cephalotes_105627134_12957.ACEP23192-PA:0.0102015147,Insects_Acromyrmex_echinatior_G5I_06975_103372.F4WME1:0.0066467049)100:0.0965575728)95:0.0136779271)99:0.0456053764,Insects_Microplitis_demolitor_69319.XP_008547448.1:0.0859987971)100:0.1075559932)86:0.0125609390,(Insects_Rhodnius_prolixus_13249.RPRC004566-PA:0.1673533024,Insects_Pediculus_humanus_8231114_121225.PHUM065570-PA:0.1579075089)95:0.0456971251)89:0.0239290244,Insects_Zootermopsis_nevadensis_L798_09476_136037.KDR16811:0.0938003537)100:0.0723120741)100:0.0836968450,Arachnids_Tetranychus_urticae_107361768_32264.tetur07g03620.1:0.3093877367)100:0.1048310052)61:0.0096117750,(((Insects_Acyrthosiphon_pisum_7029.ACYPI001045-PA:0.9185459486,Placozoa_Trichoplax_adhaerens_10228.TriadP56158:1.7640853134)93:0.0958472935,(Hemichordates_Saccoglossus_kowalevskii_10224.XP_002732444.1:0.4086236277,Filasterea_Capsaspora_owczarzaki_192875.XP_004343304.1:0.5357718855)80:0.0628836547)75:0.0554669314,((((Tunicates_Ciona_intestinalis_7719.XP_002119996.1:0.0943169276,Tunicates_Ciona_savignyi_51511.ENSCSAVP00000010545:0.1974517802)100:0.2735022091,(Tunicates_Ciona_intestinalis_7719.XP_002128288.1:0.3152216387,Tunicates_Ciona_savignyi_51511.ENSCSAVP00000019069:0.2945933067)100:0.5622373772)99:0.1621334975,(Choanoflagellates_Monosiga_brevicollis_33737_81824.XP_001748573.1:0.6674336160,Choanoflagellates_Salpingoeca_rosetta_PTSG_06450_946362.XP_004991830.1:0.6329928537)78:0.1464389158)58:0.0127084458,(Fish_Latimeria_chalumnae_TDO2_7897.ENSLACP00000000384:0.0855094734,(Fish_Lepisosteus_oculatus_TDO2_7918.ENSLOCP00000010007:0.0492666500,((Fish_Danio_rerio_tdo2b_7955.ENSDARP00000035102:0.0251092145,Fish_Astyanax_mexicanus_7994.ENSAMXP00000008439:0.1162788142)100:0.0743075692,((((((Fish_Danio_rerio_tdo2a_7955.ENSDARP00000096367:0.0709199614,Fish_Astyanax_mexicanus_TDO2_7994.ENSAMXP00000015637:0.0275134650)99:0.0264868694,Fish_Esox_lucius_tdo2_8010.XP_010898111.1:0.0770883028)65:0.0091768873,((((((Fish_Poecilia_reticulata_tdo2_8081.XP_008419272.1:0.0091126086,Fish_Poecilia_formosa_tdo2_48698.ENSPFOP00000019088:0.0090798294)100:0.0109344569,Fish_Xiphophorus_maculatus_TDO2_8083.ENSXMAP00000002272:0.0234937999)100:0.0466931364,Fish_Oryzias_latipes_TDO2_8090.ENSORLP00000025285:0.0643240610)76:0.0009601565,((Fish_Oreochromis_niloticus_TDO2_8128.ENSONIP00000001455:0.0067472475,((Fish_Haplochromis_burtoni_8153.XP_005919480.1:0.0000010571,Fish_Maylandia_zebra_tdo2_106582.XP_004553681.1:0.0033744563)56:0.0000026322,Fish_Pundamilia_nyererei_303518.XP_005726539.1:0.0033870622)100:0.0033831812)89:0.0000027359,Fish_Neolamprologus_brichardi_32507.XP_006798913.1:0.0071884493)100:0.0171066048)77:0.0093377588,((Fish_Takifugu_rubripes_TDO2_31033.ENSTRUP00000040153:0.0819157946,Fish_Gasterosteus_aculeatus_TDO2_69293.ENSGACP00000021816:0.0396649122)97:0.0173744521,Fish_Stegastes_partitus_tdo2_144197.XP_008277714.1:0.0131029164)52:0.0090127849)85:0.0053156694,Fish_Larimichthys_crocea_tdo2_215358.XP_010727802.1:0.0114528071)93:0.0230770765)65:0.0164936323,Fish_Gadus_morhua_8049.ENSGMOP00000013275:0.0802361004)53:0.0063264759,(Fish_Cynoglossus_semilaevis_244447.XP_008305943.1:0.1075318874,Fish_Cynoglossus_semilaevis_tdo2_244447.XP_008324797.1:0.0000024411)100:0.1119159018)100:0.0394335357,(Amphibians_Xenopus__Silurana__tdo2_8364.ENSXETP00000048482:0.0431321369,((((Reptiles_Chelonia_mydas_TDO2_8469.XP_007071332.1:0.0063863311,(Reptiles_Anolis_carolinensis_TDO2_28377.ENSACAP00000016632:0.0284438994,Reptiles_Python_bivittatus_TDO2_176946.XP_007437938.1:0.0318722499)96:0.0145176181)58:0.0070363549,(Reptiles_Chrysemys_picta_TDO2_8479.XP_005299386.1:0.0168514342,Reptiles_Pelodiscus_sinensis_TDO2_13735.ENSPSIP00000009850:0.0577030847)55:0.0000021071)54:0.0089899090,((Reptiles_Alligator_mississippiensis_TDO2_8496.XP_006275838.1:0.0034323181,Reptiles_Alligator_sinensis_TDO2_38654.XP_006038040.1:0.0000024302)100:0.0289812948,(Birds_Columba_livia_TDO2_8932.XP_005509615.1:0.0034106997,((Birds_Haliaeetus_leucocephalus_TDO2_52644.XP_010584401.1:0.0035897272,(Birds_Ficedula_albicollis_TDO2_59894.ENSFALP00000009682:0.0000010571,Birds_Pseudopodoces_humilis_TDO2_181119.XP_005517635.1:0.0000010571)100:0.0358675050)77:0.0000023943,Birds_Nipponia_nippon_TDO2_128390.XP_009473029.1:0.0137971430)100:0.0034427622)100:0.0362270390)99:0.0058561705)92:0.0242136212,((Mammals_Ornithorhynchus_anatinus_TDO2_9258.ENSOANP00000024684:0.0000020397,Mammals_Ornithorhynchus_anatinus_9258.ENSOANP00000029816:0.0192027292)100:0.0275712648,(((((((Mammals_Sarcophilus_harrisii_TDO2_9305.ENSSHAP00000003483:0.0112695331,Mammals_Macropus_eugenii_TDO2_9315.ENSMEUP00000000133:0.0327374690)96:0.0204919435,Mammals_Monodelphis_domestica_TDO2_13616.ENSMODP00000002068:0.0031885279)96:0.0281005440,Mammals_Chrysochloris_asiatica_TDO2_185453.XP_006867973.1:0.0104576081)23:0.0032361102,((((((Mammals_Echinops_telfairi_TDO2_9371.XP_004708784.1:0.0475810455,((Mammals_Callithrix_jacchus_TDO2_9483.ENSCJAP00000003010:0.0283444500,Mammals_Saimiri_boliviensis_TDO2_27679.XP_010336874.1:0.0069483512)98:0.0070082766,((((Mammals_Macaca_fascicularis_TDO2_9541.XP_005556209.1:0.0000010571,Mammals_Pan_paniscus_TDO2_9597.XP_003822608.1:0.0000010571)69:0.0000010570,(Mammals_Rhinopithecus_roxellana_TDO2_61622.XP_010356340.1:0.0069157612,Mammals_Nomascus_leucogenys_TDO2_61853.ENSNLEP00000007627:0.0068592230)16:0.0000020850)17:0.0000024350,Mammals_Papio_anubis_TDO2_9555.ENSPANP00000015362:0.0068665550)21:0.0000022081,((Mammals_Macaca_mulatta_TDO2_9544.ENSMMUP00000028993:0.1166904250,Mammals_Gorilla_gorilla_TDO2_9593.ENSGGOP00000020021:0.0871287125)100:0.0612989221,Mammals_Pongo_abelii_TDO2_9601.ENSPPYP00000016928:0.0042795888)38:0.0000021611)100:0.0172673641)97:0.0034751768)100:0.0120072885,Mammals_Sorex_araneus_TDO2_42254.XP_004606216.1:0.0276985908)97:0.0069402244,(Mammals_Felis_catus_TDO2_9685.ENSFCAP00000022790:0.0313078547,Mammals_Panthera_tigris_TDO2_9694.XP_007084318.1:0.0000020316)96:0.0136264731)74:0.0057504020,(((Mammals_Tarsius_syrichta_9478.XP_008063676.1:0.0138610948,Mammals_Elephantulus_edwardii_TDO2_28737.XP_006884511.1:0.0068385725)65:0.0034117600,(Mammals_Orycteropus_afer_TDO2_9818.XP_007942169.1:0.0282963822,(Mammals_Galeopterus_variegatus_482537.XP_008562049.1:0.0687223303,Mammals_Galeopterus_variegatus_TDO2_482537.XP_008580788.1:0.0523962986)69:0.0034364710)51:0.0035056419)18:0.0000026588,(Mammals_Trichechus_manatus_TDO2_9778.XP_004382121.1:0.0299331778,Mammals_Loxodonta_africana_TDO2_9785.ENSLAFP00000006729:0.0187765294)86:0.0146885994)20:0.0033936027)35:0.0000026368,((Mammals_Canis_lupus_TDO2_9612.ENSCAFP00000012609:0.0102399266,((Mammals_Ailuropoda_melanoleuca_TDO2_9646.ENSAMEP00000016329:0.0000010571,Mammals_Ursus_maritimus_TDO2_29073.XP_008683754.1:0.0000010571)99:0.0033917993,Mammals_Mustela_putorius_TDO2_9668.ENSMPUP00000005684:0.0033972291)59:0.0000026646)93:0.0034074744,(Mammals_Odobenus_rosmarus_TDO2_9707.XP_004394300.1:0.0034009637,Mammals_Leptonychotes_weddellii_TDO2_9713.XP_006727337.1:0.0068977517)100:0.0034375855)96:0.0034574612)37:0.0000020249,((((Mammals_Pteropus_alecto_TDO2_9402.XP_006917052.1:0.0064437083,Mammals_Pteropus_vampyrus_TDO2_132908.ENSPVAP00000006423:0.0263211129)100:0.0609281066,(Mammals_Eptesicus_fuscus_TDO2_29078.XP_008142795.1:0.0068591084,(Mammals_Myotis_lucifugus_TDO2_59463.ENSMLUP00000011346:0.0000023067,(Mammals_Myotis_brandtii_TDO2_109478.XP_005860827.1:0.0000025162,Mammals_Myotis_davidii_TDO2_225400.XP_006754339.1:0.0033948524)100:0.0033942734)100:0.0067945783)100:0.0433536543)96:0.0029772135,((Mammals_Cavia_porcellus_TDO2_10141.ENSCPOP00000007787:0.0321112695,(Mammals_Octodon_degus_Tdo2_10160.XP_004638770.1:0.0558061648,Mammals_Chinchilla_lanigera_Tdo2_34839.XP_005401005.1:0.0191372848)99:0.0053392690)98:0.0138402345,(Mammals_Heterocephalus_glaber_Tdo2_10181.XP_004868605.1:0.0196268664,Mammals_Fukomys_damarensis_Tdo2_885580.XP_010626270.1:0.0653706328)98:0.0161237375)100:0.0335408815)71:0.0034058114,(((((((((((Mammals_Orcinus_orca_TDO2_9733.XP_004266221.1:0.0034190250,(Mammals_Tursiops_truncatus_9739.XP_004326709.1:0.0000010571,Mammals_Lipotes_vexillifer_TDO2_118797.XP_007461933.1:0.0033664764)47:0.0000012909)99:0.0069480202,Mammals_Balaenoptera_acutorostrata_TDO2_9767.XP_007184228.1:0.0033800376)100:0.0175401474,Mammals_Ictidomys_tridecemlineatus_TDO2_43179.ENSSTOP00000012370:0.1439478713)70:0.0000020669,Mammals_Bubalus_bubalis_TDO2_89462.XP_006078274.1:0.0242701544)63:0.0034284740,(Mammals_Bos_taurus_TDO2_9913.ENSBTAP00000014690:0.0000010571,Mammals_Bos_mutus_TDO2_72004.XP_005888745.1:0.0000010571)100:0.0068471083)61:0.0000027452,(Mammals_Ovis_aries_TDO2_9940.ENSOARP00000007369:0.0034316794,Mammals_Pantholops_hodgsonii_TDO2_59538.XP_005961766.1:0.0068685532)91:0.0034242366)98:0.0103574477,Mammals_Sus_scrofa_TDO2_9823.ENSSSCP00000009459:0.0069371405)96:0.0067933386,(Mammals_Ochotona_princeps_TDO2_9978.XP_004591458.1:0.0291977609,Mammals_Oryctolagus_cuniculus_TDO2_9986.ENSOCUP00000013279:0.0247100097)87:0.0101158220)79:0.0034709843,Mammals_Nannospalax_galili_Tdo2_1026970.XP_008852527.1:0.0246656411)37:0.0034606752,(((Mammals_Cricetulus_griseus_Tdo2_10029.XP_007613764.1:0.0069210174,Mammals_Mesocricetus_auratus_TDO2_10036.XP_005076212.1:0.0000021863)100:0.0103662716,((Mammals_Peromyscus_maniculatus_10042.XP_006985363.1:0.0000020584,(Mammals_Mus_musculus_Tdo2_10090.ENSMUSP00000029645:0.0107220375,Mammals_Rattus_norvegicus_Tdo2_10116.ENSRNOP00000015732:0.0138218075)98:0.0138040412)65:0.0034391372,Mammals_Microtus_ochrogaster_79684.XP_005344195.1:0.0209277264)46:0.0000025060)99:0.0212045808,Mammals_Jaculus_jaculus_Tdo2_51337.XP_004655943.1:0.0281477753)90:0.0071677445)39:0.0000023260,Mammals_Tupaia_chinensis_TDO2_246437.XP_006164255.1:0.0531182718)49:0.0034455765)55:0.0068160685)36:0.0034133388)30:0.0034694796,Mammals_Erinaceus_europaeus_TDO2_9365.XP_007535113.1:0.0208217781)29:0.0032924278,Mammals_Otolemur_garnettii_TDO2_30611.ENSOGAP00000003864:0.0207527794)33:0.0038809094,Mammals_Dasypus_novemcinctus_TDO2_9361.ENSDNOP00000028774:0.0212474740)99:0.0336093579)100:0.0373648895)100:0.0374193634)100:0.0348966918)53:0.0137721565)53:0.0060187309)97:0.0229493434)100:0.3004770104)63:0.0547972145)77:0.0417697940)61:0.0315820070)76:0.1091871317,(Echinoderms_Strongylocentrotus_purpuratus_LOC589461_7668.SPU_019914-tr:0.5502935185,(Echinoderms_Strongylocentrotus_purpuratus_LOC593764_7668.SPU_027816-tr:0.1115958705,Fonticula_Fonticula_alba_H696_02007_691883.XP_009494180.1:1.5839813524)77:0.1139149650)77:0.0813058782);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -21343.580123
+Robinson-Foulds distance between ML tree and consensus tree: 22
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++---------------------Cnidarians_Hydra_vulgaris_6087.XP_004206814.1
+|
+|                  +--Nematodes_Caenorhabditis_briggsae_CBG09046_6238.CBG09046
+|               +--| (82)
+|               |  |     +--Nematodes_Caenorhabditis_elegans_C28H8.11_6239.C28H8.11a.1
+|               |  |  +--| (96)
+|               |  |  |  +--Nematodes_Caenorhabditis_remanei_CRE_04506_31234.CRE04506
+|               |  +--| (74)
+|               |     |  +--Nematodes_Caenorhabditis_brenneri_CBN24716_135651.CBN24716
+|               |     +--| (74)
+|               |        +--Nematodes_Caenorhabditis_tropicalis_1561998.Csp11.Scaffold546.g3499.t1
+|            +--| (81)
+|            |  |     +--Nematodes_Caenorhabditis_japonica_CJA00189_281687.CJA00189
+|            |  |  +--| (99)
+|            |  |  |  +--Nematodes_Caenorhabditis_japonica_CJA42184b_281687.CJA42184b
+|            |  +--| (75)
+|            |     |  +--Nematodes_Caenorhabditis_japonica_CJA16255a_281687.CJA16255a
+|            |     +--| (94)
+|            |        +--Nematodes_Caenorhabditis_japonica_CJA35679b_281687.CJA35679b
+|        +---| (99)
+|        |   +--Nematodes_Bursaphelenchus_xylophilus_6326.BUX.s00351.454
+|     +--| (100)
+|     |  |  +---Nematodes_Bursaphelenchus_xylophilus_6326.BUX.s00351.453
+|     |  +--| (100)
+|     |     +-----Nematodes_Strongyloides_ratti_g4317_34506.g4317
+|  +--| (74)
+|  |  |  +------Placozoa_Trichoplax_adhaerens_10228.TriadP25841
+|  |  +--| (79)
+|  |     |                                   +-----------Mammals_Pantholops_hodgsonii_59538.XP_005961907.1
+|  |     +-----------------------------------| (100)
+|  |                                         +---------------Mammals_Pantholops_hodgsonii_59538.XP_005968213.1
++--| (76)
+|  |               +-----Annelids_Helobdella_robusta_20210143_6412.HelroP185454
+|  |           +---| (92)
+|  |           |   +------------------------------------Ctenophores_Mnemiopsis_leidyi_27923.ML030523a-PA
+|  |        +--| (78)
+|  |        |  +---------Molluscs_Aplysia_californica_6500.XP_005104332.1
+|  |     +--| (72)
+|  |     |  |  +----Lancelets_Branchiostoma_floridae_7739.XP_002611396.1
+|  |     |  +--| (96)
+|  |     |     +-------Cnidarians_Nematostella_vectensis_v1g157887_45351.EDO49705
+|  |  +--| (61)
+|  |  |  |     +---Crustaceans_Daphnia_pulex_6669.EFX83853
+|  |  |  |  +--| (100)
+|  |  |  |  |  |              +--Insects_Tribolium_castaneum_V_7070.TC008028-PA
+|  |  |  |  |  |           +--| (69)
+|  |  |  |  |  |           |  |        +--Insects_Aedes_aegypti_AAEL000428_7159.AAEL000428-PA
+|  |  |  |  |  |           |  |     +--| (100)
+|  |  |  |  |  |           |  |     |  +------Insects_Culex_quinquefasciatus_6034009_7176.CPIJ002864-PA
+|  |  |  |  |  |           |  |  +--| (99)
+|  |  |  |  |  |           |  |  |  |  +--Insects_Anopheles_gambiae_T23O_ANOGA_7165.AGAP002721-PA
+|  |  |  |  |  |           |  |  |  +--| (95)
+|  |  |  |  |  |           |  |  |     +--Insects_Anopheles_darlingi_AND_004972_43151.ADAC004972-PA
+|  |  |  |  |  |           |  +--| (79)
+|  |  |  |  |  |           |     |  +--Insects_Ceratitis_capitata_7213.XP_004529546.1
+|  |  |  |  |  |           |     +--| (100)
+|  |  |  |  |  |           |        |           +--Insects_Drosophila_ananassae_v_7217.FBpp0123668
+|  |  |  |  |  |           |        |        +--| (100)
+|  |  |  |  |  |           |        |        |  |     +--Insects_Drosophila_erecta_GG18380_7220.FBpp0136926
+|  |  |  |  |  |           |        |        |  |  +--| (100)
+|  |  |  |  |  |           |        |        |  |  |  +--Insects_Drosophila_melanogaster_v_7227.FBpp0073242
+|  |  |  |  |  |           |        |        |  +--| (100)
+|  |  |  |  |  |           |        |        |     +--Insects_Drosophila_yakuba_v_7245.FBpp0260907
+|  |  |  |  |  |           |        |     +--| (99)
+|  |  |  |  |  |           |        |     |  |  +--Insects_Drosophila_persimilis_GL18243_7234.FBpp0182350
+|  |  |  |  |  |           |        |     |  +--| (100)
+|  |  |  |  |  |           |        |     |     +--Insects_Drosophila_pseudoobscura_GA15272_7237.FBpp0285544
+|  |  |  |  |  |           |        |  +--| (100)
+|  |  |  |  |  |           |        |  |  |     +--Insects_Drosophila_grimshawi_GH12679_7222.FBpp0146585
+|  |  |  |  |  |           |        |  |  |  +--| (99)
+|  |  |  |  |  |           |        |  |  |  |  |  +--Insects_Drosophila_mojavensis_GI16256_7230.FBpp0165473
+|  |  |  |  |  |           |        |  |  |  |  +--| (99)
+|  |  |  |  |  |           |        |  |  |  |     +--Insects_Drosophila_virilis_GJ16721_7244.FBpp0231138
+|  |  |  |  |  |           |        |  |  +--| (98)
+|  |  |  |  |  |           |        |  |     +--Insects_Drosophila_willistoni_GK19977_7260.FBpp0249120
+|  |  |  |  |  |           |        +--| (100)
+|  |  |  |  |  |           |           +--Insects_Musca_domestica_101890019_7370.XP_005177538.1
+|  |  |  |  |  |        +--| (100)
+|  |  |  |  |  |        |  |  +--Insects_Bombyx_mori_7091.BGIBMGA009276-TA
+|  |  |  |  |  |        |  +--| (100)
+|  |  |  |  |  |        |     |  +--Insects_Danaus_plexippus_KGM_213793_13037.EHJ70119
+|  |  |  |  |  |        |     +--| (95)
+|  |  |  |  |  |        |        |  +--Insects_Heliconius_melpomene_34740.HMEL008452-PA
+|  |  |  |  |  |        |        +--| (100)
+|  |  |  |  |  |        |           +--Insects_Heliconius_melpomene_34740.HMEL010716-PA
+|  |  |  |  |  |     +--| (86)
+|  |  |  |  |  |     |  |     +--Insects_Nasonia_vitripennis_7425.NV17830-PA
+|  |  |  |  |  |     |  |  +--| (99)
+|  |  |  |  |  |     |  |  |  |     +--Insects_Apis_mellifera_LOC410828_7460.GB55638-PA
+|  |  |  |  |  |     |  |  |  |  +--| (100)
+|  |  |  |  |  |     |  |  |  |  |  +--Insects_Bombus_impatiens_132113.XP_003490724.1
+|  |  |  |  |  |     |  |  |  +--| (95)
+|  |  |  |  |  |     |  |  |     |  +--Insects_Atta_cephalotes_105627134_12957.ACEP23192-PA
+|  |  |  |  |  |     |  |  |     +--| (100)
+|  |  |  |  |  |     |  |  |        +--Insects_Acromyrmex_echinatior_G5I_06975_103372.F4WME1
+|  |  |  |  |  |     |  +--| (100)
+|  |  |  |  |  |     |     +--Insects_Microplitis_demolitor_69319.XP_008547448.1
+|  |  |  |  |  |  +--| (89)
+|  |  |  |  |  |  |  |  +--Insects_Rhodnius_prolixus_13249.RPRC004566-PA
+|  |  |  |  |  |  |  +--| (95)
+|  |  |  |  |  |  |     +--Insects_Pediculus_humanus_8231114_121225.PHUM065570-PA
+|  |  |  |  |  +--| (100)
+|  |  |  |  |     +--Insects_Zootermopsis_nevadensis_L798_09476_136037.KDR16811
+|  |  |  +--| (100)
+|  |  |     +------Arachnids_Tetranychus_urticae_107361768_32264.tetur07g03620.1
+|  +--| (61)
+|     |        +--------------------Insects_Acyrthosiphon_pisum_7029.ACYPI001045-PA
+|     |     +--| (93)
+|     |     |  +---------------------------------------Placozoa_Trichoplax_adhaerens_10228.TriadP56158
+|     |  +--| (75)
+|     |  |  |  +--------Hemichordates_Saccoglossus_kowalevskii_10224.XP_002732444.1
+|     |  |  +--| (80)
+|     |  |     +-----------Filasterea_Capsaspora_owczarzaki_192875.XP_004343304.1
+|     +--| (77)
+|        |              +--Tunicates_Ciona_intestinalis_7719.XP_002119996.1
+|        |        +-----| (100)
+|        |        |     +---Tunicates_Ciona_savignyi_51511.ENSCSAVP00000010545
+|        |     +--| (99)
+|        |     |  |           +------Tunicates_Ciona_intestinalis_7719.XP_002128288.1
+|        |     |  +-----------| (100)
+|        |     |              +-----Tunicates_Ciona_savignyi_51511.ENSCSAVP00000019069
+|        |  +--| (58)
+|        |  |  |  +--------------Choanoflagellates_Monosiga_brevicollis_33737_81824.XP_001748573.1
+|        |  |  +--| (78)
+|        |  |     +-------------Choanoflagellates_Salpingoeca_rosetta_PTSG_06450_946362.XP_004991830.1
+|        +--| (63)
+|           |     +--Fish_Latimeria_chalumnae_TDO2_7897.ENSLACP00000000384
+|           +-----| (100)
+|                 |  +--Fish_Lepisosteus_oculatus_TDO2_7918.ENSLOCP00000010007
+|                 +--| (97)
+|                    |     +--Fish_Danio_rerio_tdo2b_7955.ENSDARP00000035102
+|                    |  +--| (100)
+|                    |  |  +--Fish_Astyanax_mexicanus_7994.ENSAMXP00000008439
+|                    +--| (53)
+|                       |                 +--Fish_Danio_rerio_tdo2a_7955.ENSDARP00000096367
+|                       |              +--| (99)
+|                       |              |  +--Fish_Astyanax_mexicanus_TDO2_7994.ENSAMXP00000015637
+|                       |           +--| (65)
+|                       |           |  +--Fish_Esox_lucius_tdo2_8010.XP_010898111.1
+|                       |        +--| (65)
+|                       |        |  |                 +--Fish_Poecilia_reticulata_tdo2_8081.XP_008419272.1
+|                       |        |  |              +--| (100)
+|                       |        |  |              |  +--Fish_Poecilia_formosa_tdo2_48698.ENSPFOP00000019088
+|                       |        |  |           +--| (100)
+|                       |        |  |           |  +--Fish_Xiphophorus_maculatus_TDO2_8083.ENSXMAP00000002272
+|                       |        |  |        +--| (76)
+|                       |        |  |        |  +--Fish_Oryzias_latipes_TDO2_8090.ENSORLP00000025285
+|                       |        |  |     +--| (77)
+|                       |        |  |     |  |     +--Fish_Oreochromis_niloticus_TDO2_8128.ENSONIP00000001455
+|                       |        |  |     |  |  +--| (89)
+|                       |        |  |     |  |  |  |     +--Fish_Haplochromis_burtoni_8153.XP_005919480.1
+|                       |        |  |     |  |  |  |  +--| (56)
+|                       |        |  |     |  |  |  |  |  +--Fish_Maylandia_zebra_tdo2_106582.XP_004553681.1
+|                       |        |  |     |  |  |  +--| (100)
+|                       |        |  |     |  |  |     +--Fish_Pundamilia_nyererei_303518.XP_005726539.1
+|                       |        |  |     |  +--| (100)
+|                       |        |  |     |     +--Fish_Neolamprologus_brichardi_32507.XP_006798913.1
+|                       |        |  |  +--| (85)
+|                       |        |  |  |  |     +--Fish_Takifugu_rubripes_TDO2_31033.ENSTRUP00000040153
+|                       |        |  |  |  |  +--| (97)
+|                       |        |  |  |  |  |  +--Fish_Gasterosteus_aculeatus_TDO2_69293.ENSGACP00000021816
+|                       |        |  |  |  +--| (52)
+|                       |        |  |  |     +--Fish_Stegastes_partitus_tdo2_144197.XP_008277714.1
+|                       |        |  +--| (93)
+|                       |        |     +--Fish_Larimichthys_crocea_tdo2_215358.XP_010727802.1
+|                       |     +--| (53)
+|                       |     |  +--Fish_Gadus_morhua_8049.ENSGMOP00000013275
+|                       |  +--| (100)
+|                       |  |  |  +--Fish_Cynoglossus_semilaevis_244447.XP_008305943.1
+|                       |  |  +--| (100)
+|                       |  |     +--Fish_Cynoglossus_semilaevis_tdo2_244447.XP_008324797.1
+|                       +--| (53)
+|                          |  +--Amphibians_Xenopus__Silurana__tdo2_8364.ENSXETP00000048482
+|                          +--| (100)
+|                             |           +--Reptiles_Chelonia_mydas_TDO2_8469.XP_007071332.1
+|                             |        +--| (58)
+|                             |        |  |  +--Reptiles_Anolis_carolinensis_TDO2_28377.ENSACAP00000016632
+|                             |        |  +--| (96)
+|                             |        |     +--Reptiles_Python_bivittatus_TDO2_176946.XP_007437938.1
+|                             |     +--| (54)
+|                             |     |  |  +--Reptiles_Chrysemys_picta_TDO2_8479.XP_005299386.1
+|                             |     |  +--| (55)
+|                             |     |     +--Reptiles_Pelodiscus_sinensis_TDO2_13735.ENSPSIP00000009850
+|                             |  +--| (92)
+|                             |  |  |     +--Reptiles_Alligator_mississippiensis_TDO2_8496.XP_006275838.1
+|                             |  |  |  +--| (100)
+|                             |  |  |  |  +--Reptiles_Alligator_sinensis_TDO2_38654.XP_006038040.1
+|                             |  |  +--| (99)
+|                             |  |     |  +--Birds_Columba_livia_TDO2_8932.XP_005509615.1
+|                             |  |     +--| (100)
+|                             |  |        |     +--Birds_Haliaeetus_leucocephalus_TDO2_52644.XP_010584401.1
+|                             |  |        |  +--| (77)
+|                             |  |        |  |  |  +--Birds_Ficedula_albicollis_TDO2_59894.ENSFALP00000009682
+|                             |  |        |  |  +--| (100)
+|                             |  |        |  |     +--Birds_Pseudopodoces_humilis_TDO2_181119.XP_005517635.1
+|                             |  |        +--| (100)
+|                             |  |           +--Birds_Nipponia_nippon_TDO2_128390.XP_009473029.1
+|                             +--| (100)
+|                                |     +--Mammals_Ornithorhynchus_anatinus_TDO2_9258.ENSOANP00000024684
+|                                |  +--| (100)
+|                                |  |  +--Mammals_Ornithorhynchus_anatinus_9258.ENSOANP00000029816
+|                                +--| (100)
+|                                   |        +--Mammals_Sarcophilus_harrisii_TDO2_9305.ENSSHAP00000003483
+|                                   |     +--| (96)
+|                                   |     |  +--Mammals_Macropus_eugenii_TDO2_9315.ENSMEUP00000000133
+|                                   |  +--| (96)
+|                                   |  |  +--Mammals_Monodelphis_domestica_TDO2_13616.ENSMODP00000002068
+|                                   +--| (99)
+|                                      |           +--Mammals_Dasypus_novemcinctus_TDO2_9361.ENSDNOP00000028774
+|                                      |        +--| (25)
+|                                      |        |  +--Mammals_Otolemur_garnettii_TDO2_30611.ENSOGAP00000003864
+|                                      |     +--| (52)
+|                                      |     |  +--Mammals_Erinaceus_europaeus_TDO2_9365.XP_007535113.1
+|                                      |  +--| (31)
+|                                      |  |  |                 +--Mammals_Echinops_telfairi_TDO2_9371.XP_004708784.1
+|                                      |  |  |              +--| (100)
+|                                      |  |  |              |  |     +--Mammals_Callithrix_jacchus_TDO2_9483.ENSCJAP00000003010
+|                                      |  |  |              |  |  +--| (98)
+|                                      |  |  |              |  |  |  +--Mammals_Saimiri_boliviensis_TDO2_27679.XP_010336874.1
+|                                      |  |  |              |  +--| (97)
+|                                      |  |  |              |     |                    +**Mammals_Macaca_fascicularis_TDO2_9541.XP_005556209.1
+|                                      |  |  |              |     |                 +**|
+|                                      |  |  |              |     |                 |  +**Mammals_Homo_sapiens_TDO2_9606.ENSP00000444788
+|                                      |  |  |              |     |              +**|
+|                                      |  |  |              |     |              |  +**Mammals_Chlorocebus_sabaeus_TDO2_60711.ENSCSAP00000014794
+|                                      |  |  |              |     |           +--|
+|                                      |  |  |              |     |           |  +**Mammals_Pan_troglodytes_TDO2_9598.ENSPTRP00000028403
+|                                      |  |  |              |     |        +--| (69)
+|                                      |  |  |              |     |        |  +--Mammals_Pan_paniscus_TDO2_9597.XP_003822608.1
+|                                      |  |  |              |     |     +--| (20)
+|                                      |  |  |              |     |     |  |  +--Mammals_Papio_anubis_TDO2_9555.ENSPANP00000015362
+|                                      |  |  |              |     |     |  +--| (12)
+|                                      |  |  |              |     |     |     +--Mammals_Rhinopithecus_roxellana_TDO2_61622.XP_010356340.1
+|                                      |  |  |              |     |  +--| (42)
+|                                      |  |  |              |     |  |  |  +--Mammals_Pongo_abelii_TDO2_9601.ENSPPYP00000016928
+|                                      |  |  |              |     |  |  +--| (32)
+|                                      |  |  |              |     |  |     +--Mammals_Nomascus_leucogenys_TDO2_61853.ENSNLEP00000007627
+|                                      |  |  |              |     +--| (100)
+|                                      |  |  |              |        |  +--Mammals_Macaca_mulatta_TDO2_9544.ENSMMUP00000028993
+|                                      |  |  |              |        +--| (100)
+|                                      |  |  |              |           +--Mammals_Gorilla_gorilla_TDO2_9593.ENSGGOP00000020021
+|                                      |  |  |           +--| (97)
+|                                      |  |  |           |  +--Mammals_Sorex_araneus_TDO2_42254.XP_004606216.1
+|                                      |  |  |        +--| (74)
+|                                      |  |  |        |  |  +--Mammals_Felis_catus_TDO2_9685.ENSFCAP00000022790
+|                                      |  |  |        |  +--| (96)
+|                                      |  |  |        |     +--Mammals_Panthera_tigris_TDO2_9694.XP_007084318.1
+|                                      |  |  |     +--| (35)
+|                                      |  |  |     |  |        +--Mammals_Tarsius_syrichta_9478.XP_008063676.1
+|                                      |  |  |     |  |     +--| (65)
+|                                      |  |  |     |  |     |  +--Mammals_Elephantulus_edwardii_TDO2_28737.XP_006884511.1
+|                                      |  |  |     |  |  +--| (18)
+|                                      |  |  |     |  |  |  |  +--Mammals_Orycteropus_afer_TDO2_9818.XP_007942169.1
+|                                      |  |  |     |  |  |  +--| (51)
+|                                      |  |  |     |  |  |     |  +--Mammals_Galeopterus_variegatus_482537.XP_008562049.1
+|                                      |  |  |     |  |  |     +--| (69)
+|                                      |  |  |     |  |  |        +--Mammals_Galeopterus_variegatus_TDO2_482537.XP_008580788.1
+|                                      |  |  |     |  +--| (20)
+|                                      |  |  |     |     |  +--Mammals_Trichechus_manatus_TDO2_9778.XP_004382121.1
+|                                      |  |  |     |     +--| (86)
+|                                      |  |  |     |        +--Mammals_Loxodonta_africana_TDO2_9785.ENSLAFP00000006729
+|                                      |  |  |  +--| (37)
+|                                      |  |  |  |  |     +--Mammals_Canis_lupus_TDO2_9612.ENSCAFP00000012609
+|                                      |  |  |  |  |  +--| (93)
+|                                      |  |  |  |  |  |  |     +--Mammals_Ailuropoda_melanoleuca_TDO2_9646.ENSAMEP00000016329
+|                                      |  |  |  |  |  |  |  +--| (99)
+|                                      |  |  |  |  |  |  |  |  +--Mammals_Ursus_maritimus_TDO2_29073.XP_008683754.1
+|                                      |  |  |  |  |  |  +--| (59)
+|                                      |  |  |  |  |  |     +--Mammals_Mustela_putorius_TDO2_9668.ENSMPUP00000005684
+|                                      |  |  |  |  +--| (96)
+|                                      |  |  |  |     |  +--Mammals_Odobenus_rosmarus_TDO2_9707.XP_004394300.1
+|                                      |  |  |  |     +--| (100)
+|                                      |  |  |  |        +--Mammals_Leptonychotes_weddellii_TDO2_9713.XP_006727337.1
+|                                      |  |  +--| (36)
+|                                      |  |     |           +--Mammals_Pteropus_alecto_TDO2_9402.XP_006917052.1
+|                                      |  |     |        +--| (100)
+|                                      |  |     |        |  +--Mammals_Pteropus_vampyrus_TDO2_132908.ENSPVAP00000006423
+|                                      |  |     |     +--| (96)
+|                                      |  |     |     |  |  +--Mammals_Eptesicus_fuscus_TDO2_29078.XP_008142795.1
+|                                      |  |     |     |  +--| (100)
+|                                      |  |     |     |     |  +--Mammals_Myotis_lucifugus_TDO2_59463.ENSMLUP00000011346
+|                                      |  |     |     |     +--| (100)
+|                                      |  |     |     |        |  +--Mammals_Myotis_brandtii_TDO2_109478.XP_005860827.1
+|                                      |  |     |     |        +--| (100)
+|                                      |  |     |     |           +--Mammals_Myotis_davidii_TDO2_225400.XP_006754339.1
+|                                      |  |     |  +--| (71)
+|                                      |  |     |  |  |     +--Mammals_Cavia_porcellus_TDO2_10141.ENSCPOP00000007787
+|                                      |  |     |  |  |  +--| (98)
+|                                      |  |     |  |  |  |  |  +--Mammals_Octodon_degus_Tdo2_10160.XP_004638770.1
+|                                      |  |     |  |  |  |  +--| (99)
+|                                      |  |     |  |  |  |     +--Mammals_Chinchilla_lanigera_Tdo2_34839.XP_005401005.1
+|                                      |  |     |  |  +--| (100)
+|                                      |  |     |  |     |  +--Mammals_Heterocephalus_glaber_Tdo2_10181.XP_004868605.1
+|                                      |  |     |  |     +--| (98)
+|                                      |  |     |  |        +--Mammals_Fukomys_damarensis_Tdo2_885580.XP_010626270.1
+|                                      |  |     +--| (55)
+|                                      |  |        |                                +--Mammals_Orcinus_orca_TDO2_9733.XP_004266221.1
+|                                      |  |        |                             +--| (53)
+|                                      |  |        |                             |  +--Mammals_Tursiops_truncatus_9739.XP_004326709.1
+|                                      |  |        |                          +--| (99)
+|                                      |  |        |                          |  +--Mammals_Lipotes_vexillifer_TDO2_118797.XP_007461933.1
+|                                      |  |        |                       +--| (100)
+|                                      |  |        |                       |  +--Mammals_Balaenoptera_acutorostrata_TDO2_9767.XP_007184228.1
+|                                      |  |        |                    +--| (70)
+|                                      |  |        |                    |  +--Mammals_Ictidomys_tridecemlineatus_TDO2_43179.ENSSTOP00000012370
+|                                      |  |        |                 +--| (63)
+|                                      |  |        |                 |  +--Mammals_Bubalus_bubalis_TDO2_89462.XP_006078274.1
+|                                      |  |        |              +--| (61)
+|                                      |  |        |              |  |  +--Mammals_Bos_taurus_TDO2_9913.ENSBTAP00000014690
+|                                      |  |        |              |  +--| (100)
+|                                      |  |        |              |     +--Mammals_Bos_mutus_TDO2_72004.XP_005888745.1
+|                                      |  |        |           +--| (98)
+|                                      |  |        |           |  |  +--Mammals_Ovis_aries_TDO2_9940.ENSOARP00000007369
+|                                      |  |        |           |  +--| (91)
+|                                      |  |        |           |     +--Mammals_Pantholops_hodgsonii_TDO2_59538.XP_005961766.1
+|                                      |  |        |        +--| (96)
+|                                      |  |        |        |  +--Mammals_Sus_scrofa_TDO2_9823.ENSSSCP00000009459
+|                                      |  |        |     +--| (79)
+|                                      |  |        |     |  |  +--Mammals_Ochotona_princeps_TDO2_9978.XP_004591458.1
+|                                      |  |        |     |  +--| (87)
+|                                      |  |        |     |     +--Mammals_Oryctolagus_cuniculus_TDO2_9986.ENSOCUP00000013279
+|                                      |  |        |  +--| (39)
+|                                      |  |        |  |  |              +--Mammals_Cricetulus_griseus_Tdo2_10029.XP_007613764.1
+|                                      |  |        |  |  |           +--| (100)
+|                                      |  |        |  |  |           |  +--Mammals_Mesocricetus_auratus_TDO2_10036.XP_005076212.1
+|                                      |  |        |  |  |        +--| (54)
+|                                      |  |        |  |  |        |  +--Mammals_Microtus_ochrogaster_79684.XP_005344195.1
+|                                      |  |        |  |  |     +--| (99)
+|                                      |  |        |  |  |     |  |  +--Mammals_Peromyscus_maniculatus_10042.XP_006985363.1
+|                                      |  |        |  |  |     |  +--| (65)
+|                                      |  |        |  |  |     |     |  +--Mammals_Mus_musculus_Tdo2_10090.ENSMUSP00000029645
+|                                      |  |        |  |  |     |     +--| (98)
+|                                      |  |        |  |  |     |        +--Mammals_Rattus_norvegicus_Tdo2_10116.ENSRNOP00000015732
+|                                      |  |        |  |  |  +--| (90)
+|                                      |  |        |  |  |  |  +--Mammals_Jaculus_jaculus_Tdo2_51337.XP_004655943.1
+|                                      |  |        |  |  +--| (44)
+|                                      |  |        |  |     +--Mammals_Nannospalax_galili_Tdo2_1026970.XP_008852527.1
+|                                      |  |        +--| (49)
+|                                      |  |           +--Mammals_Tupaia_chinensis_TDO2_246437.XP_006164255.1
+|                                      +--| (61)
+|                                         +--Mammals_Chrysochloris_asiatica_TDO2_185453.XP_006867973.1
+|
+|  +-----------Echinoderms_Strongylocentrotus_purpuratus_LOC589461_7668.SPU_019914-tr
++--| (77)
+   |  +--Echinoderms_Strongylocentrotus_purpuratus_LOC593764_7668.SPU_027816-tr
+   +--| (77)
+      +-----------------------------------Fonticula_Fonticula_alba_H696_02007_691883.XP_009494180.1
+
+
+Consensus tree in newick format: 
+
+(Cnidarians_Hydra_vulgaris_6087.XP_004206814.1:0.9960938330,((((((Nematodes_Caenorhabditis_briggsae_CBG09046_6238.CBG09046:0.0146563318,((Nematodes_Caenorhabditis_elegans_C28H8.11_6239.C28H8.11a.1:0.0308857313,Nematodes_Caenorhabditis_remanei_CRE_04506_31234.CRE04506:0.0073316035)96:0.0078614882,(Nematodes_Caenorhabditis_brenneri_CBN24716_135651.CBN24716:0.0054795306,Nematodes_Caenorhabditis_tropicalis_1561998.Csp11.Scaffold546.g3499.t1:0.0079662966)74:0.0013523045)74:0.0137402340)82:0.0250989191,((Nematodes_Caenorhabditis_japonica_CJA00189_281687.CJA00189:0.0180895633,Nematodes_Caenorhabditis_japonica_CJA42184b_281687.CJA42184b:0.0000028518)99:0.0405139409,(Nematodes_Caenorhabditis_japonica_CJA16255a_281687.CJA16255a:0.0000028280,Nematodes_Caenorhabditis_japonica_CJA35679b_281687.CJA35679b:0.0356556973)94:0.0551201515)75:0.0007063949)81:0.0934762973,Nematodes_Bursaphelenchus_xylophilus_6326.BUX.s00351.454:0.1215955697)99:0.2127969063,(Nematodes_Bursaphelenchus_xylophilus_6326.BUX.s00351.453:0.2152475317,Nematodes_Strongyloides_ratti_g4317_34506.g4317:0.2621737453)100:0.1345513117)100:0.1736979369,(Placozoa_Trichoplax_adhaerens_10228.TriadP25841:0.3336389497,(Mammals_Pantholops_hodgsonii_59538.XP_005961907.1:0.5426361025,Mammals_Pantholops_hodgsonii_59538.XP_005968213.1:0.7329806533)100:1.5900893123)79:0.1174392905)74:0.0640552945,(((((Annelids_Helobdella_robusta_20210143_6412.HelroP185454:0.2630365889,Ctenophores_Mnemiopsis_leidyi_27923.ML030523a-PA:1.6396212151)92:0.1746380136,Molluscs_Aplysia_californica_6500.XP_005104332.1:0.4713141465)78:0.0361612287,(Lancelets_Branchiostoma_floridae_7739.XP_002611396.1:0.2337975593,Cnidarians_Nematostella_vectensis_v1g157887_45351.EDO49705:0.3607314248)96:0.0761595158)72:0.0369393951,((Crustaceans_Daphnia_pulex_6669.EFX83853:0.1888055099,(((((Insects_Tribolium_castaneum_V_7070.TC008028-PA:0.1373601944,(((Insects_Aedes_aegypti_AAEL000428_7159.AAEL000428-PA:0.0184357436,Insects_Culex_quinquefasciatus_6034009_7176.CPIJ002864-PA:0.3298877645)100:0.0268917830,(Insects_Anopheles_gambiae_T23O_ANOGA_7165.AGAP002721-PA:0.0153872908,Insects_Anopheles_darlingi_AND_004972_43151.ADAC004972-PA:0.0245358781)95:0.0132883182)99:0.0473135805,(Insects_Ceratitis_capitata_7213.XP_004529546.1:0.0734749092,((((Insects_Drosophila_ananassae_v_7217.FBpp0123668:0.0000025917,((Insects_Drosophila_erecta_GG18380_7220.FBpp0136926:0.0000025749,Insects_Drosophila_melanogaster_v_7227.FBpp0073242:0.0000025749)100:0.0000025749,Insects_Drosophila_yakuba_v_7245.FBpp0260907:0.0034077970)100:0.0278803619)100:0.0169304575,(Insects_Drosophila_persimilis_GL18243_7234.FBpp0182350:0.0000025749,Insects_Drosophila_pseudoobscura_GA15272_7237.FBpp0285544:0.0000025749)100:0.0097412025)99:0.0040763862,((Insects_Drosophila_grimshawi_GH12679_7222.FBpp0146585:0.0163382463,(Insects_Drosophila_mojavensis_GI16256_7230.FBpp0165473:0.0132442595,Insects_Drosophila_virilis_GJ16721_7244.FBpp0231138:0.0125397956)99:0.0084828551)99:0.0064084815,Insects_Drosophila_willistoni_GK19977_7260.FBpp0249120:0.0233748531)98:0.0037367898)100:0.0748780349,Insects_Musca_domestica_101890019_7370.XP_005177538.1:0.0340027517)100:0.0401434694)100:0.0792122972)79:0.0496446776)69:0.0206922230,(Insects_Bombyx_mori_7091.BGIBMGA009276-TA:0.0304624058,(Insects_Danaus_plexippus_KGM_213793_13037.EHJ70119:0.0361767595,(Insects_Heliconius_melpomene_34740.HMEL008452-PA:0.0406436718,Insects_Heliconius_melpomene_34740.HMEL010716-PA:0.1109518908)100:0.0325364224)95:0.0101016216)100:0.1378850845)100:0.0423827573,((Insects_Nasonia_vitripennis_7425.NV17830-PA:0.0708925804,((Insects_Apis_mellifera_LOC410828_7460.GB55638-PA:0.0213254686,Insects_Bombus_impatiens_132113.XP_003490724.1:0.0375978418)100:0.0377902444,(Insects_Atta_cephalotes_105627134_12957.ACEP23192-PA:0.0101706591,Insects_Acromyrmex_echinatior_G5I_06975_103372.F4WME1:0.0066257485)100:0.0962245089)95:0.0136347045)99:0.0454218468,Insects_Microplitis_demolitor_69319.XP_008547448.1:0.0856760857)100:0.1072495315)86:0.0125164854,(Insects_Rhodnius_prolixus_13249.RPRC004566-PA:0.1668055297,Insects_Pediculus_humanus_8231114_121225.PHUM065570-PA:0.1573783709)95:0.0456059674)89:0.0238304421,Insects_Zootermopsis_nevadensis_L798_09476_136037.KDR16811:0.0935251492)100:0.0721600206)100:0.0834673175,Arachnids_Tetranychus_urticae_107361768_32264.tetur07g03620.1:0.3084153319)100:0.1045983435)61:0.0095144527,(((Insects_Acyrthosiphon_pisum_7029.ACYPI001045-PA:0.9156219128,Placozoa_Trichoplax_adhaerens_10228.TriadP56158:1.7593636388)93:0.0959078032,(Hemichordates_Saccoglossus_kowalevskii_10224.XP_002732444.1:0.4070253658,Filasterea_Capsaspora_owczarzaki_192875.XP_004343304.1:0.5339230061)80:0.0627199650)75:0.0552468776,((((Tunicates_Ciona_intestinalis_7719.XP_002119996.1:0.0940750213,Tunicates_Ciona_savignyi_51511.ENSCSAVP00000010545:0.1967634078)100:0.2727780235,(Tunicates_Ciona_intestinalis_7719.XP_002128288.1:0.3141736460,Tunicates_Ciona_savignyi_51511.ENSCSAVP00000019069:0.2936536505)100:0.5605480152)99:0.1616517099,(Choanoflagellates_Monosiga_brevicollis_33737_81824.XP_001748573.1:0.6655836759,Choanoflagellates_Salpingoeca_rosetta_PTSG_06450_946362.XP_004991830.1:0.6317673886)78:0.1458696561)58:0.0126120013,(Fish_Latimeria_chalumnae_TDO2_7897.ENSLACP00000000384:0.0854526332,(Fish_Lepisosteus_oculatus_TDO2_7918.ENSLOCP00000010007:0.0488744027,((Fish_Danio_rerio_tdo2b_7955.ENSDARP00000035102:0.0249240299,Fish_Astyanax_mexicanus_7994.ENSAMXP00000008439:0.1160539823)100:0.0737506204,((((((Fish_Danio_rerio_tdo2a_7955.ENSDARP00000096367:0.0706393084,Fish_Astyanax_mexicanus_TDO2_7994.ENSAMXP00000015637:0.0274205316)99:0.0263934840,Fish_Esox_lucius_tdo2_8010.XP_010898111.1:0.0767917008)65:0.0091459205,((((((Fish_Poecilia_reticulata_tdo2_8081.XP_008419272.1:0.0090793051,Fish_Poecilia_formosa_tdo2_48698.ENSPFOP00000019088:0.0090463859)100:0.0108952373,Fish_Xiphophorus_maculatus_TDO2_8083.ENSXMAP00000002272:0.0234076229)100:0.0465217505,Fish_Oryzias_latipes_TDO2_8090.ENSORLP00000025285:0.0640724824)76:0.0009567542,((Fish_Oreochromis_niloticus_TDO2_8128.ENSONIP00000001455:0.0067224531,((Fish_Haplochromis_burtoni_8153.XP_005919480.1:0.0000025749,Fish_Maylandia_zebra_tdo2_106582.XP_004553681.1:0.0033615780)56:0.0000025749,Fish_Pundamilia_nyererei_303518.XP_005726539.1:0.0033737239)100:0.0033701385)89:0.0000025749,Fish_Neolamprologus_brichardi_32507.XP_006798913.1:0.0071621100)100:0.0170447950)77:0.0093005457,((Fish_Takifugu_rubripes_TDO2_31033.ENSTRUP00000040153:0.0816051057,Fish_Gasterosteus_aculeatus_TDO2_69293.ENSGACP00000021816:0.0395199148)97:0.0173214301,Fish_Stegastes_partitus_tdo2_144197.XP_008277714.1:0.0130635116)52:0.0089676676)85:0.0052958446,Fish_Larimichthys_crocea_tdo2_215358.XP_010727802.1:0.0114160416)93:0.0229879996)65:0.0166396843,Fish_Gadus_morhua_8049.ENSGMOP00000013275:0.0797572747)53:0.0062828811,(Fish_Cynoglossus_semilaevis_244447.XP_008305943.1:0.1069818985,Fish_Cynoglossus_semilaevis_tdo2_244447.XP_008324797.1:0.0000028839)100:0.1117614544)100:0.0394324477,(Amphibians_Xenopus__Silurana__tdo2_8364.ENSXETP00000048482:0.0394152892,((((Reptiles_Chelonia_mydas_TDO2_8469.XP_007071332.1:0.0063664716,(Reptiles_Anolis_carolinensis_TDO2_28377.ENSACAP00000016632:0.0283353098,Reptiles_Python_bivittatus_TDO2_176946.XP_007437938.1:0.0317477405)96:0.0144590930)58:0.0070010385,(Reptiles_Chrysemys_picta_TDO2_8479.XP_005299386.1:0.0167965156,Reptiles_Pelodiscus_sinensis_TDO2_13735.ENSPSIP00000009850:0.0574772497)55:0.0000021896)54:0.0088656049,((Reptiles_Alligator_mississippiensis_TDO2_8496.XP_006275838.1:0.0034194348,Reptiles_Alligator_sinensis_TDO2_38654.XP_006038040.1:0.0000025749)100:0.0288495149,(Birds_Columba_livia_TDO2_8932.XP_005509615.1:0.0033961854,((Birds_Haliaeetus_leucocephalus_TDO2_52644.XP_010584401.1:0.0035750486,(Birds_Ficedula_albicollis_TDO2_59894.ENSFALP00000009682:0.0000025749,Birds_Pseudopodoces_humilis_TDO2_181119.XP_005517635.1:0.0000025749)100:0.0357253437)77:0.0000025749,Birds_Nipponia_nippon_TDO2_128390.XP_009473029.1:0.0137435348)100:0.0034293246)100:0.0360888945)99:0.0059592667)92:0.0237080563,((Mammals_Ornithorhynchus_anatinus_TDO2_9258.ENSOANP00000024684:0.0000024715,Mammals_Ornithorhynchus_anatinus_9258.ENSOANP00000029816:0.0191465849)100:0.0348434923,(((Mammals_Sarcophilus_harrisii_TDO2_9305.ENSSHAP00000003483:0.0112326643,Mammals_Macropus_eugenii_TDO2_9315.ENSMEUP00000000133:0.0325672222)96:0.0200220524,Mammals_Monodelphis_domestica_TDO2_13616.ENSMODP00000002068:0.0034783906)96:0.0181725325,((((Mammals_Dasypus_novemcinctus_TDO2_9361.ENSDNOP00000028774:0.0248720968,Mammals_Otolemur_garnettii_TDO2_30611.ENSOGAP00000003864:0.0210643036)25:0.0028880091,Mammals_Erinaceus_europaeus_TDO2_9365.XP_007535113.1:0.0207565538)52:0.0034712760,((((((Mammals_Echinops_telfairi_TDO2_9371.XP_004708784.1:0.0474142837,((Mammals_Callithrix_jacchus_TDO2_9483.ENSCJAP00000003010:0.0282448476,Mammals_Saimiri_boliviensis_TDO2_27679.XP_010336874.1:0.0069260416)98:0.0069860458,(((((((Mammals_Macaca_fascicularis_TDO2_9541.XP_005556209.1:0.0000000000,Mammals_Homo_sapiens_TDO2_9606.ENSP00000444788:0.0000000000):0.0000000000,Mammals_Chlorocebus_sabaeus_TDO2_60711.ENSCSAP00000014794:0.0000000000):0.0000000000,Mammals_Pan_troglodytes_TDO2_9598.ENSPTRP00000028403:0.0000000000):0.0000025749,Mammals_Pan_paniscus_TDO2_9597.XP_003822608.1:0.0000025749)69:0.0000025749,(Mammals_Papio_anubis_TDO2_9555.ENSPANP00000015362:0.0068419740,Mammals_Rhinopithecus_roxellana_TDO2_61622.XP_010356340.1:0.0068908751)12:0.0000025749)20:0.0000025749,(Mammals_Pongo_abelii_TDO2_9601.ENSPPYP00000016928:0.0042607640,Mammals_Nomascus_leucogenys_TDO2_61853.ENSNLEP00000007627:0.0068333667)32:0.0000025749)42:0.0000025749,(Mammals_Macaca_mulatta_TDO2_9544.ENSMMUP00000028993:0.1162868499,Mammals_Gorilla_gorilla_TDO2_9593.ENSGGOP00000020021:0.0868249726)100:0.0610909969)100:0.0172048345)97:0.0034641214)100:0.0119646272,Mammals_Sorex_araneus_TDO2_42254.XP_004606216.1:0.0276012233)97:0.0069156549,(Mammals_Felis_catus_TDO2_9685.ENSFCAP00000022790:0.0312055992,Mammals_Panthera_tigris_TDO2_9694.XP_007084318.1:0.0000025749)96:0.0135751430)74:0.0057301077,(((Mammals_Tarsius_syrichta_9478.XP_008063676.1:0.0138220977,Mammals_Elephantulus_edwardii_TDO2_28737.XP_006884511.1:0.0068145937)65:0.0033983726,(Mammals_Orycteropus_afer_TDO2_9818.XP_007942169.1:0.0281953890,(Mammals_Galeopterus_variegatus_482537.XP_008562049.1:0.0685525263,Mammals_Galeopterus_variegatus_TDO2_482537.XP_008580788.1:0.0521885556)69:0.0034282778)51:0.0034942850)18:0.0000025749,(Mammals_Trichechus_manatus_TDO2_9778.XP_004382121.1:0.0298766012,Mammals_Loxodonta_africana_TDO2_9785.ENSLAFP00000006729:0.0187112215)86:0.0146449706)20:0.0033818332)35:0.0000025749,((Mammals_Canis_lupus_TDO2_9612.ENSCAFP00000012609:0.0102039148,((Mammals_Ailuropoda_melanoleuca_TDO2_9646.ENSAMEP00000016329:0.0000025749,Mammals_Ursus_maritimus_TDO2_29073.XP_008683754.1:0.0000025749)99:0.0033791999,Mammals_Mustela_putorius_TDO2_9668.ENSMPUP00000005684:0.0033846147)59:0.0000025749)93:0.0033947630,(Mammals_Odobenus_rosmarus_TDO2_9707.XP_004394300.1:0.0033882452,Mammals_Leptonychotes_weddellii_TDO2_9713.XP_006727337.1:0.0068734110)100:0.0034247443)96:0.0034447004)37:0.0000025806,((((Mammals_Pteropus_alecto_TDO2_9402.XP_006917052.1:0.0064213484,Mammals_Pteropus_vampyrus_TDO2_132908.ENSPVAP00000006423:0.0262156404)100:0.0607127509,(Mammals_Eptesicus_fuscus_TDO2_29078.XP_008142795.1:0.0068350296,(Mammals_Myotis_lucifugus_TDO2_59463.ENSMLUP00000011346:0.0000025749,(Mammals_Myotis_brandtii_TDO2_109478.XP_005860827.1:0.0000025749,Mammals_Myotis_davidii_TDO2_225400.XP_006754339.1:0.0033821222)100:0.0033815455)100:0.0067703397)100:0.0431997971)96:0.0029679266,((Mammals_Cavia_porcellus_TDO2_10141.ENSCPOP00000007787:0.0320074159,(Mammals_Octodon_degus_Tdo2_10160.XP_004638770.1:0.0556302948,Mammals_Chinchilla_lanigera_Tdo2_34839.XP_005401005.1:0.0190766013)99:0.0053213315)98:0.0137947063,(Mammals_Heterocephalus_glaber_Tdo2_10181.XP_004868605.1:0.0195583094,Mammals_Fukomys_damarensis_Tdo2_885580.XP_010626270.1:0.0651764912)98:0.0160737149)100:0.0334476057)71:0.0033937541,(((((((((((Mammals_Orcinus_orca_TDO2_9733.XP_004266221.1:0.0001195138,Mammals_Tursiops_truncatus_9739.XP_004326709.1:0.0000025749)53:0.0032867054,Mammals_Lipotes_vexillifer_TDO2_118797.XP_007461933.1:0.0033557634)99:0.0069231339,Mammals_Balaenoptera_acutorostrata_TDO2_9767.XP_007184228.1:0.0033670093)100:0.0174835218,Mammals_Ictidomys_tridecemlineatus_TDO2_43179.ENSSTOP00000012370:0.1434701811)70:0.0000025749,Mammals_Bubalus_bubalis_TDO2_89462.XP_006078274.1:0.0241930257)63:0.0034167768,(Mammals_Bos_taurus_TDO2_9913.ENSBTAP00000014690:0.0000025749,Mammals_Bos_mutus_TDO2_72004.XP_005888745.1:0.0000025749)100:0.0068250928)61:0.0000025749,(Mammals_Ovis_aries_TDO2_9940.ENSOARP00000007369:0.0034199647,Mammals_Pantholops_hodgsonii_TDO2_59538.XP_005961766.1:0.0068464080)91:0.0034125515)98:0.0103089628,Mammals_Sus_scrofa_TDO2_9823.ENSSSCP00000009459:0.0069028021)96:0.0086088992,(Mammals_Ochotona_princeps_TDO2_9978.XP_004591458.1:0.0270730847,Mammals_Oryctolagus_cuniculus_TDO2_9986.ENSOCUP00000013279:0.0265268044)87:0.0099634733)79:0.0051004989,(((((Mammals_Cricetulus_griseus_Tdo2_10029.XP_007613764.1:0.0068960520,Mammals_Mesocricetus_auratus_TDO2_10036.XP_005076212.1:0.0000025749)100:0.0103288456,Mammals_Microtus_ochrogaster_79684.XP_005344195.1:0.0208545526)54:0.0000025749,(Mammals_Peromyscus_maniculatus_10042.XP_006985363.1:0.0000025749,(Mammals_Mus_musculus_Tdo2_10090.ENSMUSP00000029645:0.0106847227,Mammals_Rattus_norvegicus_Tdo2_10116.ENSRNOP00000015732:0.0137734429)98:0.0137560197)65:0.0034269354)99:0.0199805052,Mammals_Jaculus_jaculus_Tdo2_51337.XP_004655943.1:0.0288689172)90:0.0035379881,Mammals_Nannospalax_galili_Tdo2_1026970.XP_008852527.1:0.0222780472)44:0.0059235692)39:0.0000025749,Mammals_Tupaia_chinensis_TDO2_246437.XP_006164255.1:0.0528970850)49:0.0033975854)55:0.0067906842)36:0.0034050095)31:0.0032415194,Mammals_Chrysochloris_asiatica_TDO2_185453.XP_006867973.1:0.0104320785)61:0.0098732190)99:0.0277751285)100:0.0333461196)100:0.0363515260)100:0.0380270565)53:0.0133908784)53:0.0060310618)97:0.0228213552)100:0.2999470476)63:0.0546393771)77:0.0416641650)61:0.0314728375)76:0.1098480028,(Echinoderms_Strongylocentrotus_purpuratus_LOC589461_7668.SPU_019914-tr:0.5485104276,(Echinoderms_Strongylocentrotus_purpuratus_LOC593764_7668.SPU_027816-tr:0.1110578232,Fonticula_Fonticula_alba_H696_02007_691883.XP_009494180.1:1.5794969653)77:0.1139185905)77:0.0799991359);
+
+ALISIM COMMAND
+--------------
+To simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis, you can use the following command:
+
+--alisim simulated_MSA -t PREF.treefile -m "LG+R7{0.184369,0.0877329,0.182171,0.290461,0.266523,0.631189,0.169048,1.27094,0.129877,2.16019,0.0570209,3.49619,0.0109904,6.17992}" --length 311
+
+To mimic the alignment used to produce this analysis, i.e. simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis *and* copying the same gap positions as the original alignment, you can use the following command:
+
+iqtree -s /data/dnb12/galaxy_db/files/1/a/1/dataset_1a17e5c1-bb06-4cb0-b189-0d1ee36d90cb.dat --alisim mimicked_MSA
+
+To simulate any number of alignments in either of the two commandlines above, use the --num-alignments options, for example mimic 100 alignments you would use the command line:
+
+iqtree -s /data/dnb12/galaxy_db/files/1/a/1/dataset_1a17e5c1-bb06-4cb0-b189-0d1ee36d90cb.dat --alisim mimicked_MSA --num-alignments 100
+
+For more information on using AliSim, please visit: www.iqtree.org/doc/AliSim
+
+TIME STAMP
+----------
+
+Date and time: Tue Apr  7 21:03:10 2026
+Total CPU time used: 29752.84736 seconds (8h:15m:52s)
+Total wall-clock time used: 3022.032879 seconds (0h:50m:22s)
+

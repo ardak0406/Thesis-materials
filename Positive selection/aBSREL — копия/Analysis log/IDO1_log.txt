@@ -1,0 +1,198 @@
+
+Analysis Description
+--------------------
+aBSREL (Adaptive branch-site random effects likelihood) uses an adaptive
+random effects branch-site model framework to test whether each branch
+has evolved under positive selection, using a procedure which infers an
+optimal number of rate categories per branch. v2.2 adds support for
+multiple-hit models. v2.3 adds support for SRV. v2.5 adds support for
+ancestral state reconstruction, identification of sites contributing to
+selection signal, and some diagnostics. v2.6 adds tree reports and ASCII
+art
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree
+
+- __Citation__:  Less Is More: An Adaptive Branch-Site Random Effects Model for
+Efficient Detection of Episodic Diversifying Selection (2015). Mol Biol
+Evol 32 (5): 1342-1353. 
+
+- __Written by__: Sergei L Kosakovsky Pond, Ben Murrell, Steven Weaver and Temple iGEM /
+UCSD viral evolution group
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 2.6
+
+[Advanced option] Bag of little bootstrap alignment resampling rate (permissible range = [0.01,1], default value = 1): blb: 1
+
+>code => Universal
+/home/datamonkey/datamonkey-js-server/app/absrel/output/6a54b1d4a3cde1ef15d3698d.tre
+/home/datamonkey/datamonkey-js-server/app/absrel/output/6a54b1d4a3cde1ef15d3698d.tre
+
+>Loaded a multiple sequence alignment with **20** sequences, **404** codons, and **1** partitions from `/home/datamonkey/datamonkey-js-server/app/absrel/output/6a54b1d4a3cde1ef15d3698d`
+
+>branches => FG
+
+>multiple-hits => None
+
+>srv => No
+
+
+### * Selected 37 branches for testing: `FISH_CYNOGLOSSUS_SEMILAEVIS_244447_XP_008320619_1, REPTILES_CHELONIA_MYDAS_IDO1_8469_XP_007053526_1, REPTILES_CHRYSEMYS_PICTA_IDO1_8479_XP_005286614_1, Node3, REPTILES_PELODISCUS_SINENSIS_IDO1_13735_ENSPSIP00000005352, Node2, MAMMALS_BALAENOPTERA_ACUTOROSTRATA_IDO1_9767_XP_007178481_1, MAMMALS_ORCINUS_ORCA_IDO1_9733_XP_004286560_1, Node11, MAMMALS_LEPTONYCHOTES_WEDDELLII_IDO1_9713_XP_006731898_1, MAMMALS_PANTHERA_TIGRIS_IDO1_9694_XP_007097118_1, Node14, Node10, MAMMALS_PTEROPUS_ALECTO_IDO1_9402_XP_006916344_1, MAMMALS_SOREX_ARANEUS_42254_XP_004621800_1, Node17, Node9, MAMMALS_GALEOPTERUS_VARIEGATUS_IDO1_482537_XP_008591488_1, MAMMALS_MACACA_FASCICULARIS_EGM_17258_9541_XP_005563203_1, MAMMALS_OCHOTONA_PRINCEPS_IDO1_9978_XP_004592787_1, MAMMALS_OCTODON_DEGUS_IDO1_10160_XP_004633178_1, MAMMALS_PEROMYSCUS_MANICULATUS_10042_XP_006983027_1, Node27, Node25, Node23, MAMMALS_TARSIUS_SYRICHTA_9478_XP_008049827_1, MAMMALS_TUPAIA_CHINENSIS_IDO1_246437_XP_006164819_1, Node30, Node22, Node20, Node8, MAMMALS_DASYPUS_NOVEMCINCTUS_9361_ENSDNOP00000027435, MAMMALS_ECHINOPS_TELFAIRI_9371_XP_004707721_1, MAMMALS_ORYCTEROPUS_AFER_IDO1_9818_XP_007933199_1, Node35, Node33, Node7`
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths => Yes
+* Log(L) = -15109.34, AIC-c = 30308.86 (45 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  3.404
+
+### Fitting the baseline model with a single dN/dS class per branch, and no site-to-site variation. 
+* Log(L) = -14528.48, AIC-c = 29234.93 (88 estimated parameters)
+* Branch-level non-synonymous/synonymous rate ratio distribution has median  0.34, and 95% of the weight in  0.10 -  0.00
+
+### Determining the optimal number of rate classes per branch using a step up procedure
+
+|              Branch               |  Length  |  Rates   |     Max. dN/dS     |    Log(L)     |     AIC-c     |Best AIC-c so far|
+|-----------------------------------|----------|----------|--------------------|---------------|---------------|-----------------|
+|FISH_CYNOGLOSSUS_SEMILAEVIS_2444...|1150.19...|    2     |    0.05 (50.78%)   |   -14513.12   |   29208.30    |    29208.30     |
+|FISH_CYNOGLOSSUS_SEMILAEVIS_2444...|1150.19...|    3     |   26.41 ( 9.38%)   |   -14512.81   |   29211.76    |    29208.30     |
+|               Node7               |   0.54   |    2     |    0.88 (32.26%)   |   -14494.11   |   29174.37    |    29174.37     |
+|               Node7               |   0.54   |    3     |   30.44 ( 0.00%)   |   -14494.10   |   29178.44    |    29174.37     |
+|MAMMALS_DASYPUS_NOVEMCINCTUS_936...|   0.26   |    2     |  143.31 (13.82%)   |   -14446.81   |   29083.86    |    29083.86     |
+|MAMMALS_DASYPUS_NOVEMCINCTUS_936...|   0.26   |    3     |  210.74 (12.63%)   |   -14446.60   |   29087.53    |    29083.86     |
+|MAMMALS_OCTODON_DEGUS_IDO1_10160...|   0.22   |    2     |    0.53 (48.09%)   |   -14444.21   |   29082.75    |    29082.75     |
+|MAMMALS_OCTODON_DEGUS_IDO1_10160...|   0.22   |    3     |    0.60 ( 0.96%)   |   -14444.21   |   29086.84    |    29082.75     |
+|MAMMALS_OCHOTONA_PRINCEPS_IDO1_9...|   0.20   |    2     |    1.01 (29.64%)   |   -14434.89   |   29068.21    |    29068.21     |
+|MAMMALS_OCHOTONA_PRINCEPS_IDO1_9...|   0.20   |    3     |  399.85 ( 1.45%)   |   -14434.50   |   29071.54    |    29068.21     |
+|MAMMALS_PEROMYSCUS_MANICULATUS_1...|   0.20   |    2     |    5.02 ( 7.35%)   |   -14425.33   |   29053.20    |    29053.20     |
+|MAMMALS_PEROMYSCUS_MANICULATUS_1...|   0.20   |    3     |   58.40 ( 2.37%)   |   -14424.63   |   29055.89    |    29053.20     |
+|MAMMALS_SOREX_ARANEUS_42254_XP_0...|   0.19   |    2     |    7.04 ( 7.96%)   |   -14409.53   |   29025.69    |    29025.69     |
+|MAMMALS_SOREX_ARANEUS_42254_XP_0...|   0.19   |    3     |   11.62 ( 5.15%)   |   -14409.38   |   29029.50    |    29025.69     |
+|MAMMALS_ECHINOPS_TELFAIRI_9371_X...|   0.19   |    2     |    1.71 (45.43%)   |   -14402.56   |   29015.87    |    29015.87     |
+|MAMMALS_ECHINOPS_TELFAIRI_9371_X...|   0.19   |    3     |    1.72 (45.02%)   |   -14402.57   |   29019.98    |    29015.87     |
+|               Node2               |   0.16   |    2     |    1.45 (28.42%)   |   -14401.15   |   29017.14    |    29015.87     |
+|REPTILES_PELODISCUS_SINENSIS_IDO...|   0.14   |    2     |    0.67 (50.40%)   |   -14401.66   |   29018.17    |    29015.87     |
+|MAMMALS_TUPAIA_CHINENSIS_IDO1_24...|   0.13   |    2     |    3.55 ( 5.93%)   |   -14398.51   |   29011.86    |    29011.86     |
+|MAMMALS_TUPAIA_CHINENSIS_IDO1_24...|   0.13   |    3     |    3.93 ( 4.77%)   |   -14398.51   |   29015.98    |    29011.86     |
+|MAMMALS_MACACA_FASCICULARIS_EGM_...|   0.13   |    2     |    6.70 ( 9.03%)   |   -14391.91   |   29002.78    |    29002.78     |
+|MAMMALS_MACACA_FASCICULARIS_EGM_...|   0.13   |    3     |    6.69 ( 8.95%)   |   -14391.91   |   29006.89    |    29002.78     |
+|MAMMALS_PANTHERA_TIGRIS_IDO1_969...|   0.08   |    2     |    2.65 (33.25%)   |   -14388.63   |   29000.33    |    29000.33     |
+|MAMMALS_PANTHERA_TIGRIS_IDO1_969...|   0.08   |    3     |    2.67 (32.93%)   |   -14388.63   |   29004.44    |    29000.33     |
+|MAMMALS_GALEOPTERUS_VARIEGATUS_I...|   0.08   |    2     |    1.08 (11.78%)   |   -14388.38   |   29003.95    |    29000.33     |
+|MAMMALS_TARSIUS_SYRICHTA_9478_XP...|   0.08   |    2     |    1.76 (14.21%)   |   -14383.64   |   28994.45    |    28994.45     |
+|MAMMALS_TARSIUS_SYRICHTA_9478_XP...|   0.08   |    3     |    1.76 (14.21%)   |   -14383.64   |   28998.57    |    28994.45     |
+|MAMMALS_ORYCTEROPUS_AFER_IDO1_98...|   0.08   |    2     |    1.67 (25.43%)   |   -14380.63   |   28992.55    |    28992.55     |
+|MAMMALS_ORYCTEROPUS_AFER_IDO1_98...|   0.08   |    3     |    2.10 (14.77%)   |   -14380.64   |   28996.69    |    28992.55     |
+|MAMMALS_LEPTONYCHOTES_WEDDELLII_...|   0.07   |    2     |    1.03 (53.72%)   |   -14380.22   |   28995.86    |    28992.55     |
+|              Node11               |   0.07   |    2     |    1.16 (16.86%)   |   -14380.34   |   28996.09    |    28992.55     |
+|MAMMALS_PTEROPUS_ALECTO_IDO1_940...|   0.07   |    2     |    1.64 (15.21%)   |   -14379.94   |   28995.28    |    28992.55     |
+|              Node14               |   0.06   |    2     |   12.21 (14.26%)   |   -14365.54   |   28966.49    |    28966.49     |
+|              Node14               |   0.06   |    3     |   12.32 (14.07%)   |   -14365.56   |   28970.65    |    28966.49     |
+|              Node27               |   0.05   |    2     |    5.61 (14.40%)   |   -14361.36   |   28962.24    |    28962.24     |
+|              Node27               |   0.05   |    3     |    5.61 (14.47%)   |   -14361.36   |   28966.36    |    28962.24     |
+|              Node35               |   0.04   |    2     |   36.26 ( 2.02%)   |   -14352.80   |   28949.24    |    28949.24     |
+|              Node35               |   0.04   |    3     |   38.15 ( 1.90%)   |   -14352.84   |   28953.45    |    28949.24     |
+|               Node3               |   0.04   |    2     |   44.66 (10.32%)   |   -14348.61   |   28944.98    |    28944.98     |
+|               Node3               |   0.04   |    3     |   39.13 ( 9.43%)   |   -14348.61   |   28949.12    |    28944.98     |
+|REPTILES_CHELONIA_MYDAS_IDO1_846...|   0.03   |    2     |    6.80 ( 3.65%)   |   -14346.38   |   28944.66    |    28944.66     |
+|REPTILES_CHELONIA_MYDAS_IDO1_846...|   0.03   |    3     |    7.48 ( 3.05%)   |   -14346.40   |   28948.82    |    28944.66     |
+|REPTILES_CHRYSEMYS_PICTA_IDO1_84...|   0.02   |    2     |    0.27 ( 0.00%)   |   -14346.27   |   28948.57    |    28944.66     |
+|               Node9               |   0.02   |    2     |   29.85 ( 0.57%)   |   -14344.99   |   28946.01    |    28944.66     |
+|MAMMALS_ORCINUS_ORCA_IDO1_9733_X...|   0.02   |    2     |    6.24 ( 2.82%)   |   -14346.08   |   28948.19    |    28944.66     |
+|              Node17               |   0.02   |    2     |    7.58 ( 8.14%)   |   -14344.82   |   28945.67    |    28944.66     |
+|               Node8               |   0.02   |    2     |    3.96 (39.95%)   |   -14346.29   |   28948.60    |    28944.66     |
+|              Node33               |   0.02   |    2     |   34.13 ( 7.91%)   |   -14344.79   |   28945.60    |    28944.66     |
+|              Node20               |   0.02   |    2     |    0.40 (51.40%)   |   -14346.37   |   28948.77    |    28944.66     |
+|              Node25               |   0.01   |    2     |    0.24 (49.23%)   |   -14346.37   |   28948.76    |    28944.66     |
+|              Node23               |   0.01   |    2     |    1.44 (97.54%)   |   -14346.37   |   28948.76    |    28944.66     |
+|              Node30               |   0.01   |    2     |   39.37 ( 1.84%)   |   -14344.50   |   28945.02    |    28944.66     |
+|MAMMALS_BALAENOPTERA_ACUTOROSTRA...|   0.01   |    2     |    1.14 (65.34%)   |   -14346.38   |   28948.79    |    28944.66     |
+|              Node10               |   0.01   |    2     |    0.27 (31.40%)   |   -14350.10   |   28956.23    |    28944.66     |
+|              Node22               |   0.01   |    2     |    0.26 ( 0.00%)   |   -14346.38   |   28948.78    |    28944.66     |
+
+### Rate class analyses summary
+*  18 branches with **2** rate classes
+*  19 branches with **1** rate classes
+
+### Annotated Tree
+(FISH_CYNOGLOSSUS_SEMILAEVIS_244447_XP_008320619_1{2},((REPTILES_CHELONIA_MYDAS_IDO1_8469_XP_007053526_1{2},REPTILES_CHRYSEMYS_PICTA_IDO1_8479_XP_005286614_1{1})Node3{2},REPTILES_PELODISCUS_SINENSIS_IDO1_13735_ENSPSIP00000005352{1})Node2{1},(((((MAMMALS_BALAENOPTERA_ACUTOROSTRATA_IDO1_9767_XP_007178481_1{1},MAMMALS_ORCINUS_ORCA_IDO1_9733_XP_004286560_1{1})Node11{1},(MAMMALS_LEPTONYCHOTES_WEDDELLII_IDO1_9713_XP_006731898_1{1},MAMMALS_PANTHERA_TIGRIS_IDO1_9694_XP_007097118_1{2})Node14{2})Node10{1},(MAMMALS_PTEROPUS_ALECTO_IDO1_9402_XP_006916344_1{1},MAMMALS_SOREX_ARANEUS_42254_XP_004621800_1{2})Node17{1})Node9{1},(MAMMALS_GALEOPTERUS_VARIEGATUS_IDO1_482537_XP_008591488_1{1},((MAMMALS_MACACA_FASCICULARIS_EGM_17258_9541_XP_005563203_1{2},(MAMMALS_OCHOTONA_PRINCEPS_IDO1_9978_XP_004592787_1{2},(MAMMALS_OCTODON_DEGUS_IDO1_10160_XP_004633178_1{2},MAMMALS_PEROMYSCUS_MANICULATUS_10042_XP_006983027_1{2})Node27{2})Node25{1})Node23{1},(MAMMALS_TARSIUS_SYRICHTA_9478_XP_008049827_1{2},MAMMALS_TUPAIA_CHINENSIS_IDO1_246437_XP_006164819_1{2})Node30{1})Node22{1})Node20{1})Node8{1},(MAMMALS_DASYPUS_NOVEMCINCTUS_9361_ENSDNOP00000027435{2},(MAMMALS_ECHINOPS_TELFAIRI_9371_XP_004707721_1{2},MAMMALS_ORYCTEROPUS_AFER_IDO1_9818_XP_007933199_1{2})Node35{2})Node33{1})Node7{2})
+
+----
+
+```
+|FISH_CYNOGLOSSUS_SEMILAEVIS_244447_XP_008320619_1 (2)
+| |REPTILES_CHELONIA_MYDAS_IDO1_8469_XP_007053526_1 (2)
+||+Node3 (2)
+|||REPTILES_CHRYSEMYS_PICTA_IDO1_8479_XP_005286614_1 (1)
+|+Node2 (1)
+||REPTILES_PELODISCUS_SINENSIS_IDO1_13735_ENSPSIP00000005352 (1)
+|    |MAMMALS_BALAENOPTERA_ACUTOROSTRATA_IDO1_9767_XP_007178481_1 (1)
+|   |+Node11 (1)
+|   ||MAMMALS_ORCINUS_ORCA_IDO1_9733_XP_004286560_1 (1)
+|  |+Node10 (1)
+|  |||MAMMALS_LEPTONYCHOTES_WEDDELLII_IDO1_9713_XP_006731898_1 (1)
+|  ||+Node14 (2)
+|  | |MAMMALS_PANTHERA_TIGRIS_IDO1_9694_XP_007097118_1 (2)
+| |+Node9 (1)
+| |||MAMMALS_PTEROPUS_ALECTO_IDO1_9402_XP_006916344_1 (1)
+| ||+Node17 (1)
+| | |MAMMALS_SOREX_ARANEUS_42254_XP_004621800_1 (2)
+||+Node8 (1)
+||||MAMMALS_GALEOPTERUS_VARIEGATUS_IDO1_482537_XP_008591488_1 (1)
+|||+Node20 (1)
+|| | |MAMMALS_MACACA_FASCICULARIS_EGM_17258_9541_XP_005563203_1 (2)
+|| ||+Node23 (1)
+|| ||||MAMMALS_OCHOTONA_PRINCEPS_IDO1_9978_XP_004592787_1 (2)
+|| |||+Node25 (1)
+|| || ||MAMMALS_OCTODON_DEGUS_IDO1_10160_XP_004633178_1 (2)
+|| || |+Node27 (2)
+|| ||  |MAMMALS_PEROMYSCUS_MANICULATUS_10042_XP_006983027_1 (2)
+|| |+Node22 (1)
+||  ||MAMMALS_TARSIUS_SYRICHTA_9478_XP_008049827_1 (2)
+||  |+Node30 (1)
+||   |MAMMALS_TUPAIA_CHINENSIS_IDO1_246437_XP_006164819_1 (2)
+|+Node7 (2)
+ ||MAMMALS_DASYPUS_NOVEMCINCTUS_9361_ENSDNOP00000027435 (2)
+ |+Node33 (1)
+  ||MAMMALS_ECHINOPS_TELFAIRI_9371_XP_004707721_1 (2)
+  |+Node35 (2)
+   |MAMMALS_ORYCTEROPUS_AFER_IDO1_9818_XP_007933199_1 (2)
+```
+
+
+### Improving parameter estimates of the adaptive rate class model
+* Log(L) = -14340.05, AIC-c = 28931.99 (124 estimated parameters)
+
+### Testing selected branches for selection
+
+|              Branch               |  Rates   |     Max. dN/dS     | Sites @ EBF>=100 |      Test LRT      |Uncorrected p-value |
+|-----------------------------------|----------|--------------------|------------------|--------------------|--------------------|
+|FISH_CYNOGLOSSUS_SEMILAEVIS_2444...|     2    |    0.05 (48.68%)   |       N/A        |        0.00        |       1.00000      |
+|               Node7               |     2    |    0.88 (32.86%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_DASYPUS_NOVEMCINCTUS_936...|     2    |  554.56 (13.95%)   |         18       |       40.84        |       0.00000      |
+|MAMMALS_OCTODON_DEGUS_IDO1_10160...|     2    |    0.71 (25.58%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_OCHOTONA_PRINCEPS_IDO1_9...|     2    |    2.28 (10.79%)   |          8       |        0.66        |       0.29892      |
+|MAMMALS_PEROMYSCUS_MANICULATUS_1...|     2    |    5.17 ( 7.04%)   |          3       |        2.71        |       0.09709      |
+|MAMMALS_SOREX_ARANEUS_42254_XP_0...|     2    |    5.46 ( 9.04%)   |          9       |        4.75        |       0.03374      |
+|MAMMALS_ECHINOPS_TELFAIRI_9371_X...|     2    |    1.71 (44.54%)   |         75       |        3.15        |       0.07747      |
+|               Node2               |     1    |   0.21 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|REPTILES_PELODISCUS_SINENSIS_IDO...|     1    |   0.28 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_TUPAIA_CHINENSIS_IDO1_24...|     2    |    3.91 ( 5.17%)   |          2       |        1.01        |       0.24448      |
+|MAMMALS_MACACA_FASCICULARIS_EGM_...|     2    |    6.95 ( 8.78%)   |          3       |        6.57        |       0.01328      |
+|MAMMALS_PANTHERA_TIGRIS_IDO1_969...|     2    |    2.42 (35.09%)   |         36       |        2.98        |       0.08453      |
+|MAMMALS_GALEOPTERUS_VARIEGATUS_I...|     1    |   0.28 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_TARSIUS_SYRICHTA_9478_XP...|     2    |    1.85 (13.82%)   |         21       |        1.29        |       0.20846      |
+|MAMMALS_ORYCTEROPUS_AFER_IDO1_98...|     2    |    1.33 (30.29%)   |         17       |        0.24        |       0.39223      |
+|MAMMALS_LEPTONYCHOTES_WEDDELLII_...|     1    |   0.51 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node11               |     1    |   0.31 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_PTEROPUS_ALECTO_IDO1_940...|     1    |   0.35 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node14               |     2    |   12.07 (14.47%)   |         27       |       24.27        |       0.00000      |
+|              Node27               |     2    |    5.91 (14.06%)   |          5       |        4.70        |       0.03457      |
+|              Node35               |     2    |   36.45 ( 2.02%)   |          3       |       11.65        |       0.00101      |
+|               Node3               |     2    |   46.77 (13.82%)   |          4       |        6.73        |       0.01224      |
+|REPTILES_CHELONIA_MYDAS_IDO1_846...|     2    |    2.99 (14.28%)   |          9       |        1.54        |       0.18194      |
+|REPTILES_CHRYSEMYS_PICTA_IDO1_84...|     1    |   0.18 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|               Node9               |     1    |   0.29 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_ORCINUS_ORCA_IDO1_9733_X...|     1    |   0.33 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node17               |     1    |   0.57 (100.00%)   |       N/A        |        0.00        |       1.00000      |

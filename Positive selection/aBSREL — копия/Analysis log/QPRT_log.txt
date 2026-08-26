@@ -1,0 +1,312 @@
+
+Analysis Description
+--------------------
+aBSREL (Adaptive branch-site random effects likelihood) uses an adaptive
+random effects branch-site model framework to test whether each branch
+has evolved under positive selection, using a procedure which infers an
+optimal number of rate categories per branch. v2.2 adds support for
+multiple-hit models. v2.3 adds support for SRV. v2.5 adds support for
+ancestral state reconstruction, identification of sites contributing to
+selection signal, and some diagnostics. v2.6 adds tree reports and ASCII
+art
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree
+
+- __Citation__:  Less Is More: An Adaptive Branch-Site Random Effects Model for
+Efficient Detection of Episodic Diversifying Selection (2015). Mol Biol
+Evol 32 (5): 1342-1353. 
+
+- __Written by__: Sergei L Kosakovsky Pond, Ben Murrell, Steven Weaver and Temple iGEM /
+UCSD viral evolution group
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 2.6
+
+[Advanced option] Bag of little bootstrap alignment resampling rate (permissible range = [0.01,1], default value = 1): blb: 1
+
+>code => Universal
+/home/datamonkey/datamonkey-js-server/app/absrel/output/6a54b2f5a3cde1ef15d3759f.tre
+/home/datamonkey/datamonkey-js-server/app/absrel/output/6a54b2f5a3cde1ef15d3759f.tre
+
+>Loaded a multiple sequence alignment with **35** sequences, **292** codons, and **1** partitions from `/home/datamonkey/datamonkey-js-server/app/absrel/output/6a54b2f5a3cde1ef15d3759f`
+
+>branches => FG
+
+>multiple-hits => None
+
+>srv => No
+
+
+### * Selected 67 branches for testing: `FISH_CYNOGLOSSUS_SEMILAEVIS_QPRT_244447_XP_008316080_1, FISH_ESOX_LUCIUS_QPRT_8010_XP_010887676_1, FISH_LEPISOSTEUS_OCULATUS_QPRT_7918_ENSLOCP00000003250, Node6, FISH_LATIMERIA_CHALUMNAE_QPRT_7897_ENSLACP00000002514, AMPHIBIANS_XENOPUS_SILURANA_QPRT_8364_ENSXETP00000040992, REPTILES_ALLIGATOR_MISSISSIPPIENSIS_QPRT_1_8496_XP_006262877_1, BIRDS_PSEUDOPODOCES_HUMILIS_QPRT_181119_XP_005533880_1, Node15, MAMMALS_BALAENOPTERA_ACUTOROSTRATA_QPRT_9767_XP_007186460_1, MAMMALS_BOS_MUTUS_QPRT_72004_XP_005888895_1, Node22, MAMMALS_PTEROPUS_ALECTO_QPRT_9402_XP_006914295_1, Node21, MAMMALS_DASYPUS_NOVEMCINCTUS_9361_ENSDNOP00000025532, MAMMALS_ELEPHANTULUS_EDWARDII_28737_XP_006896674_1, MAMMALS_TRICHECHUS_MANATUS_QPRT_9778_XP_004386821_1, Node29, Node27, MAMMALS_GALEOPTERUS_VARIEGATUS_QPRT_482537_XP_008584766_1, MAMMALS_TUPAIA_CHINENSIS_QPRT_246437_XP_006148336_1, Node33, MAMMALS_MESOCRICETUS_AURATUS_QPRT_10036_XP_005063444_1, MAMMALS_OCHOTONA_PRINCEPS_QPRT_9978_XP_004587194_1, Node38, MAMMALS_OCTODON_DEGUS_QPRT_10160_XP_004623210_1, Node37, MAMMALS_PAN_PANISCUS_MAZ_9597_XP_008959847_1, MAMMALS_SAIMIRI_BOLIVIENSIS_QPRT_27679_XP_010338990_1, Node42, Node36, Node32, Node26, Node20, MAMMALS_ODOBENUS_ROSMARUS_QPRT_9707_XP_004397270_1, MAMMALS_URSUS_MARITIMUS_QPRT_29073_XP_008683513_1, Node45, Node19, MAMMALS_ERINACEUS_EUROPAEUS_QPRT_9365_XP_007536242_1, Node18, Node14, REPTILES_ANOLIS_CAROLINENSIS_QPRT_28377_ENSACAP00000010539, REPTILES_PYTHON_BIVITTATUS_QPRT_176946_XP_007432297_1, Node50, REPTILES_CHELONIA_MYDAS_8469_XP_007071206_1, REPTILES_CHRYSEMYS_PICTA_QPRT_8479_XP_008174263_1, Node53, Node49, Node13, Node11, Node9, Node5, FISH_STEGASTES_PARTITUS_QPRT_144197_XP_008292521_1, Node4, FISH_POECILIA_RETICULATA_QPRT_8081_XP_008404967_1, Node3, FISH_HAPLOCHROMIS_BURTONI_8153_XP_005919283_1, FISH_MAYLANDIA_ZEBRA_QPRT_106582_XP_004538817_1, FISH_PUNDAMILIA_NYEREREI_303518_XP_005737460_1, Node62, Node60, FISH_OREOCHROMIS_NILOTICUS_QPRT_8128_ENSONIP00000004121, Node59, FISH_NEOLAMPROLOGUS_BRICHARDI_32507_XP_006799688_1, Node58, Node2, FISH_LARIMICHTHYS_CROCEA_QPRT_215358_XP_010730959_1`
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths => Yes
+* Log(L) = -17876.06, AIC-c = 35902.50 (75 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  5.968
+
+### Fitting the baseline model with a single dN/dS class per branch, and no site-to-site variation. 
+* Log(L) = -16688.52, AIC-c = 33677.42 (148 estimated parameters)
+* Branch-level non-synonymous/synonymous rate ratio distribution has median  0.18, and 95% of the weight in  0.01 -  0.00
+
+### Determining the optimal number of rate classes per branch using a step up procedure
+
+|              Branch               |  Length  |  Rates   |     Max. dN/dS     |    Log(L)     |     AIC-c     |Best AIC-c so far|
+|-----------------------------------|----------|----------|--------------------|---------------|---------------|-----------------|
+|AMPHIBIANS_XENOPUS_SILURANA_QPRT...|1222.22...|    2     |    0.05 (36.55%)   |   -16671.09   |   33646.67    |    33646.67     |
+|AMPHIBIANS_XENOPUS_SILURANA_QPRT...|1222.22...|    3     |   41.00 (15.98%)   |   -16670.23   |   33649.07    |    33646.67     |
+|              Node11               |1222.09...|    2     |    0.24 ( 3.93%)   |   -16669.04   |   33646.70    |    33646.67     |
+|              Node13               |1222.08...|    2     |    0.36 ( 4.94%)   |   -16667.50   |   33643.63    |    33643.63     |
+|              Node13               |1222.08...|    3     |    2.00 ( 2.47%)   |   -16667.50   |   33647.75    |    33643.63     |
+|BIRDS_PSEUDOPODOCES_HUMILIS_QPRT...|   0.53   |    2     |   39.43 (28.73%)   |   -16621.50   |   33555.75    |    33555.75     |
+|BIRDS_PSEUDOPODOCES_HUMILIS_QPRT...|   0.53   |    3     |   43.61 (28.78%)   |   -16621.50   |   33559.87    |    33555.75     |
+|               Node9               |   0.48   |    2     |  266.89 (18.02%)   |   -16595.04   |   33506.95    |    33506.95     |
+|               Node9               |   0.48   |    3     |  328.74 (18.04%)   |   -16595.04   |   33511.08    |    33506.95     |
+|FISH_LEPISOSTEUS_OCULATUS_QPRT_7...|   0.47   |    2     |  141.04 (20.15%)   |   -16572.50   |   33466.00    |    33466.00     |
+|FISH_LEPISOSTEUS_OCULATUS_QPRT_7...|   0.47   |    3     |  671.61 (16.99%)   |   -16572.15   |   33469.42    |    33466.00     |
+|              Node50               |   0.41   |    2     |    0.27 (30.58%)   |   -16570.24   |   33465.60    |    33465.60     |
+|              Node50               |   0.41   |    3     |    0.30 ( 0.61%)   |   -16570.24   |   33469.73    |    33465.60     |
+|MAMMALS_DASYPUS_NOVEMCINCTUS_936...|   0.30   |    2     |  823.57 (17.47%)   |   -16541.57   |   33412.38    |    33412.38     |
+|MAMMALS_DASYPUS_NOVEMCINCTUS_936...|   0.30   |    3     |   >1000 (15.25%)   |   -16541.13   |   33415.64    |    33412.38     |
+|MAMMALS_PAN_PANISCUS_MAZ_9597_XP...|   0.30   |    2     |   >1000 (31.53%)   |   -16448.45   |   33230.29    |    33230.29     |
+|MAMMALS_PAN_PANISCUS_MAZ_9597_XP...|   0.30   |    3     |  431.87 (31.40%)   |   -16448.44   |   33234.41    |    33230.29     |
+|REPTILES_ALLIGATOR_MISSISSIPPIEN...|   0.28   |    2     |    2.71 (16.81%)   |   -16432.56   |   33202.63    |    33202.63     |
+|REPTILES_ALLIGATOR_MISSISSIPPIEN...|   0.28   |    3     |   >1000 (11.19%)   |   -16431.03   |   33203.70    |    33202.63     |
+|MAMMALS_ERINACEUS_EUROPAEUS_QPRT...|   0.25   |    2     |  368.42 ( 9.91%)   |   -16417.63   |   33176.92    |    33176.92     |
+|MAMMALS_ERINACEUS_EUROPAEUS_QPRT...|   0.25   |    3     |  852.46 (10.00%)   |   -16417.63   |   33181.06    |    33176.92     |
+|MAMMALS_OCTODON_DEGUS_QPRT_10160...|   0.24   |    2     |  387.06 ( 8.32%)   |   -16399.68   |   33145.15    |    33145.15     |
+|MAMMALS_OCTODON_DEGUS_QPRT_10160...|   0.24   |    3     |  236.28 ( 8.32%)   |   -16399.68   |   33149.29    |    33145.15     |
+|FISH_LATIMERIA_CHALUMNAE_QPRT_78...|   0.21   |    2     |    2.55 (28.51%)   |   -16390.44   |   33130.81    |    33130.81     |
+|FISH_LATIMERIA_CHALUMNAE_QPRT_78...|   0.21   |    3     |    2.52 (28.51%)   |   -16390.44   |   33134.95    |    33130.81     |
+|              Node18               |   0.20   |    2     |   57.99 (19.73%)   |   -16346.22   |   33046.51    |    33046.51     |
+|              Node18               |   0.20   |    3     |   65.80 (18.91%)   |   -16346.17   |   33050.54    |    33046.51     |
+|FISH_CYNOGLOSSUS_SEMILAEVIS_QPRT...|   0.20   |    2     |    1.64 (17.68%)   |   -16328.99   |   33016.18    |    33016.18     |
+|FISH_CYNOGLOSSUS_SEMILAEVIS_QPRT...|   0.20   |    3     |  172.08 ( 3.42%)   |   -16328.01   |   33018.37    |    33016.18     |
+|FISH_POECILIA_RETICULATA_QPRT_80...|   0.18   |    2     |    1.07 (23.28%)   |   -16321.02   |   33004.39    |    33004.39     |
+|FISH_POECILIA_RETICULATA_QPRT_80...|   0.18   |    3     |    1.64 ( 5.96%)   |   -16321.03   |   33008.54    |    33004.39     |
+|MAMMALS_OCHOTONA_PRINCEPS_QPRT_9...|   0.18   |    2     |    0.81 (30.02%)   |   -16315.84   |   32998.18    |    32998.18     |
+|MAMMALS_OCHOTONA_PRINCEPS_QPRT_9...|   0.18   |    3     |    0.81 (29.42%)   |   -16315.84   |   33002.33    |    32998.18     |
+|              Node49               |   0.18   |    2     |  668.75 ( 4.98%)   |   -16312.29   |   32995.22    |    32995.22     |
+|              Node49               |   0.18   |    3     |   >1000 ( 4.98%)   |   -16312.29   |   32999.37    |    32995.22     |
+|FISH_STEGASTES_PARTITUS_QPRT_144...|   0.17   |    2     |    0.25 (46.36%)   |   -16311.66   |   32998.11    |    32995.22     |
+|MAMMALS_MESOCRICETUS_AURATUS_QPR...|   0.15   |    2     |    1.64 (11.54%)   |   -16304.72   |   32984.21    |    32984.21     |
+|MAMMALS_MESOCRICETUS_AURATUS_QPR...|   0.15   |    3     |    1.62 (11.54%)   |   -16304.71   |   32988.36    |    32984.21     |
+|              Node14               |   0.14   |    2     |  536.74 ( 9.81%)   |   -16298.38   |   32975.70    |    32975.70     |
+|              Node14               |   0.14   |    3     |  124.64 ( 7.17%)   |   -16297.57   |   32978.23    |    32975.70     |
+|REPTILES_ANOLIS_CAROLINENSIS_QPR...|   0.13   |    2     |    0.78 (12.02%)   |   -16295.96   |   32975.01    |    32975.01     |
+|REPTILES_ANOLIS_CAROLINENSIS_QPR...|   0.13   |    3     |    0.78 (11.78%)   |   -16295.96   |   32979.16    |    32975.01     |
+|REPTILES_PYTHON_BIVITTATUS_QPRT_...|   0.13   |    2     |    0.31 ( 0.00%)   |   -16295.96   |   32979.16    |    32975.01     |
+|               Node5               |   0.12   |    2     |    4.11 (11.94%)   |   -16283.35   |   32953.93    |    32953.93     |
+|               Node5               |   0.12   |    3     |  475.91 ( 5.84%)   |   -16282.59   |   32956.57    |    32953.93     |
+|MAMMALS_ELEPHANTULUS_EDWARDII_28...|   0.12   |    2     |    0.72 (25.91%)   |   -16281.69   |   32954.77    |    32953.93     |
+|              Node58               |   0.11   |    2     |    1.71 (13.30%)   |   -16276.76   |   32944.91    |    32944.91     |
+|              Node58               |   0.11   |    3     |    1.72 (13.27%)   |   -16276.76   |   32949.07    |    32944.91     |
+|              Node19               |   0.10   |    2     |    0.83 (25.12%)   |   -16275.56   |   32946.68    |    32944.91     |
+|FISH_ESOX_LUCIUS_QPRT_8010_XP_01...|   0.10   |    2     |    2.05 (10.95%)   |   -16271.85   |   32939.24    |    32939.24     |
+|FISH_ESOX_LUCIUS_QPRT_8010_XP_01...|   0.10   |    3     |    2.05 (10.91%)   |   -16271.85   |   32943.40    |    32939.24     |
+|FISH_LARIMICHTHYS_CROCEA_QPRT_21...|   0.09   |    2     |    0.93 (22.67%)   |   -16270.33   |   32940.36    |    32939.24     |
+|MAMMALS_PTEROPUS_ALECTO_QPRT_940...|   0.08   |    2     |   0.15 (100.00%)   |   -16271.85   |   32943.40    |    32939.24     |
+|MAMMALS_TUPAIA_CHINENSIS_QPRT_24...|   0.08   |    2     |    3.44 ( 8.15%)   |   -16267.86   |   32935.43    |    32935.43     |
+|MAMMALS_TUPAIA_CHINENSIS_QPRT_24...|   0.08   |    3     |  217.06 ( 1.30%)   |   -16267.02   |   32937.90    |    32935.43     |
+|MAMMALS_BOS_MUTUS_QPRT_72004_XP_...|   0.07   |    2     |    4.47 ( 6.59%)   |   -16258.80   |   32921.46    |    32921.46     |
+|MAMMALS_BOS_MUTUS_QPRT_72004_XP_...|   0.07   |    3     |   18.08 ( 2.22%)   |   -16258.20   |   32924.42    |    32921.46     |
+|MAMMALS_GALEOPTERUS_VARIEGATUS_Q...|   0.07   |    2     |   0.15 (100.00%)   |   -16258.80   |   32925.62    |    32921.46     |
+|REPTILES_CHELONIA_MYDAS_8469_XP_...|   0.07   |    2     |    9.06 ( 8.11%)   |   -16250.42   |   32908.86    |    32908.86     |
+|REPTILES_CHELONIA_MYDAS_8469_XP_...|   0.07   |    3     |  269.75 ( 5.29%)   |   -16247.59   |   32907.36    |    32907.36     |
+|REPTILES_CHELONIA_MYDAS_8469_XP_...|   0.07   |    4     |   >1000 ( 5.36%)   |   -16247.64   |   32911.63    |    32907.36     |
+|              Node42               |   0.06   |    2     |    1.42 (14.40%)   |   -16245.71   |   32907.77    |    32907.36     |
+|MAMMALS_ODOBENUS_ROSMARUS_QPRT_9...|   0.05   |    2     |    0.05 (99.85%)   |   -16247.59   |   32911.52    |    32907.36     |
+|MAMMALS_TRICHECHUS_MANATUS_QPRT_...|   0.05   |    2     |    0.66 (32.98%)   |   -16247.43   |   32911.22    |    32907.36     |
+|MAMMALS_URSUS_MARITIMUS_QPRT_290...|   0.04   |    2     |    0.26 ( 5.19%)   |   -16247.59   |   32911.53    |    32907.36     |
+|              Node53               |   0.04   |    2     |    6.27 (19.18%)   |   -16245.32   |   32906.99    |    32906.99     |
+|              Node53               |   0.04   |    3     |    6.18 (14.61%)   |   -16245.36   |   32911.24    |    32906.99     |
+|               Node2               |   0.04   |    2     |    6.17 ( 4.44%)   |   -16241.17   |   32902.87    |    32902.87     |
+|               Node2               |   0.04   |    3     |    7.49 ( 3.29%)   |   -16241.19   |   32907.06    |    32902.87     |
+|MAMMALS_BALAENOPTERA_ACUTOROSTRA...|   0.04   |    2     |    1.86 (14.85%)   |   -16239.86   |   32904.40    |    32902.87     |
+|              Node20               |   0.04   |    2     |   0.13 (100.00%)   |   -16241.14   |   32906.97    |    32902.87     |
+|              Node15               |   0.04   |    2     |    0.27 (31.40%)   |   -16244.83   |   32914.34    |    32902.87     |
+|REPTILES_CHRYSEMYS_PICTA_QPRT_84...|   0.03   |    2     |    0.20 (72.98%)   |   -16241.08   |   32906.85    |    32902.87     |
+|MAMMALS_SAIMIRI_BOLIVIENSIS_QPRT...|   0.03   |    2     |    4.25 ( 4.40%)   |   -16238.44   |   32901.56    |    32901.56     |
+|MAMMALS_SAIMIRI_BOLIVIENSIS_QPRT...|   0.03   |    3     |    5.35 ( 3.04%)   |   -16238.46   |   32905.77    |    32901.56     |
+|              Node29               |   0.02   |    2     |    0.24 (22.91%)   |   -16238.42   |   32905.70    |    32901.56     |
+|              Node33               |   0.02   |    2     |    0.17 (92.19%)   |   -16238.44   |   32905.73    |    32901.56     |
+|              Node37               |   0.02   |    2     |  112.10 ( 2.19%)   |   -16232.14   |   32893.14    |    32893.14     |
+|              Node37               |   0.02   |    3     |  150.20 ( 2.10%)   |   -16231.96   |   32896.95    |    32893.14     |
+|FISH_OREOCHROMIS_NILOTICUS_QPRT_...|   0.02   |    2     |    0.32 (49.74%)   |   -16232.14   |   32897.31    |    32893.14     |
+|              Node26               |   0.02   |    2     |    0.20 (48.79%)   |   -16232.10   |   32897.23    |    32893.14     |
+|              Node27               |   0.02   |    2     |   78.45 ( 1.23%)   |   -16226.97   |   32886.96    |    32886.96     |
+|              Node27               |   0.02   |    3     |   87.30 ( 1.29%)   |   -16226.92   |   32891.04    |    32886.96     |
+|               Node6               |   0.02   |    2     |   54.47 ( 3.30%)   |   -16223.54   |   32884.28    |    32884.28     |
+|               Node6               |   0.02   |    3     |   57.83 ( 3.09%)   |   -16223.52   |   32888.41    |    32884.28     |
+|               Node4               |   0.02   |    2     |    0.21 (48.35%)   |   -16223.24   |   32887.86    |    32884.28     |
+|               Node3               |   0.01   |    2     |    0.26 ( 0.00%)   |   -16223.52   |   32888.41    |    32884.28     |
+|              Node36               |   0.01   |    2     |    3.03 ( 5.10%)   |   -16223.41   |   32888.18    |    32884.28     |
+|              Node32               |   0.01   |    2     |    8.44 ( 3.19%)   |   -16223.17   |   32887.71    |    32884.28     |
+|              Node22               |   0.01   |    2     |    0.73 (67.08%)   |   -16223.47   |   32888.32    |    32884.28     |
+|              Node38               |   0.01   |    2     |    0.84 (51.17%)   |   -16223.54   |   32888.45    |    32884.28     |
+|              Node45               |   0.01   |    2     |    2.00 (50.00%)   |   -16223.31   |   32888.00    |    32884.28     |
+|FISH_PUNDAMILIA_NYEREREI_303518_...|   0.00   |    2     |    0.25 ( 0.00%)   |   -16223.54   |   32888.45    |    32884.28     |
+|FISH_NEOLAMPROLOGUS_BRICHARDI_32...|   0.00   |    2     |    0.98 (49.29%)   |   -16223.42   |   32888.22    |    32884.28     |
+|              Node59               |   0.00   |    2     |    0.25 (49.96%)   |   -16223.27   |   32887.91    |    32884.28     |
+|              Node21               |   0.00   |    2     |    0.33 (27.10%)   |   -16222.96   |   32887.29    |    32884.28     |
+|              Node60               |   0.00   |    2     |    0.40 (75.94%)   |   -16223.54   |   32888.45    |    32884.28     |
+|FISH_HAPLOCHROMIS_BURTONI_8153_X...|   0.00   |    2     |    0.26 ( 0.00%)   |   -16223.54   |   32888.45    |    32884.28     |
+|              Node62               |   0.00   |    2     |    0.25 ( 0.00%)   |   -16223.54   |   32888.45    |    32884.28     |
+|FISH_MAYLANDIA_ZEBRA_QPRT_106582...|   0.00   |    2     |  >1000 (100.00%)   |   -16223.54   |   32888.45    |    32884.28     |
+
+### Rate class analyses summary
+*  31 branches with **2** rate classes
+*  35 branches with **1** rate classes
+*  1 branches with **3** rate classes
+
+### Annotated Tree
+(FISH_CYNOGLOSSUS_SEMILAEVIS_QPRT_244447_XP_008316080_1{2},(((((FISH_ESOX_LUCIUS_QPRT_8010_XP_010887676_1{2},FISH_LEPISOSTEUS_OCULATUS_QPRT_7918_ENSLOCP00000003250{2})Node6{2},(FISH_LATIMERIA_CHALUMNAE_QPRT_7897_ENSLACP00000002514{2},(AMPHIBIANS_XENOPUS_SILURANA_QPRT_8364_ENSXETP00000040992{2},(((REPTILES_ALLIGATOR_MISSISSIPPIENSIS_QPRT_1_8496_XP_006262877_1{2},BIRDS_PSEUDOPODOCES_HUMILIS_QPRT_181119_XP_005533880_1{2})Node15{1},(((((MAMMALS_BALAENOPTERA_ACUTOROSTRATA_QPRT_9767_XP_007186460_1{1},MAMMALS_BOS_MUTUS_QPRT_72004_XP_005888895_1{2})Node22{1},MAMMALS_PTEROPUS_ALECTO_QPRT_9402_XP_006914295_1{1})Node21{1},((MAMMALS_DASYPUS_NOVEMCINCTUS_9361_ENSDNOP00000025532{2},(MAMMALS_ELEPHANTULUS_EDWARDII_28737_XP_006896674_1{1},MAMMALS_TRICHECHUS_MANATUS_QPRT_9778_XP_004386821_1{1})Node29{1})Node27{2},((MAMMALS_GALEOPTERUS_VARIEGATUS_QPRT_482537_XP_008584766_1{1},MAMMALS_TUPAIA_CHINENSIS_QPRT_246437_XP_006148336_1{2})Node33{1},(((MAMMALS_MESOCRICETUS_AURATUS_QPRT_10036_XP_005063444_1{2},MAMMALS_OCHOTONA_PRINCEPS_QPRT_9978_XP_004587194_1{2})Node38{1},MAMMALS_OCTODON_DEGUS_QPRT_10160_XP_004623210_1{2})Node37{2},(MAMMALS_PAN_PANISCUS_MAZ_9597_XP_008959847_1{2},MAMMALS_SAIMIRI_BOLIVIENSIS_QPRT_27679_XP_010338990_1{2})Node42{1})Node36{1})Node32{1})Node26{1})Node20{1},(MAMMALS_ODOBENUS_ROSMARUS_QPRT_9707_XP_004397270_1{1},MAMMALS_URSUS_MARITIMUS_QPRT_29073_XP_008683513_1{1})Node45{1})Node19{1},MAMMALS_ERINACEUS_EUROPAEUS_QPRT_9365_XP_007536242_1{2})Node18{2})Node14{2},((REPTILES_ANOLIS_CAROLINENSIS_QPRT_28377_ENSACAP00000010539{2},REPTILES_PYTHON_BIVITTATUS_QPRT_176946_XP_007432297_1{1})Node50{2},(REPTILES_CHELONIA_MYDAS_8469_XP_007071206_1{3},REPTILES_CHRYSEMYS_PICTA_QPRT_8479_XP_008174263_1{1})Node53{2})Node49{2})Node13{2})Node11{1})Node9{2})Node5{2},FISH_STEGASTES_PARTITUS_QPRT_144197_XP_008292521_1{1})Node4{1},FISH_POECILIA_RETICULATA_QPRT_8081_XP_008404967_1{2})Node3{1},(((FISH_HAPLOCHROMIS_BURTONI_8153_XP_005919283_1{1},(FISH_MAYLANDIA_ZEBRA_QPRT_106582_XP_004538817_1{1},FISH_PUNDAMILIA_NYEREREI_303518_XP_005737460_1{1})Node62{1})Node60{1},FISH_OREOCHROMIS_NILOTICUS_QPRT_8128_ENSONIP00000004121{1})Node59{1},FISH_NEOLAMPROLOGUS_BRICHARDI_32507_XP_006799688_1{1})Node58{2})Node2{2},FISH_LARIMICHTHYS_CROCEA_QPRT_215358_XP_010730959_1{1})
+
+----
+
+```
+|FISH_CYNOGLOSSUS_SEMILAEVIS_QPRT_244447_XP_008316080_1 (2)
+|    |FISH_ESOX_LUCIUS_QPRT_8010_XP_010887676_1 (2)
+|   |+Node6 (2)
+|   ||FISH_LEPISOSTEUS_OCULATUS_QPRT_7918_ENSLOCP00000003250 (2)
+|  |+Node5 (2)
+|  |||FISH_LATIMERIA_CHALUMNAE_QPRT_7897_ENSLACP00000002514 (2)
+|  ||+Node9 (2)
+|  | ||AMPHIBIANS_XENOPUS_SILURANA_QPRT_8364_ENSXETP00000040992 (2)
+|  | |+Node11 (1)
+|  |  |  |REPTILES_ALLIGATOR_MISSISSIPPIENSIS_QPRT_1_8496_XP_006262877_1 (2)
+|  |  | |+Node15 (1)
+|  |  | ||BIRDS_PSEUDOPODOCES_HUMILIS_QPRT_181119_XP_005533880_1 (2)
+|  |  ||+Node14 (2)
+|  |  |||    |MAMMALS_BALAENOPTERA_ACUTOROSTRATA_QPRT_9767_XP_007186460_1 (1)
+|  |  |||   |+Node22 (1)
+|  |  |||   ||MAMMALS_BOS_MUTUS_QPRT_72004_XP_005888895_1 (2)
+|  |  |||  |+Node21 (1)
+|  |  |||  ||MAMMALS_PTEROPUS_ALECTO_QPRT_9402_XP_006914295_1 (1)
+|  |  ||| |+Node20 (1)
+|  |  ||| || |MAMMALS_DASYPUS_NOVEMCINCTUS_9361_ENSDNOP00000025532 (2)
+|  |  ||| |||+Node27 (2)
+|  |  ||| |||||MAMMALS_ELEPHANTULUS_EDWARDII_28737_XP_006896674_1 (1)
+|  |  ||| ||||+Node29 (1)
+|  |  ||| ||| |MAMMALS_TRICHECHUS_MANATUS_QPRT_9778_XP_004386821_1 (1)
+|  |  ||| ||+Node26 (1)
+|  |  ||| | | |MAMMALS_GALEOPTERUS_VARIEGATUS_QPRT_482537_XP_008584766_1 (1)
+|  |  ||| | ||+Node33 (1)
+|  |  ||| | |||MAMMALS_TUPAIA_CHINENSIS_QPRT_246437_XP_006148336_1 (2)
+|  |  ||| | |+Node32 (1)
+|  |  ||| |  |  |MAMMALS_MESOCRICETUS_AURATUS_QPRT_10036_XP_005063444_1 (2)
+|  |  ||| |  | |+Node38 (1)
+|  |  ||| |  | ||MAMMALS_OCHOTONA_PRINCEPS_QPRT_9978_XP_004587194_1 (2)
+|  |  ||| |  ||+Node37 (2)
+|  |  ||| |  |||MAMMALS_OCTODON_DEGUS_QPRT_10160_XP_004623210_1 (2)
+|  |  ||| |  |+Node36 (1)
+|  |  ||| |   ||MAMMALS_PAN_PANISCUS_MAZ_9597_XP_008959847_1 (2)
+|  |  ||| |   |+Node42 (1)
+|  |  ||| |    |MAMMALS_SAIMIRI_BOLIVIENSIS_QPRT_27679_XP_010338990_1 (2)
+|  |  ||||+Node19 (1)
+|  |  ||||||MAMMALS_ODOBENUS_ROSMARUS_QPRT_9707_XP_004397270_1 (1)
+|  |  |||||+Node45 (1)
+|  |  |||| |MAMMALS_URSUS_MARITIMUS_QPRT_29073_XP_008683513_1 (1)
+|  |  |||+Node18 (2)
+|  |  || |MAMMALS_ERINACEUS_EUROPAEUS_QPRT_9365_XP_007536242_1 (2)
+|  |  |+Node13 (2)
+|  |   | |REPTILES_ANOLIS_CAROLINENSIS_QPRT_28377_ENSACAP00000010539 (2)
+|  |   ||+Node50 (2)
+|  |   |||REPTILES_PYTHON_BIVITTATUS_QPRT_176946_XP_007432297_1 (1)
+|  |   |+Node49 (2)
+|  |    ||REPTILES_CHELONIA_MYDAS_8469_XP_007071206_1 (3)
+|  |    |+Node53 (2)
+|  |     |REPTILES_CHRYSEMYS_PICTA_QPRT_8479_XP_008174263_1 (1)
+| |+Node4 (1)
+| ||FISH_STEGASTES_PARTITUS_QPRT_144197_XP_008292521_1 (1)
+||+Node3 (1)
+|||FISH_POECILIA_RETICULATA_QPRT_8081_XP_008404967_1 (2)
+|+Node2 (2)
+||  |FISH_HAPLOCHROMIS_BURTONI_8153_XP_005919283_1 (1)
+|| |+Node60 (1)
+|| |||FISH_MAYLANDIA_ZEBRA_QPRT_106582_XP_004538817_1 (1)
+|| ||+Node62 (1)
+|| | |FISH_PUNDAMILIA_NYEREREI_303518_XP_005737460_1 (1)
+|||+Node59 (1)
+||||FISH_OREOCHROMIS_NILOTICUS_QPRT_8128_ENSONIP00000004121 (1)
+||+Node58 (2)
+| |FISH_NEOLAMPROLOGUS_BRICHARDI_32507_XP_006799688_1 (1)
+|FISH_LARIMICHTHYS_CROCEA_QPRT_215358_XP_010730959_1 (1)
+```
+
+
+### Improving parameter estimates of the adaptive rate class model
+* Log(L) = -16165.99, AIC-c = 32769.19 (214 estimated parameters)
+
+### Testing selected branches for selection
+
+|              Branch               |  Rates   |     Max. dN/dS     | Sites @ EBF>=100 |      Test LRT      |Uncorrected p-value |
+|-----------------------------------|----------|--------------------|------------------|--------------------|--------------------|
+|AMPHIBIANS_XENOPUS_SILURANA_QPRT...|     2    |    6.05 (20.72%)   |          7       |       -2.61        |       0.50000      |
+|              Node11               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node13               |     2    |    1.37 ( 5.48%)   |          2       |       -2.59        |       0.50000      |
+|BIRDS_PSEUDOPODOCES_HUMILIS_QPRT...|     2    |  374.49 (30.57%)   |         29       |       16.59        |       0.00008      |
+|               Node9               |     2    |    4.27 (17.28%)   |         11       |        2.90        |       0.08800      |
+|FISH_LEPISOSTEUS_OCULATUS_QPRT_7...|     2    |  429.72 (21.23%)   |         13       |        3.23        |       0.07413      |
+|              Node50               |     2    |    0.26 (32.38%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_DASYPUS_NOVEMCINCTUS_936...|     2    |   >1000 (17.46%)   |         13       |       22.53        |       0.00000      |
+|MAMMALS_PAN_PANISCUS_MAZ_9597_XP...|     2    |  465.42 (31.16%)   |         71       |       136.25       |       0.00000      |
+|REPTILES_ALLIGATOR_MISSISSIPPIEN...|     2    |   39.33 (13.40%)   |          7       |        4.16        |       0.04578      |
+|MAMMALS_ERINACEUS_EUROPAEUS_QPRT...|     2    |  453.10 (11.86%)   |         10       |        9.07        |       0.00374      |
+|MAMMALS_OCTODON_DEGUS_QPRT_10160...|     2    |  475.95 ( 7.84%)   |         10       |        5.39        |       0.02432      |
+|FISH_LATIMERIA_CHALUMNAE_QPRT_78...|     2    |   15.39 (22.01%)   |          7       |       -1.01        |       0.50000      |
+|              Node18               |     2    |  104.16 (17.99%)   |         16       |       22.44        |       0.00000      |
+|FISH_CYNOGLOSSUS_SEMILAEVIS_QPRT...|     2    |    9.91 ( 8.32%)   |         11       |        3.44        |       0.06658      |
+|FISH_POECILIA_RETICULATA_QPRT_80...|     2    |    1.67 (14.57%)   |          8       |       -2.22        |       0.50000      |
+|MAMMALS_OCHOTONA_PRINCEPS_QPRT_9...|     2    |    0.76 (28.14%)   |       N/A        |        0.00        |       1.00000      |
+|              Node49               |     2    |  620.78 ( 1.63%)   |          0       |       -2.52        |       0.50000      |
+|FISH_STEGASTES_PARTITUS_QPRT_144...|     1    |   0.10 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_MESOCRICETUS_AURATUS_QPR...|     2    |    1.47 (11.28%)   |         19       |       -2.00        |       0.50000      |
+|              Node14               |     2    |   81.03 ( 9.02%)   |          5       |        4.71        |       0.03451      |
+|REPTILES_ANOLIS_CAROLINENSIS_QPR...|     2    |    0.68 (14.53%)   |       N/A        |        0.00        |       1.00000      |
+|REPTILES_PYTHON_BIVITTATUS_QPRT_...|     1    |   0.13 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|               Node5               |     2    |   37.18 ( 4.92%)   |          5       |        3.24        |       0.07364      |
+|MAMMALS_ELEPHANTULUS_EDWARDII_28...|     1    |   0.15 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node58               |     2    |    2.77 ( 9.06%)   |          6       |       -0.31        |       0.50000      |
+|              Node19               |     1    |   0.13 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|FISH_ESOX_LUCIUS_QPRT_8010_XP_01...|     2    |    1.49 (13.96%)   |          4       |       -0.40        |       0.50000      |
+|FISH_LARIMICHTHYS_CROCEA_QPRT_21...|     1    |   0.17 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_PTEROPUS_ALECTO_QPRT_940...|     1    |   0.15 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_TUPAIA_CHINENSIS_QPRT_24...|     2    |   11.35 ( 2.97%)   |          2       |        2.08        |       0.13622      |
+|MAMMALS_BOS_MUTUS_QPRT_72004_XP_...|     2    |   16.19 ( 2.68%)   |          4       |        5.23        |       0.02644      |
+|MAMMALS_GALEOPTERUS_VARIEGATUS_Q...|     1    |   0.14 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|REPTILES_CHELONIA_MYDAS_8469_XP_...|     3    |   >1000 ( 5.60%)   |         16       |       14.47        |       0.00024      |
+|              Node42               |     1    |   0.14 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_ODOBENUS_ROSMARUS_QPRT_9...|     1    |   0.05 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_TRICHECHUS_MANATUS_QPRT_...|     1    |   0.20 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_URSUS_MARITIMUS_QPRT_290...|     1    |   0.01 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node53               |     2    |    3.94 (14.52%)   |          6       |       -1.97        |       0.50000      |
+|               Node2               |     2    |    8.53 ( 4.08%)   |          6       |        1.65        |       0.17161      |
+|MAMMALS_BALAENOPTERA_ACUTOROSTRA...|     1    |   0.23 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node20               |     1    |   0.16 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node15               |     1    |   0.72 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|REPTILES_CHRYSEMYS_PICTA_QPRT_84...|     1    |  >1000 (100.00%)   |       N/A        |       -2.43        |       0.50000      |
+|MAMMALS_SAIMIRI_BOLIVIENSIS_QPRT...|     2    |    3.51 ( 5.57%)   |          4       |       -1.42        |       0.50000      |
+|              Node29               |     1    |   0.07 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node33               |     1    |   0.12 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node37               |     2    |  311.99 ( 1.79%)   |          3       |       11.41        |       0.00115      |
+|FISH_OREOCHROMIS_NILOTICUS_QPRT_...|     1    |   0.31 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node26               |     1    |   0.09 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node27               |     2    |   91.81 ( 1.24%)   |          2       |        4.93        |       0.03084      |
+|               Node6               |     2    |  112.61 ( 2.91%)   |          3       |        3.27        |       0.07258      |
+|               Node4               |     1    |   0.14 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|               Node3               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node36               |     1    |   0.12 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node32               |     1    |   0.23 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node22               |     1    |   0.80 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node38               |     1    |   0.79 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node45               |     1    |   0.16 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|FISH_PUNDAMILIA_NYEREREI_303518_...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|FISH_NEOLAMPROLOGUS_BRICHARDI_32...|     1    |   1.30 (100.00%)   |       N/A        |       -2.58        |       0.50000      |
+|              Node59               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node21               |     1    |   0.08 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node60               |     1    |   0.39 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|FISH_HAPLOCHROMIS_BURTONI_8153_X...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node62               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |

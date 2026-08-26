@@ -1,0 +1,342 @@
+
+Analysis Description
+--------------------
+aBSREL (Adaptive branch-site random effects likelihood) uses an adaptive
+random effects branch-site model framework to test whether each branch
+has evolved under positive selection, using a procedure which infers an
+optimal number of rate categories per branch. v2.2 adds support for
+multiple-hit models. v2.3 adds support for SRV. v2.5 adds support for
+ancestral state reconstruction, identification of sites contributing to
+selection signal, and some diagnostics. v2.6 adds tree reports and ASCII
+art
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree
+
+- __Citation__:  Less Is More: An Adaptive Branch-Site Random Effects Model for
+Efficient Detection of Episodic Diversifying Selection (2015). Mol Biol
+Evol 32 (5): 1342-1353. 
+
+- __Written by__: Sergei L Kosakovsky Pond, Ben Murrell, Steven Weaver and Temple iGEM /
+UCSD viral evolution group
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 2.6
+
+[Advanced option] Bag of little bootstrap alignment resampling rate (permissible range = [0.01,1], default value = 1): blb: 1
+
+>code => Universal
+/home/datamonkey/datamonkey-js-server/app/absrel/output/6a54b26fa3cde1ef15d36fd5.tre
+/home/datamonkey/datamonkey-js-server/app/absrel/output/6a54b26fa3cde1ef15d36fd5.tre
+
+>Loaded a multiple sequence alignment with **40** sequences, **421** codons, and **1** partitions from `/home/datamonkey/datamonkey-js-server/app/absrel/output/6a54b26fa3cde1ef15d36fd5`
+
+>branches => FG
+
+>multiple-hits => None
+
+>srv => No
+
+
+### * Selected 77 branches for testing: `FISH_CYNOGLOSSUS_SEMILAEVIS_AADAT_244447_XP_008321870_1, FISH_DANIO_RERIO_AADAT_7955_ENSDARP00000010437, FISH_LATIMERIA_CHALUMNAE_AADAT_7897_ENSLACP00000003451, REPTILES_ALLIGATOR_MISSISSIPPIENSIS_AADAT_8496_XP_006277551_1, REPTILES_CHELONIA_MYDAS_AADAT_8469_XP_007067118_1, REPTILES_CHRYSEMYS_PICTA_8479_XP_008161010_1, REPTILES_PELODISCUS_SINENSIS_AADAT_13735_ENSPSIP00000010151, Node15, Node13, Node11, REPTILES_PYTHON_BIVITTATUS_AADAT_176946_XP_007441842_1, Node10, BIRDS_COLUMBA_LIVIA_AADAT_8932_XP_005509595_1, BIRDS_HALIAEETUS_LEUCOCEPHALUS_AADAT_52644_XP_010568257_1, BIRDS_NIPPONIA_NIPPON_AADAT_128390_XP_009473070_1, Node22, Node20, BIRDS_FICEDULA_ALBICOLLIS_AADAT_59894_ENSFALP00000011924, BIRDS_PSEUDOPODOCES_HUMILIS_AADAT_181119_XP_005517679_1, Node25, Node19, Node9, MAMMALS_BALAENOPTERA_ACUTOROSTRATA_9767_XP_007192838_1, MAMMALS_PTEROPUS_ALECTO_AADAT_9402_XP_006906381_1, Node37, MAMMALS_LEPTONYCHOTES_WEDDELLII_AADAT_9713_XP_006730179_1, MAMMALS_PANTHERA_TIGRIS_AADAT_9694_XP_007097214_1, Node40, Node36, MAMMALS_ERINACEUS_EUROPAEUS_AADAT_9365_XP_007527291_1, Node35, MAMMALS_GALEOPTERUS_VARIEGATUS_AADAT_482537_XP_008576751_1, MAMMALS_MACACA_FASCICULARIS_EGM_14810_9541_XP_005556359_1, MAMMALS_TARSIUS_SYRICHTA_9478_XP_008058866_1, Node46, Node44, Node34, MAMMALS_TUPAIA_CHINENSIS_AADAT_246437_XP_006141386_1, Node33, MAMMALS_CHINCHILLA_LANIGERA_34839_XP_005373952_1, MAMMALS_NANNOSPALAX_GALILI_AADAT_1026970_XP_008823154_1, Node51, MAMMALS_OCHOTONA_PRINCEPS_AADAT_9978_XP_004579326_1, Node50, Node32, MAMMALS_DASYPUS_NOVEMCINCTUS_AADAT_9361_ENSDNOP00000032387, Node31, MAMMALS_ECHINOPS_TELFAIRI_AADAT_9371_XP_004696179_1, Node30, MAMMALS_SARCOPHILUS_HARRISII_AADAT_9305_ENSSHAP00000010245, Node29, MAMMALS_ORNITHORHYNCHUS_ANATINUS_AADAT_9258_ENSOANP00000011847, Node28, Node8, Node6, FISH_LEPISOSTEUS_OCULATUS_AADAT_7918_ENSLOCP00000015705, Node5, Node3, FISH_ESOX_LUCIUS_AADAT_8010_XP_010896724_1, Node2, FISH_HAPLOCHROMIS_BURTONI_8153_XP_005950016_1, FISH_PUNDAMILIA_NYEREREI_303518_XP_005751129_1, Node67, FISH_MAYLANDIA_ZEBRA_AADAT_106582_XP_004570756_1, Node66, FISH_NEOLAMPROLOGUS_BRICHARDI_32507_XP_006805565_1, Node65, FISH_OREOCHROMIS_NILOTICUS_AADAT_8128_ENSONIP00000016358, Node64, FISH_LARIMICHTHYS_CROCEA_AADAT_215358_XP_010752635_1, Node63, FISH_STEGASTES_PARTITUS_AADAT_144197_XP_008284606_1, Node62, FISH_POECILIA_RETICULATA_AADAT_8081_XP_008426155_1, FISH_XIPHOPHORUS_MACULATUS_AADAT_8083_ENSXMAP00000001904, Node75, Node61`
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths => Yes
+* Log(L) = -23109.53, AIC-c = 46389.35 (85 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  4.279
+
+### Fitting the baseline model with a single dN/dS class per branch, and no site-to-site variation. 
+* Log(L) = -21370.65, AIC-c = 43080.71 (168 estimated parameters)
+* Branch-level non-synonymous/synonymous rate ratio distribution has median  0.20, and 95% of the weight in  0.03 -  4.82
+
+### Determining the optimal number of rate classes per branch using a step up procedure
+
+|              Branch               |  Length  |  Rates   |     Max. dN/dS     |    Log(L)     |     AIC-c     |Best AIC-c so far|
+|-----------------------------------|----------|----------|--------------------|---------------|---------------|-----------------|
+|FISH_DANIO_RERIO_AADAT_7955_ENSD...|   0.23   |    2     |    1.12 (15.27%)   |   -21357.62   |   43058.72    |    43058.72     |
+|FISH_DANIO_RERIO_AADAT_7955_ENSD...|   0.23   |    3     |  115.22 ( 4.38%)   |   -21353.99   |   43055.55    |    43055.55     |
+|FISH_DANIO_RERIO_AADAT_7955_ENSD...|   0.23   |    4     |  150.20 ( 4.38%)   |   -21353.99   |   43059.63    |    43055.55     |
+|REPTILES_PYTHON_BIVITTATUS_AADAT...|   0.22   |    2     |   >1000 ( 4.66%)   |   -21338.75   |   43029.15    |    43029.15     |
+|REPTILES_PYTHON_BIVITTATUS_AADAT...|   0.22   |    3     |   >1000 ( 4.64%)   |   -21338.75   |   43033.23    |    43029.15     |
+|FISH_LATIMERIA_CHALUMNAE_AADAT_7...|   0.21   |    2     |    0.72 (27.43%)   |   -21332.56   |   43020.86    |    43020.86     |
+|FISH_LATIMERIA_CHALUMNAE_AADAT_7...|   0.21   |    3     |    0.75 ( 0.55%)   |   -21332.56   |   43024.94    |    43020.86     |
+|               Node5               |   0.20   |    2     |    0.76 (10.96%)   |   -21328.87   |   43017.56    |    43017.56     |
+|               Node5               |   0.20   |    3     |    0.76 ( 9.87%)   |   -21328.87   |   43021.64    |    43017.56     |
+|REPTILES_CHELONIA_MYDAS_AADAT_84...|   0.20   |    2     |    6.58 ( 7.48%)   |   -21319.51   |   43002.92    |    43002.92     |
+|REPTILES_CHELONIA_MYDAS_AADAT_84...|   0.20   |    3     |    6.75 ( 7.24%)   |   -21319.55   |   43007.10    |    43002.92     |
+|FISH_LEPISOSTEUS_OCULATUS_AADAT_...|   0.19   |    2     |    0.66 (14.91%)   |   -21316.84   |   43001.68    |    43001.68     |
+|FISH_LEPISOSTEUS_OCULATUS_AADAT_...|   0.19   |    3     |    3.33 ( 2.05%)   |   -21316.66   |   43005.41    |    43001.68     |
+|               Node6               |   0.19   |    2     |    0.41 (15.05%)   |   -21315.43   |   43002.95    |    43001.68     |
+|FISH_CYNOGLOSSUS_SEMILAEVIS_AADA...|   0.19   |    2     |    1.11 (21.64%)   |   -21304.09   |   42980.26    |    42980.26     |
+|FISH_CYNOGLOSSUS_SEMILAEVIS_AADA...|   0.19   |    3     |    1.79 ( 5.47%)   |   -21304.09   |   42984.35    |    42980.26     |
+|MAMMALS_ORNITHORHYNCHUS_ANATINUS...|   0.19   |    2     |    0.10 (51.09%)   |   -21304.07   |   42984.31    |    42980.26     |
+|FISH_ESOX_LUCIUS_AADAT_8010_XP_0...|   0.15   |    2     |    0.36 (26.16%)   |   -21302.71   |   42981.60    |    42980.26     |
+|MAMMALS_ECHINOPS_TELFAIRI_AADAT_...|   0.15   |    2     |    0.45 (47.02%)   |   -21303.26   |   42982.69    |    42980.26     |
+|              Node30               |   0.14   |    2     |  399.74 ( 5.82%)   |   -21282.18   |   42940.55    |    42940.55     |
+|              Node30               |   0.14   |    3     |   >1000 ( 4.68%)   |   -21281.42   |   42943.11    |    42940.55     |
+|MAMMALS_CHINCHILLA_LANIGERA_3483...|   0.14   |    2     |   37.62 ( 5.22%)   |   -21268.81   |   42917.89    |    42917.89     |
+|MAMMALS_CHINCHILLA_LANIGERA_3483...|   0.14   |    3     |   38.56 ( 5.16%)   |   -21268.75   |   42921.87    |    42917.89     |
+|MAMMALS_TUPAIA_CHINENSIS_AADAT_2...|   0.12   |    2     |   90.10 ( 3.75%)   |   -21255.58   |   42895.51    |    42895.51     |
+|MAMMALS_TUPAIA_CHINENSIS_AADAT_2...|   0.12   |    3     |   87.14 ( 3.78%)   |   -21255.56   |   42899.57    |    42895.51     |
+|MAMMALS_ERINACEUS_EUROPAEUS_AADA...|   0.12   |    2     |  294.36 ( 1.23%)   |   -21253.30   |   42895.05    |    42895.05     |
+|MAMMALS_ERINACEUS_EUROPAEUS_AADA...|   0.12   |    3     |  141.10 ( 1.21%)   |   -21253.32   |   42899.18    |    42895.05     |
+|MAMMALS_BALAENOPTERA_ACUTOROSTRA...|   0.12   |    2     |   >1000 ( 2.45%)   |   -21243.45   |   42879.44    |    42879.44     |
+|MAMMALS_BALAENOPTERA_ACUTOROSTRA...|   0.12   |    3     |  110.82 ( 2.42%)   |   -21243.44   |   42883.52    |    42879.44     |
+|               Node8               |   0.12   |    2     |    0.77 (15.97%)   |   -21241.86   |   42880.35    |    42879.44     |
+|MAMMALS_OCHOTONA_PRINCEPS_AADAT_...|   0.12   |    2     |    0.93 (29.49%)   |   -21239.91   |   42876.45    |    42876.45     |
+|MAMMALS_OCHOTONA_PRINCEPS_AADAT_...|   0.12   |    3     |    1.00 ( 0.59%)   |   -21239.91   |   42880.55    |    42876.45     |
+|MAMMALS_SARCOPHILUS_HARRISII_AAD...|   0.11   |    2     |    1.63 (11.56%)   |   -21233.00   |   42866.74    |    42866.74     |
+|MAMMALS_SARCOPHILUS_HARRISII_AAD...|   0.11   |    3     |    2.12 ( 6.58%)   |   -21233.02   |   42870.86    |    42866.74     |
+|              Node19               |   0.11   |    2     |    0.80 (17.12%)   |   -21231.03   |   42866.90    |    42866.74     |
+|MAMMALS_TARSIUS_SYRICHTA_9478_XP...|   0.11   |    2     |    8.16 ( 2.79%)   |   -21228.51   |   42861.86    |    42861.86     |
+|MAMMALS_TARSIUS_SYRICHTA_9478_XP...|   0.11   |    3     |   11.58 ( 2.23%)   |   -21228.52   |   42865.98    |    42861.86     |
+|MAMMALS_GALEOPTERUS_VARIEGATUS_A...|   0.09   |    2     |    2.48 (41.42%)   |   -21225.24   |   42859.40    |    42859.40     |
+|MAMMALS_GALEOPTERUS_VARIEGATUS_A...|   0.09   |    3     |    2.49 (41.11%)   |   -21225.24   |   42863.50    |    42859.40     |
+|              Node75               |   0.09   |    2     |    1.29 ( 9.68%)   |   -21222.40   |   42857.82    |    42857.82     |
+|              Node75               |   0.09   |    3     |    1.45 ( 5.08%)   |   -21222.41   |   42861.94    |    42857.82     |
+|MAMMALS_DASYPUS_NOVEMCINCTUS_AAD...|   0.09   |    2     |    1.83 (26.62%)   |   -21218.47   |   42854.07    |    42854.07     |
+|MAMMALS_DASYPUS_NOVEMCINCTUS_AAD...|   0.09   |    3     |    2.31 (15.46%)   |   -21218.47   |   42858.18    |    42854.07     |
+|MAMMALS_NANNOSPALAX_GALILI_AADAT...|   0.09   |    2     |    2.07 (11.81%)   |   -21217.50   |   42856.23    |    42854.07     |
+|              Node64               |   0.08   |    2     |    0.96 ( 5.00%)   |   -21216.23   |   42853.68    |    42853.68     |
+|              Node64               |   0.08   |    3     |   10.91 ( 0.39%)   |   -21215.79   |   42856.90    |    42853.68     |
+|FISH_STEGASTES_PARTITUS_AADAT_14...|   0.08   |    2     |    1.42 ( 7.98%)   |   -21212.46   |   42850.24    |    42850.24     |
+|FISH_STEGASTES_PARTITUS_AADAT_14...|   0.08   |    3     |    1.81 ( 4.33%)   |   -21212.45   |   42854.34    |    42850.24     |
+|FISH_LARIMICHTHYS_CROCEA_AADAT_2...|   0.07   |    2     |    1.28 ( 9.17%)   |   -21208.79   |   42847.01    |    42847.01     |
+|FISH_LARIMICHTHYS_CROCEA_AADAT_2...|   0.07   |    3     |    1.61 ( 4.63%)   |   -21208.80   |   42851.13    |    42847.01     |
+|REPTILES_ALLIGATOR_MISSISSIPPIEN...|   0.07   |    2     |    0.18 (75.64%)   |   -21208.79   |   42851.11    |    42847.01     |
+|               Node2               |   0.07   |    2     |  114.01 ( 3.21%)   |   -21196.78   |   42827.09    |    42827.09     |
+|               Node2               |   0.07   |    3     |  110.00 ( 3.20%)   |   -21196.78   |   42831.20    |    42827.09     |
+|              Node28               |   0.07   |    2     |    1.65 (13.10%)   |   -21193.54   |   42824.72    |    42824.72     |
+|              Node28               |   0.07   |    3     |    1.64 (13.12%)   |   -21193.54   |   42828.83    |    42824.72     |
+|MAMMALS_PTEROPUS_ALECTO_AADAT_94...|   0.06   |    2     |    0.72 (22.87%)   |   -21193.48   |   42828.70    |    42824.72     |
+|MAMMALS_MACACA_FASCICULARIS_EGM_...|   0.06   |    2     |    1.59 (32.29%)   |   -21191.93   |   42825.61    |    42824.72     |
+|MAMMALS_PANTHERA_TIGRIS_AADAT_96...|   0.06   |    2     |   93.17 ( 3.37%)   |   -21168.35   |   42778.44    |    42778.44     |
+|MAMMALS_PANTHERA_TIGRIS_AADAT_96...|   0.06   |    3     |   96.84 ( 3.27%)   |   -21168.35   |   42782.55    |    42778.44     |
+|REPTILES_PELODISCUS_SINENSIS_AAD...|   0.04   |    2     |    0.36 ( 0.00%)   |   -21168.35   |   42782.54    |    42778.44     |
+|              Node29               |   0.04   |    2     |    0.22 (49.33%)   |   -21168.38   |   42782.62    |    42778.44     |
+|FISH_HAPLOCHROMIS_BURTONI_8153_X...|   0.04   |    2     |   >1000 ( 5.22%)   |   -21091.61   |   42629.08    |    42629.08     |
+|FISH_HAPLOCHROMIS_BURTONI_8153_X...|   0.04   |    3     |   >1000 ( 4.65%)   |   -21090.54   |   42631.05    |    42629.08     |
+|               Node9               |   0.04   |    2     |    3.26 ( 4.86%)   |   -21090.60   |   42631.16    |    42629.08     |
+|BIRDS_COLUMBA_LIVIA_AADAT_8932_X...|   0.04   |    2     |    3.37 ( 4.76%)   |   -21090.71   |   42631.38    |    42629.08     |
+|              Node61               |   0.04   |    2     |    4.57 ( 2.62%)   |   -21089.42   |   42628.80    |    42628.80     |
+|              Node61               |   0.04   |    3     |    5.60 ( 1.86%)   |   -21089.45   |   42632.96    |    42628.80     |
+|              Node25               |   0.04   |    2     |    1.55 (11.12%)   |   -21088.06   |   42630.18    |    42628.80     |
+|REPTILES_CHRYSEMYS_PICTA_8479_XP...|   0.03   |    2     |   >1000 ( 1.90%)   |   -21070.23   |   42594.54    |    42594.54     |
+|REPTILES_CHRYSEMYS_PICTA_8479_XP...|   0.03   |    3     |   >1000 ( 1.88%)   |   -21070.25   |   42598.67    |    42594.54     |
+|MAMMALS_LEPTONYCHOTES_WEDDELLII_...|   0.03   |    2     |    0.42 (76.26%)   |   -21070.23   |   42598.63    |    42594.54     |
+|              Node15               |   0.03   |    2     |    7.08 ( 2.25%)   |   -21064.88   |   42587.94    |    42587.94     |
+|              Node15               |   0.03   |    3     |    8.08 ( 1.79%)   |   -21064.98   |   42592.25    |    42587.94     |
+|FISH_XIPHOPHORUS_MACULATUS_AADAT...|   0.03   |    2     |   0.12 (100.00%)   |   -21064.88   |   42592.04    |    42587.94     |
+|              Node40               |   0.03   |    2     |    0.50 (49.75%)   |   -21064.88   |   42592.04    |    42587.94     |
+|              Node51               |   0.02   |    2     |    0.38 ( 0.00%)   |   -21064.83   |   42591.94    |    42587.94     |
+|              Node32               |   0.02   |    2     |    3.28 ( 7.78%)   |   -21064.60   |   42591.48    |    42587.94     |
+|FISH_POECILIA_RETICULATA_AADAT_8...|   0.02   |    2     |    0.12 (99.76%)   |   -21064.88   |   42592.04    |    42587.94     |
+|BIRDS_NIPPONIA_NIPPON_AADAT_1283...|   0.02   |    2     |   >1000 ( 0.40%)   |   -21058.68   |   42579.65    |    42579.65     |
+|BIRDS_NIPPONIA_NIPPON_AADAT_1283...|   0.02   |    3     |  198.78 ( 0.39%)   |   -21058.85   |   42584.10    |    42579.65     |
+|BIRDS_FICEDULA_ALBICOLLIS_AADAT_...|   0.02   |    2     |    0.51 (27.40%)   |   -21058.69   |   42583.79    |    42579.65     |
+|BIRDS_PSEUDOPODOCES_HUMILIS_AADA...|   0.02   |    2     |    0.24 (48.06%)   |   -21058.69   |   42583.77    |    42579.65     |
+|              Node50               |   0.02   |    2     |   >1000 ( 1.17%)   |   -21054.45   |   42575.29    |    42575.29     |
+|              Node50               |   0.02   |    3     |   >1000 ( 1.18%)   |   -21054.45   |   42579.40    |    42575.29     |
+|               Node3               |   0.02   |    2     |    0.27 (31.40%)   |   -21076.35   |   42623.21    |    42575.29     |
+|              Node11               |   0.02   |    2     |    0.19 (55.63%)   |   -21054.40   |   42579.31    |    42575.29     |
+|              Node31               |   0.01   |    2     |    0.63 (54.12%)   |   -21054.39   |   42579.29    |    42575.29     |
+|              Node62               |   0.01   |    2     |    0.79 (10.47%)   |   -21054.46   |   42579.43    |    42575.29     |
+|              Node44               |   0.01   |    2     |   45.84 ( 3.69%)   |   -21051.08   |   42572.67    |    42572.67     |
+|              Node44               |   0.01   |    3     |   43.81 ( 3.55%)   |   -21051.10   |   42576.82    |    42572.67     |
+|BIRDS_HALIAEETUS_LEUCOCEPHALUS_A...|   0.01   |    2     |    0.26 (10.57%)   |   -21051.08   |   42576.79    |    42572.67     |
+|              Node13               |   0.01   |    2     |    0.26 (50.86%)   |   -21051.07   |   42576.77    |    42572.67     |
+|FISH_OREOCHROMIS_NILOTICUS_AADAT...|   0.01   |    2     |    0.19 (54.61%)   |   -21051.09   |   42576.80    |    42572.67     |
+|              Node35               |   0.01   |    2     |   31.00 ( 2.42%)   |   -21049.98   |   42574.59    |    42572.67     |
+|              Node46               |   0.01   |    2     |  126.57 ( 7.55%)   |   -21050.12   |   42574.85    |    42572.67     |
+|              Node63               |   0.01   |    2     |   29.88 ( 1.62%)   |   -21047.37   |   42569.37    |    42569.37     |
+|              Node63               |   0.01   |    3     |   30.35 ( 1.49%)   |   -21047.40   |   42573.53    |    42569.37     |
+|              Node66               |   0.01   |    2     |    0.60 (76.52%)   |   -21047.37   |   42573.48    |    42569.37     |
+|              Node34               |   0.01   |    2     |   46.87 (11.41%)   |   -21046.96   |   42572.67    |    42569.37     |
+|              Node10               |   0.01   |    2     |    0.40 (51.36%)   |   -21047.35   |   42573.43    |    42569.37     |
+|              Node65               |   0.01   |    2     |    0.49 ( 9.62%)   |   -21047.38   |   42573.49    |    42569.37     |
+|              Node36               |   0.01   |    2     |    0.79 (76.21%)   |   -21047.37   |   42573.47    |    42569.37     |
+|              Node37               |   0.01   |    2     |    0.27 (31.40%)   |   -21056.01   |   42590.75    |    42569.37     |
+|              Node33               |   0.01   |    2     |    0.27 (31.40%)   |   -21054.50   |   42587.73    |    42569.37     |
+|              Node22               |   0.01   |    2     |    0.48 (51.52%)   |   -21047.37   |   42573.48    |    42569.37     |
+|FISH_PUNDAMILIA_NYEREREI_303518_...|   0.00   |    2     |    0.26 ( 0.00%)   |   -21047.37   |   42573.48    |    42569.37     |
+|FISH_MAYLANDIA_ZEBRA_AADAT_10658...|   0.00   |    2     |    2.20 (23.61%)   |   -21047.37   |   42573.48    |    42569.37     |
+|              Node20               |   0.00   |    2     |    2.05 (50.55%)   |   -21047.36   |   42573.46    |    42569.37     |
+|FISH_NEOLAMPROLOGUS_BRICHARDI_32...|   0.00   |    2     |    0.25 (49.89%)   |   -21047.37   |   42573.48    |    42569.37     |
+|              Node67               |   0.00   |    2     |  523.46 (100.00%)  |   -21047.37   |   42573.48    |    42569.37     |
+
+### Rate class analyses summary
+*  1 branches with **3** rate classes
+*  31 branches with **2** rate classes
+*  45 branches with **1** rate classes
+
+### Annotated Tree
+(FISH_CYNOGLOSSUS_SEMILAEVIS_AADAT_244447_XP_008321870_1{2},((FISH_DANIO_RERIO_AADAT_7955_ENSDARP00000010437{3},((FISH_LATIMERIA_CHALUMNAE_AADAT_7897_ENSLACP00000003451{2},((((REPTILES_ALLIGATOR_MISSISSIPPIENSIS_AADAT_8496_XP_006277551_1{1},(REPTILES_CHELONIA_MYDAS_AADAT_8469_XP_007067118_1{2},(REPTILES_CHRYSEMYS_PICTA_8479_XP_008161010_1{2},REPTILES_PELODISCUS_SINENSIS_AADAT_13735_ENSPSIP00000010151{1})Node15{2})Node13{1})Node11{1},REPTILES_PYTHON_BIVITTATUS_AADAT_176946_XP_007441842_1{2})Node10{1},((BIRDS_COLUMBA_LIVIA_AADAT_8932_XP_005509595_1{1},(BIRDS_HALIAEETUS_LEUCOCEPHALUS_AADAT_52644_XP_010568257_1{1},BIRDS_NIPPONIA_NIPPON_AADAT_128390_XP_009473070_1{2})Node22{1})Node20{1},(BIRDS_FICEDULA_ALBICOLLIS_AADAT_59894_ENSFALP00000011924{1},BIRDS_PSEUDOPODOCES_HUMILIS_AADAT_181119_XP_005517679_1{1})Node25{1})Node19{1})Node9{1},((((((((((MAMMALS_BALAENOPTERA_ACUTOROSTRATA_9767_XP_007192838_1{2},MAMMALS_PTEROPUS_ALECTO_AADAT_9402_XP_006906381_1{1})Node37{1},(MAMMALS_LEPTONYCHOTES_WEDDELLII_AADAT_9713_XP_006730179_1{1},MAMMALS_PANTHERA_TIGRIS_AADAT_9694_XP_007097214_1{2})Node40{1})Node36{1},MAMMALS_ERINACEUS_EUROPAEUS_AADAT_9365_XP_007527291_1{2})Node35{1},(MAMMALS_GALEOPTERUS_VARIEGATUS_AADAT_482537_XP_008576751_1{2},(MAMMALS_MACACA_FASCICULARIS_EGM_14810_9541_XP_005556359_1{1},MAMMALS_TARSIUS_SYRICHTA_9478_XP_008058866_1{2})Node46{1})Node44{2})Node34{1},MAMMALS_TUPAIA_CHINENSIS_AADAT_246437_XP_006141386_1{2})Node33{1},((MAMMALS_CHINCHILLA_LANIGERA_34839_XP_005373952_1{2},MAMMALS_NANNOSPALAX_GALILI_AADAT_1026970_XP_008823154_1{1})Node51{1},MAMMALS_OCHOTONA_PRINCEPS_AADAT_9978_XP_004579326_1{2})Node50{2})Node32{1},MAMMALS_DASYPUS_NOVEMCINCTUS_AADAT_9361_ENSDNOP00000032387{2})Node31{1},MAMMALS_ECHINOPS_TELFAIRI_AADAT_9371_XP_004696179_1{1})Node30{2},MAMMALS_SARCOPHILUS_HARRISII_AADAT_9305_ENSSHAP00000010245{2})Node29{1},MAMMALS_ORNITHORHYNCHUS_ANATINUS_AADAT_9258_ENSOANP00000011847{1})Node28{2})Node8{1})Node6{1},FISH_LEPISOSTEUS_OCULATUS_AADAT_7918_ENSLOCP00000015705{2})Node5{2})Node3{1},FISH_ESOX_LUCIUS_AADAT_8010_XP_010896724_1{1})Node2{2},(((((((FISH_HAPLOCHROMIS_BURTONI_8153_XP_005950016_1{2},FISH_PUNDAMILIA_NYEREREI_303518_XP_005751129_1{1})Node67{1},FISH_MAYLANDIA_ZEBRA_AADAT_106582_XP_004570756_1{1})Node66{1},FISH_NEOLAMPROLOGUS_BRICHARDI_32507_XP_006805565_1{1})Node65{1},FISH_OREOCHROMIS_NILOTICUS_AADAT_8128_ENSONIP00000016358{1})Node64{2},FISH_LARIMICHTHYS_CROCEA_AADAT_215358_XP_010752635_1{2})Node63{2},FISH_STEGASTES_PARTITUS_AADAT_144197_XP_008284606_1{2})Node62{1},(FISH_POECILIA_RETICULATA_AADAT_8081_XP_008426155_1{1},FISH_XIPHOPHORUS_MACULATUS_AADAT_8083_ENSXMAP00000001904{1})Node75{2})Node61{2})
+
+----
+
+```
+|FISH_CYNOGLOSSUS_SEMILAEVIS_AADAT_244447_XP_008321870_1 (2)
+| |FISH_DANIO_RERIO_AADAT_7955_ENSDARP00000010437 (3)
+||+Node3 (1)
+||| |FISH_LATIMERIA_CHALUMNAE_AADAT_7897_ENSLACP00000003451 (2)
+||||+Node6 (1)
+|||||   |REPTILES_ALLIGATOR_MISSISSIPPIENSIS_AADAT_8496_XP_006277551_1 (1)
+|||||  |+Node11 (1)
+|||||  |||REPTILES_CHELONIA_MYDAS_AADAT_8469_XP_007067118_1 (2)
+|||||  ||+Node13 (1)
+|||||  | ||REPTILES_CHRYSEMYS_PICTA_8479_XP_008161010_1 (2)
+|||||  | |+Node15 (2)
+|||||  |  |REPTILES_PELODISCUS_SINENSIS_AADAT_13735_ENSPSIP00000010151 (1)
+||||| |+Node10 (1)
+||||| ||REPTILES_PYTHON_BIVITTATUS_AADAT_176946_XP_007441842_1 (2)
+||||||+Node9 (1)
+||||||| |BIRDS_COLUMBA_LIVIA_AADAT_8932_XP_005509595_1 (1)
+||||||||+Node20 (1)
+||||||||||BIRDS_HALIAEETUS_LEUCOCEPHALUS_AADAT_52644_XP_010568257_1 (1)
+|||||||||+Node22 (1)
+|||||||| |BIRDS_NIPPONIA_NIPPON_AADAT_128390_XP_009473070_1 (2)
+|||||||+Node19 (1)
+|||||| ||BIRDS_FICEDULA_ALBICOLLIS_AADAT_59894_ENSFALP00000011924 (1)
+|||||| |+Node25 (1)
+||||||  |BIRDS_PSEUDOPODOCES_HUMILIS_AADAT_181119_XP_005517679_1 (1)
+|||||+Node8 (1)
+|||| |         |MAMMALS_BALAENOPTERA_ACUTOROSTRATA_9767_XP_007192838_1 (2)
+|||| |        |+Node37 (1)
+|||| |        ||MAMMALS_PTEROPUS_ALECTO_AADAT_9402_XP_006906381_1 (1)
+|||| |       |+Node36 (1)
+|||| |       |||MAMMALS_LEPTONYCHOTES_WEDDELLII_AADAT_9713_XP_006730179_1 (1)
+|||| |       ||+Node40 (1)
+|||| |       | |MAMMALS_PANTHERA_TIGRIS_AADAT_9694_XP_007097214_1 (2)
+|||| |      |+Node35 (1)
+|||| |      ||MAMMALS_ERINACEUS_EUROPAEUS_AADAT_9365_XP_007527291_1 (2)
+|||| |     |+Node34 (1)
+|||| |     |||MAMMALS_GALEOPTERUS_VARIEGATUS_AADAT_482537_XP_008576751_1 (2)
+|||| |     ||+Node44 (2)
+|||| |     | ||MAMMALS_MACACA_FASCICULARIS_EGM_14810_9541_XP_005556359_1 (1)
+|||| |     | |+Node46 (1)
+|||| |     |  |MAMMALS_TARSIUS_SYRICHTA_9478_XP_008058866_1 (2)
+|||| |    |+Node33 (1)
+|||| |    ||MAMMALS_TUPAIA_CHINENSIS_AADAT_246437_XP_006141386_1 (2)
+|||| |   |+Node32 (1)
+|||| |   || |MAMMALS_CHINCHILLA_LANIGERA_34839_XP_005373952_1 (2)
+|||| |   |||+Node51 (1)
+|||| |   ||||MAMMALS_NANNOSPALAX_GALILI_AADAT_1026970_XP_008823154_1 (1)
+|||| |   ||+Node50 (2)
+|||| |   | |MAMMALS_OCHOTONA_PRINCEPS_AADAT_9978_XP_004579326_1 (2)
+|||| |  |+Node31 (1)
+|||| |  ||MAMMALS_DASYPUS_NOVEMCINCTUS_AADAT_9361_ENSDNOP00000032387 (2)
+|||| | |+Node30 (2)
+|||| | ||MAMMALS_ECHINOPS_TELFAIRI_AADAT_9371_XP_004696179_1 (1)
+|||| ||+Node29 (1)
+|||| |||MAMMALS_SARCOPHILUS_HARRISII_AADAT_9305_ENSSHAP00000010245 (2)
+|||| |+Node28 (2)
+||||  |MAMMALS_ORNITHORHYNCHUS_ANATINUS_AADAT_9258_ENSOANP00000011847 (1)
+|||+Node5 (2)
+|| |FISH_LEPISOSTEUS_OCULATUS_AADAT_7918_ENSLOCP00000015705 (2)
+|+Node2 (2)
+||FISH_ESOX_LUCIUS_AADAT_8010_XP_010896724_1 (1)
+|      |FISH_HAPLOCHROMIS_BURTONI_8153_XP_005950016_1 (2)
+|     |+Node67 (1)
+|     ||FISH_PUNDAMILIA_NYEREREI_303518_XP_005751129_1 (1)
+|    |+Node66 (1)
+|    ||FISH_MAYLANDIA_ZEBRA_AADAT_106582_XP_004570756_1 (1)
+|   |+Node65 (1)
+|   ||FISH_NEOLAMPROLOGUS_BRICHARDI_32507_XP_006805565_1 (1)
+|  |+Node64 (2)
+|  ||FISH_OREOCHROMIS_NILOTICUS_AADAT_8128_ENSONIP00000016358 (1)
+| |+Node63 (2)
+| ||FISH_LARIMICHTHYS_CROCEA_AADAT_215358_XP_010752635_1 (2)
+||+Node62 (1)
+|||FISH_STEGASTES_PARTITUS_AADAT_144197_XP_008284606_1 (2)
+|+Node61 (2)
+ ||FISH_POECILIA_RETICULATA_AADAT_8081_XP_008426155_1 (1)
+ |+Node75 (2)
+  |FISH_XIPHOPHORUS_MACULATUS_AADAT_8083_ENSXMAP00000001904 (1)
+```
+
+
+### Improving parameter estimates of the adaptive rate class model
+* Log(L) = -21015.90, AIC-c = 42506.42 (234 estimated parameters)
+
+### Testing selected branches for selection
+
+|              Branch               |  Rates   |     Max. dN/dS     | Sites @ EBF>=100 |      Test LRT      |Uncorrected p-value |
+|-----------------------------------|----------|--------------------|------------------|--------------------|--------------------|
+|FISH_DANIO_RERIO_AADAT_7955_ENSD...|     3    |  796.97 ( 4.27%)   |         21       |        6.33        |       0.01508      |
+|REPTILES_PYTHON_BIVITTATUS_AADAT...|     2    |  394.09 ( 4.38%)   |         10       |        7.53        |       0.00815      |
+|FISH_LATIMERIA_CHALUMNAE_AADAT_7...|     2    |    0.68 (28.61%)   |       N/A        |        0.00        |       1.00000      |
+|               Node5               |     2    |    0.78 (11.12%)   |       N/A        |        0.00        |       1.00000      |
+|REPTILES_CHELONIA_MYDAS_AADAT_84...|     2    |    5.97 ( 7.26%)   |          4       |        5.34        |       0.02495      |
+|FISH_LEPISOSTEUS_OCULATUS_AADAT_...|     2    |    0.67 (14.30%)   |       N/A        |        0.00        |       1.00000      |
+|               Node6               |     1    |   0.05 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|FISH_CYNOGLOSSUS_SEMILAEVIS_AADA...|     2    |    0.99 (22.23%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_ORNITHORHYNCHUS_ANATINUS...|     1    |   0.07 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|FISH_ESOX_LUCIUS_AADAT_8010_XP_0...|     1    |   0.08 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_ECHINOPS_TELFAIRI_AADAT_...|     1    |   0.19 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node30               |     2    |   >1000 ( 5.33%)   |         10       |       11.05        |       0.00137      |
+|MAMMALS_CHINCHILLA_LANIGERA_3483...|     2    |   39.62 ( 4.86%)   |          7       |        8.91        |       0.00406      |
+|MAMMALS_TUPAIA_CHINENSIS_AADAT_2...|     2    |   61.86 ( 4.00%)   |          6       |       13.79        |       0.00034      |
+|MAMMALS_ERINACEUS_EUROPAEUS_AADA...|     2    |   >1000 ( 1.10%)   |          2       |        1.49        |       0.18679      |
+|MAMMALS_BALAENOPTERA_ACUTOROSTRA...|     2    |   89.33 ( 2.31%)   |          6       |        7.85        |       0.00695      |
+|               Node8               |     1    |   0.09 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_OCHOTONA_PRINCEPS_AADAT_...|     2    |    0.87 (29.90%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_SARCOPHILUS_HARRISII_AAD...|     2    |    1.50 (11.49%)   |         20       |        0.66        |       0.29885      |
+|              Node19               |     1    |   0.10 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_TARSIUS_SYRICHTA_9478_XP...|     2    |    7.39 ( 2.80%)   |          4       |        1.66        |       0.17003      |
+|MAMMALS_GALEOPTERUS_VARIEGATUS_A...|     2    |    2.43 (40.10%)   |         56       |        4.21        |       0.04466      |
+|              Node75               |     2    |    1.06 (10.97%)   |         16       |        0.00        |       0.48877      |
+|MAMMALS_DASYPUS_NOVEMCINCTUS_AAD...|     2    |    1.74 (26.49%)   |         40       |        1.20        |       0.21952      |
+|MAMMALS_NANNOSPALAX_GALILI_AADAT...|     1    |   0.35 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node64               |     2    |    8.98 ( 0.40%)   |          1       |        0.72        |       0.28857      |
+|FISH_STEGASTES_PARTITUS_AADAT_14...|     2    |    1.28 ( 7.72%)   |         12       |        0.07        |       0.44617      |
+|FISH_LARIMICHTHYS_CROCEA_AADAT_2...|     2    |    1.08 (10.02%)   |         14       |        0.01        |       0.48545      |
+|REPTILES_ALLIGATOR_MISSISSIPPIEN...|     1    |   0.16 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|               Node2               |     2    |  126.82 ( 3.06%)   |         10       |       10.88        |       0.00150      |
+|              Node28               |     2    |    1.58 (13.46%)   |         12       |        0.35        |       0.36283      |
+|MAMMALS_PTEROPUS_ALECTO_AADAT_94...|     1    |   0.29 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_MACACA_FASCICULARIS_EGM_...|     1    |   0.44 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|MAMMALS_PANTHERA_TIGRIS_AADAT_96...|     2    |   87.72 ( 3.20%)   |          9       |       33.36        |       0.00000      |
+|REPTILES_PELODISCUS_SINENSIS_AAD...|     1    |   0.17 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node29               |     1    |   0.10 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|FISH_HAPLOCHROMIS_BURTONI_8153_X...|     2    |   >1000 ( 4.67%)   |         17       |       133.30       |       0.00000      |
+|               Node9               |     1    |   0.09 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|BIRDS_COLUMBA_LIVIA_AADAT_8932_X...|     1    |   0.28 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node61               |     2    |    4.74 ( 2.54%)   |          4       |        1.44        |       0.19206      |
+|              Node25               |     1    |   0.16 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|REPTILES_CHRYSEMYS_PICTA_8479_XP...|     2    |   >1000 ( 1.92%)   |          7       |       26.02        |       0.00000      |
+|MAMMALS_LEPTONYCHOTES_WEDDELLII_...|     1    |   0.38 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node15               |     2    |    6.42 ( 2.38%)   |          5       |        3.75        |       0.05658      |
+|FISH_XIPHOPHORUS_MACULATUS_AADAT...|     1    |   0.11 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node40               |     1    |   0.34 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node51               |     1    |   0.16 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node32               |     1    |   0.32 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|FISH_POECILIA_RETICULATA_AADAT_8...|     1    |   0.12 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|BIRDS_NIPPONIA_NIPPON_AADAT_1283...|     2    |   >1000 ( 0.41%)   |          2       |        7.70        |       0.00749      |
+|BIRDS_FICEDULA_ALBICOLLIS_AADAT_...|     1    |   0.27 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|BIRDS_PSEUDOPODOCES_HUMILIS_AADA...|     1    |   0.11 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node50               |     2    |   >1000 ( 1.16%)   |          4       |        7.77        |       0.00725      |
+|               Node3               |     1    |  >1000 (100.00%)   |       N/A        |        0.55        |       0.31945      |
+|              Node11               |     1    |   0.10 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node31               |     1    |   0.50 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node62               |     1    |   0.07 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node44               |     2    |   47.71 ( 3.68%)   |          6       |        6.82        |       0.01171      |
+|BIRDS_HALIAEETUS_LEUCOCEPHALUS_A...|     1    |   0.03 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node13               |     1    |   0.12 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|FISH_OREOCHROMIS_NILOTICUS_AADAT...|     1    |   0.10 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node35               |     1    |   0.57 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node46               |     1    |   6.32 (100.00%)   |       N/A        |        0.64        |       0.30168      |
+|              Node63               |     2    |   27.73 ( 1.58%)   |          5       |        4.38        |       0.04090      |
+|              Node66               |     1    |   0.54 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node34               |     1    |   4.42 (100.00%)   |       N/A        |        1.68        |       0.16824      |
+|              Node10               |     1    |   0.22 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node65               |     1    |   0.04 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node36               |     1    |   0.72 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node37               |     1    |  >1000 (100.00%)   |       N/A        |        2.81        |       0.09240      |
+|              Node33               |     1    |  >1000 (100.00%)   |       N/A        |        1.23        |       0.21577      |
+|              Node22               |     1    |   0.42 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|FISH_PUNDAMILIA_NYEREREI_303518_...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|FISH_MAYLANDIA_ZEBRA_AADAT_10658...|     1    |   1.09 (100.00%)   |       N/A        |        0.00        |       0.48868      |
+|              Node20               |     1    |   1.66 (100.00%)   |       N/A        |        0.02        |       0.47404      |
+|FISH_NEOLAMPROLOGUS_BRICHARDI_32...|     1    |   0.12 (100.00%)   |       N/A        |        0.00        |       1.00000      |
