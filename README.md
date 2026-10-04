@@ -1,0 +1,1 @@
+Supplementary materials for the thesis "Evolution of the kynurenine pathway genes across Opisthokonta": eggNOG sequence data, phylogenetic trees of 13 genes, presence/absence heat maps, positive selection results and AlphaFold 3 models. 
